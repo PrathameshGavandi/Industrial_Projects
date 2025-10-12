@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Custmarmaster.Master.cs" Inherits="Bagshop.Custmor.Custmarmaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+      <link rel="stylesheet" type="text/css" href="../engine1/style.css" />
+	<script type="text/javascript" src="../engine1/jquery.js"></script>
+	
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            text-align: center;
+        }
+        .auto-style7 {
+            
+            border: 1px solid #FF9900;
+        }
+        .auto-style8 {
+            color: #FF9900;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table align="center" cellpadding="0" class="auto-style1" style="border-style: solid; border-width: thin; font-family: Arial, Helvetica, sans-serif;">
+            <tr>
+                <td>
+                        <asp:ImageButton ID="ImageButton1" runat="server" Height="80px" ImageUrl="~/Images/logo.png" Width="293px" />
+                    </td>
+                <td>
+                        <table align="center" cellpadding="3" class="auto-style7" style="border-radius:15px;">
+                            <tr>
+                                <td>
+                                    <asp:TextBox ID="txtsearch" runat="server" BorderStyle="None" Height="35px" Width="400px" placeholder="Search Your Bag.."></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:ImageButton ID="ImageButton4" runat="server" Height="30px" ImageUrl="~/Images/search.png" Width="30px" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <table align="center" cellpadding="2" class="auto-style1">
+                        <tr>
+                            <td>
+                        <asp:ImageButton ID="ImageButton2" runat="server" Height="30px" ImageUrl="~/Images/hd-user.png" Width="30px" PostBackUrl="~/User/CustmarLogin.aspx" />
+                            </td>
+                            <td>Welcome
+                                <asp:Label ID="Label1" runat="server" CssClass="auto-style8" Text="Label"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                            <td>
+                        <asp:ImageButton ID="ImageButton3" runat="server" Height="30px" ImageUrl="~/Images/shopping_cart_PNG37.png" Width="30px" PostBackUrl="~/Custmar/Cartdetails1.aspx" />
+                     </td>
+                        </tr>
+                    </table>
+</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="auto-style2">
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#003366" ForeColor="White" Height="34px" Orientation="Horizontal" RenderingMode="Table" Width="100%">
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Custmar/Home.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Manage Profile" Value="Manage Profile" NavigateUrl="~/Custmar/ManageProfile.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Product" Value="Product" NavigateUrl="~/Custmar/Product.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="My Order" Value="My Order" NavigateUrl="~/Custmar/MyOrder.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Feedback" Value="Feedback" NavigateUrl="~/Custmar/Feedback.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Custmar/Cancelorder.aspx" Text="Cancel Order" Value="Cancel Order"></asp:MenuItem>
+                            <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/User/Home.aspx"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <asp:Image ID="Image1" runat="server" Height="150px" ImageUrl="~/Images/genuine-leather.jpg" Width="100%" />
+                    </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

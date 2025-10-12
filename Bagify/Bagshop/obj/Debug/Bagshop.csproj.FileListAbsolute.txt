@@ -1,0 +1,14 @@
+E:\Bagshop\Bagshop\Bagshop\obj\Debug\Bagshop.csproj.CoreCompileInputs.cache
+E:\Bagshop\Bagshop\Bagshop\obj\Debug\Bagshop.csproj.AssemblyReference.cache
+E:\Bagshop\obj\Debug\Bagshop.csproj.AssemblyReference.cache
+E:\Bagshop\obj\Debug\Bagshop.csproj.CoreCompileInputs.cache
+E:\Bagshop\Bagshop\obj\Debug\Bagshop.csproj.AssemblyReference.cache
+E:\Bagshop\Bagshop\obj\Debug\Bagshop.csproj.CoreCompileInputs.cache
+D:\Bagshop\Bagshop\obj\Debug\Bagshop.csproj.AssemblyReference.cache
+D:\Bagshop\Bagshop\obj\Debug\Bagshop.csproj.CoreCompileInputs.cache
+E:\Bagshop\Bagshop\obj\Debug\Bagshop.dll
+E:\Bagshop\Bagshop\obj\Debug\Bagshop.pdb
+E:\Bagshop Documents\Bagshop\Bagshop\obj\Debug\Bagshop.csproj.AssemblyReference.cache
+E:\Bagshop Documents\Bagshop\Bagshop\obj\Debug\Bagshop.csproj.CoreCompileInputs.cache
+E:\Bagshop Documents\Bagshop\Bagshop\obj\Debug\Bagshop.dll
+E:\Bagshop Documents\Bagshop\Bagshop\obj\Debug\Bagshop.pdb

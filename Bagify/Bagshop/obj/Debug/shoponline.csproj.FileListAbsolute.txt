@@ -1,0 +1,7 @@
+E:\Bagshop\Bagshop\Bagshop\bin\Bagshop.dll.config
+E:\Bagshop\Bagshop\Bagshop\bin\Bagshop.dll
+E:\Bagshop\Bagshop\Bagshop\bin\Bagshop.pdb
+E:\Bagshop\Bagshop\Bagshop\obj\Debug\shoponline.csproj.AssemblyReference.cache
+E:\Bagshop\Bagshop\Bagshop\obj\Debug\shoponline.csproj.CoreCompileInputs.cache
+E:\Bagshop\Bagshop\Bagshop\obj\Debug\Bagshop.dll
+E:\Bagshop\Bagshop\Bagshop\obj\Debug\Bagshop.pdb
