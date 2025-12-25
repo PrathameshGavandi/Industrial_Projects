@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Adminmaster.master.cs" Inherits="Bagshop.Admin.Adminmaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style3 {
+            text-align: right;
+            font-size: large;
+            color: #FF1C1C;
+        }
+        .auto-style2 {
+            height: 27px;
+        }
+        .auto-style5 {
+            background-color: #003366;
+        }
+        .auto-style7 {
+            font-size: x-large;
+        }
+        .auto-style8 {
+            text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <form id="form2" runat="server">
+        <table cellpadding="0" cellspacing="1" class="auto-style1" style="border: thin solid #000000; font-family: Arial, Helvetica, sans-serif;">
+            <tr>
+                <td class="">
+                    
+                        <asp:ImageButton ID="ImageButton1" runat="server" Height="80px" ImageUrl="~/Images/logo.png" Width="293px"  />
+                </td>
+                <td class="auto-style3">
+                    <table align="center" cellpadding="2" class="auto-style1">
+                        <tr>
+                            <td>
+                                </td>
+                            <td class="auto-style7"><strong>
+                        <asp:ImageButton ID="ImageButton2" runat="server" Height="30px" ImageUrl="~/Images/hd-user.png" Width="30px" PostBackUrl="~/User/CustmarLogin.aspx" />
+                            &nbsp; Admin Panel&nbsp;&nbsp;&nbsp; </strong></td>
+                            <td>
+                             </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style8" colspan="2">
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#003366" ForeColor="White" Height="35px" Orientation="Horizontal" RenderingMode="Table" Width="100%" CssClass="auto-style5">
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Admin/home.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/ManageCategory.aspx" Text="Manage Category " Value="Manage Catagory "></asp:MenuItem>
+                            <asp:MenuItem Text="Manage Product" Value="Manage Product" NavigateUrl="~/Admin/ManageProduct.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Manage Admin" Value="Process Order" NavigateUrl="~/Admin/ManageAdmin.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Process Order" Value="Manage Admin" NavigateUrl="~/Admin/Processorder.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Report" Value="Report"></asp:MenuItem>
+                            <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/User/Home.aspx"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" colspan="2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

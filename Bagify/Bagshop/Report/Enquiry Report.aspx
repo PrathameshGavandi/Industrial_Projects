@@ -1,0 +1,21 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Adminmaster.Master" AutoEventWireup="true" CodeBehind="Enquiry Report.aspx.cs" Inherits="Bagshop.Report.Enquiry_Report" %>
+<%@ Register assembly="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style9 {
+            width: 90%;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <table align="center" cellpadding="3" class="auto-style9">
+        <tr>
+            <td class="auto-style8">Enquiry Report</td>
+        </tr>
+        <tr>
+            <td>
+                <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="True"  Height="50px"   ToolPanelWidth="200px" Width="350px" GroupTreeImagesFolderUrl="" ToolbarImagesFolderUrl="" />
+            </td>
+        </tr>
+    </table>
+</asp:Content>
