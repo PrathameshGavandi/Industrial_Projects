@@ -1,0 +1,59 @@
+<div class="form_wrapper dashshadow">
+  <div class="form_container">
+    <div class="title_container">
+      <h2>Notifications Form</h2>
+    </div>
+    <div class="row clearfix">
+      <div class="">
+        <form #form="ngForm" (ngSubmit)="OnSubmit()">
+
+          <!-- Message field with validation -->
+          <div class="form-group">
+            <label for="Message">Message</label>
+            <input type="text" id="Message" class="form-control" placeholder="Message"
+              [(ngModel)]="notifications.Message" #MessageControl="ngModel" name="Message" required minlength="5"
+              [ngModelOptions]="{updateOn: 'blur'}" (ngModelChange)="validateWhitespace(MessageControl)"
+              pattern="^(?!\s)(?!\s*$).+" />
+
+            <!-- Error messages for Message field -->
+            <div *ngIf="MessageControl.invalid && MessageControl.touched" class="error-message">
+              <span *ngIf="MessageControl.errors?.['required']">Message is required.</span>
+              <span *ngIf="MessageControl.errors?.['minlength']">Message must be at least 3 characters long.</span>
+              <span *ngIf="MessageControl.errors?.['pattern']">Message cannot start with whitespace and cannot be just
+                whitespace.</span>
+            </div>
+          </div>
+
+          <!-- Status field -->
+          <div class="form-group">
+            <label for="Status">Status</label>
+            <select id="Status" name="Status" required [(ngModel)]="notifications.Status" #Status="ngModel"
+              class="form-control">
+              <option value="Active">Active</option>
+              <option value="Inactive">Inactive</option>
+            </select>
+            <div *ngIf="Status.invalid && Status.touched" class="error-message">
+              <span *ngIf="Status.errors?.['required']">Status is required.</span>
+            </div>
+          </div>
+
+          <!-- Status1 field -->
+          <div class="form-group">
+            <label for="Status1">Status1</label>
+            <select id="Status1" name="Status1" required [(ngModel)]="notifications.Status1" #Status1="ngModel"
+              class="form-control">
+              <option value="Active">Active</option>
+              <option value="Inactive">Inactive</option>
+            </select>
+            <div *ngIf="Status1.invalid && Status1.touched" class="error-message">
+              <span *ngIf="Status1.errors?.['required']">Status1 is required.</span>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <input class="btn-submit" type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

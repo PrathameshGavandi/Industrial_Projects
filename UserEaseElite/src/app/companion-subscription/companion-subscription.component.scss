@@ -1,0 +1,236 @@
+$primary-color: #006AD5;
+$primary-color-light: #F2F5FF;
+$white-color: #F9F9F9;
+$gray-color: #C0CBF2;
+$gray-color-light: #C8CDD1;
+$black-color: #262223;
+$black-light: #666662;
+$text-color: #AEAEAC;
+
+// Common styles
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: repeating-linear-gradient($primary-color, $primary-color 49.9%, $white-color 50.1%, $white-color 100%);
+}
+
+// Subscription container and button styles
+.subscription-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap; // Allows wrapping if needed
+  margin: 0 auto; // Centers the container horizontally
+}
+
+.subscription__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  width: 275px;
+  margin: 5px;
+  padding: 0;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.45);
+  transition: transform 0.5s, box-shadow 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.65);
+  }
+
+  &:after {
+    content: "Buy Now";
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: $primary-color; // Background color for "SUBSCRIBE"
+    color: $white-color; // Text color for "SUBSCRIBE"
+    width: 80%;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    border: solid 2px $primary-color;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  &:hover::after {
+    background-color: darken($primary-color, 10%); // Darken on hover
+    color: $white-color;
+  }
+}
+
+// Title and Icon styling
+.subscription__title {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 20px;
+  color: $primary-color;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.subscription__icon {
+  margin-top: 10px;
+  font-size: 38px;
+  background: $primary-color-light;
+  padding: 30px;
+  border-radius: 50%;
+  color: $primary-color;
+}
+
+// Premium specific styles
+.subscription__title--premium {
+  color: $primary-color;
+}
+
+.subscription__icon.fas.fa-crown {
+  background: $gray-color; // Uniform background color for premium icon
+}
+
+// Ensuring all icons are the same size and style
+.subscription__icon i {
+  font-size: 38px;
+  color: linear-gradient(90deg, #003A74, #006AD5);
+  transition: background 0.3s ease;
+  &:hover {
+    color: #003A74;
+  }
+  &:focus {
+    outline: 2px solid #003A74; // Add focus style for better accessibility
+    outline-offset: 2px;
+  }
+}
+// Header styles
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px; // Adjust the max-width as needed
+  margin: 0 auto; // Center horizontally
+  text-align: center;
+  padding: 20px 0; // Add padding for spacing
+  background: white; // Background color for header
+  border-radius: 10px; // Rounded corners
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow
+
+  .header__title {
+    font-size: 36px; // Slightly larger font size for emphasis
+    margin: 0;
+    color: $primary-color;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .header__text {
+    color: $gray-color;
+    font-size: 18px; // Adjust the font size as needed
+    margin-top: 10px;
+  }
+}
+
+
+// Add styles for the Buy Now button
+.buy-now-btn {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: $primary-color; // Background color for "Buy Now"
+  color: $white-color; // Text color for "Buy Now"
+  width: 80%;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  border: solid 2px $primary-color;
+  transition: background-color 0.5s ease, color 0.5s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%); // Darken on hover
+    color: $white-color;
+  }
+}
+
+// Add styles for the Buy Now button
+.buy-now-btn {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: $primary-color; // Background color for "Buy Now"
+  color: $white-color; // Text color for "Buy Now"
+  width: 80%;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  border: solid 2px $primary-color;
+  transition: background-color 0.5s ease, color 0.5s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%); // Darken on hover
+    color: $white-color;
+  }
+}
+// .remove-subscription-btn {
+//   display: block;
+//   text-align: center;
+//   padding: 10px;
+//   background-color: $gray-color; // Background color for "Remove Subscription"
+//   color: $black-color; // Text color for "Remove Subscription"
+//   width: 80%;
+//   border-radius: 5px;
+//   margin-bottom: 25px;
+//   border: solid 2px $gray-color;
+//   transition: background-color 0.5s ease, color 0.5s ease;
+
+//   &:hover {
+//     background-color: darken($gray-color, 10%); // Darken on hover
+//     color: $black-color;
+//   }
+// }
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px; // Adjust the max-width as needed
+  margin: 0 auto; // Center horizontally
+  text-align: center;
+  padding: 20px 0; // Add padding for spacing
+  background: white; // Background color for header
+  border-radius: 10px; // Rounded corners
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow
+.header__title {
+  font-size: 36px; // Slightly larger font size for emphasis
+  margin: 0;
+  color: $primary-color;
+  font-family: 'Open Sans', sans-serif;
+}}
+
+.message {
+  text-align: center;
+  color: #FF0000; // Red color for emphasis
+  margin-top: 20px; // Space above the message
+}
+
+.hidden {
+  display: none; // Hide the message by default
+}
+

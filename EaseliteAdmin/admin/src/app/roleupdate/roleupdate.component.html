@@ -1,0 +1,65 @@
+<div class="row marginlittle">
+  <div class="col-md-12 topform">
+    <div class="role-form-container">
+      <h2>Update Role</h2>
+      <form #updateFttSubscriptionForm="ngForm" (ngSubmit)="onUpdate()">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            [(ngModel)]="admrole.Title"
+            #titleControl="ngModel"
+            required
+            placeholder="Enter Title"
+            pattern="^(?!\s)(?!\s*$).+" 
+            class="form-control"
+          />
+          <div *ngIf="titleControl.invalid && titleControl.touched" class="error-message">
+            <span *ngIf="titleControl.errors?.['required']">Title is required.</span>
+            <span *ngIf="titleControl.errors?.['pattern']">Title cannot start with whitespace and cannot be just whitespace.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            name="description"
+            [(ngModel)]="admrole.Description"
+            #descriptionControl="ngModel"
+            required
+            placeholder="Enter Description"
+            pattern="^(?!\s)(?!\s*$).+" 
+            class="form-control"
+          ></textarea>
+          <div *ngIf="descriptionControl.invalid && descriptionControl.touched" class="error-message">
+            <span *ngIf="descriptionControl.errors?.['required']">Description is required.</span>
+            <span *ngIf="descriptionControl.errors?.['pattern']">Description cannot start with whitespace and cannot be just whitespace.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select
+            id="status"
+            name="status"
+            [(ngModel)]="admrole.Status"
+            #statusControl="ngModel"
+            required
+            class="form-control"
+          >
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+          </select>
+          <span *ngIf="statusControl.invalid && statusControl.touched" class="error-message">
+            Status is required.
+          </span>
+        </div>
+
+        <button type="submit" class="btn-submit" [disabled]="updateFttSubscriptionForm.invalid">Update</button>
+      </form>
+    </div>
+  </div>
+</div>

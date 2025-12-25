@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\PrismAPI",
+    "\\PrismAPI\\Controllers",
+    "\\PrismAPI\\DAL",
+    "\\PrismAPI\\Models"
+  ],
+  "SelectedNode": "\\PrismAPI\\Models\\Registration.cs",
+  "PreviewInSolutionExplorer": false
+}

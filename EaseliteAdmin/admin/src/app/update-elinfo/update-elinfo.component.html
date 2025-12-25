@@ -1,0 +1,157 @@
+<div class="plan-form-container">
+    <h2>Add EaseElite Info</h2>
+    <form (ngSubmit)="onSubmit()" #form="ngForm" novalidate>
+        <!-- Address and Email in one row -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    required
+                    minlength="3"
+                    [ngModelOptions]="{updateOn: 'blur'}"
+                    [(ngModel)]="admELInfo.Address"
+                    #address="ngModel"
+                    placeholder="Enter Address"
+                    class="form-control"
+                    pattern="^(?!\s)(?!\s*$).+"
+                />
+                <div *ngIf="address.invalid && address.touched" class="error-message">
+                    <span *ngIf="address.errors?.['required']">Address is required.</span>
+                    <span *ngIf="address.errors?.['minlength']">Address must be at least 3 characters long.</span>
+                    <span *ngIf="address.errors?.['pattern']">Address cannot start with or only contain whitespace.</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    [ngModelOptions]="{updateOn: 'blur'}"
+                    [(ngModel)]="admELInfo.Email"
+                    #email="ngModel"
+                    placeholder="Enter Email"
+                    class="form-control"
+                />
+                <div *ngIf="email.invalid && email.touched" class="error-message">
+                    <span *ngIf="email.errors?.['required']">Email is required.</span>
+                    <span *ngIf="email.errors?.['email']">Please enter a valid email address.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact and Logo in one row -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="contact">Contact</label>
+                <input
+                    type="tel"
+                    id="contact"
+                    name="contact"
+                    required
+                    pattern="[0-9]{10}"
+                    [ngModelOptions]="{updateOn: 'blur'}"
+                    [(ngModel)]="admELInfo.Contact"
+                    #contact="ngModel"
+                    placeholder="Enter Contact Number"
+                    class="form-control"
+                />
+                <div *ngIf="contact.invalid && contact.touched" class="error-message">
+                    Enter a valid 10-digit phone number.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="logo">Logo</label>
+                <input
+                    type="file"
+                    id="logo"
+                    name="logo"
+                    required
+                    (change)="fileChangeEvent($event)"
+                    placeholder="Upload Logo"
+                    class="form-control"
+                />
+                <div *ngIf="admELInfo.Logo === '' && form.submitted" class="error-message">
+                    Logo is required.
+                </div>
+            </div>
+        </div>
+
+        <!-- SiteName and WebsiteLink in one row -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="siteName">Site Name</label>
+                <input
+                    type="text"
+                    id="siteName"
+                    name="siteName"
+                    required
+                    minlength="3"
+                    [ngModelOptions]="{updateOn: 'blur'}"
+                    [(ngModel)]="admELInfo.SiteName"
+                    #siteName="ngModel"
+                    placeholder="Enter Site Name"
+                    class="form-control"
+                    pattern="^(?!\s)(?!\s*$).+"
+                />
+                <div *ngIf="siteName.invalid && siteName.touched" class="error-message">
+                    <span *ngIf="siteName.errors?.['required']">Site Name is required.</span>
+                    <span *ngIf="siteName.errors?.['minlength']">Site Name must be at least 3 characters long.</span>
+                    <span *ngIf="siteName.errors?.['pattern']">Site Name cannot start with or only contain whitespace.</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="websiteLink">Website Link</label>
+                <input
+                    type="url"
+                    id="websiteLink"
+                    name="websiteLink"
+                    required
+                    minlength="3"
+                    [ngModelOptions]="{updateOn: 'blur'}"
+                    [(ngModel)]="admELInfo.WebsiteLink"
+                    #websiteLink="ngModel"
+                    placeholder="Enter Website Link"
+                    class="form-control"
+                    pattern="^(?!\s)(?!\s*$).+"
+                />
+                <div *ngIf="websiteLink.invalid && websiteLink.touched" class="error-message">
+                    <span *ngIf="websiteLink.errors?.['required']">Website Link is required.</span>
+                    <span *ngIf="websiteLink.errors?.['minlength']">Website Link must be at least 3 characters long.</span>
+                    <span *ngIf="websiteLink.errors?.['pattern']">Website Link cannot start with or only contain whitespace.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status -->
+        <div class="form-group status-group">
+            <label for="status">Status</label>
+            <select
+                id="status"
+                name="status"
+                required
+                [(ngModel)]="admELInfo.Status"
+                #status="ngModel"
+                class="form-control"
+            >
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+            <div *ngIf="status.invalid && status.touched" class="error-message">
+                Status is required.
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-submit" [disabled]="form.invalid">
+            Submit
+        </button>
+    </form>
+</div>

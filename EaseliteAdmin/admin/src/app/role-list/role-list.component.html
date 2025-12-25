@@ -1,0 +1,33 @@
+<div class="list-container">
+    <div class="title">
+        <h1>Role List</h1>
+    </div>
+
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let admrole of admroleList">
+                <td>{{ admrole.Title }}</td>
+                <td class="description">{{ admrole.Description }}</td>
+                <td>{{ admrole.Status }}</td>
+                <td>
+                    <!-- Action buttons for edit, view, and delete -->
+                    <button class="edit" (click)="Edit(admrole.AdmRoleId)">
+                        <i class="fas fa-pencil-alt"></i> 
+                    </button>
+
+                    <button class="delete" (click)="deleteUser(admrole.AdmRoleId)">
+                        <i class="fas fa-trash-alt"></i> 
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,35 @@
+<div class="plan-detail">
+    <section class="plan-overview">
+        <h1 class="plan-title">6 Month Plan</h1>
+        <p class="plan-description">Unlock exclusive content and enjoy 24/7 support.</p>
+        <div class="pricing">
+            <span class="monthly-price">$29/month</span>
+            <span class="annual-price">20% off if billed annually!</span>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Features</h2>
+        <ul>
+            <li><i class="icon">✔</i> Unlimited Access</li>
+            <li><i class="icon">✔</i> 24/7 Support</li>
+            <li><i class="icon">✔</i> Exclusive Content</li>
+        </ul>
+    </section>
+
+    <section class="payment">
+        <h2>Secure Your Subscription</h2>
+        <div class="payment-methods">
+            <button class="payment-btn paypal-btn" (click)="openPaypalScanner()">
+                <img src="assets/paypal.png" alt="PayPal Logo" style="width: 90px; height: auto;">
+            </button>
+            <button class="payment-btn card-btn" (click)="handleCardPayment()">
+                <img src="assets/card-icon.png" alt="Debit/Credit Card Logo" style="width: 30px; height: auto;"> Debit/Credit
+            </button>
+        </div>
+        <label>
+            <input type="checkbox" /> Save card for future payments
+        </label>
+        <p>Your information is secure with us.</p>
+    </section>
+</div>

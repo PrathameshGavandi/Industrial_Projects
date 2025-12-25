@@ -1,0 +1,114 @@
+/* Global Styles */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f6fa;
+  font-family: Arial, sans-serif;
+}
+
+/* Section Styling */
+.verification-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9fb;
+  padding: 2rem 0;
+}
+
+/* Card Styling */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* SVG Icon Styling */
+.svg-icon {
+  width: 40px;
+  height: 40px;
+  color: #6f42c1;
+}
+
+/* Text Styling */
+.text-dark {
+  color: #333;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+.text-purple {
+  color: #6f42c1;
+}
+
+/* OTP Container */
+.otp-container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* OTP Input Styling */
+.otp-input {
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: #f3f3f7;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(111, 66, 193, 0.15);
+  transition: all 0.3s ease;
+}
+
+.otp-input:focus {
+  outline: none;
+  background: #fff;
+  border-color: #6f42c1;
+  box-shadow: 0 8px 16px rgba(111, 66, 193, 0.3);
+  transform: scale(1.1);
+}
+
+/* Button Styling */
+.btn-purple {
+  background-color: #6f42c1;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 6px 12px rgba(111, 66, 193, 0.3);
+}
+
+.btn-purple:hover {
+  background-color: #5a34a0;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(111, 66, 193, 0.4);
+}
+
+/* Resend Link Styling */
+.text-muted a {
+  color: #6f42c1;
+  text-decoration: none;
+}
+
+.text-muted a:hover {
+  color: #5a34a0;
+  text-decoration: underline;
+}

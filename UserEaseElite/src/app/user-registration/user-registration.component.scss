@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* Centers the form horizontally */
+    align-items: center; /* Centers the form vertically */
+    min-height: 100vh; /* Ensure it takes up the full viewport height */
+    margin: 0;
+    background: #f6f8fa;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                0px 5px 12px -2px rgba(0, 0, 0, 0.1),
+                0px 18px 36px -6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px auto; /* Ensure the form is centered horizontally */
+    padding: 0 20px;
+}
+
+.container .title {
+    padding: 25px;
+    background: #f6f8fa;
+}
+
+.container .title p {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    text-align: center; /* Center the title text */
+}
+
+.container .title p::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Align the underline to the center */
+    transform: translateX(-50%); /* Center the underline */
+    width: 30px;
+    height: 3px;
+    background: linear-gradient(to right,  #003A74, #006AD5);
+}
+
+.user_details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 25px;
+}
+
+.user_details .input_box {
+    width: calc(100% / 2 - 20px);
+    margin: 0 0 12px 0;
+}
+
+.input_box label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input_box label::after {
+    content: " *";
+    color: red;
+}
+
+.input_box input {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 15px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    background-color: #f6f8fa;
+    font-family: 'Rajdhani', sans-serif;
+    transition: all 120ms ease-out 0s;
+}
+
+.input_box input:focus,
+.input_box input:valid {
+    box-shadow: 0px 0px 0px 2px #AC8ECE;
+}
+
+form .gender {
+    padding: 0px 25px;
+}
+
+.gender .gender_title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.gender .category {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.gender .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.gender .category label .dot {
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#radio_1:checked ~ .category label .one,
+#radio_2:checked ~ .category label .two,
+#radio_3:checked ~ .category label .three {
+    border-color: #d9d9d9;
+    background:  #006AD5;
+}
+
+.gender input {
+    display: none;
+}
+
+.reg_btn {
+    padding: 25px;
+    margin: 15px 0;
+}
+
+.reg_btn input {
+    font-family: 'Rajdhani', sans-serif;
+    height: 45px;
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient( #003A74, #006AD5);
+    border-radius: 5px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.reg_btn input:hover {
+    background: linear-gradient(45deg, #003A74, #006AD5);
+}
+
+@media screen and (max-width: 584px) {
+    .user_details {
+        max-height: 340px;
+        overflow-y: scroll;
+    }
+
+    .user_details::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .user_details .input_box {
+        width: 100%;
+    }
+
+    .gender .category {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 419px) {
+    .gender .category {
+        flex-direction: column;
+    }
+}
+.error-msg {
+    color: red;
+    font-size: 12px;
+  }
+  
+  input.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+/* Home Button Styling */
+.home-btn-container {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+/* Home Button Styling */
+.home-btn-container {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+  
+  .home-btn {
+    font-size: 14px;
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #006AD5;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .home-btn span {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  
+
+.container .title {
+    padding: 25px;
+    background: #f6f8fa;
+    position: relative; /* Allow the home button to be positioned absolutely */
+}
+
+.container .title p {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    text-align: center; /* Center the title text */
+}
+
+.container .title p::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 3px;
+    background: linear-gradient(to right, #003A74, #006AD5);
+}
+
+/* New Login link styling */
+.login-link {
+    
+    text-align: center;
+    margin-top: 20px;
+}
+
+// .login-link p {
+//     font-size: 20px;
+// }
+
+.login-link a {
+    color: #006AD5;
+    text-decoration: underline;
+    font-size: 20px;
+    
+}
+.password-wrapper {
+    position: relative;
+}
+.toggle-password {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: Black; /* Change this to your desired color */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.toggle-password .fas {
+    font-size: 18px;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .popup button {
+    background-color: #006AD5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .registration-link {
+    margin-top: 20px; // Add some space above the button
+    text-align: center; // Center the button
+}
+
+.register-btn {
+    padding: 10px 20px;
+    background-color: #007bff; // Example color
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #0056b3; // Darker shade on hover
+    }
+}

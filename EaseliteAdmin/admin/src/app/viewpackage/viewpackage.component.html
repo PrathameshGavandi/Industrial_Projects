@@ -1,0 +1,55 @@
+<div class="view-container">
+    <div class="card">
+        <div class="card-header card-header-danger">
+            <h4 class="card-title">Package sender Details</h4>
+        </div>
+        <div class="card-body">
+            <div *ngIf="packageDetails">
+                <div class="info-group">
+                    <strong>Title:</strong> 
+                    <p>{{ packageDetails.Title }}</p>
+                </div>
+                <div class="info-group">
+                    <strong>SubTitle:</strong> 
+                    <p>{{ packageDetails.SubTitle }}</p>
+                </div>
+                <div class="info-group">
+                    <strong>Description:</strong> 
+                    <p>{{ packageDetails.Description }}</p>
+                </div>
+                <div class="info-group">
+                    <strong>Price:</strong> 
+                    <p>{{ packageDetails.Price }}</p>
+                </div>
+                <div class="info-group">
+                    <strong>Plan Period:</strong> 
+                    <p>{{ packageDetails.PlanPeriod }}</p>
+                </div>
+                <div class="info-group">
+                    <strong>Status:</strong> 
+                    <p>{{ packageDetails.Status }}</p>
+                </div>
+
+                <!-- Uncomment these fields if needed -->
+                <!-- 
+                <div class="info-group">
+                    <strong>Updated By:</strong> 
+                    <p>{{ packageDetails.UpdatedBy }}</p>
+                </div>
+                <div class="info-group">
+                    <strong>Updated Date:</strong> 
+                    <p>{{ packageDetails.UpdatedDate }}</p>
+                </div>
+                <div class="info-group">
+                    <strong>Created By:</strong> 
+                    <p>{{ packageDetails.CreatedBy }}</p>
+                </div>
+                <div class="info-group">
+                    <strong>Created Date:</strong> 
+                    <p>{{ packageDetails.CreatedDate }}</p>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+</div>

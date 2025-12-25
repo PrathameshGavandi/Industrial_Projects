@@ -1,0 +1,271 @@
+
+
+.combined-card,
+.feedback-card {
+    width: 200%; /* Full width for the card */
+    max-width: 900px; /* Adjusted max width for a more vertical card */
+    height: auto; /* Height will adjust based on content */
+    background-color: #fff; /* White background for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 10px 0; /* Spacing above and below */
+    overflow: hidden; /* Prevent overflow of child elements */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.combined-card:hover, .feedback-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.card-header-common {
+    padding: 15px; /* Padding for the header */
+    color: #fff; /* Text color */
+    background-color: #0072ff; /* Header color */
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+.card-title {
+    margin: 0; /* Remove default margin */
+    font-size: 1.3rem; /* Title size */
+    font-weight: bold; /* Make title bold */
+}
+
+// .card-body {
+//     padding: 10px; /* Reduced padding for the body */
+//     display: flex; /* Use flexbox for layout */
+//     flex-direction: column; /* Stack items vertically */
+// }
+
+// .traveller-details {
+//     margin-bottom: 10px; /* Space between details and match */
+// }
+
+p {
+    margin: 3px 0; /* Reduced margin for paragraphs */
+    // font-size: 1.3rem; /* Increased font size */
+    line-height: 1.4; /* Adjusted line height for readability */
+    color: #333; /* Darker text color */
+}
+
+strong {
+    color: #005bb5; /* Color for strong text (labels) */
+}
+
+/* Button styles */
+.button-container {
+    margin-top: auto; /* Push the button to the bottom */
+    text-align: right; /* Align the button to the right */
+}
+
+.make-request-btn {
+    background-color: #0072ff; /* Button background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.make-request-btn:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
+
+// .photo {
+//     width: 100px; /* Fixed width for the photo */
+//     height: 100px; /* Fixed height for the photo */
+//     border-radius: 50%; /* Make it circular */
+//     object-fit: cover; /* Cover the entire area */
+//     margin-top: 10px; /* Space above the photo */
+//     border: 2px solid #005bb5; /* Border color for the photo */
+//     transition: transform 0.3s; /* Smooth scaling effect */
+// }
+
+
+// .photo:hover {
+//     transform: scale(1.1); /* Scale effect on hover */
+// }
+// .rating {
+//     display: flex;
+//     flex-direction: column; /* Stack the items vertically */
+//     align-items: center; /* Center items horizontally */
+//     justify-content: center; /* Center items vertically */
+//     margin-top: 20px; /* More space above the rating */
+//     font-size: 1.5rem; /* Increase font size for the entire rating section */
+// }
+
+.stars {
+    display: flex;
+    justify-content: center; /* Center stars horizontally */
+    margin: 5px 0; /* Space above and below the stars */
+    width: 100%; /* Ensure the stars take full width for centering */
+}
+
+.star {
+    width: 30px; /* Increased width for larger stars */
+    height: 30px; /* Increased height for larger stars */
+    background-color: lightgray;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    margin: 0 2px; /* Space between stars */
+}
+
+.star.filled {
+    background-color: gold;
+}
+
+// .rating-value {
+//     margin-top: 5px; /* Space above the rating value */
+//     font-size: 1.5rem; /* Match the size of the stars */
+//     text-align: center; /* Center the rating value text */
+// }
+
+.p{
+    font-size: 1.6rem;
+}
+.card-body {
+    padding: 10px; /* Reduced padding for the body */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Align items in a row */
+    justify-content: space-between; /* Space between the two sections */
+}
+
+.traveller-details {
+    flex: 1; /* Allow details to take up available space */
+    margin-right: 20px; /* Space between details and matched companion */
+}
+
+.matched-companion {
+    flex: 1; /* Allow matched companion to take up available space */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    // font-size: 1.3rem; /* Increase font size for the matched companion details */
+    padding: 10px; /* Add some padding */
+}
+.card-container {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the cards */
+    margin: 20px; /* Margin around the container */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.card-group {
+    display: flex; /* Arrange the cards in a row */
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center align the cards */
+}
+.traveller-details {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center align items vertically */
+    margin-bottom: 10px; /* Space between details and match */
+}
+
+.photo {
+    width: 100px; /* Fixed width for the photo */
+    height: 100px; /* Fixed height for the photo */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Cover the entire area */
+    margin-right: 15px; /* Space to the right of the photo */
+    border: 2px solid #005bb5; /* Border color for the photo */
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.photo:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+
+/* Parent container to hold the cards side by side */
+.cards-container {
+  display: flex;
+  justify-content: flex-start; /* Align cards to the start */
+  gap: 10px; /* Small gap between cards */
+  padding: 10px;
+  overflow-x: auto; /* Allows scrolling if needed */
+  max-width: 100%; /* Full-width container */
+  box-sizing: border-box;
+}
+
+figure.snip1390 {
+  font-family: 'Rajdhani', sans-serif; /* Updated font to Rajdhani */
+  position: relative;
+  overflow: hidden;
+  margin: 0; /* Removed margin */
+  width: 140px; /* Smaller card width */
+  height: 220px; /* Smaller card height */
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px; /* Smaller font size */
+  background-color: #0072ff;
+  padding: 10px;
+  background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+  box-sizing: border-box;
+  flex-shrink: 0; /* Prevent shrinking of cards */
+}
+
+figure.snip1390 * {
+  box-sizing: border-box;
+  transition: all 0.35s ease;
+}
+
+figure.snip1390 figcaption {
+  width: 100%;
+}
+
+figure.snip1390 h2, figure.snip1390 h4, figure.snip1390 blockquote {
+  margin: 0;
+}
+
+figure.snip1390 h2 {
+  color: #ffffff;
+  font-size: 14px; /* Smaller heading size */
+}
+
+figure.snip1390 h4 {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+figure.snip1390 blockquote {
+  font-size: 0.7em;
+  padding: 8px 5px;
+  margin-top: 10px;
+  background-color: #0072ff;
+  border-radius: 5px;
+  box-shadow: inset -1.4px -1.4px 2px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  position: relative;
+}
+
+figure.snip1390 blockquote:before {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 40px;
+  opacity: 0.25;
+  top: 0px;
+  left: 10px;
+}
+
+figure.snip1390 .profile {
+  width: 50px; /* Smaller profile image */
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 5px;
+  border: solid 4px #A6A57A;
+}
+
+/* Rating section */
+.rating {
+  margin-top: 5px;
+}
+
+.rating i {
+  color: #FFD700; /* Gold color for stars */
+  font-size: 14px; /* Smaller star size */
+  margin: 0 1px;
+}

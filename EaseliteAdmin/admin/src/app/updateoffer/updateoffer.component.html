@@ -1,0 +1,130 @@
+<div class="discount-form-container">
+    <h2>Add Offers</h2>
+    <form (ngSubmit)="onSubmit()" #discountForm="ngForm">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    required
+                    minlength="3"
+                    [ngModelOptions]="{updateOn: 'blur'}"
+                    [(ngModel)]="offer.Title"
+                    placeholder="Enter Title"
+                    #title="ngModel"
+                    class="form-control"
+                    [ngClass]="{'is-invalid': title.invalid && title.touched}"
+                    pattern="^(?!\s)(?!\s*$).+"
+                />
+                <div *ngIf="title.invalid && title.touched" class="error-message">
+                    <span *ngIf="title.errors?.['required']">Title is required.</span>
+                    <span *ngIf="title.errors?.['minlength']">Title must be at least 3 characters long.</span>
+                    <span *ngIf="title.errors?.['pattern']">Title cannot start with whitespace and cannot be just whitespace.</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="subtitle">Subtitle</label>
+                <input
+                    type="text"
+                    id="subtitle"
+                    name="subtitle"
+                    required
+                    minlength="3"
+                    [ngModelOptions]="{updateOn: 'blur'}"
+                    [(ngModel)]="offer.SubTitle"
+                    placeholder="Enter Subtitle"
+                    #subtitle="ngModel"
+                    class="form-control"
+                    pattern="^(?!\s)(?!\s*$).+"
+                />
+                <div *ngIf="subtitle.invalid && subtitle.touched" class="error-message">
+                    <span *ngIf="subtitle.errors?.['required']">Subtitle is required.</span>
+                    <span *ngIf="subtitle.errors?.['minlength']">Subtitle must be at least 3 characters long.</span>
+                    <span *ngIf="subtitle.errors?.['pattern']">Subtitle cannot start with whitespace and cannot be just whitespace.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea
+                    id="description"
+                    name="description"
+                    required
+                    minlength="10"
+                    [ngModelOptions]="{updateOn: 'blur'}"
+                    [(ngModel)]="offer.Description"
+                    placeholder="Enter Description"
+                    #description="ngModel"
+                    class="form-control"
+                    pattern="^(?!\s)(?!\s*$).+"
+                ></textarea>
+                <div *ngIf="description.invalid && description.touched" class="error-message">
+                    <span *ngIf="description.errors?.['required']">Description is required.</span>
+                    <span *ngIf="description.errors?.['minlength']">Description must be at least 10 characters long.</span>
+                    <span *ngIf="description.errors?.['pattern']">Description cannot start with whitespace and cannot be just whitespace.</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="discountPercent">Discount (%)</label>
+                <input
+                    type="number"
+                    id="discountPercent"
+                    name="discountPercent"
+                    required
+                    min="0"
+                    max="100"
+                    [(ngModel)]="offer.DiscountInPercent"
+                    placeholder="Enter Discount Percentage"
+                    #discountPercent="ngModel"
+                    class="form-control"
+                    pattern="^[0-9]+(\.[0-9]{1,2})?$"
+                />
+                <div *ngIf="discountPercent.invalid && discountPercent.touched" class="error-message">
+                    <span *ngIf="discountPercent.errors?.['required']">Discount percentage is required.</span>
+                    <span *ngIf="discountPercent.errors?.['min']">Discount cannot be negative.</span>
+                    <span *ngIf="discountPercent.errors?.['max']">Discount cannot exceed 100%.</span>
+                    <span *ngIf="discountPercent.errors?.['pattern']">Please enter a valid percentage.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select
+                    id="status"
+                    name="status"
+                    required
+                    [(ngModel)]="offer.Status"
+                    #status="ngModel"
+                    class="form-control"
+                >
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+                <div *ngIf="status.invalid && status.touched" class="error-message">
+                    <span *ngIf="status.errors?.['required']">Status is required.</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="image">Upload Image</label>
+                <input
+                    type="file"
+                    id="image"
+                    name="image"
+                    (change)="fileChangeEvent($event)"
+                    class="form-control"
+                />
+            </div>
+        </div>
+
+        <button type="submit" class="btn-submit" >Submit</button>
+    </form>
+</div>

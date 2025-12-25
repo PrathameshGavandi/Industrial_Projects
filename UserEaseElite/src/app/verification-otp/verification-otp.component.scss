@@ -1,0 +1,99 @@
+.verification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  
+  h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+
+    .verification_inputs {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 340px; // Adjust width for better alignment
+      gap: 10px;
+
+      .code_input {
+        width: 33px; // Adjust width to a consistent size
+        height: 50px; // Maintain height consistency
+        padding: 0 12px;
+        text-align: center;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 18px;
+        color: #333;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:focus {
+          border-color: #006AD5;
+          box-shadow: 0 0 0 2px rgba(0, 106, 213, 0.2);
+          outline: none;
+        }
+
+        &::placeholder {
+          color: #aaa;
+        }
+      }
+    }
+
+    .verify_btn {
+      padding: 12px;
+      font-size: 16px;
+      color: #fff;
+      background: linear-gradient(90deg, #003A74, #006AD5);
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: linear-gradient(90deg, #006AD5, #003A74);
+      }
+
+      &:focus {
+        outline: 2px solid #003A74;
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  .resend_code {
+    margin-top: 15px;
+    color: #5881d0;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #003A74;
+    }
+  }
+}

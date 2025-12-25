@@ -1,0 +1,192 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F8F9FA;
+    color: #343A40;
+  }
+  
+  .admin-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+  }
+  
+  .sidebar ul li {
+    margin: 20px 0;
+  }
+  
+  .sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .sidebar ul li a:hover {
+    color: #28A745;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .admin-header h1 {
+    font-size: 28px;
+  }
+  
+  .logout-btn {
+    background-color: #28A745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: #0069D9;
+  }
+  
+  .dashboard-cards {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border: 1px solid #6C757D;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+  }
+  
+  .card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 24px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-color: #007BFF;
+  }
+  
+
+
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /* Light gray background */
+  }
+  
+  /* Form Container */
+  .form-container {
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    max-width: 400px; /* Limit the width of the form */
+    margin: 50px auto; /* Center the form in the middle of the screen */
+  }
+  
+  /* Headings */
+  h2 {
+    text-align: center;
+    color: #333333; /* Dark gray color for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  /* Labels */
+  label {
+    display: block; /* Make labels block elements */
+    margin: 15px 0 5px; /* Spacing around labels */
+    font-weight: bold; /* Make labels bold */
+    color: #555555; /* Medium gray color */
+    text-align: left; /* Align labels to the left */
+  }
+  
+  /* Input Fields */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="file"],
+  button {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #cccccc; /* Light gray border */
+    border-radius: 4px; /* Slightly rounded corners */
+    margin-bottom: 15px; /* Space below inputs */
+    font-size: 16px; /* Font size */
+  }
+  
+  /* Input Focus */
+  input:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle blue glow */
+  }
+  
+  /* Error Messages */
+  small {
+    color: red; /* Red color for error messages */
+    font-size: 12px; /* Smaller font for error messages */
+  }
+  
+  /* Submit Button */
+  button {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  /* Button Hover Effect */
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .form-container {
+      width: 90%; /* Make the form responsive on smaller screens */
+    }
+  }
+  

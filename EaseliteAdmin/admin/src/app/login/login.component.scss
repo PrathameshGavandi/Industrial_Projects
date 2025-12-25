@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rajdhani", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f6f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.card h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.login_register {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.login_register a {
+  font-size: 16px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  flex: 1;
+  margin: 0 5px;
+}
+
+.login_register a.login {
+  background: linear-gradient(90deg, #003A74, #006AD5);
+}
+
+.login_register a.register {
+  background-color: #f1f1f1;
+  color: #003a74;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #333;
+}
+
+
+.card a.fp {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #5881d0;
+  font-size: 14px;
+}
+
+.login_btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  color: white;
+  background: linear-gradient(90deg, #003A74, #006AD5);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login_btn:hover {
+  background: linear-gradient(90deg, #006ad5, #003a74);
+}
+
+.footer_card {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.footer_card p {
+  margin-right: 5px;
+}
+
+.footer_card a {
+  color: #5881d0;
+  font-weight: 600;
+}
+.google_signin {
+  margin-bottom: 20px;
+}
+
+.google_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.google_btn:hover {
+  background-color: #f1f1f1;
+}
+
+.google_logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.required-msg {
+  font-size: 12px; /* Keep the text small */
+  color: #e74c3c; /* Softer, professional-looking red */
+  margin-top: -5px; /* Fine-tune the top spacing */
+  margin-bottom: 10px; /* Consistent spacing with input fields */
+  text-align: left; /* Align the message to the left */
+  font-weight: 500; /* Adds some weight to the text for clarity */
+  letter-spacing: 0.5px; /* Slight letter spacing for better readability */
+}
+
+
+.password_container {
+  position: relative;
+  margin-bottom: 15px; /* Adjust as needed */
+}
+
+.pass {
+  width: 100%; /* Full width */
+  padding: 12px 40px 12px 12px; /* Space for the eye icon */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #333;
+}
+
+.eye_icon {
+  position: absolute;
+  right: 15px; /* Fixed space from the right */
+  top: 40%; /* Center vertically */
+  transform: translateY(-50%); /* Center vertically */
+  cursor: pointer;
+  color: #666; /* Icon color */
+}
+
+.checkbox_container {
+  display: flex;
+  justify-content: space-between; /* Space between checkbox and link */
+  align-items: center; /* Center vertically */
+  margin-bottom: 15px; /* Spacing below the checkbox section */
+
+  .checkbox_label {
+    display: flex;
+    align-items: center; /* Aligns checkbox and text */
+    font-size: 14px;
+    color: #4d4d4d;
+    margin-top: -5px; /* Adjust this value to move the checkbox up */
+
+    input[type="checkbox"] {
+      margin-right: 8px; /* Space between checkbox and label */
+      cursor: pointer; /* Pointer cursor for better UX */
+    }
+  }
+
+  .fp {
+    color: #5881d0; /* Color for the forgot password link */
+    font-size: 14px;
+    text-decoration: none; /* No underline */
+    margin-left: auto; /* Pushes the link to the right */
+    transition: color 0.3s ease; /* Smooth color transition */
+
+    &:hover {
+      text-decoration: underline; /* Underline on hover for feedback */
+      color: #5881d0; /* Darker color on hover */
+    }
+  }
+}
+
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  animation: fadeIn 0.5s; /* Fade-in effect */
+
+  .popup-content {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      width: 80%;
+      animation: zoomIn 0.5s; /* Zoom-in effect */
+
+      .close-btn {
+          position: absolute;
+          top: 10px;
+          right: 15px;
+          cursor: pointer;
+          font-size: 22px;
+          color: #333;
+      }
+
+      .popup-message {
+          margin-top: 15px;
+
+          p {
+              font-size: 18px;
+              color: #333;
+          }
+
+          .check-icon {
+              color: #28a745; /* Green color for the check icon */
+              font-size: 28px;
+          }
+      }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+      transform: scale(0.5); /* Start at 50% size */
+      opacity: 0; /* Start invisible */
+  }
+  to {
+      transform: scale(1); /* End at 100% size */
+      opacity: 1; /* End fully visible */
+  }
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 600px) {
+  .radio_group {
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 10px; /* Keep consistent spacing between labels */
+    justify-content: center; /* Center the radio buttons on mobile */
+  }
+
+  .radio_group label {
+    max-width: 100%; /* Allow labels to take full width */
+    width: 100%; /* Ensures labels stretch to fill the container */
+    padding: 12px; /* Provide enough padding for touch targets */
+  }
+
+  .card {
+    padding: 20px; /* Slightly reduce padding on the card for mobile */
+  }
+
+  .login_btn {
+    font-size: 16px; /* Adjust font size for buttons */
+    padding: 10px; /* Adjust padding for button */
+  }
+
+  .google_btn {
+    font-size: 14px; /* Adjust font size for Google button */
+    padding: 10px; /* Adjust padding for button */
+  }
+
+  .required-msg {
+    font-size: 12px; /* Ensure error messages are legible */
+  }
+}
+
+
+
+.container .title {
+  padding: 25px;
+  background: #f6f8fa;
+  position: relative; /* Allow the home button to be positioned absolutely */
+}
+
+.container .title p {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  text-align: center; /* Center the title text */
+}
+
+.container .title p::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background: linear-gradient(to right, #003A74, #006AD5);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;  /* Aligns the link to the right */
+  margin-top: 20px;           /* Optional: space above */
+}
+
+.fp {
+  text-decoration: none;       /* Removes underline */
+  color: #007BFF;             /* Change link color */
+}

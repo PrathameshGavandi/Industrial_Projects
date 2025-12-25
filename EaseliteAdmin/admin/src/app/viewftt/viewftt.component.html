@@ -1,0 +1,55 @@
+<div class="view-container">
+  <div class="card">
+      <div class="card-header card-header-danger">
+          <h4 class="card-title">Ftt Details</h4>
+      </div>
+      <div class="card-body">
+          <div *ngIf="fttDetails">
+              <div class="info-group">
+                  <strong>Title:</strong> 
+                  <p>{{ fttDetails.Title }}</p>
+              </div>
+              <div class="info-group">
+                  <strong>SubTitle:</strong> 
+                  <p>{{ fttDetails.SubTitle }}</p>
+              </div>
+              <div class="info-group">
+                  <strong>Description:</strong> 
+                  <p>{{ fttDetails.Description }}</p>
+              </div>
+              <div class="info-group">
+                  <strong>Price:</strong> 
+                  <p>{{ fttDetails.Price }}</p>
+              </div>
+              <div class="info-group">
+                  <strong>Plan Period:</strong> 
+                  <p>{{ fttDetails.PlanPeriod }}</p>
+              </div>
+              <div class="info-group">
+                  <strong>Status:</strong> 
+                  <p>{{ fttDetails.Status }}</p>
+              </div>
+
+              <!-- Uncomment these fields if needed -->
+              <!-- 
+              <div class="info-group">
+                  <strong>Updated By:</strong> 
+                  <p>{{ fttDetails.UpdatedBy }}</p>
+              </div>
+              <div class="info-group">
+                  <strong>Updated Date:</strong> 
+                  <p>{{ fttDetails.UpdatedDate }}</p>
+              </div>
+              <div class="info-group">
+                  <strong>Created By:</strong> 
+                  <p>{{ fttDetails.CreatedBy }}</p>
+              </div>
+              <div class="info-group">
+                  <strong>Created Date:</strong> 
+                  <p>{{ fttDetails.CreatedDate }}</p>
+              </div>
+              -->
+          </div>
+      </div>
+  </div>
+</div>

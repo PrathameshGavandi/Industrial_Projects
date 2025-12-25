@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="title">
+        <p>Registration</p> 
+    </div>
+
+    <form #registrationForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="user_details">
+            <!-- First Name -->
+            <div class="input_box">
+                <label for="name">First Name</label>
+                <input type="text" id="name" placeholder="Enter your first name" [(ngModel)]="user.firstName" name="firstName" required>
+                <div *ngIf="registrationForm.submitted || registrationForm.controls['firstName']?.touched">
+                    <span *ngIf="registrationForm.controls['firstName']?.errors?.['required']" class="error">First name is required.</span>
+                </div>
+            </div>
+
+            <!-- Last Name -->
+            <div class="input_box">
+                <label for="username">Last Name</label>
+                <input type="text" id="username" placeholder="Enter your last name" [(ngModel)]="user.lastName" name="lastName" required>
+                <div *ngIf="registrationForm.submitted || registrationForm.controls['lastName']?.touched">
+                    <span *ngIf="registrationForm.controls['lastName']?.errors?.['required']" class="error">Last name is required.</span>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="input_box">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" [(ngModel)]="user.email" name="email" required email>
+                <div *ngIf="registrationForm.submitted || registrationForm.controls['email']?.touched">
+                    <span *ngIf="registrationForm.controls['email']?.errors?.['required']" class="error">Email is required.</span>
+                    <span *ngIf="registrationForm.controls['email']?.errors?.['email']" class="error">Please enter a valid email.</span>
+                </div>
+            </div>
+
+            <!-- Password -->
+            <div class="input_box">
+                <label for="pass">Password</label>
+                <div class="password-wrapper">
+                    <input [type]="showPassword ? 'text' : 'password'" id="pass" placeholder="Enter your password" [(ngModel)]="user.password" name="password" required minlength="6">
+                    <button type="button" class="toggle-password" (click)="togglePasswordVisibility('password')">
+                        <span *ngIf="!showPassword">👁️</span>
+                        <span *ngIf="showPassword">🙈</span>
+                    </button>
+                </div>
+                <div *ngIf="registrationForm.submitted || registrationForm.controls['password']?.touched">
+                    <span *ngIf="registrationForm.controls['password']?.errors?.['required']" class="error">Password is required.</span>
+                    <span *ngIf="registrationForm.controls['password']?.errors?.['minlength']" class="error">Password must be at least 6 characters long.</span>
+                </div>
+            </div>
+
+            <!-- OTP Number -->
+            <div class="input_box">
+                <label for="otp">OTP Number</label>
+                <input type="text" id="otp" placeholder="Enter OTP" [(ngModel)]="user.otp" name="otp" required>
+                <div *ngIf="registrationForm.submitted || registrationForm.controls['otp']?.touched">
+                    <span *ngIf="registrationForm.controls['otp']?.errors?.['required']" class="error">OTP is required.</span>
+                </div>
+            </div>
+
+            <!-- Status -->
+            <div class="input_box">
+                <label for="status">Status</label>
+                <select id="status" [(ngModel)]="user.status" name="status" required>
+                    <!-- <option value="">Select Status</option> -->
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+                <div *ngIf="registrationForm.submitted || registrationForm.controls['status']?.touched">
+                    <span *ngIf="registrationForm.controls['status']?.errors?.['required']" class="error">Status is required.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="reg_btn">
+            <input type="submit" value="Register" [disabled]="!registrationForm.form.valid">
+        </div>
+
+        <!-- Popup Modal for Registration Success -->
+        <div *ngIf="showSuccessMessage" class="popup-overlay">
+            <div class="popup">
+                <p>Registration Successful!</p>
+                <button (click)="closePopup()">OK</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,55 @@
+<div class="view-container">
+  <div class="card">
+      <div class="card-header card-header-danger">
+          <h4 class="card-title">Companion Details</h4>
+      </div>
+      <div class="card-body">
+          <div *ngIf="companionDetails">
+              <div class="info-group">
+                  <strong>Title:</strong> 
+                  <p>{{ companionDetails.Title }}</p>
+              </div>
+              <div class="info-group">
+                  <strong>SubTitle:</strong> 
+                  <p>{{ companionDetails.SubTitle }}</p>
+              </div>
+              <div class="info-group">
+                  <strong>Description:</strong> 
+                  <p>{{ companionDetails.Description }}</p>
+              </div>
+              <div class="info-group">
+                  <strong>Price:</strong> 
+                  <p>{{ companionDetails.Price }}</p>
+              </div>
+              <div class="info-group">
+                  <strong>Plan Period:</strong> 
+                  <p>{{ companionDetails.PlanPeriod }}</p>
+              </div>
+              <div class="info-group">
+                  <strong>Status:</strong> 
+                  <p>{{ companionDetails.Status }}</p>
+              </div>
+
+              <!-- Uncomment these fields if needed -->
+              <!-- 
+              <div class="info-group">
+                  <strong>Updated By:</strong> 
+                  <p>{{ companionDetails.UpdatedBy }}</p>
+              </div>
+              <div class="info-group">
+                  <strong>Updated Date:</strong> 
+                  <p>{{ companionDetails.UpdatedDate }}</p>
+              </div>
+              <div class="info-group">
+                  <strong>Created By:</strong> 
+                  <p>{{ companionDetails.CreatedBy }}</p>
+              </div>
+              <div class="info-group">
+                  <strong>Created Date:</strong> 
+                  <p>{{ companionDetails.CreatedDate }}</p>
+              </div>
+              -->
+          </div>
+      </div>
+  </div>
+</div>

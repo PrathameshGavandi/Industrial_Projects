@@ -1,0 +1,197 @@
+<app-header></app-header>
+<br><br>
+<div class="container">
+    <div class="sidebar-toggle-btn" (click)="toggleSidebar()" [class.active]="isSidebarOpen">
+        &#9776; <!-- Hamburger icon -->
+    </div>
+
+    <div class="box" [ngClass]="{'active': isSidebarOpen}">
+        <div class="card">
+            <a routerLink="/dashboard" target="content-frame">
+                <h2>Dashboard</h2>
+            </a>
+        </div>
+
+        <!-- First Time Traveller Subscription -->
+        <div class="card" (mouseenter)="toggleDropdown('firstTimeTraveller')" (mouseleave)="toggleDropdown('firstTimeTraveller')">
+            <h2 class="dropdown-title">First Time Traveller Subscription</h2>
+            <span class="arrow">&#x25BC;</span>
+            <ul class="role-dropdown" [ngClass]="{'show': dropdownOpen === 'firstTimeTraveller'}">
+                <li (click)="selectRole('Traveller', '/traveller-add')">
+                    <a routerLink="/addfttp" target="content-frame">First Time Traveller Add</a>
+                </li>
+                <li (click)="selectRole('Traveller', '/traveller-list')">
+                    <a routerLink="/fttlist" target="content-frame">First Time Traveller List</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Companion Subscription -->
+        <div class="card" (mouseenter)="toggleDropdown('companionSubscription')" (mouseleave)="toggleDropdown('companionSubscription')">
+            <h2 class="dropdown-title">Companion Subscription</h2>
+            <span class="arrow">&#x25BC;</span>
+            <ul class="role-dropdown" [ngClass]="{'show': dropdownOpen === 'companionSubscription'}">
+                <li (click)="selectRole('Companion', '/companion-add')">
+                    <a routerLink="/addcompanion" target="content-frame">Companion Add</a>
+                </li>
+                <li (click)="selectRole('Companion', '/companion-list')">
+                    <a routerLink="/companionlist" target="content-frame">Companion List</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Carrier Subscription -->
+        <div class="card" (mouseenter)="toggleDropdown('carrierSubscription')" (mouseleave)="toggleDropdown('carrierSubscription')">
+            <h2 class="dropdown-title">Carrier Subscription</h2>
+            <span class="arrow">&#x25BC;</span>
+            <ul class="role-dropdown" [ngClass]="{'show': dropdownOpen === 'carrierSubscription'}">
+                <li (click)="selectRole('Carrier', '/carrier-add')">
+                    <a routerLink="/addcarrier" target="content-frame">Carrier Add</a>
+                </li>
+                <li (click)="selectRole('Carrier', '/carrier-list')">
+                    <a routerLink="/carrierlist" target="content-frame">Carrier List</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Package Sender Subscription -->
+        <div class="card" (mouseenter)="toggleDropdown('packageSenderSubscription')" (mouseleave)="toggleDropdown('packageSenderSubscription')">
+            <h2 class="dropdown-title">Package Sender Subscription</h2>
+            <span class="arrow">&#x25BC;</span>
+            <ul class="role-dropdown" [ngClass]="{'show': dropdownOpen === 'packageSenderSubscription'}">
+                <li (click)="selectRole('PackageSender', '/package-sender-add')">
+                    <a routerLink="/addpackage" target="content-frame">Package Sender Add</a>
+                </li>
+                <li (click)="selectRole('PackageSender', '/package-sender-list')">
+                    <a routerLink="/packagesenderlist" target="content-frame">Package Sender List</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- UserList -->
+        <div class="card" (mouseenter)="toggleDropdown('UserList')" (mouseleave)="toggleDropdown('UserList')">
+            <h2 class="dropdown-title">UserList</h2>
+            <span class="arrow">&#x25BC;</span>
+            <ul class="role-dropdown" [ngClass]="{'show': dropdownOpen === 'UserList'}">
+                <li (click)="selectRole('UserList', '/FTT List')">
+                    <a routerLink="/userftt" target="content-frame">FTT List</a>
+                </li>
+                <li (click)="selectRole('UserList ', '/Companion List')">
+                    <a routerLink="/usercompanion" target="content-frame">Companion List</a>
+                </li>
+                <li (click)="selectRole('UserList ', '/Carrier List')">
+                    <a routerLink="/usercarrier" target="content-frame">Carrier List</a>
+                </li>
+                <li (click)="selectRole('UserList ', '/PackageSender List')">
+                    <a routerLink="/userpackagesender" target="content-frame">PackageSender List</a>
+                </li>
+            </ul>
+        </div>
+          <!-- User Feedback -->
+          <div class="card">
+            <a href="/feedbacklist" target="content-frame">
+                <h2>Feedback </h2>
+            </a>
+        </div>
+
+
+        <!-- User KYC -->
+        <div class="card">
+            <a href="/kyc" target="content-frame">
+                <h2>Kyc </h2>
+            </a>
+        </div>
+
+         <!-- Notification -->
+
+        <div class="card" (mouseenter)="toggleDropdown('Notification')" (mouseleave)="toggleDropdown('Notification')">
+            <h2 class="dropdown-title">Add Notification</h2>
+            <span class="arrow">&#x25BC;</span>
+            <ul class="role-dropdown" [ngClass]="{'show': dropdownOpen === 'Notification'}">
+                <li (click)="selectRole('Notification', '/add-notification')">
+                    <a routerLink="/usernotifications" target="content-frame">Add Notifications</a>
+                </li>
+                <li (click)="selectRole('Notification', '/notifications-list')">
+                    <a routerLink="/notificationslist" target="content-frame">Notifications List</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Offer -->
+        <div class="card" (mouseenter)="toggleDropdown('Offer')" (mouseleave)="toggleDropdown('Offer')">
+            <h2 class="dropdown-title">Offer</h2>
+            <span class="arrow">&#x25BC;</span>
+            <ul class="role-dropdown" [ngClass]="{'show': dropdownOpen === 'Offer'}">
+                <li (click)="selectRole('Offer', '/addOffer')">
+                    <a routerLink="/offers" target="content-frame">Offer Add</a>
+                </li>
+                <li (click)="selectRole('Offer', '/Offerlist')">
+                    <a routerLink="/offerlist" target="content-frame">Offer List</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Role Master -->
+        <div class="card" (mouseenter)="toggleDropdown('RoleMaster')" (mouseleave)="toggleDropdown('RoleMaster')">
+            <h2 class="dropdown-title">Role Master</h2>
+            <span class="arrow">&#x25BC;</span>
+            <ul class="role-dropdown" [ngClass]="{'show': dropdownOpen === 'RoleMaster'}">
+                <li (click)="selectRole('Role Master', '/addRole Master')">
+                    <a routerLink="/admrole" target="content-frame">Role Master Add</a>
+                </li>
+                <li (click)="selectRole('Role Master', '/Role Masterlist')">
+                    <a routerLink="/rolelist" target="content-frame">Role Master List</a>
+                </li>
+            </ul>
+        </div>
+
+        
+
+        <!-- Easelite Info -->
+        <div class="card" (mouseenter)="toggleDropdown('Easelite Info')" (mouseleave)="toggleDropdown('Easelite Info')">
+            <h2 class="dropdown-title">Easelite Info</h2>
+            <span class="arrow">&#x25BC;</span>
+            <ul class="role-dropdown" [ngClass]="{'show': dropdownOpen === 'Easelite Info'}">
+                <li (click)="selectRole('Easelite Info', '/addEaselite Info')">
+                    <a routerLink="/adminfo" target="content-frame">Easelite Info Add</a>
+                </li>
+                <li (click)="selectRole('Easelite Info', '/Easelite Infolist')">
+                    <a routerLink="/elinfolist" target="content-frame">Easelite Info List</a>
+                </li>
+            </ul>
+        </div>
+
+
+
+         
+         <!-- Transaction List -->
+         <div class="card" (mouseenter)="toggleDropdown('Transaction List')" (mouseleave)="toggleDropdown('TransactionList')">
+            <h2 class="dropdown-title">Transaction List</h2>
+            <span class="arrow">&#x25BC;</span>
+            <ul class="role-dropdown" [ngClass]="{'show': dropdownOpen === 'Transaction List'}">
+                <li (click)="selectRole('Transaction List', '/Ftt Transaction')"> 
+                    <a routerLink="/ftttransaction" target="content-frame">Ftt Transaction</a>
+                </li>
+                <li (click)="selectRole('Transaction List ', '/Companion Transaction')">
+                    <a routerLink="/companiontransaction" target="content-frame">Companion Transaction</a>
+                </li>
+                <li (click)="selectRole('Transaction List ', '/Carrier Transaction')">
+                    <a routerLink="/carriertransaction" target="content-frame">Carrier Transaction</a>
+                </li>
+                <li (click)="selectRole('TransactionList ', '/PackageSender Transaction')">
+                    <a routerLink="/packagesendertransaction" target="content-frame">PackageSender Transaction</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <a href="/contact" target="content-frame">
+                <h2>Contact Us</h2>
+            </a>
+        </div>
+    </div>
+
+    <div class="content-area">
+        <iframe name="content-frame" class="content-frame" src="/dashboard"></iframe>
+    </div>
+</div>

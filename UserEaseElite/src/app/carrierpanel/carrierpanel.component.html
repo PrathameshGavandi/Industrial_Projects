@@ -1,0 +1,65 @@
+
+<app-header></app-header>
+<br><br>
+
+<div class="container">
+    <!-- Sidebar Toggle Button for Mobile -->
+    <div class="sidebar-toggle-btn" (click)="toggleSidebar()">
+        &#9776;
+    </div>
+
+    <!-- Left Side Card Links (Sidebar) -->
+    <div class="box" [ngClass]="{'active': isSidebarOpen}">
+        <div class="card image-upload-card">
+            <div class="image-container">
+                <img id="uploadedImage" src="" alt="Profile Image" class="image-preview">
+            </div>
+            <!-- <input type="file" id="imageInput" class="image-input" (change)="previewImage($event)"> -->
+            <!-- <label for="imageInput" class="upload-button">Upload Image</label> -->
+
+            <div class="card">
+                <a href="/edit" target="content-frame">
+                    <h2>Edit Profile</h2>
+                </a>
+            </div>
+            
+        </div>
+
+        <div class="card">
+            <a href="/fttdetails" target="content-frame">
+                <h2>Dashboard</h2>
+            </a>
+        </div>
+        <!-- <div class="card">
+            <a href="/edit" target="content-frame">
+                <h2>Edit Profile</h2>
+            </a>
+        </div> -->
+        <div class="card">
+            <a href="/kyc" target="content-frame">
+                <h2>Do KYC</h2>
+            </a>
+        </div>
+        <div class="card">
+            <a href="/carriersubscription" target="content-frame">
+                <h2>Subscription</h2>
+            </a>
+        </div>
+
+     <!-- Change Role Dropdown -->
+     <div class="card">
+        <button class="change-role-btn" (click)="toggleDropdown()">Change Role <span class="arrow">▼</span></button>
+        <ul class="role-dropdown" [class.show]="dropdownOpen">
+            <li (click)="selectRole('ftt', '/fttpanel')">First Time Traveler</li>
+            <li (click)="selectRole('Companion', '/companionpanel')">Companion</li>
+            <li (click)="selectRole('PackageSender', '/packagesenderpanel')">Package Sender</li>
+        </ul>
+    </div>
+    </div>
+
+    <!-- Right Content Area -->
+    <div class="content-area">
+        <!-- Set default src to /fttdetails -->
+        <iframe name="content-frame" class="content-frame" src="/carrierdetails"></iframe>
+    </div>
+</div>

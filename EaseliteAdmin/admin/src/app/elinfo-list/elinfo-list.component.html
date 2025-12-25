@@ -1,0 +1,47 @@
+<div class="list-container">
+    <div class="title">
+        <h1>Ease Elite Info List</h1>
+    </div>
+
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Logo</th>
+                <th>Site Name</th>
+                <th>Website Link</th>
+                <th>Image</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Correcting the ngFor directive to iterate over elinfoList -->
+            <tr *ngFor="let i of elinfoList">
+                <td>{{ i.Address }}</td>
+                <td>{{ i.Email }}</td>
+                <td>{{ i.Contact }}</td>
+                <td>{{ i.Logo }}</td>    
+                <td>{{ i.SiteName }}</td>
+                <td>{{ i.WebsiteLink }}</td>
+                <td>
+                    <img [src]="imgPath + 'Content/Elinfo/' + i.Logo" style="height: 80px;width: 80px">
+                </td>
+                <td>{{ i.Status }}</td>
+                <td>
+                    <button class="view" (click)="viewDetails(i.AdmELInfoId)">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="edit" (click)="editUser(i.AdmELInfoId)">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button> 
+                    <button class="delete" (click)="Delete(i.AdmELInfoId)">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,43 @@
+<section class="verification-section">
+    <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+      <div class="card col-lg-4 col-md-6 col-10 text-center p-4">
+        <div class="card-body box-shadow border-rounded p-4">
+          
+          <!-- Icon -->
+          <div class="svg-icon text-purple mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 512">
+              <path d="M336,208V113a80,80,0,0,0-160,0v95" style="fill:none;stroke:#6f42c1;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path>
+              <rect x="96" y="208" width="320" height="272" rx="48" ry="48" style="fill:none;stroke:#6f42c1;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></rect>
+            </svg>
+          </div>
+  
+          <!-- Title & Message -->
+          <h3 class="fw-bold text-dark mt-3">2-Step Verification</h3>
+          <p class="text-muted mt-2">We sent a verification code to your email.</p>
+  
+          <!-- OTP Inputs -->
+          <div class="otp-container mt-4">
+            <input type="text" class="otp-input" maxlength="1" [(ngModel)]="otp1" #input1 (input)="moveToNext(input1, input2)">
+            <input type="text" class="otp-input" maxlength="1" [(ngModel)]="otp2" #input2 (input)="moveToNext(input2, input3)">
+            <input type="text" class="otp-input" maxlength="1" [(ngModel)]="otp3" #input3 (input)="moveToNext(input3, input4)">
+            <input type="text" class="otp-input" maxlength="1" [(ngModel)]="otp4" #input4 (input)="moveToNext(input4, input5)">
+            <input type="text" class="otp-input" maxlength="1" [(ngModel)]="otp5" #input5 (input)="moveToNext(input5, input6)">
+            <input type="text" class="otp-input" maxlength="1" [(ngModel)]="otp6" #input6>
+          </div>
+  
+          <!-- Verify Button -->
+          <button (click)="OnSubmit1()" class="btn btn-purple w-100 mt-4">Verify OTP</button>
+        </div>
+  
+        <!-- Resend Link -->
+        <p class="text-center text-muted mt-4">
+          Didn't receive it?
+          <!-- <a ="#!" class="text-decoration-none ms-2"> -->
+            <!-- Resend code -->
+            <a href="javascript:void(0);" (click)="SendOTPEmail()">Resend code</a>
+          <!-- </a> -->
+        </p>
+      </div>
+    </div>
+  </section>
+  

@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background: url('https://www.transparenttextures.com/patterns/debut-light.png'), #e0f7fa;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .contact-wrapper {
+    max-width: 1100px;
+    width: 100%;
+  }
+  
+  .contact-card {
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .left-side {
+    flex: 1;
+    background-color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .left-side img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .right-side {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .right-side h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .right-side p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    color: #007bff;
+    margin-bottom: 5px;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .contact-form input:focus, .contact-form textarea:focus {
+    border-color: #0056b3;
+    outline: none;
+  }
+  
+  .contact-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .contact-card {
+      flex-direction: column;
+    }
+  
+    .left-side, .right-side {
+      padding: 20px;
+    }
+  
+    .left-side img {
+      max-width: 200px;
+    }
+  
+    .right-side h2 {
+      font-size: 2rem;
+    }
+  }
+  

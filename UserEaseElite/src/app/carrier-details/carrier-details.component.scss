@@ -1,0 +1,272 @@
+body, html {
+    height: 100%;
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+  }
+
+  .background-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: url('/assets/background1.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .title p {
+    font-size: 2em;
+    color: #0072ff;
+    font-weight: bold;
+    text-align: center;
+  }
+
+
+  
+  .form-card,
+  .matched-users {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .user_details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns for the first row */
+    gap: 15px; /* Space between grid items */
+    margin-bottom: 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .user_details {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for smaller screens */
+    }
+}
+
+
+
+  .input_box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  input[type="time"],
+  input[type="file"],
+  input[type="numbertext"],
+  textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9em;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+  }
+
+ 
+  textarea {
+    width: 140%; /* or use a fixed width like 500px */
+    min-height: 30px; /* Adjust the height as needed */
+    padding: 10px; /* Optional: for better spacing */
+    border: 1px solid #ccc; /* Default border */
+    border-radius: 4px; /* Optional: for rounded corners */
+    resize: vertical; /* Optional: allow vertical resizing only */
+  }
+  
+  textarea:focus {
+    border-color: #0072ff;
+    box-shadow: 0px 0px 8px rgba(0, 114, 255, 0.2);
+    background-color: #fff;
+  }
+  
+  .error {
+    font-size: 0.75em;
+    color: red;
+    margin-top: 5px;
+  }
+  
+
+  .user_details .reg_btn {
+    text-align: center;
+    align-items: center;
+    
+  }
+
+  input[type="submit"] {
+    background-color: #0072ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #005bb5;
+  }
+
+  .matched-users h3 {
+    color: #0072ff;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+
+  .matched-users ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .matched-users li {
+    background-color: rgba(249, 249, 249, 0.9);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .matched-users li span {
+    display: block;
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+
+    .user_details {
+      grid-template-columns: 1fr;
+    }
+
+    .title p {
+      font-size: 1.5em;
+    }
+
+    input[type="submit"] {
+      font-size: 1em;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .title p {
+      font-size: 1.2em;
+    }
+
+    input[type="submit"] {
+      font-size: 0.9em;
+      padding: 8px 16px;
+    }
+  }
+
+  .matched-users {
+    ul {
+      list-style-type: none;
+      padding: 0;
+  
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+  
+        span {
+          margin-right: 15px;
+        }
+  
+        .info-btn {
+          background-color: #0072ff; /* Info color (teal) */
+          color: white;
+          border: none;
+          padding: 5px 10px;
+          border-radius: 4px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          transition: background-color 0.3s;
+  
+          i {
+            margin-right: 5px;
+          }
+  
+          &:hover {
+            background-color: #005bb5; /* Darker teal on hover */
+          }
+        }
+      }
+    }
+  }
+  .reg_btn {
+    grid-column: 1 / -1; /* Span the button across all columns */
+    text-align: center; /* Center the button */
+    margin-top: 20px; /* Optional: space above the button */
+}
+
+.input-container {
+  position: relative; // Positioning for dropdown
+
+  input[type="text"] {
+    width: 100%; // Full width of the container
+    box-sizing: border-box; // Padding doesn't affect width
+  }
+
+  .dropdown-list {
+    position: absolute; // Position dropdown below input
+    top: 100%; // Aligns it to the bottom of the input
+    left: 0; // Aligns it to the left
+    right: 0; // Aligns it to the right
+    background-color: white; // Background color of the dropdown
+    border: 1px solid #ddd; // Border of the dropdown
+    border-radius: 6px; // Rounded corners
+    max-height: 200px; // Max height to limit dropdown size
+    overflow-y: auto; // Scrolls if items exceed max height
+    z-index: 1000; // Ensure dropdown appears above other elements
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Shadow for depth
+    margin-top: 5px; // Space between input and dropdown
+    display: none; // Initially hidden
+    border-radius: 6px; // Rounded corners for the dropdown box
+  }
+
+  &.open {
+    .dropdown-list {
+      display: block; // Show dropdown when input is focused
+    }
+  }
+
+  .dropdown-item {
+    padding: 10px; // Padding for each item
+    cursor: pointer; // Pointer cursor for items
+    transition: background-color 0.3s; // Transition for hover effect
+
+    &:hover {
+      background-color: #f0f0f0; // Change background on hover
+    }
+  }
+}

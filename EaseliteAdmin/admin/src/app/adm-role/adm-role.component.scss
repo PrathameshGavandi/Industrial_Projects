@@ -1,0 +1,96 @@
+/* Load Rajdhani font */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600&display=swap');
+
+.role-form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.role-form-container h2 {
+    text-align: center;
+    color: #006AD5;
+    margin-bottom: 20px;
+}
+
+.role-form-container .form-group {
+    margin-bottom: 15px;
+}
+
+.role-form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.role-form-container .form-group input,
+// 
+.role-form-container .form-group textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+.role-form-container .form-group select{
+    width: 99%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.3s ease;
+
+}
+
+.role-form-container .form-group input:focus,
+.role-form-container .form-group select:focus,
+.role-form-container .form-group textarea:focus {
+    border-color: #006AD5;
+    outline: none;
+}
+
+/* Apply Rajdhani font to description */
+.role-form-container .form-group textarea {
+    resize: vertical;
+    font-family: 'Rajdhani', sans-serif; /* Rajdhani font for the description */
+}
+
+.role-form-container .btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #006AD5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.role-form-container .btn-submit:hover {
+    background-color: #0056b3;
+}
+
+.role-form-container .error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+#roleDescription {
+    width: calc(92% + 20px); /* Adjust the width for description */
+    margin-left: -5px; /* Align with container */
+}
+
+#roleStatus {
+    width: calc(96% + 20px); /* Adjust the width for status */
+    margin-left: -5px; /* Align with container */
+}

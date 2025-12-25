@@ -1,0 +1,140 @@
+/* Container for the list */
+.list-container {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* Title styles */
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Table styles */
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    table-layout: fixed; /* Prevent auto column width expansion */
+}
+
+.user-table thead {
+    background-color: #0072ff;
+    color: white;
+}
+
+.user-table th, .user-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px; /* Ensure all columns have a fixed width */
+    height: 50px; /* Fixed height for consistency */
+}
+
+/* Set specific widths for columns */
+.user-table th:nth-child(1), .user-table td:nth-child(1) {
+    width: 10%;
+}
+
+.user-table th:nth-child(2), .user-table td:nth-child(2) {
+    width: 15%;
+}
+
+.user-table th:nth-child(3), .user-table td:nth-child(3) {
+    width: 30%; /* Description column takes more space */
+}
+
+.user-table th:nth-child(4), .user-table td:nth-child(4) {
+    width: 10%;
+}
+
+.user-table th:nth-child(5), .user-table td:nth-child(5) {
+    width: 10%;
+}
+
+.user-table th:nth-child(6), .user-table td:nth-child(6) {
+    width: 10%;
+}
+
+.user-table th:nth-child(7), .user-table td:nth-child(7) {
+    width: 15%;
+}
+
+/* Truncate long descriptions */
+.description {
+    max-width: 200px; /* Set a max width for the description column */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Hover effect for table rows */
+.user-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button styles */
+button {
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 8px;
+}
+
+.view {
+    background-color: #0072ff;
+    color: white;
+}
+
+.edit {
+    background-color: #0072ff;
+    color: white;
+}
+
+.delete {
+    background-color: #0072ff;
+    color: white;
+}
+
+button:last-child {
+    margin-right: 0;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .user-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .user-table th, .user-table td {
+        white-space: nowrap;
+    }
+
+    .title h1 {
+        font-size: 20px;
+    }
+}
+
+/* Word wrap for all table data cells */
+.user-table td {
+    word-wrap: break-word;
+}

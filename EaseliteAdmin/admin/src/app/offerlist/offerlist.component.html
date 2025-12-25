@@ -1,0 +1,40 @@
+<div class="list-container">
+  <div class="title">
+    <h1>Offer List</h1>
+  </div>
+
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>SubTitle</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Discount (%)</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Iterate through offerList1 to display the offer data -->
+      <tr *ngFor="let offer of offerList1">
+        <td>{{ offer.Title }}</td>
+        <td>{{ offer.SubTitle }}</td>
+        <td class="description">{{ offer.Description }}</td>
+        <td>
+          <img [src]="imgPath + 'Content/Offer/' + offer.Image" class="offer-image">
+        </td>
+        <td>{{ offer.DiscountInPercent }}%</td>
+        <td>{{ offer.Status }}</td>
+        <td>
+          <button class="edit" (click)="editUser(offer.Id)">
+            <i class="fas fa-pencil-alt"></i>
+          </button>
+          <button class="delete" (click)="deleteUser(offer.Id)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,42 @@
+<div class="role-form-container">
+    <form (ngSubmit)="onSubmit(roleForm)" #roleForm="ngForm">
+        <h2>Add Role</h2>
+
+        <div class="form-group">
+            <label for="roleTitle">Role Title</label>
+            <input type="text" id="roleTitle" name="roleTitle" required [(ngModel)]="admRole.Title"
+                placeholder="Enter Role Title" #roleTitle="ngModel" pattern="^(?!\s)(?!\s*$).+" class="form-control" />
+            <div *ngIf="roleTitle.invalid && roleTitle.touched" class="error-message">
+                <span *ngIf="roleTitle.errors?.['required']">Role title is required.</span>
+                <span *ngIf="roleTitle.errors?.['pattern']">Role title cannot start with whitespace and cannot be just
+                    whitespace.</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="roleDescription">Description</label>
+            <textarea id="roleDescription" name="roleDescription" required [(ngModel)]="admRole.Description"
+                placeholder="Enter Description" #roleDescription="ngModel" pattern="^(?!\s)(?!\s*$).+"
+                class="form-control"></textarea>
+            <div *ngIf="roleDescription.invalid && roleDescription.touched" class="error-message">
+                <span *ngIf="roleDescription.errors?.['required']">Description is required.</span>
+                <span *ngIf="roleDescription.errors?.['pattern']">Description cannot start with whitespace and cannot be
+                    just whitespace.</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="roleStatus">Status</label>
+            <select id="roleStatus" name="roleStatus" required [(ngModel)]="admRole.Status" #roleStatus="ngModel"
+                class="form-control">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </select>
+            <div *ngIf="roleStatus.invalid && roleStatus.touched" class="error-message">
+                <span *ngIf="roleStatus.errors?.['required']">Status is required.</span>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-submit">Submit</button>
+    </form>
+</div>

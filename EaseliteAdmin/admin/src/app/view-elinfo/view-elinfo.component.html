@@ -1,0 +1,40 @@
+
+
+
+
+
+<div class="view-container">
+  <div class="card">
+    <div class="card-header card-header-danger">
+      <h4 class="card-title">Ease Elite Info Details</h4>
+    </div>
+    <div class="card-body">
+      <div *ngIf="elinfoDetails">
+        <div class="info-group">
+          <strong>Address:</strong> 
+          <p>{{ elinfoDetails.Address }}</p>
+        </div>
+        <div class="info-group">
+          <strong>Email:</strong> 
+          <p>{{ elinfoDetails.Email }}</p>
+        </div>
+        <div class="info-group">
+          <strong>Contact:</strong> 
+          <p>{{ elinfoDetails.Contact }}</p>
+        </div>
+        <div class="info-group">
+          <strong>Site Name:</strong> 
+          <p>{{ elinfoDetails.SiteName }}</p>
+        </div>
+        <div class="info-group">
+          <strong>Website Link:</strong> 
+          <p>{{ elinfoDetails.WebsiteLink }}</p>
+        </div>
+        <div class="info-group">
+          <strong>Status:</strong> 
+          <p>{{ elinfoDetails.Status }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

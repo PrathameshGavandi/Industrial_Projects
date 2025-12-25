@@ -1,0 +1,52 @@
+<div class="view-container">
+  <div class="card">
+      <div class="card-header card-header-danger">
+          <h4 class="card-title">Carrier Details</h4>
+      </div>
+      <div class="card-body">
+          <div *ngIf="carrierDetails">
+              <div class="info-group">
+                  <label>Title:</label>
+                  <p>{{ carrierDetails.Title }}</p>
+              </div>
+              <div class="info-group">
+                  <label>SubTitle:</label>
+                  <p>{{ carrierDetails.SubTitle }}</p>
+              </div>
+              <div class="info-group">
+                  <label>Description:</label>
+                  <p>{{ carrierDetails.Description }}</p>
+              </div>
+              <div class="info-group">
+                  <label>Price:</label>
+                  <p>{{ carrierDetails.Price }}</p>
+              </div>
+              <div class="info-group">
+                  <label>Plan Period:</label>
+                  <p>{{ carrierDetails.PlanPeriod }}</p>
+              </div>
+              <div class="info-group">
+                  <label>Status:</label>
+                  <p>{{ carrierDetails.Status }}</p>
+              </div>
+              <!-- Uncomment if you want to include these fields -->
+              <!-- <div class="info-group">
+                  <label>Updated By:</label>
+                  <p>{{ carrierDetails.UpdatedBy }}</p>
+              </div>
+              <div class="info-group">
+                  <label>Updated Date:</label>
+                  <p>{{ carrierDetails.UpdatedDate }}</p>
+              </div>
+              <div class="info-group">
+                  <label>Created By:</label>
+                  <p>{{ carrierDetails.CreatedBy }}</p>
+              </div>
+              <div class="info-group">
+                  <label>Created Date:</label>
+                  <p>{{ carrierDetails.CreatedDate }}</p>
+              </div> -->
+          </div>
+      </div>
+  </div>
+</div>

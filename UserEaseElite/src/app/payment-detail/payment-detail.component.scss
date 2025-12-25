@@ -1,0 +1,214 @@
+.plan-detail {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    section {
+        margin: 20px 0;
+    }
+
+    .plan-overview {
+        text-align: center;
+
+        .plan-title {
+            font-size: 32px;
+            margin: 10px 0;
+            padding: 15px;
+            background: linear-gradient(90deg, #006ad5, #003a74);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border: 2px solid #006ad5;
+            border-radius: 5px;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+
+            &:hover {
+                background-color: rgba(0, 106, 213, 0.1);
+                transform: scale(1.05);
+            }
+        }
+
+        .pricing {
+            font-size: 22px;
+
+            .monthly-price {
+                font-weight: bold;
+                color: #28a745;
+            }
+
+            .annual-price {
+                color: #6c757d;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .features {
+        text-align: center;
+
+        h2 {
+            margin-bottom: 15px;
+            font-size: 26px;
+            color: #006ad5;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                display: flex;
+                align-items: center;
+                margin: 12px 0;
+
+                .icon {
+                    margin-right: 10px;
+                    color: #28a745;
+                }
+            }
+        }
+    }
+
+    .payment {
+        h2 {
+            text-align: center;
+        }
+
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .payment-btn {
+                padding: 12px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 15px;
+                width: 100%;
+                font-size: 16px;
+                color: #fff;
+                border: none;
+                transition: background-color 0.3s;
+
+                img {
+                    margin-right: 10px;
+                    height: 24px; /* Adjust image size for consistency */
+                }
+            }
+
+            .paypal-btn {
+                background-color: #0070ba;
+
+                &:hover {
+                    background-color: #005b9f;
+                }
+            }
+
+            .card-btn {
+                background-color: #28a745;
+
+                &:hover {
+                    background-color: #218838;
+                }
+            }
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        p {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .plan-detail {
+        padding: 15px;
+
+        .plan-overview {
+            .plan-title {
+                font-size: 28px;
+                padding: 10px;
+            }
+
+            .pricing {
+                font-size: 20px;
+            }
+        }
+
+        .features {
+            h2 {
+                font-size: 24px;
+            }
+            ul li {
+                font-size: 16px;
+            }
+        }
+
+        .payment {
+            h2 {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .plan-detail {
+        padding: 10px;
+
+        .plan-overview {
+            .plan-title {
+                font-size: 24px;
+            }
+
+            .pricing {
+                font-size: 18px;
+            }
+        }
+
+        .features {
+            h2 {
+                font-size: 22px;
+            }
+            ul li {
+                font-size: 14px;
+            }
+        }
+
+        .payment {
+            h2 {
+                font-size: 20px;
+            }
+
+            .payment-btn {
+                font-size: 14px;
+            }
+        }
+    }
+}

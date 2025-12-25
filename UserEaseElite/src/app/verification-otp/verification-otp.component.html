@@ -1,0 +1,16 @@
+<div class="verification">
+    <h3>Verify Your Email</h3>
+    <p>Please enter the verification code sent to your email.</p>
+    <form (ngSubmit)="verifyCode()">
+        <div class="verification_inputs">
+            <input type="text" placeholder="-" class="code_input" maxlength="1" [(ngModel)]="verification.code1" name="code1"  (input)="autoTab($event, 'code1')" required>
+            <input type="text" placeholder="-" class="code_input" maxlength="1" [(ngModel)]="verification.code2" name="code2"  (input)="autoTab($event, 'code2')" required>
+            <input type="text" placeholder="-" class="code_input" maxlength="1" [(ngModel)]="verification.code3" name="code3"  (input)="autoTab($event, 'code3')" required>
+            <input type="text" placeholder="-" class="code_input" maxlength="1" [(ngModel)]="verification.code4" name="code4" (input)="autoTab($event, 'code4')"  required>
+            <input type="text" placeholder="-" class="code_input" maxlength="1" [(ngModel)]="verification.code5" name="code5" (input)="autoTab($event, 'code5')"  required>
+            <input type="text" placeholder="-" class="code_input" maxlength="1" [(ngModel)]="verification.code6" name="code6" (input)="autoTab($event, 'code6')"  required>
+        </div>
+        <button [routerLink]="['/resetpassword']" type="submit" class="verify_btn">Verify Code</button>
+    </form>
+    <a href="\verificationotp" class="resend_code">Resend Code</a>
+</div>

@@ -1,0 +1,73 @@
+
+
+
+<div class="form_wrapper dashshadow">
+    <div class="form_container">
+    <div class="title_container">
+    <h2> UserProfile Form</h2>
+    </div>
+    <div class="row clearfix">
+    <div class="">
+    <form>
+    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+    <input type="Int32" id="RegistrationId" class="form-control" placeholder="RegistrationId"
+    [(ngModel)]="userProfile.RegistrationId" #RegistrationIdControl="ngModel" name="RegistrationId" required
+    autofocus="">
+    </div>
+    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+    <input type="text" id="AlternativeEmail" class="form-control" placeholder="AlternativeEmail"
+    [(ngModel)]="userProfile.AlternativeEmail" #AlternativeEmailControl="ngModel" name="AlternativeEmail" required
+    autofocus="">
+    </div>
+    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+    <input type="text" id="Address" class="form-control" placeholder="Address"
+    [(ngModel)]="userProfile.Address" #AddressControl="ngModel" name="Address" required
+    autofocus="">
+    </div>
+    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+    <input type="text" id="Country" class="form-control" placeholder="Country"
+    [(ngModel)]="userProfile.Country" #CountryControl="ngModel" name="Country" required
+    autofocus="">
+    </div>
+    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+    <input type="text" id="Province" class="form-control" placeholder="Province"
+    [(ngModel)]="userProfile.Province" #ProvinceControl="ngModel" name="Province" required
+    autofocus="">
+    </div>
+    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+    <input type="text" id="City" class="form-control" placeholder="City"
+    [(ngModel)]="userProfile.City" #CityControl="ngModel" name="City" required
+    autofocus="">
+    </div>
+    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+    <input type="text" id="PostalCode" class="form-control" placeholder="PostalCode"
+    [(ngModel)]="userProfile.PostalCode" #PostalCodeControl="ngModel" name="PostalCode" required
+    autofocus="">
+    </div>
+    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+    <input type="text" id="Status" class="form-control" placeholder="Status"
+    [(ngModel)]="userProfile.Status" #StatusControl="ngModel" name="Status" required
+    autofocus="">
+    </div>
+    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+    <input type="text" id="Passport" class="form-control" placeholder="Passport"
+    [(ngModel)]="userProfile.Passport" #PassportControl="ngModel" name="Passport" required
+    autofocus="">
+    </div>
+    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+    <input type="text" id="AddressProof" class="form-control" placeholder="AddressProof"
+    [(ngModel)]="userProfile.AddressProof" #AddressProofControl="ngModel" name="AddressProof" required
+    autofocus="">
+    </div>
+    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+    <input type="text" id="KycStatus" class="form-control" placeholder="KycStatus"
+    [(ngModel)]="userProfile.KycStatus" #KycStatusControl="ngModel" name="KycStatus" required
+    autofocus="">
+    </div>
+    <input class="button" type="submit" (click)="OnSubmit();" value="Submit" />
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    

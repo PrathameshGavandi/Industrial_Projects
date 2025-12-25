@@ -1,0 +1,51 @@
+<div class="list-container">
+    <div class="title">
+        <h1>KYC List</h1>
+    </div>
+    
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Passport</th>
+                <th>Address Proof</th>
+                <th>KYC Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of UserprofileList">
+                <td>{{ user.registration.Email }}</td>
+                <td>
+                    <!-- Link to open PDF file in a new tab -->
+                    <a [href]="imgPath + 'Content/Kyc/' + user.Passport" target="_blank">
+                        {{ user.Passport }}
+                    </a>
+                </td>
+                
+                <td>
+                    <!-- Link to open PDF file in a new tab -->
+                    <a [href]="imgPath + 'Content/Kyc/' + user.AddressProof" target="_blank" >
+                        {{ user.AddressProof }}
+                    </a>
+                </td>
+                <td>
+                    <div class="btn-container">
+                    <!-- <button class="btn-approve"(click)=approve(user.UserProfileId)><i class="fas fa-check"></i> Approve</button> -->
+                    <button 
+                    class="btn-approve" 
+                    (click)="approve(user.UserProfileId)" 
+                    [disabled]="!user.UserProfileId || user.KycStatus === 'Approve'">
+                    <i class="fas fa-check"></i> Approve
+                  </button>
+                  
+                    <button class="btn-decline"(click)="delete(user.UserProfileld)"><i class="fas fa-times"></i> Decline</button>
+                </div>
+            </td>
+            </tr>
+        </tbody>
+        
+    </table>
+</div>
+ 
+
+

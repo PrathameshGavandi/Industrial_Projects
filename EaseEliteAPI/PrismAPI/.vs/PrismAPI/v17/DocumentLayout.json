@@ -1,0 +1,174 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|c:\\users\\min\\desktop\\projectfiles\\newproject\\easeeliteapi\\prismapi\\dal\\admregistrationdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|solutionrelative:dal\\admregistrationdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|c:\\users\\min\\desktop\\projectfiles\\newproject\\easeeliteapi\\prismapi\\controllers\\admregistrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|solutionrelative:controllers\\admregistrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|c:\\users\\min\\desktop\\projectfiles\\newproject\\easeeliteapi\\prismapi\\models\\admregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|solutionrelative:models\\admregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|c:\\users\\min\\desktop\\projectfiles\\newproject\\easeeliteapi\\prismapi\\controllers\\companiondetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|solutionrelative:controllers\\companiondetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\controllers\\userprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|solutionrelative:controllers\\userprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\controllers\\carrierdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|solutionrelative:controllers\\carrierdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\dal\\carrierdetaildal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|solutionrelative:dal\\carrierdetaildal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\models\\carrierdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|solutionrelative:models\\carrierdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\dal\\packagedetaildal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E2889CC-60AE-475D-AB77-422249D87D6A}|PrismAPI.csproj|solutionrelative:dal\\packagedetaildal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 287,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdmRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\Models\\AdmRegistration.cs",
+              "RelativeDocumentMoniker": "Models\\AdmRegistration.cs",
+              "ToolTip": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\Models\\AdmRegistration.cs",
+              "RelativeToolTip": "Models\\AdmRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T06:46:48.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdmRegistrationDAL.cs",
+              "DocumentMoniker": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\DAL\\AdmRegistrationDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\AdmRegistrationDAL.cs",
+              "ToolTip": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\DAL\\AdmRegistrationDAL.cs",
+              "RelativeToolTip": "DAL\\AdmRegistrationDAL.cs",
+              "ViewState": "AgIAAPUAAAAAAAAAAAAqwPgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T06:45:58.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdmRegistrationController.cs",
+              "DocumentMoniker": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\Controllers\\AdmRegistrationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdmRegistrationController.cs",
+              "ToolTip": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\Controllers\\AdmRegistrationController.cs",
+              "RelativeToolTip": "Controllers\\AdmRegistrationController.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAvwKEAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T06:44:36.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CompanionDetailController.cs",
+              "DocumentMoniker": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\Controllers\\CompanionDetailController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CompanionDetailController.cs",
+              "ToolTip": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\Controllers\\CompanionDetailController.cs",
+              "RelativeToolTip": "Controllers\\CompanionDetailController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T09:38:38.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\Controllers\\UserProfileController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserProfileController.cs",
+              "ToolTip": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\Controllers\\UserProfileController.cs",
+              "RelativeToolTip": "Controllers\\UserProfileController.cs",
+              "ViewState": "AgIAALcAAAAAAAAAAAAqwAwBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T05:34:16.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CarrierDetailDAL.cs",
+              "DocumentMoniker": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\DAL\\CarrierDetailDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\CarrierDetailDAL.cs",
+              "ToolTip": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\DAL\\CarrierDetailDAL.cs",
+              "RelativeToolTip": "DAL\\CarrierDetailDAL.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAEwGkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T04:46:54.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CarrierDetail.cs",
+              "DocumentMoniker": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\Models\\CarrierDetail.cs",
+              "RelativeDocumentMoniker": "Models\\CarrierDetail.cs",
+              "ToolTip": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\Models\\CarrierDetail.cs",
+              "RelativeToolTip": "Models\\CarrierDetail.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T05:25:56.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PackageDetailDAL.cs",
+              "DocumentMoniker": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\DAL\\PackageDetailDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\PackageDetailDAL.cs",
+              "ToolTip": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\DAL\\PackageDetailDAL.cs",
+              "RelativeToolTip": "DAL\\PackageDetailDAL.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowFMAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T09:51:34.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CarrierDetailController.cs",
+              "DocumentMoniker": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\Controllers\\CarrierDetailController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CarrierDetailController.cs",
+              "ToolTip": "C:\\Users\\min\\Desktop\\ProjectFiles\\Newproject\\EaseEliteAPI\\PrismAPI\\Controllers\\CarrierDetailController.cs",
+              "RelativeToolTip": "Controllers\\CarrierDetailController.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAEwFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T07:29:40.451Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

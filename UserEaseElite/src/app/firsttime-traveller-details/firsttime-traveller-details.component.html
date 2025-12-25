@@ -1,0 +1,94 @@
+<div class="background-wrapper">
+  <div class="container">
+    <div class="title">
+      <p>Share Your Flight Details Here</p>
+    </div>
+
+    <form #flightDetailsForm="ngForm" (ngSubmit)="onSubmit()" class="form-card">
+      <div class="user_details">
+
+        <!-- Flight Number Field -->
+        <div class="input_box">
+          <label for="flightNumber">Flight Number</label>
+          <input type="text" id="flightNumber" placeholder="Flight Number" [(ngModel)]="fdata.flightNumber" name="flightNumber" #flightNumber="ngModel" required>
+          <div *ngIf="flightNumber.invalid && flightNumber.touched" class="error">Flight Number is required.</div>
+        </div>
+
+        <!-- Date Field -->
+        <div class="input_box">
+          <label for="date">Date</label>
+          <input type="date" id="date" [(ngModel)]="fdata.date" name="date" #date="ngModel" required>
+          <div *ngIf="date.invalid && date.touched" class="error">Date is required.</div>
+        </div>
+
+        <!-- Time Field -->
+        <div class="input_box">
+          <label for="time">Time</label>
+          <input type="time" id="time" [(ngModel)]="fdata.time" name="time" #time="ngModel" required>
+          <div *ngIf="time.invalid && time.touched" class="error">Time is required.</div>
+        </div>
+
+       <!-- From Airport Field -->
+<div class="input_box input-container" [ngClass]="{ 'open': isDropdownOpenFrom }">
+  <label for="from">From</label>
+  <input type="text" id="from" placeholder="Departure airport" [(ngModel)]="searchTermFrom" name="from" (input)="onSearchFrom()" required>
+  <ul *ngIf="isDropdownOpenFrom" class="dropdown-list">
+    <li *ngFor="let airport of filteredAirportsFrom" (click)="onSelectAirportFrom(airport)" class="dropdown-item">
+      {{ airport.name }}
+    </li>
+  </ul>
+</div>
+
+<!-- To Airport Field -->
+<div class="input_box input-container" [ngClass]="{ 'open': isDropdownOpenTo }">
+  <label for="to">To</label>
+  <input type="text" id="to" placeholder="Destination airport" [(ngModel)]="searchTermTo" name="to" (input)="onSearchTo()" required>
+  <ul *ngIf="isDropdownOpenTo" class="dropdown-list">
+    <li *ngFor="let airport of filteredAirportsTo" (click)="onSelectAirportTo(airport)" class="dropdown-item">
+      {{ airport.name }}
+    </li>
+  </ul>
+</div>
+
+
+        <!-- Ticket Upload Field -->
+        <div class="input_box">
+          <label for="ticket">Upload Ticket</label>
+          <input type="file" id="ticket" [(ngModel)]="fdata.ticket" name="ticket" #ticket="ngModel" required>
+          <div *ngIf="ticket.invalid && ticket.touched" class="error">Uploading a ticket is required.</div>
+        </div>
+
+      </div>
+
+      <div class="reg_btn">
+        <input type="submit" value="Submit" [disabled]="flightDetailsForm.invalid">
+      </div>
+    </form>
+
+    <div class="matched-users">
+      <h3>Matched Companion</h3>
+      <ul>
+        <li>
+          <span>Name: John Doe</span>
+          <span>From: New York</span>
+          <span>To: Los Angeles</span>
+          <span>Date: 2024-10-10</span>
+          <span>Time: 10:00 AM</span>
+          <button class="info-btn"routerLink="/view">
+            <i class="fa fa-info-circle"></i> 
+          </button>
+        </li>
+        <li>
+          <span>Name: Jane Smith</span>
+          <span>From: San Francisco</span>
+          <span>To: Chicago</span>
+          <span>Date: 2024-10-12</span>
+          <span>Time: 2:30 PM</span>
+          <button class="info-btn"routerLink="/view">
+            <i class="fa fa-info-circle"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

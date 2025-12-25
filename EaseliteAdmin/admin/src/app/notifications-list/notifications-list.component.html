@@ -1,0 +1,33 @@
+<div class="list-container">
+    <div class="title">
+        <h1>First Time Traveller Subscription List</h1>
+    </div>
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Message</th>
+                <th>Status</th>
+                <th>Status1</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of NotificationsList">
+                <td>{{ i.Message }}</td>
+                <td>{{ i.Status }}</td>
+                <td>{{ i.Status1 }}</td>
+                <td>
+                    <button class="view" (click)="viewDetails(i.NotificationsId)">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="edit" (click)="editUser(i.NotificationsId)">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button class="delete" (click)="Delete(i.NotificationsId)">
+                        <i class="fas fa-trash-alt"></i> 
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

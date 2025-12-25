@@ -1,0 +1,105 @@
+<br>
+
+<div class="container">
+    <div class="title">
+        <button class="home-btn" routerLink="/login">
+            <!-- Arrow icon and Home text -->
+            <span>&larr;</span> Login
+        </button>
+        <p>Sign Up, Ease Elite</p>
+    </div>
+
+    <form #registrationForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="user_details">
+            <!-- First Name -->
+            <div class="input_box">
+                <label for="name">First Name</label>
+                <input type="text" id="FName" placeholder="Enter your first name" [(ngModel)]="registration.FName" name="FName" required >
+                <div *ngIf="registrationForm.submitted || registrationForm.controls['FName']?.touched">
+                    <span *ngIf="registrationForm.controls['FName']?.errors?.['required']" class="error">First name is required.</span>
+                    <!-- <span *ngIf="registrationForm.controls['firstName']?.errors?.['minlength']" class="error">First name must be at least 2 characters long.</span> -->
+                </div>
+            </div>
+
+            <!-- Last Name -->
+            <div class="input_box">
+                <label for="LName">Last Name</label>
+                <input type="text" id="LName" placeholder="Enter your last name" [(ngModel)]="registration.LName" name="LName" required >
+                <div *ngIf="registrationForm.submitted || registrationForm.controls['LName']?.touched">
+                    <span *ngIf="registrationForm.controls['LName']?.errors?.['required']" class="error">Last name is required.</span>
+                    <!-- <span *ngIf="registrationForm.controls['lastName']?.errors?.['minlength']" class="error">Last name must be at least 2 characters long.</span> -->
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="input_box">
+                <label for="email">Email</label>
+                <input type="email" id="Email" placeholder="Enter your email" [(ngModel)]="registration.Email" name="Email" required email>
+                <div *ngIf="registrationForm.submitted || registrationForm.controls['email']?.touched">
+                    <span *ngIf="registrationForm.controls['email']?.errors?.['required']" class="error">Email is required.</span>
+                    <span *ngIf="registrationForm.controls['email']?.errors?.['email']" class="error">Please enter a valid email.</span>
+                </div>
+            </div>
+
+            <div class="input_box">
+                <label for="pass">Password</label>
+                <div class="password-wrapper">
+                    <input [type]="showPassword ? 'text' : 'password'" id="Password" placeholder="Enter your password" [(ngModel)]="registration.Password" name="password" required minlength="6">
+                    <button type="button" class="toggle-password" (click)="togglePasswordVisibility('password')">
+                        <i class="fas" [ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'"></i>
+                    </button>
+                </div>
+                <div *ngIf="registrationForm.submitted || registrationForm.controls['password']?.touched">
+                    <span *ngIf="registrationForm.controls['password']?.errors?.['required']" class="error">Password is required.</span>
+                    <span *ngIf="registrationForm.controls['password']?.errors?.['minlength']" class="error">Password must be at least 6 characters long.</span>
+                </div>
+            </div>
+            
+            <div class="input_box">
+                <label for="confirmPass">Confirm Password</label>
+                <div class="password-wrapper">
+                    <input [type]="showConfirmPassword ? 'text' : 'password'" id="confirmPass" placeholder="Confirm your password" [(ngModel)]="registration.confirmPassword" name="confirmPassword" required [pattern]="registration.Password">
+                    <button type="button" class="toggle-password" (click)="togglePasswordVisibility('confirmPassword')">
+                        <i class="fas" [ngClass]="showConfirmPassword ? 'fa-eye-slash' : 'fa-eye'"></i>
+                    </button>
+                </div>
+                <div *ngIf="registrationForm.submitted || registrationForm.controls['confirmPassword']?.touched">
+                    <span *ngIf="registrationForm.controls['confirmPassword']?.errors?.['required']" class="error">Confirming your password is required.</span>
+                    <span *ngIf="registrationForm.controls['confirmPassword']?.errors?.['pattern']" class="error">Passwords do not match.</span>
+                </div>
+            </div>
+            
+            <!-- Referral Code -->
+            <div class="input_box">
+                <label for="referralCode">Referral Code (Optional)</label>
+                <input type="text" id="referralCode" placeholder="Enter your referral code (if any)" name="referralCode">
+            </div>
+        </div>
+
+        <div class="reg_btn">
+            <input type="submit" value="Register">
+        </div>
+      
+        
+<!-- Popup Modal for Registration Success -->
+<!-- <div *ngIf="showSuccessMessage" class="popup-overlay">
+    <div class="popup">
+      <p>Registration Successful!</p>
+      <button (click)="closePopup()">OK</button>
+    </div>
+  </div> -->
+
+   <!-- Registration button for routing -->
+   <!-- <div class="reg_btn">
+    <button  type="submit" routerLink="/login" >Go to Registration</button>
+</div> -->
+  <!-- The rest of your form code here -->
+  
+        <!-- Login button -->
+        <!-- <div class="login-link">
+            
+                <a routerLink="/login">Login here</a>
+            
+        </div> -->
+    </form>
+</div>

@@ -1,0 +1,124 @@
+
+
+<body>
+    <div class="admin-container">
+      <aside class="sidebar">
+        <div class="logo">
+          <h2>EaseElite User</h2>
+        </div>
+        <nav>
+          <ul>
+            <li><a routerLink="/edit" class="">Edit Profile</a></li>
+            <li><a routerLink="/kyc" class="">KYC</a></li>
+            <li><a routerLink="/subscription" class="">Subscription</a></li>
+            <li><a routerLink="/subscription"  (click)="logout()">Logout</a></li>
+            <!-- <li><a href="#">Request</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Settings</a></li> -->
+          </ul>
+        </nav>
+      </aside>
+      <main class="main-content">
+        
+        <div class="form-container">
+            <h2>Do KYC Here</h2>
+            
+            <!-- Form declaration with ngForm -->
+            <form #kycForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+            
+              <!-- Full Name -->
+              <label for="name">Full Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder="Enter your full name" 
+                [(ngModel)]="kyc.Name" 
+                #NameControl="ngModel" 
+                required 
+                minlength="3"
+              >
+              <div *ngIf="NameControl.invalid && NameControl.touched">
+                <small *ngIf="NameControl.errors?.['required']">Full name is required.</small>
+                <small *ngIf="NameControl.errors?.['minlength']">Full name must be at least 3 characters long.</small>
+              </div>
+          
+              <!-- Email -->
+              <label for="email">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="Enter your email" 
+                [(ngModel)]="kyc.Email"
+                #EmailControl="ngModel" 
+                required 
+                email
+              >
+              <div *ngIf="EmailControl.invalid && EmailControl.touched">
+                <small *ngIf="EmailControl.errors?.['required']">Email is required.</small>
+                <small *ngIf="EmailControl.errors?.['email']">Enter a valid email address.</small>
+              </div>
+          
+              <!-- Contact Number -->
+              <label for="contact">Contact Number</label>
+              <input 
+                type="tel" 
+                id="contact" 
+                name="contact" 
+                placeholder="Enter your 10-digit contact number" 
+                [(ngModel)]="kyc.Contact" 
+                #ContactControl="ngModel" 
+                required 
+                pattern="[0-9]{10}"
+              >
+              <div *ngIf="ContactControl.invalid && ContactControl.touched">
+                <small *ngIf="ContactControl.errors?.['required']">Contact number is required.</small>
+                <small *ngIf="ContactControl.errors?.['pattern']">Enter a valid 10-digit contact number.</small>
+              </div>
+          
+              <!-- ID Pan Card -->
+              <label for="id_pan">ID Pan Card</label>
+              <input 
+                type="file" 
+                id="id_pan" 
+                name="id_pan" 
+                (change)="onFileChange($event, 'PanCard')" 
+                required
+              >
+              <div *ngIf="!kyc.PanCard && kycForm.submitted">
+                <small>ID Pan Card is required.</small>
+              </div>
+          
+              <!-- Address Proof -->
+              <label for="address_proof">Address Proof</label>
+              <input 
+                type="file" 
+                id="address_proof" 
+                name="address_proof" 
+                (change)="onFileChange($event, 'Address')" 
+                required
+              >
+              <div *ngIf="!kyc.Address && kycForm.submitted">
+                <small>Address proof is required.</small>
+              </div>
+          
+              <!-- Submit Button -->
+              <button type="submit" [disabled]="kycForm.invalid">Submit</button>
+            </form>
+          </div>
+
+
+      </main>
+    </div>
+  
+  
+
+
+
+
+
+
+
+
+  

@@ -1,0 +1,12 @@
+<div class="form-container">
+  <h2>Do KYC Here</h2>
+  <form (ngSubmit)="onSubmit()" novalidate>
+    <label for="passport">Passport</label>
+    <input type="file" id="passport" name="passport" (change)="fileChangeEvent($event, 'passport')" accept="image/png, image/jpeg" required>
+
+    <label for="address_proof">Address Proof</label>
+    <input type="file" id="address_proof" name="address_proof" (change)="fileChangeEvent($event, 'addressProof')" accept="image/png, image/jpeg" required>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>

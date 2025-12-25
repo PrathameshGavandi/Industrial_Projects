@@ -1,0 +1,39 @@
+<div class="list-container">
+    <div class="title">
+        <h1>First Time Traveller Subscription List</h1>
+    </div>
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>SubTitle</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>PlanPeriod</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of admFttSubscriptionList">
+                <td>{{ i.Title }}</td>
+                <td>{{ i.SubTitle }}</td>
+                <td class="description">{{ i.Description }}</td>
+                <td>{{ i.Price }}</td>
+                <td>{{ i.PlanPeriod }}</td>
+                <td>{{ i.Status }}</td>
+                <td>
+                    <button class="view" (click)="viewDetails(i.AdmFttSubscriptionld)">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="edit" (click)="editUser(i.AdmFttSubscriptionld)">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button class="delete" (click)="Delete(i.AdmFttSubscriptionld)">
+                        <i class="fas fa-trash-alt"></i> 
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

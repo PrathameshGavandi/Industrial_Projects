@@ -1,0 +1,56 @@
+<div class="plan-form-container">
+  <h2>Add Subscription Carrier</h2>
+  <form #carrierForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" required [(ngModel)]="admCarrierSubscription.Title"
+          placeholder="Enter Plan Title" #title="ngModel" />
+        <span *ngIf="title.invalid && title.touched" class="error-message">Title is required.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="subtitle">Subtitle</label>
+        <input type="text" id="subtitle" name="subtitle" required [(ngModel)]="admCarrierSubscription.SubTitle"
+          placeholder="Enter Subtitle" #subtitle="ngModel" />
+        <span *ngIf="subtitle.invalid && subtitle.touched" class="error-message">Subtitle is required.</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" name="description" required [(ngModel)]="admCarrierSubscription.Description"
+        placeholder="" #description="ngModel"></textarea>
+      <span *ngIf="description.invalid && description.touched" class="error-message">Description is required.</span>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="price">Price ($)</label>
+        <input type="number" id="price" name="price" required [(ngModel)]="admCarrierSubscription.Price"
+          placeholder="Enter Price" min="0" #price="ngModel" />
+        <span *ngIf="price.invalid && price.touched" class="error-message">Price is required and must be a positive
+          number.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="planPeriod">Plan Period(M)</label>
+        <input type="number" id="planPeriod" name="planPeriod" required [(ngModel)]="admCarrierSubscription.PlanPeriod"
+          placeholder="Enter Plan Period" min="1" #planPeriod="ngModel" />
+        <span *ngIf="planPeriod.invalid && planPeriod.touched" class="error-message">Plan period is required and must be
+          at least 1 month.</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select id="status" name="status" required [(ngModel)]="admCarrierSubscription.Status" #status="ngModel">
+        <option value="Active">Active</option>
+        <option value="Inactive">Inactive</option>
+      </select>
+      <span *ngIf="status.invalid && status.touched" class="error-message">Status is required.</span>
+    </div>
+
+    <button type="submit" class="btn-submit" [disabled]="carrierForm.invalid">Submit</button>
+  </form>
+</div>

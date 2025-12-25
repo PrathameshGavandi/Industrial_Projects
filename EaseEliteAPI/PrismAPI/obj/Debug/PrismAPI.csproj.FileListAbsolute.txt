@@ -1,0 +1,1731 @@
+C:\Users\Alpesh\source\repos\PrismAPI\bin\PrismAPI.dll.config
+C:\Users\Alpesh\source\repos\PrismAPI\bin\PrismAPI.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\PrismAPI.pdb
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\csc.exe
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\csc.exe.config
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\csc.rsp
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\csi.exe
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\csi.exe.config
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\csi.rsp
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.AppContext.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Console.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.IO.Compression.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Net.Http.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.ValueTuple.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\vbc.exe.config
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\VBC.EXE.vir
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\vbc.rsp
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\VBCSCompiler.exe
+C:\Users\Alpesh\source\repos\PrismAPI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Aether.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Anat.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Antlr3.Runtime.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\FParsec.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\FParsecCS.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Core.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Machines.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Machines.Http.Cors.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Machines.Http.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Optics.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Optics.Http.Cors.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Optics.Http.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Types.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Types.Http.Cors.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Types.Http.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Types.Language.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Types.Uri.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\FSharp.Core.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Hekate.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Hephaestus.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Core.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Cors.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Http.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Cors.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Routing.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.Options.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Owin.Cors.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Owin.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Client.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Server.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Newtonsoft.Json.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Owin.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Buffers.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.ComponentModel.Annotations.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Memory.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Net.Http.Formatting.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Numerics.Vectors.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Text.Encodings.Web.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.ValueTuple.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.Cors.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.Helpers.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.Http.Cors.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.Http.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.Http.WebHost.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.Mvc.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.Optimization.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.Razor.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.WebPages.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\WebGrease.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Aether.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Anat.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\FParsec.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\FParsecCS.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Core.pdb
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Core.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Machines.pdb
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Machines.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Machines.Http.pdb
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Machines.Http.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Machines.Http.Cors.pdb
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Machines.Http.Cors.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Optics.pdb
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Optics.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Optics.Http.pdb
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Optics.Http.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Optics.Http.Cors.pdb
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Optics.Http.Cors.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Types.pdb
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Types.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Types.Http.pdb
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Types.Http.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Types.Http.Cors.pdb
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Types.Http.Cors.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Types.Language.pdb
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Types.Language.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Types.Uri.pdb
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Freya.Types.Uri.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\FSharp.Core.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Hekate.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Hephaestus.pdb
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Hephaestus.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Core.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Authorization.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Cors.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Http.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Cors.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Routing.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.AspNetCore.WebUtilities.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.ObjectPool.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.Options.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Owin.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Owin.Cors.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Client.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Server.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Buffers.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Memory.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Numerics.Vectors.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Text.Encodings.Web.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.ValueTuple.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.Http.Cors.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Newtonsoft.Json.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.Helpers.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.Http.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.Mvc.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.Optimization.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.Razor.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.WebPages.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Antlr3.Runtime.pdb
+C:\Users\Alpesh\source\repos\PrismAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Alpesh\source\repos\PrismAPI\bin\cs\FSharp.Core.resources.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\de\FSharp.Core.resources.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\en\FSharp.Core.resources.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\es\FSharp.Core.resources.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\fr\FSharp.Core.resources.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\it\FSharp.Core.resources.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\ja\FSharp.Core.resources.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\ko\FSharp.Core.resources.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\pl\FSharp.Core.resources.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\pt-BR\FSharp.Core.resources.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\ru\FSharp.Core.resources.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\tr\FSharp.Core.resources.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\zh-Hans\FSharp.Core.resources.dll
+C:\Users\Alpesh\source\repos\PrismAPI\bin\zh-Hant\FSharp.Core.resources.dll
+C:\Users\Alpesh\source\repos\PrismAPI\obj\Debug\PrismAPI.csproj.AssemblyReference.cache
+C:\Users\Alpesh\source\repos\PrismAPI\obj\Debug\PrismAPI.csproj.CoreCompileInputs.cache
+C:\Users\Alpesh\source\repos\PrismAPI\obj\Debug\PrismAPI.csproj.CopyComplete
+C:\Users\Alpesh\source\repos\PrismAPI\obj\Debug\PrismAPI.dll
+C:\Users\Alpesh\source\repos\PrismAPI\obj\Debug\PrismAPI.pdb
+E:\PrismAPI\PrismAPI\bin\PrismAPI.dll.config
+E:\PrismAPI\PrismAPI\bin\PrismAPI.dll
+E:\PrismAPI\PrismAPI\bin\PrismAPI.pdb
+E:\PrismAPI\PrismAPI\bin\roslyn\csc.exe
+E:\PrismAPI\PrismAPI\bin\roslyn\csc.exe.config
+E:\PrismAPI\PrismAPI\bin\roslyn\csc.rsp
+E:\PrismAPI\PrismAPI\bin\roslyn\csi.exe
+E:\PrismAPI\PrismAPI\bin\roslyn\csi.exe.config
+E:\PrismAPI\PrismAPI\bin\roslyn\csi.rsp
+E:\PrismAPI\PrismAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\PrismAPI\PrismAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\Microsoft.Managed.Core.targets
+E:\PrismAPI\PrismAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\PrismAPI\PrismAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.AppContext.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Collections.Immutable.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Console.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Globalization.Calendars.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.IO.Compression.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.IO.FileSystem.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Net.Http.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Net.Sockets.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Reflection.Metadata.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.ValueTuple.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Xml.XmlDocument.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Xml.XPath.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\PrismAPI\PrismAPI\bin\roslyn\vbc.exe.config
+E:\PrismAPI\PrismAPI\bin\roslyn\VBC.EXE.vir
+E:\PrismAPI\PrismAPI\bin\roslyn\vbc.rsp
+E:\PrismAPI\PrismAPI\bin\roslyn\VBCSCompiler.exe
+E:\PrismAPI\PrismAPI\bin\roslyn\VBCSCompiler.exe.config
+E:\PrismAPI\PrismAPI\bin\Aether.dll
+E:\PrismAPI\PrismAPI\bin\Anat.dll
+E:\PrismAPI\PrismAPI\bin\Antlr3.Runtime.dll
+E:\PrismAPI\PrismAPI\bin\FParsec.dll
+E:\PrismAPI\PrismAPI\bin\FParsecCS.dll
+E:\PrismAPI\PrismAPI\bin\Freya.Core.dll
+E:\PrismAPI\PrismAPI\bin\Freya.Machines.dll
+E:\PrismAPI\PrismAPI\bin\Freya.Machines.Http.Cors.dll
+E:\PrismAPI\PrismAPI\bin\Freya.Machines.Http.dll
+E:\PrismAPI\PrismAPI\bin\Freya.Optics.dll
+E:\PrismAPI\PrismAPI\bin\Freya.Optics.Http.Cors.dll
+E:\PrismAPI\PrismAPI\bin\Freya.Optics.Http.dll
+E:\PrismAPI\PrismAPI\bin\Freya.Types.dll
+E:\PrismAPI\PrismAPI\bin\Freya.Types.Http.Cors.dll
+E:\PrismAPI\PrismAPI\bin\Freya.Types.Http.dll
+E:\PrismAPI\PrismAPI\bin\Freya.Types.Language.dll
+E:\PrismAPI\PrismAPI\bin\Freya.Types.Uri.dll
+E:\PrismAPI\PrismAPI\bin\FSharp.Core.dll
+E:\PrismAPI\PrismAPI\bin\Hekate.dll
+E:\PrismAPI\PrismAPI\bin\Hephaestus.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Core.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Cors.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Extensions.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Features.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Core.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Cors.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.WebUtilities.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.DotNet.PlatformAbstractions.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.DependencyModel.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.Logging.Abstractions.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.ObjectPool.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.Options.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.Primitives.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.Net.Http.Headers.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.Owin.Cors.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.Owin.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Client.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Server.dll
+E:\PrismAPI\PrismAPI\bin\Microsoft.Web.Infrastructure.dll
+E:\PrismAPI\PrismAPI\bin\Newtonsoft.Json.dll
+E:\PrismAPI\PrismAPI\bin\Owin.dll
+E:\PrismAPI\PrismAPI\bin\System.Buffers.dll
+E:\PrismAPI\PrismAPI\bin\System.ComponentModel.Annotations.dll
+E:\PrismAPI\PrismAPI\bin\System.Diagnostics.DiagnosticSource.dll
+E:\PrismAPI\PrismAPI\bin\System.Memory.dll
+E:\PrismAPI\PrismAPI\bin\System.Net.Http.Formatting.dll
+E:\PrismAPI\PrismAPI\bin\System.Numerics.Vectors.dll
+E:\PrismAPI\PrismAPI\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\PrismAPI\PrismAPI\bin\System.Text.Encodings.Web.dll
+E:\PrismAPI\PrismAPI\bin\System.Threading.Tasks.Extensions.dll
+E:\PrismAPI\PrismAPI\bin\System.ValueTuple.dll
+E:\PrismAPI\PrismAPI\bin\System.Web.Cors.dll
+E:\PrismAPI\PrismAPI\bin\System.Web.Helpers.dll
+E:\PrismAPI\PrismAPI\bin\System.Web.Http.Cors.dll
+E:\PrismAPI\PrismAPI\bin\System.Web.Http.dll
+E:\PrismAPI\PrismAPI\bin\System.Web.Http.WebHost.dll
+E:\PrismAPI\PrismAPI\bin\System.Web.Mvc.dll
+E:\PrismAPI\PrismAPI\bin\System.Web.Optimization.dll
+E:\PrismAPI\PrismAPI\bin\System.Web.Razor.dll
+E:\PrismAPI\PrismAPI\bin\System.Web.WebPages.Deployment.dll
+E:\PrismAPI\PrismAPI\bin\System.Web.WebPages.dll
+E:\PrismAPI\PrismAPI\bin\System.Web.WebPages.Razor.dll
+E:\PrismAPI\PrismAPI\bin\WebGrease.dll
+E:\PrismAPI\PrismAPI\bin\Aether.xml
+E:\PrismAPI\PrismAPI\bin\Anat.xml
+E:\PrismAPI\PrismAPI\bin\FParsec.xml
+E:\PrismAPI\PrismAPI\bin\FParsecCS.xml
+E:\PrismAPI\PrismAPI\bin\Freya.Core.pdb
+E:\PrismAPI\PrismAPI\bin\Freya.Core.xml
+E:\PrismAPI\PrismAPI\bin\Freya.Machines.pdb
+E:\PrismAPI\PrismAPI\bin\Freya.Machines.xml
+E:\PrismAPI\PrismAPI\bin\Freya.Machines.Http.pdb
+E:\PrismAPI\PrismAPI\bin\Freya.Machines.Http.xml
+E:\PrismAPI\PrismAPI\bin\Freya.Machines.Http.Cors.pdb
+E:\PrismAPI\PrismAPI\bin\Freya.Machines.Http.Cors.xml
+E:\PrismAPI\PrismAPI\bin\Freya.Optics.pdb
+E:\PrismAPI\PrismAPI\bin\Freya.Optics.xml
+E:\PrismAPI\PrismAPI\bin\Freya.Optics.Http.pdb
+E:\PrismAPI\PrismAPI\bin\Freya.Optics.Http.xml
+E:\PrismAPI\PrismAPI\bin\Freya.Optics.Http.Cors.pdb
+E:\PrismAPI\PrismAPI\bin\Freya.Optics.Http.Cors.xml
+E:\PrismAPI\PrismAPI\bin\Freya.Types.pdb
+E:\PrismAPI\PrismAPI\bin\Freya.Types.xml
+E:\PrismAPI\PrismAPI\bin\Freya.Types.Http.pdb
+E:\PrismAPI\PrismAPI\bin\Freya.Types.Http.xml
+E:\PrismAPI\PrismAPI\bin\Freya.Types.Http.Cors.pdb
+E:\PrismAPI\PrismAPI\bin\Freya.Types.Http.Cors.xml
+E:\PrismAPI\PrismAPI\bin\Freya.Types.Language.pdb
+E:\PrismAPI\PrismAPI\bin\Freya.Types.Language.xml
+E:\PrismAPI\PrismAPI\bin\Freya.Types.Uri.pdb
+E:\PrismAPI\PrismAPI\bin\Freya.Types.Uri.xml
+E:\PrismAPI\PrismAPI\bin\FSharp.Core.xml
+E:\PrismAPI\PrismAPI\bin\Hekate.xml
+E:\PrismAPI\PrismAPI\bin\Hephaestus.pdb
+E:\PrismAPI\PrismAPI\bin\Hephaestus.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Core.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Cors.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Extensions.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Features.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Core.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Cors.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.AspNetCore.WebUtilities.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.Logging.Abstractions.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.ObjectPool.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.Options.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.Extensions.Primitives.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.Net.Http.Headers.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.Owin.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.Owin.Cors.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Client.xml
+E:\PrismAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Server.xml
+E:\PrismAPI\PrismAPI\bin\System.Buffers.xml
+E:\PrismAPI\PrismAPI\bin\System.Diagnostics.DiagnosticSource.xml
+E:\PrismAPI\PrismAPI\bin\System.Memory.xml
+E:\PrismAPI\PrismAPI\bin\System.Numerics.Vectors.xml
+E:\PrismAPI\PrismAPI\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\PrismAPI\PrismAPI\bin\System.Text.Encodings.Web.xml
+E:\PrismAPI\PrismAPI\bin\System.Threading.Tasks.Extensions.xml
+E:\PrismAPI\PrismAPI\bin\System.ValueTuple.xml
+E:\PrismAPI\PrismAPI\bin\System.Web.Http.Cors.xml
+E:\PrismAPI\PrismAPI\bin\Newtonsoft.Json.xml
+E:\PrismAPI\PrismAPI\bin\System.Net.Http.Formatting.xml
+E:\PrismAPI\PrismAPI\bin\System.Web.Helpers.xml
+E:\PrismAPI\PrismAPI\bin\System.Web.Http.xml
+E:\PrismAPI\PrismAPI\bin\System.Web.Http.WebHost.xml
+E:\PrismAPI\PrismAPI\bin\System.Web.Mvc.xml
+E:\PrismAPI\PrismAPI\bin\System.Web.Optimization.xml
+E:\PrismAPI\PrismAPI\bin\System.Web.Razor.xml
+E:\PrismAPI\PrismAPI\bin\System.Web.WebPages.xml
+E:\PrismAPI\PrismAPI\bin\System.Web.WebPages.Deployment.xml
+E:\PrismAPI\PrismAPI\bin\System.Web.WebPages.Razor.xml
+E:\PrismAPI\PrismAPI\bin\Antlr3.Runtime.pdb
+E:\PrismAPI\PrismAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\PrismAPI\PrismAPI\bin\cs\FSharp.Core.resources.dll
+E:\PrismAPI\PrismAPI\bin\de\FSharp.Core.resources.dll
+E:\PrismAPI\PrismAPI\bin\en\FSharp.Core.resources.dll
+E:\PrismAPI\PrismAPI\bin\es\FSharp.Core.resources.dll
+E:\PrismAPI\PrismAPI\bin\fr\FSharp.Core.resources.dll
+E:\PrismAPI\PrismAPI\bin\it\FSharp.Core.resources.dll
+E:\PrismAPI\PrismAPI\bin\ja\FSharp.Core.resources.dll
+E:\PrismAPI\PrismAPI\bin\ko\FSharp.Core.resources.dll
+E:\PrismAPI\PrismAPI\bin\pl\FSharp.Core.resources.dll
+E:\PrismAPI\PrismAPI\bin\pt-BR\FSharp.Core.resources.dll
+E:\PrismAPI\PrismAPI\bin\ru\FSharp.Core.resources.dll
+E:\PrismAPI\PrismAPI\bin\tr\FSharp.Core.resources.dll
+E:\PrismAPI\PrismAPI\bin\zh-Hans\FSharp.Core.resources.dll
+E:\PrismAPI\PrismAPI\bin\zh-Hant\FSharp.Core.resources.dll
+E:\PrismAPI\PrismAPI\obj\Debug\PrismAPI.csproj.AssemblyReference.cache
+E:\PrismAPI\PrismAPI\obj\Debug\PrismAPI.csproj.CoreCompileInputs.cache
+E:\PrismAPI\PrismAPI\obj\Debug\PrismAPI.csproj.Up2Date
+E:\PrismAPI\PrismAPI\obj\Debug\PrismAPI.dll
+E:\PrismAPI\PrismAPI\obj\Debug\PrismAPI.pdb
+E:\PrismAPI\PrismAPI\bin\BouncyCastle.Cryptography.dll
+E:\PrismAPI\PrismAPI\bin\MailKit.dll
+E:\PrismAPI\PrismAPI\bin\MimeKit.dll
+E:\PrismAPI\PrismAPI\bin\System.Formats.Asn1.dll
+E:\PrismAPI\PrismAPI\bin\BouncyCastle.Cryptography.xml
+E:\PrismAPI\PrismAPI\bin\MailKit.pdb
+E:\PrismAPI\PrismAPI\bin\MailKit.xml
+E:\PrismAPI\PrismAPI\bin\MailKit.dll.config
+E:\PrismAPI\PrismAPI\bin\MimeKit.pdb
+E:\PrismAPI\PrismAPI\bin\MimeKit.xml
+E:\PrismAPI\PrismAPI\bin\MimeKit.dll.config
+E:\PrismAPI\PrismAPI\bin\System.Formats.Asn1.xml
+E:\EaseEliteAPI\PrismAPI\bin\PrismAPI.dll.config
+E:\EaseEliteAPI\PrismAPI\bin\PrismAPI.dll
+E:\EaseEliteAPI\PrismAPI\bin\PrismAPI.pdb
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\csc.exe
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\csc.exe.config
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\csc.rsp
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\csi.exe
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\csi.exe.config
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\csi.rsp
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.Managed.Core.targets
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.AppContext.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Collections.Immutable.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Console.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Globalization.Calendars.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.Compression.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.FileSystem.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Net.Http.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Net.Sockets.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Reflection.Metadata.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.ValueTuple.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.XmlDocument.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.XPath.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\vbc.exe.config
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\VBC.EXE.vir
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\vbc.rsp
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\VBCSCompiler.exe
+E:\EaseEliteAPI\PrismAPI\bin\roslyn\VBCSCompiler.exe.config
+E:\EaseEliteAPI\PrismAPI\bin\Aether.dll
+E:\EaseEliteAPI\PrismAPI\bin\Anat.dll
+E:\EaseEliteAPI\PrismAPI\bin\Antlr3.Runtime.dll
+E:\EaseEliteAPI\PrismAPI\bin\BouncyCastle.Cryptography.dll
+E:\EaseEliteAPI\PrismAPI\bin\FParsec.dll
+E:\EaseEliteAPI\PrismAPI\bin\FParsecCS.dll
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Core.dll
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.dll
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.Cors.dll
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.dll
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.dll
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.Cors.dll
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.dll
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Types.dll
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.Cors.dll
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.dll
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Language.dll
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Uri.dll
+E:\EaseEliteAPI\PrismAPI\bin\FSharp.Core.dll
+E:\EaseEliteAPI\PrismAPI\bin\Hekate.dll
+E:\EaseEliteAPI\PrismAPI\bin\Hephaestus.dll
+E:\EaseEliteAPI\PrismAPI\bin\MailKit.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Core.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Cors.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Extensions.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Features.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Core.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Cors.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.WebUtilities.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.DotNet.PlatformAbstractions.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyModel.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Logging.Abstractions.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.ObjectPool.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Options.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Primitives.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Net.Http.Headers.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Cors.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Client.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Server.dll
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Web.Infrastructure.dll
+E:\EaseEliteAPI\PrismAPI\bin\MimeKit.dll
+E:\EaseEliteAPI\PrismAPI\bin\Newtonsoft.Json.dll
+E:\EaseEliteAPI\PrismAPI\bin\Owin.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Buffers.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.ComponentModel.Annotations.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Diagnostics.DiagnosticSource.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Formats.Asn1.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Memory.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Net.Http.Formatting.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Numerics.Vectors.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Text.Encodings.Web.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Threading.Tasks.Extensions.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.ValueTuple.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.Cors.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.Helpers.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.Http.Cors.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.Http.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.Http.WebHost.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.Mvc.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.Optimization.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.Razor.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Deployment.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.dll
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Razor.dll
+E:\EaseEliteAPI\PrismAPI\bin\WebGrease.dll
+E:\EaseEliteAPI\PrismAPI\bin\Aether.xml
+E:\EaseEliteAPI\PrismAPI\bin\Anat.xml
+E:\EaseEliteAPI\PrismAPI\bin\BouncyCastle.Cryptography.xml
+E:\EaseEliteAPI\PrismAPI\bin\FParsec.xml
+E:\EaseEliteAPI\PrismAPI\bin\FParsecCS.xml
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Core.pdb
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Core.xml
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.pdb
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.xml
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.pdb
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.xml
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.Cors.pdb
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.Cors.xml
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.pdb
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.xml
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.pdb
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.xml
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.Cors.pdb
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.Cors.xml
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Types.pdb
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Types.xml
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.pdb
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.xml
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.Cors.pdb
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.Cors.xml
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Language.pdb
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Language.xml
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Uri.pdb
+E:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Uri.xml
+E:\EaseEliteAPI\PrismAPI\bin\FSharp.Core.xml
+E:\EaseEliteAPI\PrismAPI\bin\Hekate.xml
+E:\EaseEliteAPI\PrismAPI\bin\Hephaestus.pdb
+E:\EaseEliteAPI\PrismAPI\bin\Hephaestus.xml
+E:\EaseEliteAPI\PrismAPI\bin\MailKit.pdb
+E:\EaseEliteAPI\PrismAPI\bin\MailKit.xml
+E:\EaseEliteAPI\PrismAPI\bin\MailKit.dll.config
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Core.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Cors.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Extensions.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Features.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Core.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Cors.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.WebUtilities.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Logging.Abstractions.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.ObjectPool.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Options.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Primitives.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Net.Http.Headers.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Cors.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Client.xml
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Server.xml
+E:\EaseEliteAPI\PrismAPI\bin\MimeKit.pdb
+E:\EaseEliteAPI\PrismAPI\bin\MimeKit.xml
+E:\EaseEliteAPI\PrismAPI\bin\MimeKit.dll.config
+E:\EaseEliteAPI\PrismAPI\bin\System.Buffers.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Diagnostics.DiagnosticSource.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Formats.Asn1.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Memory.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Numerics.Vectors.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Text.Encodings.Web.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Threading.Tasks.Extensions.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.ValueTuple.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.Http.Cors.xml
+E:\EaseEliteAPI\PrismAPI\bin\Newtonsoft.Json.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Net.Http.Formatting.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.Helpers.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.Http.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.Http.WebHost.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.Mvc.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.Optimization.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.Razor.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Deployment.xml
+E:\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Razor.xml
+E:\EaseEliteAPI\PrismAPI\bin\Antlr3.Runtime.pdb
+E:\EaseEliteAPI\PrismAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\EaseEliteAPI\PrismAPI\bin\cs\FSharp.Core.resources.dll
+E:\EaseEliteAPI\PrismAPI\bin\de\FSharp.Core.resources.dll
+E:\EaseEliteAPI\PrismAPI\bin\en\FSharp.Core.resources.dll
+E:\EaseEliteAPI\PrismAPI\bin\es\FSharp.Core.resources.dll
+E:\EaseEliteAPI\PrismAPI\bin\fr\FSharp.Core.resources.dll
+E:\EaseEliteAPI\PrismAPI\bin\it\FSharp.Core.resources.dll
+E:\EaseEliteAPI\PrismAPI\bin\ja\FSharp.Core.resources.dll
+E:\EaseEliteAPI\PrismAPI\bin\ko\FSharp.Core.resources.dll
+E:\EaseEliteAPI\PrismAPI\bin\pl\FSharp.Core.resources.dll
+E:\EaseEliteAPI\PrismAPI\bin\pt-BR\FSharp.Core.resources.dll
+E:\EaseEliteAPI\PrismAPI\bin\ru\FSharp.Core.resources.dll
+E:\EaseEliteAPI\PrismAPI\bin\tr\FSharp.Core.resources.dll
+E:\EaseEliteAPI\PrismAPI\bin\zh-Hans\FSharp.Core.resources.dll
+E:\EaseEliteAPI\PrismAPI\bin\zh-Hant\FSharp.Core.resources.dll
+E:\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.csproj.AssemblyReference.cache
+E:\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.csproj.CoreCompileInputs.cache
+E:\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.csproj.Up2Date
+E:\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.dll
+E:\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\PrismAPI.dll.config
+E:\New project\EaseEliteAPI\PrismAPI\bin\PrismAPI.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\PrismAPI.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\csc.exe
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\csc.exe.config
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\csc.rsp
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\csi.exe
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\csi.exe.config
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\csi.rsp
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.Managed.Core.targets
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.AppContext.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Collections.Immutable.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Console.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Globalization.Calendars.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.Compression.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.FileSystem.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Net.Http.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Net.Sockets.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Reflection.Metadata.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.ValueTuple.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.XmlDocument.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.XPath.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\vbc.exe.config
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\VBC.EXE.vir
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\vbc.rsp
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\VBCSCompiler.exe
+E:\New project\EaseEliteAPI\PrismAPI\bin\roslyn\VBCSCompiler.exe.config
+E:\New project\EaseEliteAPI\PrismAPI\bin\Aether.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Anat.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Antlr3.Runtime.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\BouncyCastle.Cryptography.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\FParsec.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\FParsecCS.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Core.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.Cors.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.Cors.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.Cors.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Language.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Uri.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\FSharp.Core.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Hekate.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Hephaestus.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\MailKit.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Core.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Cors.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Extensions.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Features.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Core.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Cors.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.WebUtilities.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.DotNet.PlatformAbstractions.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyModel.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Logging.Abstractions.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.ObjectPool.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Options.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Primitives.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Net.Http.Headers.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Cors.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Client.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Server.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Web.Infrastructure.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\MimeKit.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Newtonsoft.Json.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Owin.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Buffers.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.ComponentModel.Annotations.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Diagnostics.DiagnosticSource.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Formats.Asn1.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Memory.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Net.Http.Formatting.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Numerics.Vectors.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Text.Encodings.Web.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Threading.Tasks.Extensions.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.ValueTuple.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Cors.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Helpers.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Http.Cors.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Http.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Http.WebHost.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Mvc.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Optimization.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Razor.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Deployment.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Razor.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\WebGrease.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\Aether.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Anat.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\BouncyCastle.Cryptography.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\FParsec.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\FParsecCS.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Core.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Core.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.Cors.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.Cors.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.Cors.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.Cors.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.Cors.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.Cors.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Language.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Language.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Uri.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Uri.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\FSharp.Core.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Hekate.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Hephaestus.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\Hephaestus.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\MailKit.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\MailKit.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\MailKit.dll.config
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Core.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Cors.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Extensions.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Features.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Core.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Cors.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.WebUtilities.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Logging.Abstractions.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.ObjectPool.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Options.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Primitives.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Net.Http.Headers.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Cors.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Client.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Server.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\MimeKit.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\MimeKit.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\MimeKit.dll.config
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Buffers.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Diagnostics.DiagnosticSource.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Formats.Asn1.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Memory.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Numerics.Vectors.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Text.Encodings.Web.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Threading.Tasks.Extensions.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.ValueTuple.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Http.Cors.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Newtonsoft.Json.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Net.Http.Formatting.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Helpers.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Http.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Http.WebHost.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Mvc.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Optimization.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Razor.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Deployment.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Razor.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\Antlr3.Runtime.pdb
+E:\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\New project\EaseEliteAPI\PrismAPI\bin\cs\FSharp.Core.resources.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\de\FSharp.Core.resources.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\en\FSharp.Core.resources.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\es\FSharp.Core.resources.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\fr\FSharp.Core.resources.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\it\FSharp.Core.resources.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\ja\FSharp.Core.resources.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\ko\FSharp.Core.resources.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\pl\FSharp.Core.resources.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\pt-BR\FSharp.Core.resources.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\ru\FSharp.Core.resources.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\tr\FSharp.Core.resources.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\zh-Hans\FSharp.Core.resources.dll
+E:\New project\EaseEliteAPI\PrismAPI\bin\zh-Hant\FSharp.Core.resources.dll
+E:\New project\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.csproj.AssemblyReference.cache
+E:\New project\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.csproj.CoreCompileInputs.cache
+E:\New project\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.csproj.Up2Date
+E:\New project\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.dll
+E:\New project\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\PrismAPI.dll.config
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\PrismAPI.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\PrismAPI.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\csc.exe
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\csc.exe.config
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\csc.rsp
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\csi.exe
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\csi.exe.config
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\csi.rsp
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.AppContext.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Console.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.Compression.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Net.Http.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Net.Sockets.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.ValueTuple.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.XPath.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\vbc.exe.config
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\VBC.EXE.vir
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\vbc.rsp
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\VBCSCompiler.exe
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Aether.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Anat.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Antlr3.Runtime.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\BouncyCastle.Cryptography.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\FParsec.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\FParsecCS.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Core.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.Cors.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.Cors.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.Cors.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Language.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Uri.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\FSharp.Core.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Hekate.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Hephaestus.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\MailKit.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Core.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Cors.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Cors.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyModel.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.ObjectPool.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Options.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Cors.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Client.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Server.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\MimeKit.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Newtonsoft.Json.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Owin.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Buffers.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.ComponentModel.Annotations.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Formats.Asn1.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Memory.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Net.Http.Formatting.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Numerics.Vectors.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Text.Encodings.Web.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.ValueTuple.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Cors.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Helpers.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Http.Cors.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Http.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Http.WebHost.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Mvc.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Optimization.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Razor.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Razor.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\WebGrease.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Aether.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Anat.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\BouncyCastle.Cryptography.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\FParsec.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\FParsecCS.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Core.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Core.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.Cors.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.Cors.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.Cors.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.Cors.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.Cors.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.Cors.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Language.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Language.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Uri.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Freya.Types.Uri.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\FSharp.Core.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Hekate.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Hephaestus.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Hephaestus.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\MailKit.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\MailKit.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\MailKit.dll.config
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Core.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Cors.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Cors.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.WebUtilities.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.ObjectPool.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Options.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Cors.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Client.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Server.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\MimeKit.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\MimeKit.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\MimeKit.dll.config
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Buffers.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Formats.Asn1.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Memory.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Numerics.Vectors.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Text.Encodings.Web.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.ValueTuple.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Http.Cors.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Newtonsoft.Json.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Helpers.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Http.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Mvc.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Optimization.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.Razor.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Razor.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Antlr3.Runtime.pdb
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\cs\FSharp.Core.resources.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\de\FSharp.Core.resources.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\en\FSharp.Core.resources.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\es\FSharp.Core.resources.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\fr\FSharp.Core.resources.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\it\FSharp.Core.resources.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\ja\FSharp.Core.resources.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\ko\FSharp.Core.resources.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\pl\FSharp.Core.resources.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\pt-BR\FSharp.Core.resources.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\ru\FSharp.Core.resources.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\tr\FSharp.Core.resources.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\zh-Hans\FSharp.Core.resources.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\bin\zh-Hant\FSharp.Core.resources.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.csproj.AssemblyReference.cache
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.csproj.CoreCompileInputs.cache
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.csproj.Up2Date
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.dll
+C:\Users\min\Desktop\Project Files\New project\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\PrismAPI.dll.config
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\PrismAPI.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\PrismAPI.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\csc.exe
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\csc.exe.config
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\csc.rsp
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\csi.exe
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\csi.exe.config
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\csi.rsp
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.AppContext.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Console.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.Compression.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Net.Http.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Net.Sockets.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.ValueTuple.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.XPath.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\vbc.exe.config
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\VBC.EXE.vir
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\vbc.rsp
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\VBCSCompiler.exe
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Aether.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Anat.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Antlr3.Runtime.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\BouncyCastle.Cryptography.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\FParsec.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\FParsecCS.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Core.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Machines.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.Cors.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Optics.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.Cors.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Types.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.Cors.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Types.Language.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Types.Uri.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\FSharp.Core.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Hekate.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Hephaestus.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\MailKit.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Core.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Cors.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Cors.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyModel.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.ObjectPool.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Options.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Cors.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Client.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Server.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\MimeKit.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Newtonsoft.Json.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Owin.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Buffers.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.ComponentModel.Annotations.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Formats.Asn1.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Memory.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Net.Http.Formatting.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Numerics.Vectors.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Text.Encodings.Web.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.ValueTuple.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.Cors.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.Helpers.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.Http.Cors.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.Http.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.Http.WebHost.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.Mvc.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.Optimization.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.Razor.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Razor.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\WebGrease.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Aether.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Anat.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\BouncyCastle.Cryptography.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\FParsec.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\FParsecCS.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Core.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Core.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Machines.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Machines.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.Cors.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.Cors.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Optics.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Optics.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.Cors.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.Cors.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Types.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Types.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.Cors.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.Cors.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Types.Language.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Types.Language.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Types.Uri.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Freya.Types.Uri.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\FSharp.Core.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Hekate.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Hephaestus.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Hephaestus.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\MailKit.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\MailKit.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\MailKit.dll.config
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Core.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Cors.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Cors.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.WebUtilities.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.ObjectPool.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Options.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Cors.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Client.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Server.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\MimeKit.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\MimeKit.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\MimeKit.dll.config
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Buffers.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Formats.Asn1.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Memory.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Numerics.Vectors.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Text.Encodings.Web.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.ValueTuple.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.Http.Cors.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Newtonsoft.Json.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.Helpers.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.Http.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.Mvc.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.Optimization.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.Razor.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Razor.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Antlr3.Runtime.pdb
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\cs\FSharp.Core.resources.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\de\FSharp.Core.resources.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\en\FSharp.Core.resources.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\es\FSharp.Core.resources.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\fr\FSharp.Core.resources.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\it\FSharp.Core.resources.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\ja\FSharp.Core.resources.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\ko\FSharp.Core.resources.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\pl\FSharp.Core.resources.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\pt-BR\FSharp.Core.resources.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\ru\FSharp.Core.resources.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\tr\FSharp.Core.resources.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\zh-Hans\FSharp.Core.resources.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\bin\zh-Hant\FSharp.Core.resources.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.csproj.AssemblyReference.cache
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.csproj.CoreCompileInputs.cache
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.csproj.Up2Date
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.dll
+C:\Users\min\Desktop\ProjectFiles\Newproject\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.pdb
+D:\EaseEliteAPI\PrismAPI\bin\PrismAPI.dll.config
+D:\EaseEliteAPI\PrismAPI\bin\PrismAPI.dll
+D:\EaseEliteAPI\PrismAPI\bin\PrismAPI.pdb
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\csc.exe
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\csc.exe.config
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\csc.rsp
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\csi.exe
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\csi.exe.config
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\csi.rsp
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.Managed.Core.targets
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.AppContext.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Collections.Immutable.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Console.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Globalization.Calendars.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.Compression.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.FileSystem.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Net.Http.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Net.Sockets.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Reflection.Metadata.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.ValueTuple.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.XmlDocument.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.XPath.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\vbc.exe.config
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\VBC.EXE.vir
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\vbc.rsp
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\VBCSCompiler.exe
+D:\EaseEliteAPI\PrismAPI\bin\roslyn\VBCSCompiler.exe.config
+D:\EaseEliteAPI\PrismAPI\bin\Aether.dll
+D:\EaseEliteAPI\PrismAPI\bin\Anat.dll
+D:\EaseEliteAPI\PrismAPI\bin\Antlr3.Runtime.dll
+D:\EaseEliteAPI\PrismAPI\bin\BouncyCastle.Cryptography.dll
+D:\EaseEliteAPI\PrismAPI\bin\FParsec.dll
+D:\EaseEliteAPI\PrismAPI\bin\FParsecCS.dll
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Core.dll
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.dll
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.Cors.dll
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.dll
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.dll
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.Cors.dll
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.dll
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Types.dll
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.Cors.dll
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.dll
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Language.dll
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Uri.dll
+D:\EaseEliteAPI\PrismAPI\bin\FSharp.Core.dll
+D:\EaseEliteAPI\PrismAPI\bin\Hekate.dll
+D:\EaseEliteAPI\PrismAPI\bin\Hephaestus.dll
+D:\EaseEliteAPI\PrismAPI\bin\MailKit.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Core.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Cors.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Extensions.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Features.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Core.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Cors.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.WebUtilities.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.DotNet.PlatformAbstractions.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyModel.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.ObjectPool.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Options.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Primitives.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Net.Http.Headers.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Cors.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Client.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Server.dll
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Web.Infrastructure.dll
+D:\EaseEliteAPI\PrismAPI\bin\MimeKit.dll
+D:\EaseEliteAPI\PrismAPI\bin\Newtonsoft.Json.dll
+D:\EaseEliteAPI\PrismAPI\bin\Owin.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Buffers.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.ComponentModel.Annotations.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Diagnostics.DiagnosticSource.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Formats.Asn1.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Memory.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Net.Http.Formatting.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Numerics.Vectors.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Text.Encodings.Web.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Threading.Tasks.Extensions.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.ValueTuple.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.Cors.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.Helpers.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.Http.Cors.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.Http.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.Http.WebHost.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.Mvc.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.Optimization.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.Razor.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Deployment.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.dll
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Razor.dll
+D:\EaseEliteAPI\PrismAPI\bin\WebGrease.dll
+D:\EaseEliteAPI\PrismAPI\bin\Aether.xml
+D:\EaseEliteAPI\PrismAPI\bin\Anat.xml
+D:\EaseEliteAPI\PrismAPI\bin\BouncyCastle.Cryptography.xml
+D:\EaseEliteAPI\PrismAPI\bin\FParsec.xml
+D:\EaseEliteAPI\PrismAPI\bin\FParsecCS.xml
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Core.pdb
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Core.xml
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.pdb
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.xml
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.pdb
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.xml
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.Cors.pdb
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Machines.Http.Cors.xml
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.pdb
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.xml
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.pdb
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.xml
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.Cors.pdb
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Optics.Http.Cors.xml
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Types.pdb
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Types.xml
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.pdb
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.xml
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.Cors.pdb
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Http.Cors.xml
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Language.pdb
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Language.xml
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Uri.pdb
+D:\EaseEliteAPI\PrismAPI\bin\Freya.Types.Uri.xml
+D:\EaseEliteAPI\PrismAPI\bin\FSharp.Core.xml
+D:\EaseEliteAPI\PrismAPI\bin\Hekate.xml
+D:\EaseEliteAPI\PrismAPI\bin\Hephaestus.pdb
+D:\EaseEliteAPI\PrismAPI\bin\Hephaestus.xml
+D:\EaseEliteAPI\PrismAPI\bin\MailKit.pdb
+D:\EaseEliteAPI\PrismAPI\bin\MailKit.xml
+D:\EaseEliteAPI\PrismAPI\bin\MailKit.dll.config
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authentication.Core.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Cors.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Extensions.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Http.Features.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Core.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Mvc.Cors.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.AspNetCore.WebUtilities.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.ObjectPool.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Options.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Extensions.Primitives.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Net.Http.Headers.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Cors.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Client.xml
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.Owin.Security.OAuth.Manager.Server.xml
+D:\EaseEliteAPI\PrismAPI\bin\MimeKit.pdb
+D:\EaseEliteAPI\PrismAPI\bin\MimeKit.xml
+D:\EaseEliteAPI\PrismAPI\bin\MimeKit.dll.config
+D:\EaseEliteAPI\PrismAPI\bin\System.Buffers.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Diagnostics.DiagnosticSource.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Formats.Asn1.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Memory.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Numerics.Vectors.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Text.Encodings.Web.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Threading.Tasks.Extensions.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.ValueTuple.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.Http.Cors.xml
+D:\EaseEliteAPI\PrismAPI\bin\Newtonsoft.Json.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Net.Http.Formatting.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.Helpers.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.Http.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.Http.WebHost.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.Mvc.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.Optimization.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.Razor.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Deployment.xml
+D:\EaseEliteAPI\PrismAPI\bin\System.Web.WebPages.Razor.xml
+D:\EaseEliteAPI\PrismAPI\bin\Antlr3.Runtime.pdb
+D:\EaseEliteAPI\PrismAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\EaseEliteAPI\PrismAPI\bin\cs\FSharp.Core.resources.dll
+D:\EaseEliteAPI\PrismAPI\bin\de\FSharp.Core.resources.dll
+D:\EaseEliteAPI\PrismAPI\bin\en\FSharp.Core.resources.dll
+D:\EaseEliteAPI\PrismAPI\bin\es\FSharp.Core.resources.dll
+D:\EaseEliteAPI\PrismAPI\bin\fr\FSharp.Core.resources.dll
+D:\EaseEliteAPI\PrismAPI\bin\it\FSharp.Core.resources.dll
+D:\EaseEliteAPI\PrismAPI\bin\ja\FSharp.Core.resources.dll
+D:\EaseEliteAPI\PrismAPI\bin\ko\FSharp.Core.resources.dll
+D:\EaseEliteAPI\PrismAPI\bin\pl\FSharp.Core.resources.dll
+D:\EaseEliteAPI\PrismAPI\bin\pt-BR\FSharp.Core.resources.dll
+D:\EaseEliteAPI\PrismAPI\bin\ru\FSharp.Core.resources.dll
+D:\EaseEliteAPI\PrismAPI\bin\tr\FSharp.Core.resources.dll
+D:\EaseEliteAPI\PrismAPI\bin\zh-Hans\FSharp.Core.resources.dll
+D:\EaseEliteAPI\PrismAPI\bin\zh-Hant\FSharp.Core.resources.dll
+D:\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.csproj.AssemblyReference.cache
+D:\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.csproj.CoreCompileInputs.cache
+D:\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.csproj.CopyComplete
+D:\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.dll
+D:\EaseEliteAPI\PrismAPI\obj\Debug\PrismAPI.pdb

@@ -1,0 +1,25 @@
+<div class="list-container">
+  <div class="title">
+    <h1>first Time Traveller List</h1>
+  </div>
+
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Status</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let userrole of filteredUserRoleList">
+        <!-- Display First Name as Name -->
+        <td>{{ userrole.FName }}</td>
+        <td>{{ userrole.LName }}</td>
+        <td>{{ userrole.Status }}</td>
+        <td>{{ userrole.Email }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

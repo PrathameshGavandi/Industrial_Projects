@@ -1,0 +1,84 @@
+$primary-color: #006AD5;
+$secondary-color: #F2F5FF;
+$text-color: #262223;
+$button-color: #006AD5;
+$button-hover-color: #004B87;
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #F9F9F9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.feedback-container {
+  background: #FFF;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.feedback-title {
+  font-size: 24px;
+  color: $text-color;
+  margin-bottom: 20px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  input[type="radio"] {
+    display: none;
+  }
+  label {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    &:hover,
+    &:checked {
+      color: $primary-color;
+    }
+  }
+  input[type="radio"]:checked ~ label {
+    color: $primary-color;
+  }
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: vertical;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: $button-color;
+  color: #FFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: $button-hover-color;
+  }
+}

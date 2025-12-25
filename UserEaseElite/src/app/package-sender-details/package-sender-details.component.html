@@ -1,0 +1,110 @@
+
+<div class="background-wrapper">
+  <div class="container">
+    <div class="title">
+      <p>Share Your Package and Flight Details Here</p>
+    </div>
+
+    <form #packagesenderdetailsForm="ngForm" (ngSubmit)="onSubmit()" class="form-card" novalidate>
+      <div class="user_details">
+        <!-- Name Input -->
+        <!-- <div class="input_box">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name" [(ngModel)]="packagesenderdetails.name" name="name" #name="ngModel" required>
+          <div *ngIf="name.invalid && name.touched" class="error">Name is required.</div>
+        </div> -->
+
+        <!-- Flight Number Input -->
+        <div class="input_box">
+          <label for="flightNumber">Flight Number</label>
+          <input type="text" id="flightNumber" placeholder="Enter flight number" [(ngModel)]="packagesenderdetails.flightNumber" name="flightNumber" #flightNumber="ngModel" required>
+          <div *ngIf="flightNumber.invalid && flightNumber.touched" class="error">Flight number is required.</div>
+        </div>
+
+        <!-- Date Input -->
+        <div class="input_box">
+          <label for="date">Date</label>
+          <input type="date" id="date" [(ngModel)]="packagesenderdetails.date" name="date" #date="ngModel" required>
+          <div *ngIf="date.invalid && date.touched" class="error">Date is required.</div>
+        </div>
+
+        <!-- Time Input -->
+        <div class="input_box">
+          <label for="time">Time</label>
+          <input type="time" id="time" [(ngModel)]="packagesenderdetails.time" name="time" #time="ngModel" required>
+          <div *ngIf="time.invalid && time.touched" class="error">Time is required.</div>
+        </div>
+
+        <!-- From Airport Field -->
+<div class="input_box input-container" [ngClass]="{ 'open': isDropdownOpenFrom }">
+  <label for="from">From</label>
+  <input type="text" id="from" placeholder="Departure airport" [(ngModel)]="searchTermFrom" name="from" (input)="onSearchFrom()" required>
+  <ul *ngIf="isDropdownOpenFrom" class="dropdown-list">
+    <li *ngFor="let airport of filteredAirportsFrom" (click)="onSelectAirportFrom(airport)" class="dropdown-item">
+      {{ airport.name }}
+    </li>
+  </ul>
+</div>
+
+<!-- To Airport Field -->
+<div class="input_box input-container" [ngClass]="{ 'open': isDropdownOpenTo }">
+  <label for="to">To</label>
+  <input type="text" id="to" placeholder="Destination airport" [(ngModel)]="searchTermTo" name="to" (input)="onSearchTo()" required>
+  <ul *ngIf="isDropdownOpenTo" class="dropdown-list">
+    <li *ngFor="let airport of filteredAirportsTo" (click)="onSelectAirportTo(airport)" class="dropdown-item">
+      {{ airport.name }}
+    </li>
+  </ul>
+</div>
+
+
+        <!-- Load Capacity -->
+        <div class="input_box">
+          <label for="weight">Load Capacity (in kg)</label>
+          <input type="numbertext" id="weight" placeholder="Enter weight" [(ngModel)]="packagesenderdetails.weight" name="weight" #weight="ngModel" required>
+          <div *ngIf="weight.invalid && weight.touched" class="error">Load capacity is required.</div>
+        </div>
+
+        <!-- Additional Instructions -->
+        <!-- <div class="input_box">
+          <label for="instructions">Additional Instructions</label>
+          <textarea id="message" placeholder="Any special instructions?" [(ngModel)]="packagesenderdetails.message" name="message"></textarea>
+        </div> -->
+
+        <!-- Submit Button -->
+        
+        <div class="reg_btn">
+          <input type="submit" value="Submit" [disabled]="packagesenderdetailsForm.invalid">
+        </div>
+      </div>
+    </form>
+
+    <!-- Static List of Matched Users -->
+<div class="matched-users">
+  <h3>Matched Carrier</h3>
+  <ul>
+    <li>
+      <span>Name: John Doe</span>
+      <span>From: New York</span>
+      <span>To: Los Angeles</span>
+      <span>Date: 2024-10-10</span>
+      <span>Time: 10:00 AM</span>
+      <button class="info-btn"routerLink="/packagesenderview">
+        <i class="fa fa-info-circle"></i> 
+      </button>
+    </li>
+    <li>
+      <span>Name: Jane Smith</span>
+      <span>From: San Francisco</span>
+      <span>To: Chicago</span>
+      <span>Date: 2024-10-12</span>
+      <span>Time: 2:30 PM</span>
+      <button class="info-btn"routerLink="/packagesenderview">
+        <i class="fa fa-info-circle"></i>
+      </button>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</div>

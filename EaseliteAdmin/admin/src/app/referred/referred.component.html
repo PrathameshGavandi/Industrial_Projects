@@ -1,0 +1,57 @@
+<div class="referral-container">
+    <h2>User Referral Details</h2>
+    <form (ngSubmit)="onSubmit()" #referralForm="ngForm">
+        <div class="form-group">
+            <label for="userReferralCode">User Referral Code</label>
+            <input
+                type="text"
+                id="userReferralCode"
+                name="userReferralCode"
+                required
+                [(ngModel)]="referral.UserReferralCode"
+                placeholder="Enter User Referral Code"
+            />
+        </div>
+
+        <div class="form-group">
+            <label for="usedReferralCode">Used Referral Code</label>
+            <input
+                type="text"
+                id="usedReferralCode"
+                name="usedReferralCode"
+                required
+                [(ngModel)]="referral.UsedReferralCode"
+                placeholder="Enter Used Referral Code"
+            />
+        </div>
+
+        <div class="form-group">
+            <label for="totalReferred">Total Referred</label>
+            <input
+                type="number"
+                id="totalReferred"
+                name="totalReferred"
+                required
+                [(ngModel)]="referral.TotalReferred"
+                placeholder="Total Referred Users"
+            />
+        </div>
+
+        <div class="form-group">
+            <label for="monthlyStatus">Monthly Status</label>
+            <select
+                id="monthlyStatus"
+                name="monthlyStatus"
+                required
+                [(ngModel)]="referral.MonthlyReferred"
+            >
+                <!-- <option value="" disabled selected>Select Status</option> -->
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+                <option value="pending">Pending</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn-submit">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,94 @@
+<body>
+    <div class="card">
+        <div class="title">
+           
+        </div>
+        <h2>Hello Admin!</h2>
+
+        <!-- GOOGLE SIGN IN -->
+        <!-- <div class="google_signin">
+            <button id="google-signin-btn" class="google_btn">
+                <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" class="google_logo">
+                Sign in with Google
+            </button>
+        </div> -->
+
+        <!-- FORMULAIRE -->
+        <form class="form">
+         
+         <!-- Email Input -->
+               <input type="email" placeholder="Email" class="email" id="email" name="email" 
+                    [(ngModel)]="admRegistration.Email" #EmailControl="ngModel" required 
+                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                   <div *ngIf="EmailControl.invalid && EmailControl.touched" class="required-msg">
+                             Please enter a valid email, including '' and a domain like '.com'.
+                       </div>
+
+            <!-- Password Input -->
+            <div class="password_container">
+                <input [type]="passwordVisible ? 'text' : 'password'"  placeholder="Password" class="pass" id="Password" name="Password" 
+                [(ngModel)]="admRegistration.Password" #PasswordControl="ngModel"   pattern="^(?=.*[0-9])(?=.*[@#$%^&+=])(?=.*[a-zA-Z]).{8,}$"  required >
+                <span class="eye_icon" (click)="togglePasswordVisibility()">
+                    <i [ngClass]="passwordVisible ? 'fas fa-eye' : 'fas fa-eye-slash'"></i>
+                </span>
+            </div>
+                <div *ngIf="PasswordControl.invalid && (PasswordControl.touched || PasswordControl.dirty)" class="required-msg">
+                    <span *ngIf="PasswordControl.errors?.['required']">Password is required.</span>
+
+                    <span *ngIf="PasswordControl.errors?.['pattern']">Password must include at least one numeric character, one special character, and cannot contain spaces.</span>
+            
+                </div>
+            
+        
+ 
+        </form>
+        <!-- RADIO BUTTONS -->
+        <!-- <div class="radio_group">           
+            <label><input type="radio" name="option" value="first_time_traveller" [(ngModel)]="login.Option" [checked]="login.Option === 'first_time_traveller'" required> First Time Traveller</label>
+            <label><input type="radio" name="option" value="companion" [(ngModel)]="login.Option"> Companion</label>
+            <label><input type="radio" name="option" value="carrier" [(ngModel)]="login.Option"> Carrier</label>
+            <label><input type="radio" name="option" value="package_sender" [(ngModel)]="login.Option"> Package Sender</label>
+        </div>
+        <div *ngIf="submitted && !login.Option" class="required-msg">Please select a role option.</div> -->
+
+        <!-- <div class="checkbox_container"> -->
+            <!-- Checkbox -->
+            <!-- <label class="checkbox_label">
+                <input type="checkbox" [(ngModel)]= "admRegistration.RememberMe"> Remember Me
+            </label> -->
+            <!-- Forgot Password Link -->
+           
+        <!-- </div> -->
+        
+
+
+        <!-- BOUTTON LOGIN -->
+       <!-- BOUTTON LOGIN -->
+
+    <button type="button" (click)="OnSubmit()" class="login_btn">Login</button>
+    <div class="form-actions">
+    <a href="/forgotpassword" class="fp">Forgot password?</a>
+</div>
+
+        <!-- PIED DE LA CARD -->
+        <!-- <div class="footer_card">
+            <p>Not a member?</p>
+            <a href="registration">Signup now</a>
+            
+        </div> -->
+    </div>
+<!-- Popup Message -->
+<!-- <div *ngIf="showPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" >&times;</span>
+        <div class="popup-message">
+            <p>"Welcome .. You're logged in successfully!"</p>
+            <i class="check-icon fas fa-check-circle"></i>
+        </div>
+    </div>
+</div> -->
+</body>
+
+    <!-- Google Sign-In Script -->
+    <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+
