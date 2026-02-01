@@ -1,3 +1,14 @@
+/*
+-------------------------------------------------
+ Project Name : Customised Virtual File System
+ Language     : C
+ Domain       : System Programming
+ Author       : Prathamesh Rajendra Gavandi
+ Date         : January 2026
+ Description  : UNIX-like virtual file system
+-------------------------------------------------
+*/
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 //  Header File Inclusion
