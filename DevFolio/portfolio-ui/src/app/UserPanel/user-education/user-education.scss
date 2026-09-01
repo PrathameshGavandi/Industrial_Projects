@@ -1,0 +1,1195 @@
+/* =====================================================
+   EDUCATION SECTION
+===================================================== */
+
+.education-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 110px 60px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 88% 20%,
+      #102d52 0%,
+      #0b1c2d 48%,
+      #081827 100%
+    );
+}
+
+
+/* =====================================================
+   BACKGROUND ORBS
+===================================================== */
+
+.education-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(110px);
+}
+
+.education-orb-one {
+  width: 430px;
+  height: 430px;
+
+  left: -230px;
+  top: 10%;
+
+  background: rgba(56, 189, 248, 0.075);
+
+  animation: educationOrbOne 9s ease-in-out infinite alternate;
+}
+
+.education-orb-two {
+  width: 450px;
+  height: 450px;
+
+  right: -230px;
+  bottom: -150px;
+
+  background: rgba(37, 99, 235, 0.10);
+
+  animation: educationOrbTwo 10s ease-in-out infinite alternate;
+}
+
+@keyframes educationOrbOne {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+
+  to {
+    transform: translate(60px, -35px) scale(1.15);
+  }
+}
+
+@keyframes educationOrbTwo {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+
+  to {
+    transform: translate(-50px, -40px) scale(1.12);
+  }
+}
+
+
+/* =====================================================
+   GRID BACKGROUND
+===================================================== */
+
+.education-grid-bg {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(148, 163, 184, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 55px 55px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black,
+      transparent
+    );
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.education-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1150px;
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.education-header {
+  max-width: 760px;
+
+  margin: 0 auto 75px;
+
+  text-align: center;
+}
+
+.education-kicker {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+
+  color: #38bdf8;
+
+  font-size: 0.68rem;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.education-kicker span {
+  width: 32px;
+  height: 1px;
+
+  background: #38bdf8;
+
+  box-shadow:
+    0 0 12px
+    rgba(56, 189, 248, 0.5);
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.education-title {
+  margin: 0;
+
+  color: #ffffff !important;
+
+  font-size:
+    clamp(
+      3rem,
+      5vw,
+      4.7rem
+    );
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: -2.5px;
+}
+
+.education-title span {
+  display: inline-block;
+
+  margin-left: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #38bdf8,
+      #60a5fa,
+      #38bdf8
+    );
+
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation:
+    educationTextGradient 4s linear infinite;
+}
+
+@keyframes educationTextGradient {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+/* =====================================================
+   TITLE LINE
+===================================================== */
+
+.education-title::after {
+  content: "";
+
+  display: block;
+
+  width: 70px;
+  height: 3px;
+
+  margin: 22px auto 0;
+
+  border-radius: 20px;
+
+  background: #38bdf8;
+
+  box-shadow:
+    0 0 20px
+    rgba(56, 189, 248, 0.5);
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.education-subtitle {
+  max-width: 680px;
+
+  margin: 26px auto 0;
+
+  color: #94a3b8;
+
+  font-size: 0.95rem;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.education-timeline {
+  position: relative;
+}
+
+
+/* =====================================================
+   TIMELINE ENTRY
+===================================================== */
+
+.education-entry {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    130px
+    40px
+    minmax(0, 1fr);
+
+  gap: 0;
+
+  margin-bottom: 55px;
+}
+
+.education-entry:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =====================================================
+   YEAR
+===================================================== */
+
+.education-year {
+  padding-top: 28px;
+
+  text-align: right;
+
+  padding-right: 25px;
+}
+
+.year-small {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color:
+    rgba(148, 163, 184, 0.45);
+
+  font-size: 0.53rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+.education-year strong {
+  display: block;
+
+  color:
+    rgba(125, 211, 252, 0.75);
+
+  font-size: 1.35rem;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =====================================================
+   TIMELINE MARKER
+===================================================== */
+
+.education-marker {
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.education-marker::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: -55px;
+
+  left: 50%;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(56, 189, 248, 0.45),
+      rgba(56, 189, 248, 0.08)
+    );
+}
+
+.education-entry:last-child
+.education-marker::before {
+  bottom: 100%;
+}
+
+.education-dot {
+  position: relative;
+
+  z-index: 3;
+
+  width: 15px;
+  height: 15px;
+
+  margin-top: 30px;
+
+  border-radius: 50%;
+
+  background: #081827;
+
+  border:
+    2px solid #38bdf8;
+
+  box-shadow:
+    0 0 0 6px
+    rgba(56, 189, 248, 0.07),
+
+    0 0 22px
+    rgba(56, 189, 248, 0.55);
+}
+
+
+/* =====================================================
+   EDUCATION CARD
+===================================================== */
+
+.education-card {
+  position: relative;
+
+  padding: 30px 32px;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15, 40, 63, 0.86),
+      rgba(8, 24, 39, 0.95)
+    );
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.13);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 25px 60px
+    rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.education-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #38bdf8,
+      #2563eb,
+      transparent
+    );
+
+  opacity: 0.7;
+}
+
+.education-card:hover {
+  transform: translateY(-8px);
+
+  border-color:
+    rgba(56, 189, 248, 0.35);
+
+  box-shadow:
+    0 35px 75px
+    rgba(0, 0, 0, 0.38),
+
+    0 0 35px
+    rgba(56, 189, 248, 0.07);
+}
+
+
+/* =====================================================
+   CARD GLOW
+===================================================== */
+
+.education-card-glow {
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  right: -120px;
+  top: -120px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(56, 189, 248, 0.10);
+
+  filter: blur(45px);
+
+  opacity: 0;
+
+  transition: opacity 0.45s ease;
+}
+
+.education-card:hover
+.education-card-glow {
+  opacity: 1;
+}
+
+
+/* =====================================================
+   CARD TOP
+===================================================== */
+
+.education-card-top {
+  display: flex;
+
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   DEGREE ICON
+===================================================== */
+
+.degree-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 13px;
+
+  color: #38bdf8;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(56, 189, 248, 0.14),
+      rgba(37, 99, 235, 0.07)
+    );
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.18);
+
+  box-shadow:
+    0 10px 25px
+    rgba(0, 0, 0, 0.18);
+
+  transition: transform 0.35s ease;
+}
+
+.education-card:hover
+.degree-icon {
+  transform:
+    rotate(-5deg)
+    scale(1.07);
+}
+
+
+/* =====================================================
+   DEGREE + SPECIALIZATION ROW ⭐ UPDATED
+===================================================== */
+
+.degree-heading-row {
+  display: flex;
+
+  align-items: center;
+  //justify-content: space-between;
+  gap: 50px; /* Degree आणि specialization मधलं अंतर */
+
+  gap: 20px;
+
+  width: 100%;
+}
+
+
+/* =====================================================
+   DEGREE TITLE
+===================================================== */
+
+.degree-title {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 1.65rem;
+
+  line-height: 1.3;
+
+  font-weight: 750;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =====================================================
+   SPECIALIZATION BADGE ⭐ UPDATED
+===================================================== */
+
+.degree-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 8px 14px;
+
+  border-radius: 8px;
+
+  color: #7dd3fc;
+
+  background:
+    rgba(56, 189, 248, 0.045);
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.13);
+
+  font-size: 0.58rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   COLLEGE INFO
+===================================================== */
+
+.college-info {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 13px;
+
+  margin-top: 20px;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  background:
+    rgba(56, 189, 248, 0.035);
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.08);
+}
+
+.college-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  border-radius: 9px;
+
+  color: #38bdf8;
+
+  background:
+    rgba(56, 189, 248, 0.08);
+}
+
+.info-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color:
+    rgba(148, 163, 184, 0.55);
+
+  font-size: 0.52rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+}
+
+.college-info p {
+  margin: 0;
+
+  color: #cbd5e1;
+
+  font-size: 0.85rem;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   META
+===================================================== */
+
+.education-meta {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+
+  margin-top: 15px;
+}
+
+.meta-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  padding: 13px;
+
+  border-radius: 11px;
+
+  background:
+    rgba(148, 163, 184, 0.025);
+
+  border:
+    1px solid
+    rgba(148, 163, 184, 0.07);
+}
+
+.meta-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 27px;
+  height: 27px;
+
+  flex-shrink: 0;
+
+  color: #60a5fa;
+
+  font-size: 11px;
+}
+
+.meta-item p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 0.72rem;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   RESULT
+===================================================== */
+
+.education-result {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 24px;
+
+  padding: 17px 18px;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(56, 189, 248, 0.07),
+      rgba(37, 99, 235, 0.035)
+    );
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.10);
+}
+
+.result-text span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color:
+    rgba(148, 163, 184, 0.55);
+
+  font-size: 0.52rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+}
+
+.result-text strong {
+  color: #7dd3fc;
+
+  font-size: 1.15rem;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   RESULT RING
+===================================================== */
+
+.result-ring {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 43px;
+  height: 43px;
+
+  border-radius: 50%;
+
+  background:
+    conic-gradient(
+      #38bdf8,
+      #2563eb,
+      rgba(56, 189, 248, 0.10),
+      #38bdf8
+    );
+
+  box-shadow:
+    0 0 20px
+    rgba(56, 189, 248, 0.12);
+}
+
+.ring-inner {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+
+  background: #0b1c2d;
+
+  color: #38bdf8;
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.education-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 20px;
+
+  padding-top: 15px;
+
+  border-top:
+    1px solid
+    rgba(148, 163, 184, 0.07);
+
+  color:
+    rgba(125, 211, 252, 0.48);
+
+  font-size: 0.52rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+}
+
+.education-footer > span:first-child {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.footer-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #38bdf8;
+
+  box-shadow:
+    0 0 9px
+    rgba(56, 189, 248, 0.8);
+}
+
+.footer-arrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 29px;
+  height: 29px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.16);
+
+  color: #38bdf8;
+
+  transition: 0.3s ease;
+}
+
+.education-card:hover
+.footer-arrow {
+  transform:
+    translate(3px, -3px);
+
+  background:
+    rgba(56, 189, 248, 0.08);
+
+  border-color:
+    rgba(56, 189, 248, 0.35);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .education-wrapper {
+    padding: 90px 35px;
+  }
+
+  .education-header {
+    margin-bottom: 60px;
+  }
+
+  .education-entry {
+    grid-template-columns:
+      95px
+      35px
+      minmax(0, 1fr);
+  }
+
+  .education-year {
+    padding-right: 18px;
+  }
+
+  .education-year strong {
+    font-size: 1.1rem;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .education-wrapper {
+    min-height: auto;
+
+    padding:
+      80px 18px 90px;
+  }
+
+  .education-header {
+    margin-bottom: 48px;
+  }
+
+  .education-kicker {
+    font-size: 0.57rem;
+
+    letter-spacing: 2px;
+
+    gap: 8px;
+  }
+
+  .education-kicker span {
+    width: 20px;
+  }
+
+  .education-title {
+    font-size: 2.7rem;
+
+    letter-spacing: -1.7px;
+  }
+
+  .education-title span {
+    display: block;
+
+    margin:
+      5px 0 0;
+  }
+
+  .education-subtitle {
+    font-size: 0.84rem;
+
+    line-height: 1.7;
+  }
+
+
+  /* MOBILE TIMELINE */
+
+  .education-entry {
+    grid-template-columns:
+      27px
+      minmax(0, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 35px;
+  }
+
+  .education-year {
+    position: absolute;
+
+    top: -13px;
+    left: 40px;
+
+    z-index: 5;
+
+    padding: 6px 9px;
+
+    border-radius: 7px;
+
+    background:
+      rgba(8, 24, 39, 0.95);
+
+    border:
+      1px solid
+      rgba(56, 189, 248, 0.13);
+
+    text-align: left;
+  }
+
+  .year-small {
+    display: inline;
+
+    margin-right: 5px;
+
+    font-size: 0.45rem;
+  }
+
+  .education-year strong {
+    display: inline;
+
+    font-size: 0.68rem;
+  }
+
+  .education-marker {
+    grid-column: 1;
+  }
+
+  .education-marker::before {
+    bottom: -35px;
+  }
+
+  .education-dot {
+    width: 11px;
+    height: 11px;
+
+    margin-top: 35px;
+  }
+
+  .education-card {
+    grid-column: 2;
+
+    padding: 25px 20px;
+
+    border-radius: 16px;
+  }
+
+  .education-card-top {
+    margin-bottom: 15px;
+  }
+
+  /* DEGREE + SPECIALIZATION MOBILE */
+
+  .degree-heading-row {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .degree-badge {
+    max-width: 100%;
+
+    font-size: 0.48rem;
+
+    padding: 6px 10px;
+
+    white-space: normal;
+
+    text-align: center;
+  }
+
+  .degree-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .degree-title {
+    font-size: 1.3rem;
+  }
+
+  .college-info {
+    padding: 12px;
+  }
+
+  .college-info p {
+    font-size: 0.76rem;
+  }
+
+  .education-meta {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+  }
+
+  .meta-item {
+    padding: 10px;
+  }
+
+  .education-result {
+    padding: 14px;
+  }
+
+  .result-ring {
+    width: 38px;
+    height: 38px;
+  }
+
+  .ring-inner {
+    width: 30px;
+    height: 30px;
+  }
+
+  .education-footer {
+    font-size: 0.46rem;
+  }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .education-orb-one,
+  .education-orb-two,
+  .education-title span {
+    animation: none;
+  }
+
+  .education-card,
+  .degree-icon,
+  .footer-arrow {
+    transition: none;
+  }
+
+}

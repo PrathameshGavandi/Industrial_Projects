@@ -1,0 +1,134 @@
+<nav class="portfolio-navbar">
+
+  <div class="portfolio-nav-container">
+
+    <!-- ==============================
+         BRAND
+    =============================== -->
+    <a
+      class="portfolio-brand"
+      href="#profile"
+      (click)="scrollToSection('profile'); $event.preventDefault()"
+      aria-label="Go to profile"
+    >
+      <span class="brand-white">Prathamesh</span>
+      <span class="brand-blue">.dev</span>
+    </a>
+
+
+    <!-- ==============================
+         MOBILE MENU BUTTON
+    =============================== -->
+    <button
+      class="portfolio-menu-button"
+      type="button"
+      (click)="toggleNavbar()"
+      [class.is-open]="isMenuOpen"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-controls="portfolioNavigation"
+      aria-label="Toggle navigation menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+
+    <!-- ==============================
+         NAVIGATION
+    =============================== -->
+    <div
+      class="portfolio-navigation"
+      id="portfolioNavigation"
+      [class.navigation-open]="isMenuOpen"
+      (click)="$event.stopPropagation()"
+    >
+
+      <ul class="portfolio-nav-list">
+
+        <!-- PROFILE -->
+        <li class="portfolio-nav-item">
+          <a
+            class="portfolio-nav-link"
+            href="#profile"
+            (click)="scrollToSection('profile'); $event.preventDefault()"
+          >
+            <span class="portfolio-nav-number">01</span>
+            <span class="portfolio-nav-text">Profile</span>
+          </a>
+        </li>
+
+
+        <!-- SKILLS -->
+        <li class="portfolio-nav-item">
+          <a
+            class="portfolio-nav-link"
+            href="#skills"
+            (click)="scrollToSection('skills'); $event.preventDefault()"
+          >
+            <span class="portfolio-nav-number">02</span>
+            <span class="portfolio-nav-text">Skills</span>
+          </a>
+        </li>
+
+
+        <!-- EXPERIENCE -->
+        <li class="portfolio-nav-item">
+          <a
+            class="portfolio-nav-link"
+            href="#experience"
+            (click)="scrollToSection('experience'); $event.preventDefault()"
+          >
+            <span class="portfolio-nav-number">03</span>
+            <span class="portfolio-nav-text">Experience</span>
+          </a>
+        </li>
+
+
+        <!-- PROJECTS -->
+        <li class="portfolio-nav-item">
+          <a
+            class="portfolio-nav-link"
+            href="#projects"
+            (click)="scrollToSection('projects'); $event.preventDefault()"
+          >
+            <span class="portfolio-nav-number">04</span>
+            <span class="portfolio-nav-text">Projects</span>
+          </a>
+        </li>
+
+
+        <!-- EDUCATION -->
+        <li class="portfolio-nav-item">
+          <a
+            class="portfolio-nav-link"
+            href="#education"
+            (click)="scrollToSection('education'); $event.preventDefault()"
+          >
+            <span class="portfolio-nav-number">05</span>
+            <span class="portfolio-nav-text">Education</span>
+          </a>
+        </li>
+
+
+        <!-- CONTACT -->
+        <li class="portfolio-contact-item">
+
+          <a
+            class="portfolio-contact-button"
+            href="mailto:prathameshgavandi2019@gmail.com"
+            (click)="closeNavbar()"
+          >
+            <span>Contact</span>
+            <span class="portfolio-contact-arrow">↗</span>
+          </a>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>

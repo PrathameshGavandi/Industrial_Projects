@@ -1,0 +1,163 @@
+<section class="projects-wrapper">
+
+  <!-- BACKGROUND EFFECTS -->
+  <div class="projects-orb projects-orb-one"></div>
+  <div class="projects-orb projects-orb-two"></div>
+  <div class="projects-grid-bg"></div>
+
+  <div class="projects-container">
+
+    <!-- HEADER -->
+    <div class="projects-header animate__animated animate__fadeInUp">
+
+      <div class="projects-kicker">
+        <span></span>
+        SELECTED WORK
+        <span></span>
+      </div>
+
+      <h2 class="projects-title">
+        Things I've
+        <span>Built</span>
+      </h2>
+
+      <p class="projects-subtitle">
+        A collection of professional, academic, and personal projects
+        crafted with modern technologies and real-world problem solving.
+      </p>
+
+      <a
+        class="github-cta"
+        href="https://github.com/PrathameshGavandi/Industrial_Projects"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="github-icon">
+          <i class="fab fa-github"></i>
+        </span>
+
+        <span>Explore GitHub</span>
+
+        <span class="github-arrow">↗</span>
+      </a>
+
+    </div>
+
+
+    <!-- PROJECTS -->
+    <div
+      class="projects-grid"
+      *ngIf="projects$ | async as projects; else loading"
+    >
+
+      <article
+        class="project-card animate__animated animate__fadeInUp"
+        *ngFor="let project of projects; let i = index"
+        [style.animationDelay]="(i * 0.15) + 's'"
+      >
+
+        <!-- CARD GLOW -->
+        <div class="card-glow"></div>
+
+        <!-- PROJECT NUMBER -->
+        <div class="project-number">
+          {{ (i + 1).toString().padStart(2, '0') }}
+        </div>
+
+
+        <!-- TOP -->
+        <div class="project-top">
+
+          <div class="project-icon">
+            <i class="fas fa-code"></i>
+          </div>
+
+          <span class="project-type">
+            {{ project.type }}
+          </span>
+
+        </div>
+
+
+        <!-- PROJECT NAME -->
+        <h3 class="project-name">
+          {{ project.name }}
+        </h3>
+
+
+        <!-- DESCRIPTION -->
+        <p
+          class="project-description"
+          [innerHTML]="project.description"
+        ></p>
+
+
+        <!-- TECHNOLOGIES -->
+        <div class="technology-section">
+
+          <span class="tech-label">
+            TECHNOLOGIES
+          </span>
+
+          <div class="tech-list">
+
+            <span
+              class="tech-pill"
+              *ngFor="let tech of project.technologies.split(',')"
+            >
+              {{ tech.trim() }}
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <div class="project-footer">
+
+          <span class="project-status">
+            <span class="status-dot"></span>
+            PROJECT COMPLETED
+          </span>
+
+          <span class="project-arrow">
+            ↗
+          </span>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <!-- LOADING -->
+    <ng-template #loading>
+
+      <div class="projects-grid loading-grid">
+
+        <div
+          class="project-card skeleton-card"
+          *ngFor="let i of [1,2,3,4]"
+        >
+
+          <div class="skeleton-icon"></div>
+
+          <div class="skeleton-line large"></div>
+
+          <div class="skeleton-line"></div>
+
+          <div class="skeleton-line short"></div>
+
+          <div class="skeleton-bottom"></div>
+
+        </div>
+
+      </div>
+
+    </ng-template>
+
+  </div>
+
+</section>

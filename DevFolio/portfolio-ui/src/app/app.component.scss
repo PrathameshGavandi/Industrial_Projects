@@ -1,0 +1,25 @@
+/* ROOT */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+}
+
+/* APP SHELL */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* CONTENT */
+.app-content {
+  flex: 1 0 auto;
+}
+
+/* FOOTER */
+app-user-footer,
+app-footer {
+  flex-shrink: 0;
+}

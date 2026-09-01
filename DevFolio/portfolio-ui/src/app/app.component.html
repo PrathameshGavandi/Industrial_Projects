@@ -1,0 +1,17 @@
+<!-- Navbar -->
+<app-user-nav *ngIf="!isAdminPage"></app-user-nav>
+<app-nav *ngIf="isAdminPage"></app-nav>
+
+<!-- APP SHELL (ONLY SCROLL AREA) -->
+<div class="app-shell">
+
+  <!-- ROUTED CONTENT -->
+  <main class="app-content">
+    <router-outlet></router-outlet>
+  </main>
+
+  <!-- FOOTER -->
+  <app-user-footer *ngIf="!isAdminPage"></app-user-footer>
+  <app-footer *ngIf="isAdminPage"></app-footer>
+
+</div>

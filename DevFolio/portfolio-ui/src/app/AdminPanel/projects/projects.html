@@ -1,0 +1,115 @@
+<div class="admin-container">
+
+  <h2 class="page-title text-center">Project Management</h2>
+
+  <!-- ================= FORM CARD ================= -->
+  <div class="form-card">
+    <form (ngSubmit)="saveProject(projectForm)" #projectForm="ngForm" novalidate>
+
+      <div class="form-grid">
+
+        <!-- Project Name -->
+        <div class="field">
+          <input type="text"
+                 placeholder="Project Name"
+                 [(ngModel)]="project.name"
+                 name="name"
+                 #name="ngModel"
+                 required minlength="3" maxlength="50" />
+          <small class="error" *ngIf="name.invalid && (name.touched || name.dirty)">
+            <span *ngIf="name.errors?.['required']">Project name is required</span>
+            <span *ngIf="name.errors?.['minlength']">Minimum 3 characters required</span>
+            <span *ngIf="name.errors?.['maxlength']">Maximum 50 characters allowed</span>
+          </small>
+        </div>
+
+        <!-- Project Type -->
+        <div class="field">
+          <select [(ngModel)]="project.type" name="type" #type="ngModel" required>
+            <option value="">Select Project Type</option>
+            <option value="Personal">Personal</option>
+            <option value="Academic">Academic</option>
+            <option value="Professional">Professional</option>
+            <option value="Live">Live</option>
+          </select>
+          <small class="error" *ngIf="type.invalid && (type.touched || type.dirty)">
+            Project type is required
+          </small>
+        </div>
+
+      </div>
+
+      <!-- Description -->
+      <div class="field full-width">
+        <textarea placeholder="Project Description"
+                  [(ngModel)]="project.description"
+                  name="description"
+                  #description="ngModel"
+                  required minlength="10" maxlength="300"></textarea>
+        <small class="error" *ngIf="description.invalid && (description.touched || description.dirty)">
+          <span *ngIf="description.errors?.['required']">Description is required</span>
+          <span *ngIf="description.errors?.['minlength']">Minimum 10 characters required</span>
+          <span *ngIf="description.errors?.['maxlength']">Maximum 300 characters allowed</span>
+        </small>
+      </div>
+
+      <!-- Technologies -->
+      <div class="field full-width">
+        <input type="text"
+               placeholder="Technologies Used"
+               [(ngModel)]="project.technologies"
+               name="technologies"
+               #technologies="ngModel"
+               required />
+        <small class="error" *ngIf="technologies.invalid && (technologies.touched || technologies.dirty)">
+          Technologies are required
+        </small>
+      </div>
+
+      <!-- Submit -->
+      <div class="form-actions center">
+        <button type="submit" class="save-btn" [disabled]="projectForm.invalid">
+          Save Project
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- ================= TABLE CARD ================= -->
+  <div class="table-card">
+    <h3 class="table-title">Saved Projects</h3>
+
+    <div class="table-wrapper">
+      <table *ngIf="projects.length > 0; else noData">
+        <thead>
+          <tr>
+            <th class="col-id">ID</th>
+            <th class="col-name">Name</th>
+            <th class="col-type">Type</th>
+            <th class="col-desc">Description</th>
+            <th class="col-tech">Technologies</th>
+            <th class="col-action">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of projects">
+            <td class="col-id">{{ p.id }}</td>
+            <td class="col-name">{{ p.name }}</td>
+            <td class="col-type">{{ p.type }}</td>
+            <td class="col-desc">{{ p.description | slice:0:50 }}...</td>
+            <td class="col-tech">{{ p.technologies }}</td>
+            <td class="col-action">
+              <button class="delete-btn" (click)="deleteProject(p.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ng-template #noData>
+        <p style="text-align:center; color:gray;">No projects found</p>
+      </ng-template>
+    </div>
+  </div>
+
+</div>

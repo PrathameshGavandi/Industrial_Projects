@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg fixed-top custom-navbar shadow">
+  <div class="container">
+
+    <!-- BRAND -->
+    <a class="navbar-brand text-gradient"
+       routerLink="/profile"
+       (click)="closeNavbar()">
+      Admin Panel
+    </a>
+
+    <!-- TOGGLER -->
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#adminNavbar"
+            aria-controls="adminNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- MENU -->
+    <div class="collapse navbar-collapse" id="adminNavbar" #adminNavbar>
+      <ul class="navbar-nav ms-auto gap-3">
+
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLink="/profile"
+             routerLinkActive="active-link"
+             (click)="closeNavbar()">Profile</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLink="/skills"
+             routerLinkActive="active-link"
+             (click)="closeNavbar()">Skills</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLink="/experience"
+             routerLinkActive="active-link"
+             (click)="closeNavbar()">Experience</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLink="/projects"
+             routerLinkActive="active-link"
+             (click)="closeNavbar()">Projects</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLink="/education"
+             routerLinkActive="active-link"
+             (click)="closeNavbar()">Education</a>
+        </li>
+
+        <li class="nav-item">
+  <a class="btn btn-outline-primary px-3"
+     href="mailto:prathameshgavandi2019@gmail.com"
+     (click)="closeNavbar()">Contact</a>
+</li>
+
+
+      </ul>
+    </div>
+
+  </div>
+</nav>

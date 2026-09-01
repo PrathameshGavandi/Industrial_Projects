@@ -1,0 +1,77 @@
+@import "animate.css/animate.min.css";
+
+/* ===============================
+   ROOT RESET (PERMANENT)
+================================ */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+}
+
+/* ===============================
+   BODY BASE
+================================ */
+body {
+  background-color: #0b1c2d;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===============================
+   ANGULAR ROOT
+================================ */
+app-root {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ===============================
+   APP SHELL (ONLY SCROLL CONTAINER)
+================================ */
+.app-shell {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto; 
+  overflow-x: hidden;
+
+  position: relative;
+}
+
+/* ===============================
+   ROUTED CONTENT
+================================ */
+.app-content {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+
+  padding-top: 30px;
+
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   ROUTER FIX
+================================ */
+router-outlet {
+  display: block;
+}
+
+/* ===============================
+   ANIMATION FIX
+================================ */
+[class*="animate__"] {
+  max-width: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}

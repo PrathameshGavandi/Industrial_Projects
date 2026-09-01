@@ -1,0 +1,121 @@
+<section class="skills-wrapper">
+
+  <div class="skills-bg-orb orb-one"></div>
+  <div class="skills-bg-orb orb-two"></div>
+  <div class="skills-grid-lines"></div>
+
+  <div class="skills-container">
+
+    <!-- HEADER -->
+    <div class="skills-top">
+
+      <div class="skills-image-wrap">
+
+        <div class="skills-image">
+          <img
+            src="assets/images/skills.jpg"
+            alt="Technical Skills"
+          >
+        </div>
+
+      </div>
+
+
+      <div class="section-label">
+        <span></span>
+        MY EXPERTISE
+        <span></span>
+      </div>
+
+
+      <h2 class="skills-title">
+        Technical <strong>Skills</strong>
+      </h2>
+
+
+      <p class="skills-subtitle">
+        Technologies & tools I use to build modern,
+        scalable and user-friendly applications.
+      </p>
+
+
+      <div class="title-line"></div>
+
+    </div>
+
+
+    <!-- SKILLS -->
+    <div class="skills-grid">
+
+      <div
+        class="skill-card animate__animated"
+
+        *ngFor="
+          let row of skills$ | async;
+          let i = index
+        "
+
+        [ngClass]="{
+          'animate__fadeInLeft': i % 2 === 0,
+          'animate__fadeInRight': i % 2 !== 0
+        }"
+
+        [style.animationDelay]="
+          (i * 0.12) + 's'
+        "
+      >
+
+        <!-- CARD TOP -->
+        <div class="card-top">
+
+          <div class="skill-number">
+            {{ (i + 1).toString().padStart(2, '0') }}
+          </div>
+
+
+          <div class="card-icon">
+            ✦
+          </div>
+
+        </div>
+
+
+        <!-- CARD HEADING -->
+        <div class="card-heading">
+
+          <!-- WHITE SKILL TITLE -->
+          <h3 class="skill-title">
+            {{ row.label }}
+          </h3>
+
+          <div class="heading-line"></div>
+
+        </div>
+
+
+        <!-- SKILL VALUES -->
+        <div class="skill-values">
+
+          <div
+            class="skill-chip"
+
+            *ngFor="let v of row.values"
+          >
+
+            <span class="chip-dot"></span>
+
+            <span>
+              {{ v.trim() }}
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

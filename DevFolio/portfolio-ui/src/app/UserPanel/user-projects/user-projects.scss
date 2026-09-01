@@ -1,0 +1,1128 @@
+/* =====================================================
+   PROJECTS SECTION
+===================================================== */
+
+.projects-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 110px 60px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      #102d52 0%,
+      #0b1c2d 45%,
+      #081827 100%
+    );
+}
+
+
+/* =====================================================
+   BACKGROUND ORBS
+===================================================== */
+
+.projects-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(110px);
+}
+
+.projects-orb-one {
+  width: 430px;
+  height: 430px;
+  left: -240px;
+  top: 20%;
+
+  background: rgba(56, 189, 248, 0.08);
+
+  animation:
+    projectsOrbOne 9s ease-in-out infinite alternate;
+}
+
+.projects-orb-two {
+  width: 450px;
+  height: 450px;
+  right: -240px;
+  bottom: -150px;
+
+  background: rgba(37, 99, 235, 0.10);
+
+  animation:
+    projectsOrbTwo 10s ease-in-out infinite alternate;
+}
+
+@keyframes projectsOrbOne {
+  from {
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+
+  to {
+    transform:
+      translate(70px, -35px)
+      scale(1.15);
+  }
+}
+
+@keyframes projectsOrbTwo {
+  from {
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+
+  to {
+    transform:
+      translate(-60px, -40px)
+      scale(1.12);
+  }
+}
+
+
+/* =====================================================
+   BACKGROUND GRID
+===================================================== */
+
+.projects-grid-bg {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(148, 163, 184, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 55px 55px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black,
+      transparent
+    );
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.projects-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.projects-header {
+  max-width: 780px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   KICKER
+===================================================== */
+
+.projects-kicker {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+
+  color: #38bdf8;
+
+  font-size: 0.68rem;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.projects-kicker span {
+  width: 32px;
+  height: 1px;
+
+  background: #38bdf8;
+
+  box-shadow:
+    0 0 12px
+    rgba(56, 189, 248, 0.5);
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.projects-title {
+  margin: 0;
+
+  color: #ffffff !important;
+
+  font-size:
+    clamp(
+      3rem,
+      5vw,
+      4.7rem
+    );
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: -2.5px;
+}
+
+.projects-title span {
+  display: inline-block;
+
+  margin-left: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #38bdf8,
+      #60a5fa,
+      #38bdf8
+    );
+
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation:
+    projectsTextGradient 4s linear infinite;
+}
+
+@keyframes projectsTextGradient {
+  to {
+    background-position:
+      200% center;
+  }
+}
+
+
+/* =====================================================
+   TITLE UNDERLINE
+===================================================== */
+
+.projects-title::after {
+  content: "";
+
+  display: block;
+
+  width: 70px;
+  height: 3px;
+
+  margin: 22px auto 0;
+
+  border-radius: 20px;
+
+  background: #38bdf8;
+
+  box-shadow:
+    0 0 20px
+    rgba(56, 189, 248, 0.5);
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.projects-subtitle {
+  max-width: 680px;
+
+  margin: 26px auto 0;
+
+  color: #94a3b8;
+
+  font-size: 0.95rem;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   GITHUB CTA
+===================================================== */
+
+.github-cta {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  margin-top: 28px;
+
+  padding: 11px 17px;
+
+  border-radius: 10px;
+
+  color: #bae6fd !important;
+
+  text-decoration: none;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  background:
+    rgba(56, 189, 248, 0.045);
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.20);
+
+  backdrop-filter: blur(12px);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.github-cta::before {
+  content: "";
+
+  position: absolute;
+
+  left: -120%;
+
+  top: 0;
+
+  width: 80%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.15),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.7s ease;
+}
+
+.github-cta:hover {
+  transform: translateY(-4px);
+
+  color: #ffffff !important;
+
+  background:
+    rgba(56, 189, 248, 0.09);
+
+  border-color:
+    rgba(56, 189, 248, 0.45);
+
+  box-shadow:
+    0 15px 35px
+    rgba(0, 0, 0, 0.25);
+}
+
+.github-cta:hover::before {
+  left: 130%;
+}
+
+.github-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+
+  border-radius: 7px;
+
+  background:
+    rgba(56, 189, 248, 0.10);
+
+  color: #38bdf8;
+
+  font-size: 14px;
+}
+
+.github-arrow {
+  font-size: 15px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.github-cta:hover .github-arrow {
+  transform:
+    translate(3px, -3px);
+}
+
+
+/* =====================================================
+   PROJECT GRID
+===================================================== */
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+
+/* =====================================================
+   PROJECT CARD
+===================================================== */
+
+.project-card {
+  position: relative;
+
+  min-height: 390px;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15, 40, 63, 0.86),
+      rgba(8, 24, 39, 0.94)
+    );
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.12);
+
+  backdrop-filter:
+    blur(18px);
+
+  box-shadow:
+    0 25px 60px
+    rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+
+/* TOP BORDER */
+
+.project-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #38bdf8,
+      #2563eb,
+      transparent
+    );
+
+  opacity: 0.65;
+}
+
+
+/* CARD HOVER */
+
+.project-card:hover {
+  transform:
+    translateY(-9px);
+
+  border-color:
+    rgba(56, 189, 248, 0.35);
+
+  box-shadow:
+    0 35px 75px
+    rgba(0, 0, 0, 0.38),
+
+    0 0 35px
+    rgba(56, 189, 248, 0.06);
+}
+
+
+/* =====================================================
+   CARD GLOW
+===================================================== */
+
+.card-glow {
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  right: -120px;
+  top: -120px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(56, 189, 248, 0.10);
+
+  filter: blur(45px);
+
+  opacity: 0;
+
+  transition:
+    opacity 0.45s ease;
+}
+
+.project-card:hover .card-glow {
+  opacity: 1;
+}
+
+
+/* =====================================================
+   PROJECT NUMBER
+===================================================== */
+
+.project-number {
+  position: absolute;
+
+  right: 25px;
+  top: 20px;
+
+  color:
+    rgba(125, 211, 252, 0.08);
+
+  font-size: 4.5rem;
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  letter-spacing: -4px;
+
+  pointer-events: none;
+
+  transition:
+    color 0.4s ease;
+}
+
+.project-card:hover .project-number {
+  color:
+    rgba(125, 211, 252, 0.13);
+}
+
+
+/* =====================================================
+   PROJECT TOP
+===================================================== */
+
+.project-top {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   PROJECT ICON
+===================================================== */
+
+.project-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 12px;
+
+  color: #38bdf8;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(56, 189, 248, 0.14),
+      rgba(37, 99, 235, 0.08)
+    );
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.18);
+
+  box-shadow:
+    0 10px 25px
+    rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.project-card:hover .project-icon {
+  transform:
+    rotate(-5deg)
+    scale(1.06);
+
+  box-shadow:
+    0 12px 30px
+    rgba(56, 189, 248, 0.15);
+}
+
+
+/* =====================================================
+   PROJECT TYPE
+===================================================== */
+
+.project-type {
+  padding:
+    7px 11px;
+
+  border-radius: 8px;
+
+  color: #7dd3fc;
+
+  background:
+    rgba(56, 189, 248, 0.045);
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.12);
+
+  font-size: 0.59rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   PROJECT NAME
+===================================================== */
+
+.project-name {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 0;
+
+  max-width: 90%;
+
+  color: #ffffff;
+
+  font-size: 1.45rem;
+
+  line-height: 1.3;
+
+  font-weight: 750;
+
+  letter-spacing: -0.4px;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.project-description {
+  position: relative;
+
+  z-index: 2;
+
+  margin:
+    15px 0 25px;
+
+  color: #94a3b8;
+
+  font-size: 0.83rem;
+
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   TECHNOLOGY SECTION
+===================================================== */
+
+.technology-section {
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: auto;
+}
+
+.tech-label {
+  display: block;
+
+  margin-bottom: 11px;
+
+  color:
+    rgba(148, 163, 184, 0.58);
+
+  font-size: 0.57rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+
+/* =====================================================
+   TECH LIST
+===================================================== */
+
+.tech-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.tech-pill {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding:
+    6px 9px;
+
+  border-radius: 7px;
+
+  color: #cbd5e1;
+
+  background:
+    rgba(148, 163, 184, 0.045);
+
+  border:
+    1px solid
+    rgba(148, 163, 184, 0.10);
+
+  font-size: 0.64rem;
+
+  font-weight: 600;
+
+  transition:
+    0.3s ease;
+}
+
+.project-card:hover .tech-pill {
+  border-color:
+    rgba(56, 189, 248, 0.16);
+
+  color: #bae6fd;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.project-footer {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 27px;
+
+  padding-top: 17px;
+
+  border-top:
+    1px solid
+    rgba(148, 163, 184, 0.07);
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.project-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color:
+    rgba(125, 211, 252, 0.55);
+
+  font-size: 0.54rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #38bdf8;
+
+  box-shadow:
+    0 0 10px
+    rgba(56, 189, 248, 0.8);
+
+  animation:
+    statusPulse 2s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+
+/* =====================================================
+   PROJECT ARROW
+===================================================== */
+
+.project-arrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 31px;
+  height: 31px;
+
+  border-radius: 50%;
+
+  color: #38bdf8;
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.18);
+
+  background:
+    rgba(56, 189, 248, 0.035);
+
+  font-size: 14px;
+
+  transition:
+    0.35s ease;
+}
+
+.project-card:hover .project-arrow {
+  transform:
+    translate(3px, -3px);
+
+  background:
+    rgba(56, 189, 248, 0.10);
+
+  border-color:
+    rgba(56, 189, 248, 0.35);
+}
+
+
+/* =====================================================
+   LOADING SKELETON
+===================================================== */
+
+.skeleton-card {
+  min-height: 390px;
+
+  pointer-events: none;
+}
+
+.skeleton-icon,
+.skeleton-line,
+.skeleton-bottom {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.06),
+      rgba(148, 163, 184, 0.12),
+      rgba(148, 163, 184, 0.06)
+    );
+
+  background-size: 200% 100%;
+
+  animation:
+    skeletonLoading 1.6s linear infinite;
+}
+
+.skeleton-icon {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 12px;
+
+  margin-bottom: 28px;
+}
+
+.skeleton-line {
+  width: 80%;
+  height: 14px;
+
+  border-radius: 5px;
+
+  margin-bottom: 13px;
+}
+
+.skeleton-line.large {
+  width: 65%;
+  height: 25px;
+}
+
+.skeleton-line.short {
+  width: 45%;
+}
+
+.skeleton-bottom {
+  width: 100%;
+  height: 45px;
+
+  margin-top: 80px;
+
+  border-radius: 8px;
+}
+
+@keyframes skeletonLoading {
+  from {
+    background-position:
+      200% 0;
+  }
+
+  to {
+    background-position:
+      -200% 0;
+  }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .projects-wrapper {
+    padding:
+      90px 35px;
+  }
+
+  .projects-header {
+    margin-bottom: 55px;
+  }
+
+  .projects-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .project-card {
+    min-height: auto;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .projects-wrapper {
+    min-height: auto;
+
+    padding:
+      80px 18px 90px;
+  }
+
+  .projects-header {
+    margin-bottom: 45px;
+  }
+
+  .projects-kicker {
+    font-size: 0.57rem;
+
+    letter-spacing: 2px;
+
+    gap: 8px;
+  }
+
+  .projects-kicker span {
+    width: 20px;
+  }
+
+  .projects-title {
+    font-size: 2.7rem;
+
+    letter-spacing: -1.7px;
+  }
+
+  .projects-title span {
+    display: block;
+
+    margin:
+      5px 0 0;
+  }
+
+  .projects-subtitle {
+    font-size: 0.84rem;
+
+    line-height: 1.7;
+  }
+
+  .github-cta {
+    font-size: 0.7rem;
+
+    padding:
+      10px 14px;
+  }
+
+  .projects-grid {
+    gap: 18px;
+  }
+
+  .project-card {
+    padding:
+      24px 21px;
+
+    border-radius: 16px;
+  }
+
+  .project-number {
+    right: 18px;
+    top: 18px;
+
+    font-size: 3.5rem;
+  }
+
+  .project-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .project-name {
+    font-size: 1.25rem;
+  }
+
+  .project-description {
+    font-size: 0.78rem;
+
+    line-height: 1.7;
+  }
+
+  .project-type {
+    font-size: 0.52rem;
+
+    padding:
+      6px 8px;
+  }
+
+  .tech-pill {
+    font-size: 0.58rem;
+
+    padding:
+      5px 8px;
+  }
+
+  .project-status {
+    font-size: 0.48rem;
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .projects-orb-one,
+  .projects-orb-two,
+  .projects-title span,
+  .status-dot,
+  .skeleton-icon,
+  .skeleton-line,
+  .skeleton-bottom {
+    animation: none;
+  }
+
+  .project-card,
+  .project-icon,
+  .project-arrow,
+  .github-cta {
+    transition: none;
+  }
+}

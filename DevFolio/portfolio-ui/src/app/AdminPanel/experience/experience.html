@@ -1,0 +1,128 @@
+<div class="admin-container">
+
+  <h2 class="page-title text-center">Experience Management</h2>
+
+  <!-- ================= FORM CARD ================= -->
+  <div class="form-card">
+    <form (ngSubmit)="saveExperience(ExperienceForm)"
+          #ExperienceForm="ngForm"
+          novalidate>
+
+      <div class="form-grid">
+
+        <!-- Company Name -->
+        <div class="field">
+          <input type="text"
+                 placeholder="Company Name"
+                 [(ngModel)]="experience.company"
+                 name="company"
+                 #company="ngModel"
+                 required
+                 minlength="3"
+                 maxlength="50" />
+          <small class="error" *ngIf="company.invalid && (company.touched || company.dirty)">
+            <span *ngIf="company.errors?.['required']">Company name is required</span>
+            <span *ngIf="company.errors?.['minlength']">Minimum 3 characters required</span>
+            <span *ngIf="company.errors?.['maxlength']">Maximum 50 characters allowed</span>
+          </small>
+        </div>
+
+        <!-- Role -->
+        <div class="field">
+          <input type="text"
+                 placeholder="Role"
+                 [(ngModel)]="experience.role"
+                 name="role"
+                 #role="ngModel"
+                 required
+                 minlength="2"
+                 maxlength="30" />
+          <small class="error" *ngIf="role.invalid && (role.touched || role.dirty)">
+            <span *ngIf="role.errors?.['required']">Role is required</span>
+            <span *ngIf="role.errors?.['minlength']">Minimum 2 characters required</span>
+          </small>
+        </div>
+
+        <!-- Duration -->
+        <div class="field">
+          <input type="text"
+                 placeholder="Duration (e.g. Jan 2022 - Dec 2023)"
+                 [(ngModel)]="experience.duration"
+                 name="duration"
+                 #duration="ngModel"
+                 required
+                 pattern="^[A-Za-z0-9\s\-]+$" />
+          <small class="error" *ngIf="duration.invalid && (duration.touched || duration.dirty)">
+            <span *ngIf="duration.errors?.['required']">Duration is required</span>
+            <span *ngIf="duration.errors?.['pattern']">Invalid duration format</span>
+          </small>
+        </div>
+
+      </div>
+
+      <!-- Description -->
+      <div class="field full-width">
+        <textarea placeholder="Description"
+                  [(ngModel)]="experience.description"
+                  name="description"
+                  #description="ngModel"
+                  required
+                  minlength="10"
+                  maxlength="200"></textarea>
+        <small class="error" *ngIf="description.invalid && (description.touched || description.dirty)">
+          <span *ngIf="description.errors?.['required']">Description is required</span>
+          <span *ngIf="description.errors?.['minlength']">Minimum 10 characters required</span>
+          <span *ngIf="description.errors?.['maxlength']">Maximum 200 characters allowed</span>
+        </small>
+      </div>
+
+      <!-- Submit -->
+      <div class="form-actions center">
+        <button type="submit"
+                class="save-btn"
+                [disabled]="ExperienceForm.invalid">
+          Save Experience
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- ================= TABLE CARD ================= -->
+  <div class="table-card">
+    <h3 class="table-title">Saved Experiences</h3>
+
+    <div class="table-wrapper">
+      <table *ngIf="experiences.length > 0; else noData">
+        <thead>
+          <tr>
+            <th class="col-id">ID</th>
+            <th class="col-name">Company</th>
+            <th class="col-role">Role</th>
+            <th class="col-duration">Duration</th>
+            <th class="col-bio">Description</th>
+            <th class="col-action">Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let e of experiences">
+            <td class="col-id">{{ e.id }}</td>
+            <td class="col-name">{{ e.company }}</td>
+            <td class="col-role">{{ e.role }}</td>
+            <td class="col-duration">{{ e.duration }}</td>
+            <td class="col-bio">{{ e.description }}</td>
+            <td class="col-action">
+              <button class="delete-btn" (click)="deleteExperience(e.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ng-template #noData>
+        <p style="text-align:center; color:gray;">No experience records found</p>
+      </ng-template>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,129 @@
+/* ===============================
+   NAVBAR BASE
+================================ */
+.custom-navbar {
+  background: rgba(15, 32, 55, 0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  transition: all 0.35s ease;
+  z-index: 1050;
+}
+
+/* ===============================
+   BRAND
+================================ */
+.text-gradient {
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: 0.5px;
+}
+
+/* ===============================
+   NAV LINKS
+================================ */
+.navbar-nav .nav-link {
+  color: #cfe4ff;
+  font-weight: 500;
+  position: relative;
+  padding: 6px 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #7dd3fc;
+}
+
+/* underline animation */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  transition: width 0.35s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   ACTIVE LINK
+================================ */
+.active-link {
+  color: #7dd3fc !important;
+  font-weight: 600;
+}
+
+.active-link::after {
+  width: 100% !important;
+}
+
+/* ===============================
+   CONTACT BUTTON
+================================ */
+.navbar .btn-outline-primary {
+  border-color: #3b82f6;
+  color: #7dd3fc;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar .btn-outline-primary:hover {
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.6);
+}
+
+/* ===============================
+   TOGGLER (MOBILE)
+================================ */
+.navbar-toggler {
+  border: none;
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ===============================
+   MOBILE COLLAPSE MENU
+================================ */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(15, 32, 55, 0.95);
+    backdrop-filter: blur(16px);
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 12px;
+    animation: slideDown 0.4s ease;
+  }
+
+  .navbar-nav {
+    gap: 12px;
+  }
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,124 @@
+<div class="admin-container">
+
+  <h2 class="page-title text-center">Profile Management</h2>
+
+  <!-- ================= FORM CARD ================= -->
+  <div class="form-card">
+    <form (ngSubmit)="saveProfile(profileForm)"
+          #profileForm="ngForm"
+          novalidate>
+
+      <div class="form-grid">
+
+        <div class="field">
+          <input type="text"
+                 placeholder="Full Name"
+                 [(ngModel)]="profile.name"
+                 name="name"
+                 #name="ngModel"
+                 required
+                 minlength="3" />
+          <small class="error" *ngIf="name.invalid && name.touched">
+            Name must be at least 3 characters
+          </small>
+        </div>
+
+        <div class="field">
+          <input type="email"
+                 placeholder="Email Address"
+                 [(ngModel)]="profile.email"
+                 name="email"
+                 #email="ngModel"
+                 required
+                 email />
+          <small class="error" *ngIf="email.invalid && email.touched">
+            Enter a valid email
+          </small>
+        </div>
+
+        <div class="field">
+          <input type="text"
+                 placeholder="Phone Number"
+                 [(ngModel)]="profile.phone"
+                 name="phone"
+                 #phone="ngModel"
+                 pattern="^[0-9]{10}$" />
+          <small class="error" *ngIf="phone.invalid && phone.touched">
+            Enter valid 10 digit number
+          </small>
+        </div>
+
+        <div class="field">
+          <select [(ngModel)]="profile.status"
+                  name="status"
+                  required>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="field full-width">
+        <textarea placeholder="Short Bio"
+                  [(ngModel)]="profile.bio"
+                  name="bio"
+                  #bio="ngModel"
+                  required
+                  minlength="10"></textarea>
+        <small class="error" *ngIf="bio.invalid && bio.touched">
+          Bio must be minimum 10 characters
+        </small>
+      </div>
+
+      <div class="form-actions center">
+        <button class="save-btn"
+                type="submit"
+                [disabled]="profileForm.invalid">
+          Save Profile
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- ================= TABLE CARD ================= -->
+  <div class="table-card">
+    <h3 class="table-title">Saved Profiles</h3>
+
+    <div class="table-wrapper">
+      <table>
+
+        <thead>
+          <tr>
+            <th class="col-id">ID</th>
+            <th class="col-name">Name</th>
+            <th class="col-email">Email</th>
+            <th class="col-phone">Phone</th>
+            <th class="col-bio">Description</th>
+            <th class="col-action">Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let p of profiles">
+            <td class="col-id">{{ p.id }}</td>
+            <td class="col-name">{{ p.name }}</td>
+            <td class="col-email">{{ p.email }}</td>
+            <td class="col-phone">{{ p.phone }}</td>
+            <td class="col-bio">{{ p.bio }}</td>
+            <td class="col-action">
+              <button class="delete-btn"
+                      (click)="deleteProfile(p.id)">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+  </div>
+
+</div>

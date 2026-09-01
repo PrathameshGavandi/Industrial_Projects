@@ -1,0 +1,211 @@
+<section class="hero-wrapper">
+
+  <div class="hero-wrapper-inner">
+
+    <div
+      class="hero-container"
+      *ngIf="profile$ | async as profile"
+    >
+
+      <!-- LEFT : CREATIVE PROFILE IMAGE -->
+      <div class="hero-image animate__animated animate__fadeInLeft">
+
+        <!-- BACKGROUND SHAPES -->
+        <div class="hero-shape hero-shape-one"></div>
+        <div class="hero-shape hero-shape-two"></div>
+
+        <!-- DOT PATTERN -->
+        <div class="hero-dots hero-dots-top"></div>
+        <div class="hero-dots hero-dots-bottom"></div>
+
+        <!-- MAIN PHOTO -->
+        <div class="hero-photo">
+
+          <!-- ANIMATED ROTATING BORDER -->
+          <div class="hero-photo-border"></div>
+
+          <!-- IMAGE -->
+          <img
+            src="assets/images/prathamesh.jpg"
+            [alt]="profile.name"
+          />
+
+        </div>
+
+        <!-- FLOATING ELEMENT -->
+        <div class="hero-floating-card">
+
+          <span class="floating-dot"></span>
+
+          <span>FULL-STACK</span>
+
+        </div>
+
+        <!-- SMALL DECORATION -->
+        <div class="hero-plus">
+          +
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT : CONTENT -->
+      <div class="hero-content">
+
+        <!-- SMALL LABEL -->
+        <div
+          class="hero-label animate__animated animate__fadeInUp"
+        >
+
+          <span></span>
+
+          DEVELOPER • CREATOR
+
+        </div>
+
+
+        <!-- TITLE -->
+        <h1
+          class="hero-title animate__animated animate__fadeInUp"
+        >
+
+          Hi, I'm
+
+          <span>{{ profile.name }}</span>
+
+        </h1>
+
+
+        <!-- SUBTITLE -->
+        <p
+          class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s"
+        >
+
+          Full-Stack Developer
+
+          <strong>
+            | Java, Spring Boot, C#, ASP.NET, Angular & SQL
+          </strong>
+
+          <br>
+
+          Building modern, scalable, and user-friendly web applications
+          with hands-on experience in industry-oriented projects.
+
+        </p>
+
+
+        <!-- CONTACT -->
+        <div
+          class="hero-contact animate__animated animate__fadeInUp animate__delay-2s"
+        >
+
+          <!-- EMAIL -->
+          <p>
+
+            <span class="icon">📧</span>
+
+            <a
+              href="javascript:void(0)"
+              (click)="openMail(profile.email)"
+            >
+
+              {{ profile.email }}
+
+            </a>
+
+          </p>
+
+
+          <!-- PHONE -->
+          <p>
+
+            <span class="icon">📞</span>
+
+            <a
+              [href]="'tel:' + profile.phone"
+            >
+
+              {{ profile.phone }}
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- BIO WITH BULLET POINTS -->
+        <div
+          class="hero-bio animate__animated animate__fadeInUp animate__delay-3s"
+          *ngIf="getBioPoints(profile.bio).length > 0"
+        >
+
+          <span class="bio-label">
+            ABOUT ME
+          </span>
+
+
+          <div class="bio-list">
+
+            <div
+              class="bio-item"
+              *ngFor="let point of getBioPoints(profile.bio)"
+            >
+
+              <span class="bio-bullet"></span>
+
+              <span class="bio-text">
+
+                {{ point }}
+
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ACTION BUTTONS -->
+        <div
+          class="hero-actions animate__animated animate__fadeInUp animate__delay-4s"
+        >
+
+          <!-- RESUME -->
+          <a
+            class="btn primary"
+            href="assets/files/Prathamesh_Gavandi_Software_Developer.pdf"
+            target="_blank"
+          >
+
+            View Resume
+
+            <span>↗</span>
+
+          </a>
+
+
+          <!-- CONTACT -->
+          <a
+            class="btn outline"
+            href="javascript:void(0)"
+            (click)="openMail(profile.email)"
+          >
+
+            Contact
+
+            <span>→</span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

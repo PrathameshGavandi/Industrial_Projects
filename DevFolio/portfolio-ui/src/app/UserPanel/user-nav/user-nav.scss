@@ -1,0 +1,1055 @@
+/* =========================================================
+   PREMIUM PORTFOLIO NAVBAR
+========================================================= */
+
+.portfolio-navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+
+  height: 76px;
+
+  z-index: 99999;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 18, 32, 0.97) 0%,
+      rgba(7, 20, 34, 0.94) 100%
+    );
+
+  border-bottom:
+    1px solid rgba(125, 211, 252, 0.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 8px 35px rgba(0, 0, 0, 0.28);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   NAVBAR GLOW
+========================================================= */
+
+.portfolio-navbar::before {
+  content: "";
+
+  position: absolute;
+
+  top: -120px;
+  left: 8%;
+
+  width: 360px;
+  height: 180px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(14, 165, 233, 0.10);
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.portfolio-nav-container {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 1400px;
+
+  height: 76px;
+
+  margin: 0 auto;
+
+  padding: 0 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BRAND - GAVANDI.DEV
+========================================================= */
+
+.portfolio-brand {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  flex-shrink: 0;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 1.35rem;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+
+  line-height: 1;
+
+  z-index: 2;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.portfolio-brand:hover {
+  transform:
+    translateY(-1px);
+}
+
+
+/* =========================================================
+   BRAND TEXT
+========================================================= */
+
+.brand-white {
+  color: #ffffff;
+
+  text-shadow:
+    0 0 15px rgba(255, 255, 255, 0.08);
+}
+
+
+.brand-blue {
+  background:
+    linear-gradient(
+      90deg,
+      #38bdf8,
+      #60a5fa,
+      #38bdf8
+    );
+
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation:
+    portfolioBrandGradient 4s linear infinite;
+}
+
+
+@keyframes portfolioBrandGradient {
+
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+
+}
+
+
+/* =========================================================
+   BRAND UNDERLINE
+========================================================= */
+
+.portfolio-brand::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #38bdf8,
+      #2563eb
+    );
+
+  box-shadow:
+    0 0 12px rgba(56, 189, 248, 0.55);
+
+  transition:
+    width 0.3s ease;
+}
+
+
+.portfolio-brand:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.portfolio-navigation {
+  margin-left: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   NAV LIST
+========================================================= */
+
+.portfolio-nav-list {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 3px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   NAV ITEM
+========================================================= */
+
+.portfolio-nav-item {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   NAV LINK
+========================================================= */
+
+.portfolio-nav-link {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 40px;
+
+  padding: 8px 12px;
+
+  box-sizing: border-box;
+
+  color: #b8cbe0;
+
+  text-decoration: none;
+
+  font-size: 0.78rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.25px;
+
+  border-radius: 8px;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* =========================================================
+   NAV NUMBER
+========================================================= */
+
+.portfolio-nav-number {
+  color:
+    rgba(125, 211, 252, 0.38);
+
+  font-size: 0.55rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  transition:
+    color 0.25s ease;
+}
+
+
+/* =========================================================
+   NAV TEXT
+========================================================= */
+
+.portfolio-nav-text {
+  position: relative;
+}
+
+
+/* =========================================================
+   NAV HOVER
+========================================================= */
+
+.portfolio-nav-link:hover {
+  color: #ffffff;
+
+  background:
+    rgba(56, 189, 248, 0.065);
+
+  transform:
+    translateY(-1px);
+}
+
+
+.portfolio-nav-link:hover
+.portfolio-nav-number {
+  color: #38bdf8;
+}
+
+
+/* =========================================================
+   NAV UNDERLINE
+========================================================= */
+
+.portfolio-nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 12px;
+  right: 12px;
+
+  bottom: 3px;
+
+  height: 2px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #38bdf8,
+      #2563eb
+    );
+
+  transform:
+    scaleX(0);
+
+  transform-origin:
+    center;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.portfolio-nav-link:hover::after {
+  transform:
+    scaleX(1);
+}
+
+
+/* =========================================================
+   CONTACT ITEM
+========================================================= */
+
+.portfolio-contact-item {
+  display: flex;
+
+  align-items: center;
+
+  margin-left: 8px;
+}
+
+
+/* =========================================================
+   CONTACT BUTTON
+========================================================= */
+
+.portfolio-contact-button {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 42px;
+
+  padding: 10px 17px;
+
+  box-sizing: border-box;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 0.76rem;
+
+  font-weight: 700;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0ea5e9,
+      #2563eb
+    );
+
+  border:
+    1px solid rgba(125, 211, 252, 0.25);
+
+  box-shadow:
+    0 8px 25px rgba(37, 99, 235, 0.25);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   CONTACT SHINE
+========================================================= */
+
+.portfolio-contact-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.28),
+      transparent
+    );
+
+  transform:
+    skewX(-20deg);
+
+  transition:
+    left 0.6s ease;
+}
+
+
+.portfolio-contact-button:hover::before {
+  left: 130%;
+}
+
+
+.portfolio-contact-button:hover {
+  color: #ffffff;
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 13px 32px rgba(37, 99, 235, 0.40);
+}
+
+
+/* =========================================================
+   CONTACT ARROW
+========================================================= */
+
+.portfolio-contact-arrow {
+  font-size: 14px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.portfolio-contact-button:hover
+.portfolio-contact-arrow {
+  transform:
+    translate(3px, -3px);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.portfolio-menu-button {
+  display: none;
+
+  width: 43px;
+  height: 43px;
+
+  margin-left: auto;
+
+  padding: 0;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  background:
+    rgba(56, 189, 248, 0.06);
+
+  border:
+    1px solid rgba(56, 189, 248, 0.17);
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  outline: none;
+
+  z-index: 100000;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.2s ease;
+}
+
+
+.portfolio-menu-button:hover {
+  background:
+    rgba(56, 189, 248, 0.12);
+
+  border-color:
+    rgba(56, 189, 248, 0.35);
+}
+
+
+.portfolio-menu-button:active {
+  transform:
+    scale(0.94);
+}
+
+
+/* =========================================================
+   HAMBURGER LINES
+========================================================= */
+
+.portfolio-menu-button span {
+  display: block;
+
+  width: 19px;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background:
+    #7dd3fc;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    width 0.3s ease;
+}
+
+
+.portfolio-menu-button span:nth-child(2) {
+  width: 14px;
+
+  margin-left: 5px;
+}
+
+
+/* =========================================================
+   HAMBURGER ACTIVE
+========================================================= */
+
+.portfolio-menu-button.is-open
+span:nth-child(1) {
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+
+.portfolio-menu-button.is-open
+span:nth-child(2) {
+  width: 19px;
+
+  opacity: 0;
+}
+
+
+.portfolio-menu-button.is-open
+span:nth-child(3) {
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+  .portfolio-nav-container {
+    padding: 0 22px;
+  }
+
+  .portfolio-nav-link {
+    padding: 8px 9px;
+
+    font-size: 0.74rem;
+  }
+
+  .portfolio-nav-number {
+    font-size: 0.50rem;
+  }
+
+  .portfolio-contact-item {
+    margin-left: 5px;
+  }
+
+  .portfolio-contact-button {
+    padding: 9px 13px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .portfolio-navbar {
+    height: 70px;
+  }
+
+  .portfolio-nav-container {
+    height: 70px;
+
+    padding: 0 24px;
+  }
+
+
+  /* MOBILE NAVIGATION */
+
+  .portfolio-navigation {
+    position: absolute;
+
+    top:
+      calc(100% + 10px);
+
+    left: 16px;
+    right: 16px;
+
+    display: block;
+
+    max-height: 0;
+
+    padding: 0;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    transform:
+      translateY(-10px);
+
+    border:
+      1px solid rgba(56, 189, 248, 0.13);
+
+    border-radius: 17px;
+
+    background:
+      rgba(6, 19, 33, 0.98);
+
+    backdrop-filter:
+      blur(22px);
+
+    -webkit-backdrop-filter:
+      blur(22px);
+
+    box-shadow:
+      0 25px 65px rgba(0, 0, 0, 0.50);
+
+    transition:
+      max-height 0.35s ease,
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s ease,
+      padding 0.25s ease;
+  }
+
+
+  /* OPEN MENU */
+
+  .portfolio-navigation.navigation-open {
+    max-height: 600px;
+
+    padding: 12px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+      translateY(0);
+  }
+
+
+  /* SHOW HAMBURGER */
+
+  .portfolio-menu-button {
+    display: flex;
+  }
+
+
+  /* MOBILE LIST */
+
+  .portfolio-nav-list {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 3px;
+
+    white-space: normal;
+  }
+
+
+  .portfolio-nav-item {
+    width: 100%;
+  }
+
+
+  .portfolio-nav-link {
+    width: 100%;
+
+    min-height: 46px;
+
+    justify-content: flex-start;
+
+    padding: 12px 14px;
+
+    font-size: 0.82rem;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+  }
+
+
+  .portfolio-nav-link:hover {
+    transform: none;
+
+    background:
+      rgba(56, 189, 248, 0.08);
+  }
+
+
+  .portfolio-nav-link::after {
+    display: none;
+  }
+
+
+  .portfolio-nav-number {
+    min-width: 22px;
+
+    font-size: 0.52rem;
+  }
+
+
+  /* CONTACT */
+
+  .portfolio-contact-item {
+    width: 100%;
+
+    margin-left: 0;
+
+    margin-top: 8px;
+
+    padding-top: 10px;
+
+    border-top:
+      1px solid rgba(148, 163, 184, 0.09);
+  }
+
+
+  .portfolio-contact-button {
+    width: 100%;
+
+    min-height: 44px;
+
+    padding: 11px 18px;
+
+    box-sizing: border-box;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .portfolio-navbar {
+    height: 68px;
+  }
+
+
+  .portfolio-nav-container {
+    height: 68px;
+
+    padding: 0 16px;
+  }
+
+
+  .portfolio-brand {
+    font-size: 1.18rem;
+
+    gap: 3px;
+  }
+
+
+  .portfolio-menu-button {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .portfolio-navigation {
+    top:
+      calc(100% + 8px);
+
+    left: 10px;
+    right: 10px;
+
+    border-radius: 15px;
+  }
+
+
+  .portfolio-navigation.navigation-open {
+    padding: 10px;
+  }
+
+
+  .portfolio-nav-link {
+    min-height: 44px;
+
+    padding: 11px 12px;
+
+    font-size: 0.79rem;
+  }
+
+
+  .portfolio-nav-number {
+    font-size: 0.49rem;
+  }
+
+
+  .portfolio-contact-button {
+    min-height: 43px;
+
+    font-size: 0.78rem;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .portfolio-nav-container {
+    padding: 0 13px;
+  }
+
+
+  .portfolio-brand {
+    font-size: 1.05rem;
+
+    gap: 3px;
+  }
+
+
+  .portfolio-menu-button {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  .portfolio-navigation {
+    left: 8px;
+    right: 8px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 320px) {
+
+  .portfolio-brand {
+    font-size: 0.98rem;
+  }
+
+
+  .portfolio-menu-button {
+    width: 36px;
+    height: 36px;
+  }
+
+
+  .portfolio-navigation.navigation-open {
+    padding: 8px;
+  }
+
+
+  .portfolio-nav-link {
+    min-height: 42px;
+
+    padding: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (max-width: 900px) and (orientation: landscape) {
+
+  .portfolio-navigation.navigation-open {
+    max-height:
+      calc(100vh - 90px);
+
+    overflow-y: auto;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .portfolio-navbar,
+  .portfolio-brand,
+  .brand-blue,
+  .portfolio-navigation,
+  .portfolio-nav-link,
+  .portfolio-contact-button,
+  .portfolio-contact-arrow,
+  .portfolio-menu-button,
+  .portfolio-menu-button span {
+    animation: none !important;
+
+    transition: none !important;
+  }
+
+}
+
+
+/* =========================================================
+   SAFETY - PREVENT NAVBAR OVERFLOW
+========================================================= */
+
+.portfolio-navbar,
+.portfolio-nav-container,
+.portfolio-navigation,
+.portfolio-nav-list {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+========================================================= */
+
+.portfolio-nav-link:focus-visible,
+.portfolio-brand:focus-visible,
+.portfolio-contact-button:focus-visible,
+.portfolio-menu-button:focus-visible {
+  outline:
+    2px solid #38bdf8;
+
+  outline-offset: 3px;
+}

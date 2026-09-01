@@ -1,0 +1,135 @@
+<div class="admin-container">
+
+  <h2 class="page-title text-center">Education Management</h2>
+
+  <!-- ================= FORM CARD ================= -->
+  <div class="form-card">
+    <form (ngSubmit)="saveEducation(eduForm)" #eduForm="ngForm" novalidate>
+
+      <div class="form-grid">
+
+        <!-- Degree -->
+        <div class="field">
+          <input type="text"
+                 placeholder="Degree"
+                 [(ngModel)]="education.degree"
+                 name="degree"
+                 #degree="ngModel"
+                 required />
+          <small class="error" *ngIf="degree.invalid && (degree.touched || degree.dirty)">
+            Degree is required
+          </small>
+        </div>
+
+        <!-- Specialization -->
+        <div class="field">
+          <input type="text"
+                 placeholder="Specialization"
+                 [(ngModel)]="education.specialization"
+                 name="specialization" />
+        </div>
+
+        <!-- College -->
+        <div class="field">
+          <input type="text"
+                 placeholder="College"
+                 [(ngModel)]="education.college"
+                 name="college"
+                 #college="ngModel"
+                 required />
+          <small class="error" *ngIf="college.invalid && (college.touched || college.dirty)">
+            College is required
+          </small>
+        </div>
+
+        <!-- University -->
+        <div class="field">
+          <input type="text"
+                 placeholder="University"
+                 [(ngModel)]="education.university"
+                 name="university" />
+        </div>
+
+        <!-- Location -->
+        <div class="field">
+          <input type="text"
+                 placeholder="Location"
+                 [(ngModel)]="education.location"
+                 name="location" />
+        </div>
+
+        <!-- Passing Year -->
+        <div class="field">
+          <input type="number"
+                 placeholder="Passing Year"
+                 [(ngModel)]="education.passingYear"
+                 name="passingYear"
+                 #passingYear="ngModel"
+                 required />
+          <small class="error" *ngIf="passingYear.invalid && (passingYear.touched || passingYear.dirty)">
+            Passing year is required
+          </small>
+        </div>
+
+        <!-- CGPA -->
+        <div class="field">
+          <input type="number" step="0.01"
+                 placeholder="CGPA"
+                 [(ngModel)]="education.cgpa"
+                 name="cgpa" />
+        </div>
+
+      </div>
+
+      <div class="form-actions center">
+        <button type="submit" class="save-btn" [disabled]="eduForm.invalid">
+          Save Education
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- ================= TABLE CARD ================= -->
+  <div class="table-card">
+    <h3 class="table-title">Saved Education Records</h3>
+
+    <div class="table-wrapper">
+      <table *ngIf="educations.length > 0; else noData">
+        <thead>
+          <tr>
+            <th class="col-id">ID</th>
+            <th class="col-degree">Degree</th>
+            <th class="col-spec">Specialization</th>
+            <th class="col-college">College</th>
+            <th class="col-univ">University</th>
+            <th class="col-loc">Location</th>
+            <th class="col-year">Year</th>
+            <th class="col-cgpa">CGPA</th>
+            <th class="col-action">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let e of educations">
+            <td class="col-id">{{ e.id }}</td>
+            <td class="col-degree">{{ e.degree }}</td>
+            <td class="col-spec">{{ e.specialization }}</td>
+            <td class="col-college">{{ e.college }}</td>
+            <td class="col-univ">{{ e.university }}</td>
+            <td class="col-loc">{{ e.location }}</td>
+            <td class="col-year">{{ e.passingYear }}</td>
+            <td class="col-cgpa">{{ e.cgpa }}</td>
+            <td class="col-action">
+              <button class="delete-btn" (click)="deleteEducation(e.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ng-template #noData>
+        <p style="text-align:center; color:gray;">No education records found</p>
+      </ng-template>
+    </div>
+  </div>
+
+</div>

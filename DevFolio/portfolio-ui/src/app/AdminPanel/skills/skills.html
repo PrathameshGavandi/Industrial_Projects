@@ -1,0 +1,149 @@
+<div class="admin-container">
+
+  <h2 class="page-title text-center">Skills Management</h2>
+
+  <!-- ================= FORM CARD ================= -->
+  <div class="form-card">
+    <form (ngSubmit)="saveSkills(skillsForm)" #skillsForm="ngForm" novalidate>
+
+      <div class="form-grid">
+
+        <div class="field">
+          <input type="text" placeholder="Procedural Programming"
+                 [(ngModel)]="skill.pop"
+                 name="pop" required />
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Object Oriented Programming"
+                 [(ngModel)]="skill.oop"
+                 name="oop" required />
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Virtual Machine Programming"
+                 [(ngModel)]="skill.vm"
+                 name="vm" />
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Frameworks"
+                 [(ngModel)]="skill.fw"
+                 name="fw" />
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Scripting Languages"
+                 [(ngModel)]="skill.script"
+                 name="script" />
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Web Technologies"
+                 [(ngModel)]="skill.web"
+                 name="web" />
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="IDE Tools"
+                 [(ngModel)]="skill.ide"
+                 name="ide" />
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Web Servers"
+                 [(ngModel)]="skill.server"
+                 name="server" />
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Version Control"
+                 [(ngModel)]="skill.vcs"
+                 name="vcs" />
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Database Technologies"
+                 [(ngModel)]="skill.db"
+                 name="db" />
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Operating Systems"
+                 [(ngModel)]="skill.os"
+                 name="os" />
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Methodologies"
+                 [(ngModel)]="skill.method"
+                 name="method" />
+        </div>
+
+      </div>
+
+      <div class="form-actions center">
+        <button class="save-btn"
+                type="submit"
+                [disabled]="skillsForm.invalid">
+          Save Skill
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- ================= TABLE CARD ================= -->
+  <div class="table-card">
+    <h3 class="table-title">Saved Skills</h3>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-id">ID</th>
+            <th>Procedural</th>
+            <th>OOP</th>
+            <th>VM</th>
+            <th>Framework</th>
+            <th>Scripting</th>
+            <th>Web</th>
+            <th>IDE</th>
+            <th>Server</th>
+            <th>VCS</th>
+            <th>DB</th>
+            <th>OS</th>
+            <th>Method</th>
+            <th class="col-action">Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let s of skillsList">
+            <td class="col-id">{{ s.id }}</td>
+            <td>{{ s.pop }}</td>
+            <td>{{ s.oop }}</td>
+            <td>{{ s.vm }}</td>
+            <td>{{ s.fw }}</td>
+            <td>{{ s.script }}</td>
+            <td>{{ s.web }}</td>
+            <td>{{ s.ide }}</td>
+            <td>{{ s.server }}</td>
+            <td>{{ s.vcs }}</td>
+            <td>{{ s.db }}</td>
+            <td>{{ s.os }}</td>
+            <td>{{ s.method }}</td>
+            <td class="col-action">
+              <button class="delete-btn"
+                      (click)="deleteSkills(s.id)">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>
