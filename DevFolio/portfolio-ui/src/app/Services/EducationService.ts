@@ -1,9 +1,10 @@
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 /* ===============================
    EDUCATION INTERFACE
-================================ */
+================================= */
 export interface Education {
   id?: number;
   degree: string;
@@ -20,19 +21,24 @@ export interface Education {
 })
 export class EducationService {
 
-  private baseUrl = 'http://localhost:8080/api/education';
+  // Live Spring Boot Backend API
+  private baseUrl = 'https://my-portfolio-backend-y3cz.onrender.com/api/education';
 
   constructor(private http: HttpClient) {}
 
+  // Get all education records
   getAllEducations() {
     return this.http.get<Education[]>(this.baseUrl);
   }
 
+  // Save education record
   saveEducation(edu: Education) {
-    return this.http.post(this.baseUrl, edu);
+    return this.http.post<Education>(this.baseUrl, edu);
   }
 
+  // Delete education record
   deleteEducation(id: number) {
     return this.http.delete(`${this.baseUrl}/${id}`);
   }
 }
+

@@ -17,7 +17,7 @@ export interface Project {
 })
 export class ProjectsService {
 
-  private baseUrl = 'http://localhost:8080/api/projects';
+  private baseUrl = 'https://my-portfolio-backend-y3cz.onrender.com/api/projects';
 
   constructor(private http: HttpClient) {}
 

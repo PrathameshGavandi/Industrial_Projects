@@ -22,7 +22,10 @@ export interface Skills {
 })
 export class SkillsService {
 
-  private baseUrl = 'http://localhost:8080/api/skills';
+  
+
+  private baseUrl = 'https://my-portfolio-backend-y3cz.onrender.com/api/skills';
+  
 
   constructor(private http: HttpClient) {}
 

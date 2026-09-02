@@ -14,7 +14,8 @@ export interface Experience {
 })
 export class ExperienceService {
 
-  private baseUrl = 'http://localhost:8080/api/experience';
+  private baseUrl = 'https://my-portfolio-backend-y3cz.onrender.com/api/experience';
+  
 
   constructor(private http: HttpClient) {}
 

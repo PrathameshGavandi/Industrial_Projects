@@ -14,7 +14,7 @@ export interface Profile {
 })
 export class ProfileService {
 
-  private baseUrl = 'http://localhost:8080/api/profile';
+  private baseUrl = 'https://my-portfolio-backend-y3cz.onrender.com/api/profile';
 
   constructor(private http: HttpClient) {}
 
