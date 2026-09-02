@@ -1,108 +1,115 @@
 /* ===============================
-FOOTER BASE
+   FOOTER BASE
 ================================ */
 
 .custom-footer {
-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  padding: 14px 0;
+  flex-shrink: 0;
+}
 
-border-top:
-1px solid rgba(255, 255, 255, 0.08);
-
-text-align: center;
-
-padding: 14px 0;
-
-flex-shrink: 0;
+/* नावाच्या रेषेला फ्लेक्सबॉक्स बनवले */
+.footer-title-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 200px; /* नावाच्या आकाराएवढी रुंदी */
+  margin: 0 auto 2px auto;
 }
 
 /* Footer Title */
-
 .custom-footer h5 {
-font-weight: 700;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0px;
+  color: #ffffff;
+  white-space: nowrap;
+}
 
-font-size: 1.05rem;
+/* गुप्त बटनाचे डिझाईन */
+.secret-admin-trigger {
+  position: absolute;
+  right: -25px; /* नावाच्या अगदी शेवटी उजवीकडे बसेल */
+  color: #ffffff;
+  font-size: 0.75rem; /* अगदी बारीक लहान आकार */
+  opacity: 0.12; /* ८८% पारदर्शक - कोणालाही संशय येणार नाही */
+  text-decoration: none;
+  cursor: default;
+  transition: opacity 0.3s ease;
+}
 
-margin-bottom: 2px;
-
-color: #ffffff;
+/* कॉम्प्युटरवर फक्त माउस नेल्यास थोडे ठळक दिसेल */
+.secret-admin-trigger:hover {
+  opacity: 0.5;
 }
 
 /* Footer Subtitle */
-
 .custom-footer p.text-light {
-color: #cfe4ff;
-
-font-size: 0.85rem;
-
-margin-bottom: 8px;
+  color: #cfe4ff;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
 }
 
 /* ===============================
-SOCIAL ICONS
+   SOCIAL ICONS
 ================================ */
 
 .social-icons a {
-color: #dbeafe;
-
-font-size: 1.3rem;
-
-margin: 0 10px;
-
-display: inline-block;
-
-transition: all 0.35s ease;
+  color: #dbeafe;
+  font-size: 1.3rem;
+  margin: 0 10px;
+  display: inline-block;
+  transition: all 0.35s ease;
 }
 
 /* HOVER */
-
 .social-icons a:hover {
-color: #38bdf8;
-
-transform:
-translateY(-5px)
-scale(1.15);
-
-text-shadow:
-0 0 8px rgba(56, 189, 248, 0.9),
-0 0 18px rgba(56, 189, 248, 0.7),
-0 0 30px rgba(56, 189, 248, 0.6);
+  color: #38bdf8;
+  transform: translateY(-5px) scale(1.15);
+  text-shadow:
+    0 0 8px rgba(56, 189, 248, 0.9),
+    0 0 18px rgba(56, 189, 248, 0.7),
+    0 0 30px rgba(56, 189, 248, 0.6);
 }
 
 /* ===============================
-FOOTER BOTTOM
+   FOOTER BOTTOM
 ================================ */
 
 .footer-bottom {
-margin-top: 8px;
-
-font-size: 0.7rem;
-
-color: rgba(207, 228, 255, 0.55);
-
-letter-spacing: 0.3px;
+  margin-top: 8px;
+  font-size: 0.7rem;
+  color: rgba(207, 228, 255, 0.55);
+  letter-spacing: 0.3px;
 }
 
 /* ===============================
-MOBILE
+   MOBILE RESPONSIVE
 ================================ */
 
 @media (max-width: 576px) {
+  .custom-footer {
+    padding: 12px 0;
+  }
 
-.custom-footer {
-padding: 12px 0;
-}
+  .footer-title-row {
+    max-width: 180px;
+  }
 
-.social-icons a {
-font-size: 1.2rem;
+  .secret-admin-trigger {
+    right: -20px; /* मोबाईल स्क्रीननुसार जागा सेट केली */
+    padding: 10px; /* बोटाने अचूक टच होण्यासाठी एरिया वाढवला */
+  }
 
- 
-margin: 0 8px;
- 
+  .social-icons a {
+    font-size: 1.2rem;
+    margin: 0 8px;
+  }
 
-}
-
-.footer-bottom {
-font-size: 0.65rem;
-}
-
+  .footer-bottom {
+    font-size: 0.65rem;
+  }
 }
