@@ -14,7 +14,7 @@ public class ProfileModel {
     private String email;
     private String phone;
 
-    @Column(columnDefinition = "NVARCHAR(MAX)")
+    @Column(columnDefinition = "TEXT")
     private String bio;
 
     // getters & setters

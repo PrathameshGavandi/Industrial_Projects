@@ -13,7 +13,7 @@ public class ProjectModel {
     private String name;
     private String type;
 
-    @Column(columnDefinition = "NVARCHAR(MAX)")
+    @Column(columnDefinition = "TEXT")
     private String description;
 
     @Column(length = 300)

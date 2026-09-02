@@ -14,7 +14,7 @@ public class ExperienceModel {
     private String role;
     private String duration;
 
-    @Column(columnDefinition = "NVARCHAR(MAX)")
+    @Column(columnDefinition = "TEXT")
     private String description;
 
     // getters & setters
