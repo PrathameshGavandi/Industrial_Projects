@@ -8,9 +8,7 @@ import com.Prathamesh.ResumePortal.repository.LogincheckRepository;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = {
-        "https://prathamesh-gavandi-portfolio.onrender.com"
-}) // Angular frontend allow
+@CrossOrigin(origins = {"*"}) // Angular frontend allow
 public class LogincheckController {
 
     @Autowired

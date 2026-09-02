@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/profile")
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("*")
 public class ProfileController {
 
     @Autowired
