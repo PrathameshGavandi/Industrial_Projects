@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/education")
-@CrossOrigin(origins = "http://localhost:4200") // Angular frontend
+@CrossOrigin(origins = "*") // Angular frontend
 public class EducationController {
 
     private final EducationService service;
