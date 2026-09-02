@@ -35,7 +35,7 @@ export class LoginComponent {
       return;
     }
 
-    this.http.post<boolean>('http://localhost:8080/api/login', {
+    this.http.post<boolean>('https://my-portfolio-backend-y3cz.onrender.com/api/login', {
       username: this.username,
       password: this.password
     }).subscribe({
