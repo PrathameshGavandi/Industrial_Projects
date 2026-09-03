@@ -50,30 +50,36 @@ export class UserPortfolioComponent
   implements OnInit, OnDestroy {
 
 
-  /*
-   * Loader visible initially
-   */
+  /* =====================================================
+     LOADER STATE
+  ===================================================== */
+
   isLoading = true;
 
 
-  /*
-   * Continue button hidden initially
-   */
+  /* =====================================================
+     BUTTON / SYSTEM READY STATE
+  ===================================================== */
+
   showContinueButton = false;
 
 
-  /*
-   * EXACTLY 9 SECONDS
-   */
+  /* =====================================================
+     EXACT LOADING TIME
+
+     9000 milliseconds = 9 seconds
+  ===================================================== */
+
   private readonly LOADING_TIME = 9000;
 
 
   private loadingTimer?: ReturnType<typeof setTimeout>;
 
 
-  /*
-   * Component starts
-   */
+  /* =====================================================
+     COMPONENT START
+  ===================================================== */
+
   ngOnInit(): void {
 
     this.startLoader();
@@ -81,9 +87,10 @@ export class UserPortfolioComponent
   }
 
 
-  /*
-   * Start loader automatically
-   */
+  /* =====================================================
+     START LOADER AUTOMATICALLY
+  ===================================================== */
+
   private startLoader(): void {
 
     this.isLoading = true;
@@ -92,12 +99,17 @@ export class UserPortfolioComponent
 
 
     /*
-     * After EXACTLY 9 seconds
+     * Button is already visible.
      *
-     * Button appears automatically
+     * But it remains DISABLED for 9 seconds.
      *
-     * NO CLICK REQUIRED
+     * After 9 seconds:
+     *
+     * - Progress completes
+     * - SYSTEM READY appears
+     * - Button becomes ENABLED automatically
      */
+
     this.loadingTimer = setTimeout(() => {
 
       this.showContinueButton = true;
@@ -107,21 +119,36 @@ export class UserPortfolioComponent
   }
 
 
-  /*
-   * Called when user clicks:
-   * Click Here to Explore
-   */
+  /* =====================================================
+     GO TO PORTFOLIO CONTENT
+  ===================================================== */
+
   goToContent(): void {
+
+
+    /*
+     * Extra safety:
+     * Do nothing until system is ready
+     */
+
+    if (!this.showContinueButton) {
+
+      return;
+
+    }
+
 
     /*
      * Remove loader
      */
+
     this.isLoading = false;
 
 
     /*
-     * Enable portfolio
+     * Scroll to profile section
      */
+
     setTimeout(() => {
 
       const profileSection =
@@ -142,9 +169,10 @@ export class UserPortfolioComponent
   }
 
 
-  /*
-   * Clear timer when component destroyed
-   */
+  /* =====================================================
+     CLEANUP
+  ===================================================== */
+
   ngOnDestroy(): void {
 
     if (this.loadingTimer) {

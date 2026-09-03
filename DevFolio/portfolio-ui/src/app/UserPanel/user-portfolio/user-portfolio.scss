@@ -217,7 +217,8 @@
 
   border-radius: 50%;
 
-  background: rgba(80, 210, 255, 0.7);
+  background:
+    rgba(80, 210, 255, 0.7);
 
   box-shadow:
     0 0 12px rgba(80, 210, 255, 0.8);
@@ -671,7 +672,6 @@
   letter-spacing: -2px;
 
   text-shadow:
-
     0 0 10px rgba(0, 210, 255, 0.8);
 
 }
@@ -815,7 +815,6 @@
   letter-spacing: -1px;
 
   text-shadow:
-
     0 0 25px rgba(0, 210, 255, 0.12);
 
 }
@@ -938,8 +937,6 @@
 }
 
 
-/* Technology item */
-
 .tech-item {
 
   display: inline-flex;
@@ -980,7 +977,10 @@
 }
 
 
-/* Small technology logos */
+/* =========================================================
+   TECHNOLOGY LOGOS
+========================================================= */
+
 .tech-logo {
 
   width: 24px;
@@ -996,6 +996,8 @@
   flex-shrink: 0;
 
 }
+
+
 .tech-logo img {
 
   width: 100%;
@@ -1021,9 +1023,6 @@
 }
 
 
-
-
-
 /* Spring Boot */
 
 .spring-tech {
@@ -1034,9 +1033,6 @@
     rgba(70, 255, 130, 0.16);
 
 }
-
-
-
 
 
 /* SQL Server */
@@ -1051,9 +1047,6 @@
 }
 
 
-
-
-
 /* Java */
 
 .java-tech {
@@ -1064,9 +1057,6 @@
     rgba(255, 190, 70, 0.18);
 
 }
-
-
-
 
 
 /* Separator */
@@ -1224,9 +1214,10 @@
     0 0 25px rgba(110, 80, 255, 0.35);
 
   /*
-   * IMPORTANT:
-   * Same 9 seconds as TypeScript
+   * EXACTLY SAME 9 SECONDS
+   * AS TYPESCRIPT
    */
+
   animation:
 
     loadingProgress 9s linear forwards,
@@ -1236,9 +1227,8 @@
 }
 
 
-/*
- * After 9 seconds
- */
+/* Progress completed */
+
 .progress-complete {
 
   width: 100%;
@@ -1325,33 +1315,10 @@
 
   margin-top: 26px;
 
-  animation:
-    continueAppear 0.8s ease forwards;
-
-}
-
-
-@keyframes continueAppear {
-
-  from {
-
-    opacity: 0;
-
-    transform:
-      translateY(18px)
-      scale(0.94);
-
-  }
-
-  to {
-
-    opacity: 1;
-
-    transform:
-      translateY(0)
-      scale(1);
-
-  }
+  /*
+   * IMPORTANT:
+   * Container is visible from beginning.
+   */
 
 }
 
@@ -1369,13 +1336,26 @@
   gap: 9px;
 
   color:
-    #6dffad;
+    rgba(109, 255, 173, 0.65);
 
   font-size: 13px;
 
   font-weight: 700;
 
   letter-spacing: 0.5px;
+
+  transition:
+    color 0.4s ease;
+
+}
+
+
+/* Ready state */
+
+.continue-container.ready .ready-message {
+
+  color:
+    #6dffad;
 
 }
 
@@ -1395,13 +1375,35 @@
   border-radius: 50%;
 
   border:
-    1px solid rgba(90, 255, 165, 0.55);
+    1px solid rgba(90, 255, 165, 0.35);
+
+  background:
+    rgba(70, 255, 150, 0.05);
+
+  color:
+    rgba(109, 255, 173, 0.7);
+
+  box-shadow:
+    0 0 15px rgba(70, 255, 150, 0.08);
+
+  transition:
+    all 0.4s ease;
+
+}
+
+
+.continue-container.ready .ready-icon {
+
+  border-color:
+    rgba(90, 255, 165, 0.55);
 
   background:
     rgba(70, 255, 150, 0.08);
 
-  box-shadow:
+  color:
+    #6dffad;
 
+  box-shadow:
     0 0 15px rgba(70, 255, 150, 0.15);
 
 }
@@ -1450,9 +1452,9 @@
 
   letter-spacing: 0.2px;
 
-  cursor: pointer;
-
   outline: none;
+
+  overflow: hidden;
 
   box-shadow:
 
@@ -1466,9 +1468,53 @@
 
     box-shadow 0.3s ease,
 
-    filter 0.3s ease;
+    filter 0.3s ease,
 
-  overflow: hidden;
+    opacity 0.4s ease;
+
+}
+
+
+/* =========================================================
+   DISABLED BUTTON
+
+   FIRST 9 SECONDS
+========================================================= */
+
+.continue-button:disabled {
+
+  cursor: not-allowed;
+
+  pointer-events: none;
+
+  opacity: 0.42;
+
+  filter:
+    grayscale(0.25)
+    brightness(0.75);
+
+  transform:
+    none;
+
+}
+
+
+/* =========================================================
+   ENABLED BUTTON
+
+   AFTER 9 SECONDS
+========================================================= */
+
+.continue-button.button-ready {
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  opacity: 1;
+
+  filter:
+    none;
 
 }
 
@@ -1507,9 +1553,9 @@
 }
 
 
-/* Hover */
+/* Hover only when enabled */
 
-.continue-button:hover {
+.continue-button:not(:disabled):hover {
 
   transform:
     translateY(-4px)
@@ -1527,16 +1573,16 @@
 }
 
 
-.continue-button:hover::before {
+.continue-button:not(:disabled):hover::before {
 
   left: 140%;
 
 }
 
 
-/* Click */
+/* Click only when enabled */
 
-.continue-button:active {
+.continue-button:not(:disabled):active {
 
   transform:
     translateY(-1px)
@@ -1568,7 +1614,7 @@
 }
 
 
-.continue-button:hover .arrow {
+.continue-button:not(:disabled):hover .arrow {
 
   transform:
     translateX(6px);
@@ -1936,8 +1982,6 @@
     width: 18px;
 
     height: 18px;
-
-    font-size: 7px;
 
   }
 
