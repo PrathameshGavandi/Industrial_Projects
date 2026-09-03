@@ -30,7 +30,7 @@
 
 
   <!-- =================================================
-       LOADER CARD
+       LOADER CONTENT
   ================================================== -->
 
   <div class="loader-card">
@@ -46,6 +46,7 @@
     ================================================== -->
 
     <div class="loader-animation">
+
 
       <div class="loader-ring outer"></div>
 
@@ -65,6 +66,7 @@
         </span>
 
       </div>
+
 
     </div>
 
@@ -268,6 +270,7 @@
 
         </div>
 
+
       </div>
 
 
@@ -279,6 +282,7 @@
         class="loader-message"
         [class.ready-backend]="showContinueButton"
       >
+
 
         <span class="message-icon">
 
@@ -315,6 +319,7 @@
 
         </span>
 
+
       </div>
 
 
@@ -329,7 +334,7 @@
 
           <div
             class="progress-bar"
-            [class.progress-complete]="showContinueButton"
+            [style.width.%]="progressValue"
           ></div>
 
         </div>
@@ -356,13 +361,17 @@
           </span>
 
 
-          <span>
+          <!-- ACTUAL PROGRESS -->
 
-            0% — 100%
+          <span class="progress-percentage">
+
+            {{ progressValue }}%
 
           </span>
 
+
         </div>
+
 
       </div>
 
@@ -374,9 +383,14 @@
 
       <div class="continue-container">
 
+
         <!-- READY MESSAGE -->
 
-        <div class="ready-message">
+        <div
+          class="ready-message"
+          [class.ready-active]="showContinueButton"
+        >
+
 
           <span class="ready-icon">
 
@@ -395,19 +409,28 @@
 
           </span>
 
+
         </div>
 
 
-        <!-- MAIN BUTTON -->
+        <!-- =================================================
+             MAIN BUTTON
+        ================================================== -->
 
         <button
           type="button"
+
           class="continue-button"
+
           [disabled]="!showContinueButton"
+
           [class.enabled]="showContinueButton"
+
           aria-label="Explore my portfolio"
+
           (click)="goToContent()"
         >
+
 
           <span class="button-icon">
 
@@ -433,6 +456,7 @@
 
           </span>
 
+
         </button>
 
 
@@ -448,12 +472,15 @@
 
         </span>
 
+
       </div>
 
 
     </div>
 
+
   </div>
+
 
 </div>
 

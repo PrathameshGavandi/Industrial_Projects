@@ -50,25 +50,53 @@ export class UserPortfolioComponent
   implements OnInit, OnDestroy {
 
 
-  /* Loader initially visible */
+  /* ==========================================
+     LOADER STATE
+  ========================================== */
+
   isLoading = true;
 
 
-  /* Button initially disabled */
+  /* ==========================================
+     BUTTON STATE
+  ========================================== */
+
   showContinueButton = false;
 
 
-  /* EXACTLY 9 SECONDS */
+  /* ==========================================
+     PROGRESS
+     0 → 100
+  ========================================== */
+
+  progressValue = 0;
+
+
+  /* ==========================================
+     LOADING TIME
+     EXACTLY 9 SECONDS
+  ========================================== */
+
   private readonly LOADING_TIME = 9000;
 
 
+  /* ==========================================
+     TIMERS
+  ========================================== */
+
   private loadingTimer?: ReturnType<typeof setTimeout>;
+
+  private progressTimer?: ReturnType<typeof setInterval>;
 
 
   constructor(
     private cdr: ChangeDetectorRef
   ) {}
 
+
+  /* ==========================================
+     COMPONENT START
+  ========================================== */
 
   ngOnInit(): void {
 
@@ -77,26 +105,101 @@ export class UserPortfolioComponent
   }
 
 
+  /* ==========================================
+     START LOADER
+  ========================================== */
+
   private startLoader(): void {
+
+
+    /* Reset */
 
     this.isLoading = true;
 
     this.showContinueButton = false;
 
+    this.progressValue = 0;
+
+
+    /* ==========================================
+       PROGRESS TIMER
+
+       100 steps in 9000ms
+
+       9000 / 100 = 90ms
+    ========================================== */
+
+    const progressInterval =
+      this.LOADING_TIME / 100;
+
+
+    this.progressTimer = setInterval(() => {
+
+
+      if (this.progressValue < 100) {
+
+        this.progressValue++;
+
+        this.cdr.detectChanges();
+
+      }
+
+
+      /* Stop at 100 */
+
+      if (this.progressValue >= 100) {
+
+        this.progressValue = 100;
+
+
+        if (this.progressTimer) {
+
+          clearInterval(this.progressTimer);
+
+          this.progressTimer = undefined;
+
+        }
+
+
+        this.cdr.detectChanges();
+
+      }
+
+
+    }, progressInterval);
+
+
+    /* ==========================================
+       EXACTLY AFTER 9 SECONDS
+       ENABLE BUTTON
+    ========================================== */
 
     this.loadingTimer = setTimeout(() => {
 
-      /* 9 seconds completed */
+
+      /* Ensure exactly 100 */
+
+      this.progressValue = 100;
+
+
+      /* Enable Explore Button */
 
       this.showContinueButton = true;
 
 
-      /*
-       * IMPORTANT:
-       * Force Angular UI refresh immediately
-       *
-       * त्यामुळे click करण्याची गरज पडणार नाही
-       */
+      /* Clear progress timer */
+
+      if (this.progressTimer) {
+
+        clearInterval(this.progressTimer);
+
+        this.progressTimer = undefined;
+
+      }
+
+
+      /* Refresh Angular UI */
+
       this.cdr.detectChanges();
 
 
@@ -105,12 +208,15 @@ export class UserPortfolioComponent
   }
 
 
+  /* ==========================================
+     EXPLORE PORTFOLIO
+  ========================================== */
+
   goToContent(): void {
 
-    /*
-     * सुरक्षा:
-     * 9 sec आधी click झालं तरी काही होणार नाही
-     */
+
+    /* सुरक्षा */
+
     if (!this.showContinueButton) {
 
       return;
@@ -118,15 +224,18 @@ export class UserPortfolioComponent
     }
 
 
-    /* Remove loader */
+    /* Hide loader */
+
     this.isLoading = false;
 
 
-    /* Refresh UI */
     this.cdr.detectChanges();
 
 
+    /* Scroll to profile */
+
     setTimeout(() => {
+
 
       const profileSection =
         document.getElementById('profile');
@@ -135,22 +244,38 @@ export class UserPortfolioComponent
       if (profileSection) {
 
         profileSection.scrollIntoView({
+
           behavior: 'smooth',
+
           block: 'start'
+
         });
 
       }
+
 
     }, 100);
 
   }
 
 
+  /* ==========================================
+     CLEANUP
+  ========================================== */
+
   ngOnDestroy(): void {
+
 
     if (this.loadingTimer) {
 
       clearTimeout(this.loadingTimer);
+
+    }
+
+
+    if (this.progressTimer) {
+
+      clearInterval(this.progressTimer);
 
     }
 
