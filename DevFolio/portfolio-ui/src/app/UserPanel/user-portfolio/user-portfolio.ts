@@ -6,66 +6,129 @@ Component
 import { CommonModule } from '@angular/common';
 
 import { UserNav } from '../user-nav/user-nav';
-import { UserProfileComponent } from '../user-profile/user-profile';
-import { UserSkillsComponent } from '../user-skills/user-skills';
-import { UserExperienceComponent } from '../user-experience/user-experience';
-import { UserProjectsComponent } from '../user-projects/user-projects';
-import { UserEducationComponent } from '../user-education/user-education';
+
+import { UserProfileComponent }
+from '../user-profile/user-profile';
+
+import { UserSkillsComponent }
+from '../user-skills/user-skills';
+
+import { UserExperienceComponent }
+from '../user-experience/user-experience';
+
+import { UserProjectsComponent }
+from '../user-projects/user-projects';
+
+import { UserEducationComponent }
+from '../user-education/user-education';
 
 @Component({
+
 selector: 'app-user-portfolio',
 
 standalone: true,
 
 imports: [
+
+ 
 CommonModule,
+
 UserNav,
+
 UserProfileComponent,
+
 UserSkillsComponent,
+
 UserExperienceComponent,
+
 UserProjectsComponent,
+
 UserEducationComponent
+ 
+
 ],
 
 templateUrl: './user-portfolio.html',
 
 styleUrls: ['./user-portfolio.scss']
+
 })
-export class UserPortfolioComponent implements AfterViewInit {
+
+export class UserPortfolioComponent
+implements AfterViewInit {
 
 /*
 
-* Controls the full-screen loading screen.
+* ---
+* LOADING STATE
+* ---
 *
-* Initially true because the portfolio needs
-* some time to fetch data from the backend.
-  */
-  isLoading = true;
+* Loader remains visible for 5 seconds.
+*
+* During this time:
+* * Child components initialize
+* * API calls can run in background
+* * User cannot interact with portfolio
+    */
+
+isLoading = true;
+
+/*
+
+* ---
+* AFTER VIEW INITIALIZATION
+* ---
+
+*/
 
 ngAfterViewInit(): void {
 
  
 /*
- * Give Angular some time to initialize the
- * child components and start their API calls.
+ * Keep the full-screen loading screen
+ * visible for 5 seconds.
  */
+
 setTimeout(() => {
 
   this.isLoading = false;
 
+
+  /*
+   * Start section animations only
+   * after loading screen disappears.
+   */
+
   this.initializeSectionAnimations();
 
-}, 1200);
+}, 5000);
  
 
 }
+
+/*
+
+* ---
+* SECTION ANIMATIONS
+* ---
+
+*/
 
 private initializeSectionAnimations(): void {
 
  
 const sections =
-  document.querySelectorAll('.portfolio-section');
+  document.querySelectorAll(
+    '.portfolio-section'
+  );
 
+
+/*
+ * Intersection Observer
+ *
+ * Detects when portfolio sections
+ * enter the viewport.
+ */
 
 const observer =
   new IntersectionObserver(
@@ -76,11 +139,15 @@ const observer =
 
         if (entry.isIntersecting) {
 
-          entry.target.classList.add('show');
+          entry.target.classList.add(
+            'show'
+          );
 
         } else {
 
-          entry.target.classList.remove('show');
+          entry.target.classList.remove(
+            'show'
+          );
 
         }
 
@@ -94,6 +161,10 @@ const observer =
 
   );
 
+
+/*
+ * Observe every portfolio section.
+ */
 
 sections.forEach((section) => {
 

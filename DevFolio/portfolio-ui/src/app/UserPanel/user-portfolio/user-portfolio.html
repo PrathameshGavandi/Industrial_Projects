@@ -1,76 +1,192 @@
+<!-- =========================================================
+     NAVIGATION
+     ========================================================= -->
+
 <app-user-nav></app-user-nav>
 
-<!-- Full-Stack Loading Screen -->
+<!-- =========================================================
+     FULL-STACK LOADING SCREEN
+     ========================================================= -->
 
-<div class="portfolio-loader" *ngIf="isLoading">
+<div
+  class="portfolio-loader"
+  *ngIf="isLoading"
+  (wheel)="$event.preventDefault()"
+  (touchmove)="$event.preventDefault()"
+  (click)="$event.stopPropagation()"
+>
+
   <div class="loader-card">
 
 ```
+<!-- Animated Loader -->
 <div class="loader-animation">
+
   <div class="loader-ring"></div>
+
   <div class="loader-ring inner"></div>
 
   <div class="loader-icon">
     &lt;/&gt;
   </div>
+
 </div>
 
+
+<!-- Loading Content -->
 <div class="loader-content">
+
+  <!-- Status -->
   <span class="loader-status">
+
     <span class="status-dot"></span>
-    BACKEND CONNECTED
+
+    INITIALIZING FULL-STACK APP
+
   </span>
 
-  <h2>Loading Portfolio...</h2>
 
+  <!-- Main Heading -->
+  <h2>
+    Loading Portfolio
+  </h2>
+
+
+  <!-- Loading Message -->
   <p>
-    Fetching data from the backend
+
+    Fetching data from backend
+
     <span class="dots">
       <span>.</span>
       <span>.</span>
       <span>.</span>
     </span>
+
   </p>
 
+
+  <!-- Technology Stack -->
   <div class="loader-info">
-    <span>⚡ Full-Stack Application</span>
-    <span>•</span>
-    <span>Spring Boot API</span>
-    <span>•</span>
+
     <span>Angular</span>
+
+    <span>•</span>
+
+    <span>Spring Boot</span>
+
+    <span>•</span>
+
+    <span>SQL Server</span>
+
   </div>
 
+
+  <!-- Developer Message -->
   <small>
-    Please wait while the portfolio data is being loaded.
+
+    This is a full-stack portfolio.
+    Please wait while the backend prepares your data.
+
   </small>
+
+
+  <!-- Progress Bar -->
+  <div class="loading-progress">
+
+    <div class="progress-bar"></div>
+
+  </div>
+
+
+  <!-- Bottom Status -->
+  <div class="loading-status">
+
+    <span class="pulse-circle"></span>
+
+    Connecting to backend services...
+
+  </div>
+
 </div>
 ```
 
   </div>
+
 </div>
 
-<!-- Portfolio Content -->
+<!-- =========================================================
+     PORTFOLIO CONTENT
+     ========================================================= -->
 
-<main class="portfolio" [class.content-loaded]="!isLoading">
+<main
+  class="portfolio"
+  [class.content-loaded]="!isLoading"
+>
 
-  <section id="profile" class="portfolio-section">
-    <app-user-profile></app-user-profile>
+  <!-- PROFILE -->
+
+  <section
+    id="profile"
+    class="portfolio-section"
+  >
+
+```
+<app-user-profile></app-user-profile>
+```
+
   </section>
 
-  <section id="skills" class="portfolio-section">
-    <app-skills></app-skills>
+  <!-- SKILLS -->
+
+  <section
+    id="skills"
+    class="portfolio-section"
+  >
+
+```
+<app-skills></app-skills>
+```
+
   </section>
 
-  <section id="experience" class="portfolio-section">
-    <app-user-experience></app-user-experience>
+  <!-- EXPERIENCE -->
+
+  <section
+    id="experience"
+    class="portfolio-section"
+  >
+
+```
+<app-user-experience></app-user-experience>
+```
+
   </section>
 
-  <section id="projects" class="portfolio-section">
-    <app-user-projects></app-user-projects>
+  <!-- PROJECTS -->
+
+  <section
+    id="projects"
+    class="portfolio-section"
+  >
+
+```
+<app-user-projects></app-user-projects>
+```
+
   </section>
 
-  <section id="education" class="portfolio-section">
-    <app-user-education></app-user-education>
+  <!-- EDUCATION -->
+
+  <section
+    id="education"
+    class="portfolio-section"
+  >
+
+```
+<app-user-education></app-user-education>
+```
+
   </section>
 
 </main>

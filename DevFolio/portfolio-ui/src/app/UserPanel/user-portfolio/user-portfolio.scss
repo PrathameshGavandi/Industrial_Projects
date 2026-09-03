@@ -1,6 +1,14 @@
+/* =========================================================
+GLOBAL
+========================================================= */
+
 html {
 scroll-behavior: smooth;
 }
+
+/* =========================================================
+PORTFOLIO MAIN
+========================================================= */
 
 .portfolio {
 width: 100%;
@@ -8,48 +16,76 @@ overflow: hidden;
 
 opacity: 0;
 visibility: hidden;
+
 transition:
 opacity 0.8s ease,
 visibility 0.8s ease;
 }
 
+/* Portfolio becomes interactive only after loading */
+
 .portfolio.content-loaded {
 opacity: 1;
 visibility: visible;
+
+pointer-events: auto;
 }
 
 /* =========================================================
-FULL-STACK LOADING SCREEN
+DISABLE PORTFOLIO WHILE LOADING
+========================================================= */
+
+.portfolio:not(.content-loaded) {
+pointer-events: none;
+user-select: none;
+}
+
+/* =========================================================
+FULL-SCREEN LOADER
 ========================================================= */
 
 .portfolio-loader {
 position: fixed;
+
 inset: 0;
-z-index: 9999;
+
+z-index: 99999;
+
+width: 100vw;
+height: 100vh;
 
 display: flex;
+
 align-items: center;
 justify-content: center;
+
+overflow: hidden;
+
+cursor: wait;
 
 background:
 radial-gradient(
 circle at center,
-rgba(30, 41, 59, 0.95) 0%,
-rgba(2, 6, 23, 0.98) 55%,
+rgba(30, 41, 59, 0.96) 0%,
+rgba(15, 23, 42, 0.98) 45%,
 #020617 100%
 );
 
-backdrop-filter: blur(15px);
+backdrop-filter: blur(18px);
 
-animation: loaderFadeIn 0.5s ease forwards;
+animation:
+loaderFadeIn 0.5s ease forwards;
 }
 
-/* subtle background grid */
+/* =========================================================
+BACKGROUND GRID
+========================================================= */
 
 .portfolio-loader::before {
 content: "";
 
 position: absolute;
+
 inset: 0;
 
 background-image:
@@ -65,11 +101,42 @@ transparent 1px
 
 background-size: 45px 45px;
 
-mask-image: radial-gradient(
+mask-image:
+radial-gradient(
 circle at center,
 black,
 transparent 75%
 );
+
+pointer-events: none;
+}
+
+/* =========================================================
+GLOW EFFECT
+========================================================= */
+
+.portfolio-loader::after {
+content: "";
+
+position: absolute;
+
+width: 500px;
+height: 500px;
+
+border-radius: 50%;
+
+background:
+radial-gradient(
+circle,
+rgba(56, 189, 248, 0.08),
+transparent 70%
+);
+
+filter: blur(20px);
+
+pointer-events: none;
+
+animation: glowPulse 3s ease-in-out infinite;
 }
 
 /* =========================================================
@@ -78,32 +145,41 @@ LOADER CARD
 
 .loader-card {
 position: relative;
+
 z-index: 2;
 
-width: min(90%, 520px);
+width: min(90%, 540px);
 
-padding: 42px 35px;
+padding: 45px 38px;
 
 text-align: center;
 
-border: 1px solid rgba(148, 163, 184, 0.16);
+border-radius: 26px;
 
-border-radius: 24px;
+border:
+1px solid rgba(
+148,
+163,
+184,
+0.16
+);
 
 background:
 linear-gradient(
 145deg,
-rgba(30, 41, 59, 0.72),
-rgba(15, 23, 42, 0.55)
+rgba(30, 41, 59, 0.78),
+rgba(15, 23, 42, 0.62)
 );
 
 box-shadow:
-0 30px 80px rgba(0, 0, 0, 0.45),
-inset 0 1px 0 rgba(255, 255, 255, 0.05);
+0 35px 100px rgba(0, 0, 0, 0.55),
+inset 0 1px 0
+rgba(255, 255, 255, 0.06);
 
-backdrop-filter: blur(20px);
+backdrop-filter: blur(25px);
 
-animation: cardFloat 3s ease-in-out infinite;
+animation:
+cardFloat 3s ease-in-out infinite;
 }
 
 /* =========================================================
@@ -113,108 +189,139 @@ LOADER ANIMATION
 .loader-animation {
 position: relative;
 
-width: 105px;
-height: 105px;
+width: 115px;
+height: 115px;
 
 margin: 0 auto 30px;
 
 display: flex;
+
 align-items: center;
 justify-content: center;
 }
 
-/* outer spinning ring */
+/* Outer Ring */
 
 .loader-ring {
 position: absolute;
 
-width: 90px;
-height: 90px;
+width: 100px;
+height: 100px;
 
 border-radius: 50%;
 
-border: 3px solid rgba(255, 255, 255, 0.08);
+border:
+3px solid
+rgba(255, 255, 255, 0.07);
 
 border-top-color: #38bdf8;
+
 border-right-color: #6366f1;
 
-animation: spin 1.2s linear infinite;
+animation:
+spin 1.15s linear infinite;
 
 filter:
-drop-shadow(0 0 8px rgba(56, 189, 248, 0.5));
+drop-shadow(
+0 0 10px
+rgba(56, 189, 248, 0.55)
+);
 }
 
-/* inner spinning ring */
+/* Inner Ring */
 
 .loader-ring.inner {
-width: 65px;
-height: 65px;
+width: 72px;
+height: 72px;
 
-border: 2px solid rgba(255, 255, 255, 0.08);
+border:
+2px solid
+rgba(255, 255, 255, 0.07);
 
 border-bottom-color: #a78bfa;
+
 border-left-color: #22d3ee;
 
 animation:
-spinReverse 1.8s linear infinite;
+spinReverse 1.7s linear infinite;
 }
 
-/* center code icon */
+/* =========================================================
+CENTER CODE ICON
+========================================================= */
 
 .loader-icon {
 position: relative;
 
-width: 48px;
-height: 48px;
+width: 52px;
+height: 52px;
 
 display: flex;
+
 align-items: center;
 justify-content: center;
 
-border-radius: 14px;
+border-radius: 15px;
 
-background: rgba(15, 23, 42, 0.9);
+background:
+rgba(2, 6, 23, 0.9);
 
-border: 1px solid rgba(56, 189, 248, 0.25);
+border:
+1px solid
+rgba(56, 189, 248, 0.25);
 
 color: #e0f2fe;
 
-font-size: 18px;
+font-family:
+"Courier New",
+monospace;
+
+font-size: 19px;
+
 font-weight: 700;
 
-font-family: "Courier New", monospace;
-
 box-shadow:
-0 0 25px rgba(56, 189, 248, 0.15);
+0 0 30px
+rgba(56, 189, 248, 0.16);
 }
 
 /* =========================================================
-LOADER CONTENT
+STATUS BADGE
 ========================================================= */
 
 .loader-status {
 display: inline-flex;
 
 align-items: center;
-gap: 8px;
 
-padding: 6px 12px;
+gap: 9px;
 
-margin-bottom: 15px;
+padding:
+7px 14px;
+
+margin-bottom: 16px;
 
 border-radius: 50px;
 
-background: rgba(34, 197, 94, 0.08);
+background:
+rgba(56, 189, 248, 0.07);
 
-border: 1px solid rgba(34, 197, 94, 0.18);
+border:
+1px solid
+rgba(56, 189, 248, 0.18);
 
-color: #86efac;
+color: #7dd3fc;
 
-font-size: 11px;
-font-weight: 600;
+font-size: 10px;
 
-letter-spacing: 1.2px;
+font-weight: 700;
+
+letter-spacing: 1.4px;
 }
+
+/* =========================================================
+STATUS DOT
+========================================================= */
 
 .status-dot {
 width: 7px;
@@ -222,24 +329,36 @@ height: 7px;
 
 border-radius: 50%;
 
-background: #22c55e;
+background: #38bdf8;
 
 box-shadow:
-0 0 8px rgba(34, 197, 94, 0.8);
+0 0 10px
+rgba(56, 189, 248, 0.9);
 
-animation: pulse 1.2s ease-in-out infinite;
+animation:
+pulse 1.2s ease-in-out infinite;
 }
 
+/* =========================================================
+HEADING
+========================================================= */
+
 .loader-content h2 {
-margin: 5px 0 10px;
+margin:
+5px 0 10px;
 
 color: #f8fafc;
 
-font-size: 28px;
+font-size: 30px;
+
 font-weight: 700;
 
-letter-spacing: -0.5px;
+letter-spacing: -0.7px;
 }
+
+/* =========================================================
+LOADING TEXT
+========================================================= */
 
 .loader-content p {
 margin: 0;
@@ -249,8 +368,13 @@ color: #94a3b8;
 font-size: 15px;
 }
 
+/* =========================================================
+ANIMATED DOTS
+========================================================= */
+
 .dots span {
-animation: dotBlink 1.4s infinite;
+animation:
+dotBlink 1.4s infinite;
 }
 
 .dots span:nth-child(2) {
@@ -262,24 +386,26 @@ animation-delay: 0.4s;
 }
 
 /* =========================================================
-TECHNOLOGY INFO
+TECHNOLOGY STACK
 ========================================================= */
 
 .loader-info {
 display: flex;
 
-justify-content: center;
 align-items: center;
+justify-content: center;
 
 flex-wrap: wrap;
 
-gap: 8px;
+gap: 9px;
 
-margin-top: 22px;
+margin-top: 23px;
 
 color: #64748b;
 
 font-size: 11px;
+
+font-weight: 500;
 
 letter-spacing: 0.3px;
 }
@@ -296,16 +422,104 @@ color: #a78bfa;
 color: #67e8f9;
 }
 
+/* =========================================================
+DEVELOPER MESSAGE
+========================================================= */
+
 .loader-content small {
 display: block;
 
-margin-top: 22px;
+max-width: 410px;
+
+margin:
+22px auto 0;
 
 color: #64748b;
 
 font-size: 12px;
 
-line-height: 1.6;
+line-height: 1.7;
+}
+
+/* =========================================================
+PROGRESS BAR
+========================================================= */
+
+.loading-progress {
+width: 100%;
+
+height: 4px;
+
+margin-top: 25px;
+
+overflow: hidden;
+
+border-radius: 20px;
+
+background:
+rgba(255, 255, 255, 0.07);
+}
+
+.progress-bar {
+height: 100%;
+
+width: 0%;
+
+border-radius: inherit;
+
+background:
+linear-gradient(
+90deg,
+#38bdf8,
+#6366f1,
+#a78bfa
+);
+
+box-shadow:
+0 0 12px
+rgba(56, 189, 248, 0.45);
+
+animation:
+loadingProgress 5s
+cubic-bezier(0.16, 1, 0.3, 1)
+forwards;
+}
+
+/* =========================================================
+BOTTOM STATUS
+========================================================= */
+
+.loading-status {
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+gap: 8px;
+
+margin-top: 16px;
+
+color: #475569;
+
+font-size: 10px;
+
+letter-spacing: 0.3px;
+}
+
+.pulse-circle {
+width: 6px;
+height: 6px;
+
+border-radius: 50%;
+
+background: #22c55e;
+
+box-shadow:
+0 0 8px
+rgba(34, 197, 94, 0.7);
+
+animation:
+pulse 1s ease-in-out infinite;
 }
 
 /* =========================================================
@@ -327,7 +541,13 @@ filter: blur(8px);
 
 transition:
 opacity 0.8s ease,
-transform 1s cubic-bezier(0.16, 1, 0.3, 1),
+transform 1s
+cubic-bezier(
+0.16,
+1,
+0.3,
+1
+),
 filter 0.8s ease;
 
 will-change:
@@ -336,7 +556,9 @@ opacity,
 filter;
 }
 
-/* individual section entrance */
+/* =========================================================
+SECTION ENTRANCE DIRECTIONS
+========================================================= */
 
 .portfolio-section:nth-child(1) {
 transform:
@@ -378,7 +600,9 @@ rotate(-4deg)
 scale(0.85);
 }
 
-/* visible section */
+/* =========================================================
+SECTION VISIBLE
+========================================================= */
 
 .portfolio-section.show {
 opacity: 1;
@@ -397,6 +621,7 @@ ANIMATIONS
 ========================================================= */
 
 @keyframes spin {
+
 from {
 transform: rotate(0deg);
 }
@@ -404,9 +629,11 @@ transform: rotate(0deg);
 to {
 transform: rotate(360deg);
 }
+
 }
 
 @keyframes spinReverse {
+
 from {
 transform: rotate(360deg);
 }
@@ -414,9 +641,11 @@ transform: rotate(360deg);
 to {
 transform: rotate(0deg);
 }
+
 }
 
 @keyframes pulse {
+
 0%,
 100% {
 transform: scale(1);
@@ -435,9 +664,11 @@ opacity: 0.5;
  
 
 }
+
 }
 
 @keyframes dotBlink {
+
 0%,
 20% {
 opacity: 0;
@@ -450,20 +681,26 @@ opacity: 1;
 100% {
 opacity: 0;
 }
+
 }
 
 @keyframes cardFloat {
+
 0%,
 100% {
-transform: translateY(0);
+transform:
+translateY(0);
 }
 
 50% {
-transform: translateY(-6px);
+transform:
+translateY(-7px);
 }
+
 }
 
 @keyframes loaderFadeIn {
+
 from {
 opacity: 0;
 }
@@ -471,6 +708,60 @@ opacity: 0;
 to {
 opacity: 1;
 }
+
+}
+
+@keyframes glowPulse {
+
+0%,
+100% {
+opacity: 0.5;
+
+ 
+transform:
+  scale(0.9);
+ 
+
+}
+
+50% {
+opacity: 1;
+
+ 
+transform:
+  scale(1.1);
+ 
+
+}
+
+}
+
+@keyframes loadingProgress {
+
+0% {
+width: 0%;
+}
+
+20% {
+width: 18%;
+}
+
+45% {
+width: 42%;
+}
+
+70% {
+width: 68%;
+}
+
+90% {
+width: 88%;
+}
+
+100% {
+width: 100%;
+}
+
 }
 
 /* =========================================================
@@ -483,16 +774,17 @@ RESPONSIVE
 width: 88%;
 
  
-padding: 32px 22px;
+padding:
+  34px 22px;
 
-border-radius: 20px;
+border-radius: 21px;
  
 
 }
 
 .loader-animation {
-width: 90px;
-height: 90px;
+width: 95px;
+height: 95px;
 
  
 margin-bottom: 24px;
@@ -501,17 +793,27 @@ margin-bottom: 24px;
 }
 
 .loader-ring {
-width: 78px;
-height: 78px;
+width: 82px;
+height: 82px;
 }
 
 .loader-ring.inner {
-width: 56px;
-height: 56px;
+width: 59px;
+height: 59px;
+}
+
+.loader-icon {
+width: 46px;
+height: 46px;
+
+ 
+font-size: 17px;
+ 
+
 }
 
 .loader-content h2 {
-font-size: 23px;
+font-size: 24px;
 }
 
 .loader-content p {
@@ -519,10 +821,10 @@ font-size: 13px;
 }
 
 .loader-info {
-font-size: 10px;
+gap: 6px;
 
  
-gap: 5px;
+font-size: 10px;
  
 
 }
@@ -530,4 +832,9 @@ gap: 5px;
 .loader-content small {
 font-size: 11px;
 }
+
+.loading-status {
+font-size: 9px;
+}
+
 }
