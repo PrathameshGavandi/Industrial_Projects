@@ -1,840 +1,1387 @@
 /* =========================================================
-GLOBAL
-========================================================= */
-
-html {
-scroll-behavior: smooth;
-}
-
-/* =========================================================
-PORTFOLIO MAIN
+   PORTFOLIO MAIN
 ========================================================= */
 
 .portfolio {
-width: 100%;
-overflow: hidden;
+  position: relative;
 
-opacity: 0;
-visibility: hidden;
+  opacity: 1;
+  visibility: visible;
 
-transition:
-opacity 0.8s ease,
-visibility 0.8s ease;
+  pointer-events: none;
+  user-select: none;
+
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease;
 }
 
-/* Portfolio becomes interactive only after loading */
+
+/* Enable interaction after loader closes */
 
 .portfolio.content-loaded {
-opacity: 1;
-visibility: visible;
-
-pointer-events: auto;
+  pointer-events: auto;
+  user-select: auto;
 }
 
-/* =========================================================
-DISABLE PORTFOLIO WHILE LOADING
-========================================================= */
-
-.portfolio:not(.content-loaded) {
-pointer-events: none;
-user-select: none;
-}
 
 /* =========================================================
-FULL-SCREEN LOADER
+   PORTFOLIO LOADER
 ========================================================= */
 
 .portfolio-loader {
-position: fixed;
+  position: fixed;
 
-inset: 0;
+  inset: 0;
 
-z-index: 99999;
+  z-index: 99999;
 
-width: 100vw;
-height: 100vh;
+  display: flex;
 
-display: flex;
+  align-items: center;
 
-align-items: center;
-justify-content: center;
+  justify-content: center;
 
-overflow: hidden;
+  padding: 20px;
 
-cursor: wait;
+  overflow: hidden;
 
-background:
-radial-gradient(
-circle at center,
-rgba(30, 41, 59, 0.96) 0%,
-rgba(15, 23, 42, 0.98) 45%,
-#020617 100%
-);
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(24, 64, 96, 0.45),
+      rgba(4, 10, 18, 0.94) 55%,
+      rgba(2, 6, 12, 0.98)
+    );
 
-backdrop-filter: blur(18px);
+  backdrop-filter: blur(8px);
 
-animation:
-loaderFadeIn 0.5s ease forwards;
+  -webkit-backdrop-filter: blur(8px);
 }
 
+
 /* =========================================================
-BACKGROUND GRID
+   BACKGROUND GRID
 ========================================================= */
 
 .portfolio-loader::before {
-content: "";
 
-position: absolute;
+  content: "";
 
-inset: 0;
+  position: absolute;
 
-background-image:
-linear-gradient(
-rgba(148, 163, 184, 0.035) 1px,
-transparent 1px
-),
-linear-gradient(
-90deg,
-rgba(148, 163, 184, 0.035) 1px,
-transparent 1px
-);
+  inset: 0;
 
-background-size: 45px 45px;
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
 
-mask-image:
-radial-gradient(
-circle at center,
-black,
-transparent 75%
-);
+  background-size: 45px 45px;
 
-pointer-events: none;
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 20%,
+      black 80%,
+      transparent
+    );
+
+  pointer-events: none;
 }
 
+
 /* =========================================================
-GLOW EFFECT
+   BACKGROUND GLOW
 ========================================================= */
 
 .portfolio-loader::after {
-content: "";
 
-position: absolute;
+  content: "";
 
-width: 500px;
-height: 500px;
+  position: absolute;
 
-border-radius: 50%;
+  width: 500px;
+  height: 500px;
 
-background:
-radial-gradient(
-circle,
-rgba(56, 189, 248, 0.08),
-transparent 70%
-);
+  border-radius: 50%;
 
-filter: blur(20px);
+  background:
+    radial-gradient(
+      circle,
+      rgba(80, 180, 255, 0.08),
+      transparent 65%
+    );
 
-pointer-events: none;
+  filter: blur(20px);
 
-animation: glowPulse 3s ease-in-out infinite;
+  animation: loaderGlow 4s ease-in-out infinite;
+
+  pointer-events: none;
 }
 
+
+@keyframes loaderGlow {
+
+  0%,
+  100% {
+
+    transform: scale(0.9);
+
+    opacity: 0.6;
+
+  }
+
+  50% {
+
+    transform: scale(1.15);
+
+    opacity: 1;
+
+  }
+
+}
+
+
 /* =========================================================
-LOADER CARD
+   LOADER CARD
 ========================================================= */
 
 .loader-card {
-position: relative;
 
-z-index: 2;
+  position: relative;
 
-width: min(90%, 540px);
+  z-index: 2;
 
-padding: 45px 38px;
+  width: min(560px, 100%);
 
-text-align: center;
+  padding: 42px 38px;
 
-border-radius: 26px;
+  display: flex;
 
-border:
-1px solid rgba(
-148,
-163,
-184,
-0.16
-);
+  flex-direction: column;
 
-background:
-linear-gradient(
-145deg,
-rgba(30, 41, 59, 0.78),
-rgba(15, 23, 42, 0.62)
-);
+  align-items: center;
 
-box-shadow:
-0 35px 100px rgba(0, 0, 0, 0.55),
-inset 0 1px 0
-rgba(255, 255, 255, 0.06);
+  text-align: center;
 
-backdrop-filter: blur(25px);
+  border-radius: 24px;
 
-animation:
-cardFloat 3s ease-in-out infinite;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.09),
+      rgba(255, 255, 255, 0.035)
+    );
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(20px);
+
+  -webkit-backdrop-filter: blur(20px);
+
+  animation: loaderCardAppear 0.8s ease forwards;
 }
 
+
+@keyframes loaderCardAppear {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(25px)
+      scale(0.96);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+  }
+
+}
+
+
 /* =========================================================
-LOADER ANIMATION
+   LOADER ANIMATION
 ========================================================= */
 
 .loader-animation {
-position: relative;
 
-width: 115px;
-height: 115px;
+  position: relative;
 
-margin: 0 auto 30px;
+  width: 120px;
+  height: 120px;
 
-display: flex;
+  display: flex;
 
-align-items: center;
-justify-content: center;
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 28px;
 }
 
-/* Outer Ring */
+
+/* Outer ring */
 
 .loader-ring {
-position: absolute;
 
-width: 100px;
-height: 100px;
+  position: absolute;
 
-border-radius: 50%;
+  width: 110px;
+  height: 110px;
 
-border:
-3px solid
-rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
 
-border-top-color: #38bdf8;
+  border: 2px solid transparent;
 
-border-right-color: #6366f1;
+  border-top-color: rgba(90, 190, 255, 0.95);
 
-animation:
-spin 1.15s linear infinite;
+  border-right-color: rgba(90, 190, 255, 0.35);
 
-filter:
-drop-shadow(
-0 0 10px
-rgba(56, 189, 248, 0.55)
-);
+  animation:
+    loaderRotate 2s linear infinite;
 }
 
-/* Inner Ring */
+
+/* Second ring */
 
 .loader-ring.inner {
-width: 72px;
-height: 72px;
 
-border:
-2px solid
-rgba(255, 255, 255, 0.07);
+  width: 78px;
+  height: 78px;
 
-border-bottom-color: #a78bfa;
+  border-top-color: rgba(255, 255, 255, 0.9);
 
-border-left-color: #22d3ee;
+  border-right-color: transparent;
 
-animation:
-spinReverse 1.7s linear infinite;
+  border-bottom-color: rgba(90, 190, 255, 0.45);
+
+  animation:
+    loaderRotateReverse 1.6s linear infinite;
 }
 
+
+@keyframes loaderRotate {
+
+  from {
+
+    transform: rotate(0deg);
+
+  }
+
+  to {
+
+    transform: rotate(360deg);
+
+  }
+
+}
+
+
+@keyframes loaderRotateReverse {
+
+  from {
+
+    transform: rotate(360deg);
+
+  }
+
+  to {
+
+    transform: rotate(0deg);
+
+  }
+
+}
+
+
 /* =========================================================
-CENTER CODE ICON
+   CODE ICON
 ========================================================= */
 
 .loader-icon {
-position: relative;
 
-width: 52px;
-height: 52px;
+  position: relative;
 
-display: flex;
+  z-index: 3;
 
-align-items: center;
-justify-content: center;
+  width: 52px;
+  height: 52px;
 
-border-radius: 15px;
+  display: flex;
 
-background:
-rgba(2, 6, 23, 0.9);
+  align-items: center;
 
-border:
-1px solid
-rgba(56, 189, 248, 0.25);
+  justify-content: center;
 
-color: #e0f2fe;
+  border-radius: 15px;
 
-font-family:
-"Courier New",
-monospace;
+  background:
+    rgba(255, 255, 255, 0.07);
 
-font-size: 19px;
+  border:
+    1px solid rgba(255, 255, 255, 0.15);
 
-font-weight: 700;
+  color: #ffffff;
 
-box-shadow:
-0 0 30px
-rgba(56, 189, 248, 0.16);
+  font-size: 17px;
+
+  font-weight: 700;
+
+  letter-spacing: -1px;
+
+  box-shadow:
+    0 0 25px rgba(80, 180, 255, 0.12);
+
+  animation: codeIconPulse 2s ease-in-out infinite;
 }
 
+
+@keyframes codeIconPulse {
+
+  0%,
+  100% {
+
+    transform: scale(1);
+
+    box-shadow:
+      0 0 20px rgba(80, 180, 255, 0.1);
+
+  }
+
+  50% {
+
+    transform: scale(1.06);
+
+    box-shadow:
+      0 0 35px rgba(80, 180, 255, 0.22);
+
+  }
+
+}
+
+
 /* =========================================================
-STATUS BADGE
+   LOADER CONTENT
+========================================================= */
+
+.loader-content {
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   STATUS BADGE
 ========================================================= */
 
 .loader-status {
-display: inline-flex;
 
-align-items: center;
+  display: inline-flex;
 
-gap: 9px;
+  align-items: center;
 
-padding:
-7px 14px;
+  gap: 8px;
 
-margin-bottom: 16px;
+  padding: 7px 13px;
 
-border-radius: 50px;
+  margin-bottom: 16px;
 
-background:
-rgba(56, 189, 248, 0.07);
+  border-radius: 30px;
 
-border:
-1px solid
-rgba(56, 189, 248, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 
-color: #7dd3fc;
+  background:
+    rgba(255, 255, 255, 0.045);
 
-font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
 
-font-weight: 700;
+  font-size: 10px;
 
-letter-spacing: 1.4px;
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+
+  text-transform: uppercase;
 }
 
-/* =========================================================
-STATUS DOT
-========================================================= */
+
+/* Status dot */
 
 .status-dot {
-width: 7px;
-height: 7px;
 
-border-radius: 50%;
+  width: 7px;
+  height: 7px;
 
-background: #38bdf8;
+  border-radius: 50%;
 
-box-shadow:
-0 0 10px
-rgba(56, 189, 248, 0.9);
+  background: #7dffb2;
 
-animation:
-pulse 1.2s ease-in-out infinite;
+  box-shadow:
+    0 0 10px rgba(125, 255, 178, 0.8);
+
+  animation: statusPulse 1.5s ease-in-out infinite;
 }
 
+
+@keyframes statusPulse {
+
+  0%,
+  100% {
+
+    opacity: 0.5;
+
+    transform: scale(0.85);
+
+  }
+
+  50% {
+
+    opacity: 1;
+
+    transform: scale(1.15);
+
+  }
+
+}
+
+
 /* =========================================================
-HEADING
+   TITLE
 ========================================================= */
 
 .loader-content h2 {
-margin:
-5px 0 10px;
 
-color: #f8fafc;
+  margin: 0 0 10px;
 
-font-size: 30px;
+  color: #ffffff;
 
-font-weight: 700;
+  font-size: clamp(26px, 5vw, 36px);
 
-letter-spacing: -0.7px;
+  font-weight: 700;
+
+  letter-spacing: -0.8px;
 }
 
+
 /* =========================================================
-LOADING TEXT
+   DESCRIPTION
 ========================================================= */
 
 .loader-content p {
-margin: 0;
 
-color: #94a3b8;
+  margin: 0;
 
-font-size: 15px;
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 14px;
+
+  line-height: 1.6;
 }
 
+
 /* =========================================================
-ANIMATED DOTS
+   LOADING DOTS
 ========================================================= */
 
-.dots span {
-animation:
-dotBlink 1.4s infinite;
+.dots {
+
+  display: inline-flex;
+
+  margin-left: 2px;
 }
+
+
+.dots span {
+
+  display: inline-block;
+
+  animation:
+    loadingDot 1.4s infinite;
+
+}
+
+
+.dots span:nth-child(1) {
+
+  animation-delay: 0s;
+
+}
+
 
 .dots span:nth-child(2) {
-animation-delay: 0.2s;
+
+  animation-delay: 0.2s;
+
 }
+
 
 .dots span:nth-child(3) {
-animation-delay: 0.4s;
+
+  animation-delay: 0.4s;
+
 }
 
+
+@keyframes loadingDot {
+
+  0%,
+  60%,
+  100% {
+
+    opacity: 0.25;
+
+    transform: translateY(0);
+
+  }
+
+  30% {
+
+    opacity: 1;
+
+    transform: translateY(-3px);
+
+  }
+
+}
+
+
 /* =========================================================
-TECHNOLOGY STACK
+   TECHNOLOGY STACK
 ========================================================= */
 
 .loader-info {
-display: flex;
 
-align-items: center;
-justify-content: center;
+  display: flex;
 
-flex-wrap: wrap;
+  align-items: center;
 
-gap: 9px;
+  justify-content: center;
 
-margin-top: 23px;
+  flex-wrap: wrap;
 
-color: #64748b;
+  gap: 10px;
 
-font-size: 11px;
+  margin-top: 22px;
 
-font-weight: 500;
+  color: rgba(255, 255, 255, 0.58);
 
-letter-spacing: 0.3px;
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.6px;
 }
 
-.loader-info span:nth-child(1) {
-color: #38bdf8;
+
+.loader-info span:not(:nth-child(even)) {
+
+  color: rgba(255, 255, 255, 0.82);
+
 }
 
-.loader-info span:nth-child(3) {
-color: #a78bfa;
-}
-
-.loader-info span:nth-child(5) {
-color: #67e8f9;
-}
 
 /* =========================================================
-DEVELOPER MESSAGE
+   SMALL DESCRIPTION
 ========================================================= */
 
 .loader-content small {
-display: block;
 
-max-width: 410px;
+  max-width: 440px;
 
-margin:
-22px auto 0;
+  margin-top: 16px;
 
-color: #64748b;
+  color: rgba(255, 255, 255, 0.45);
 
-font-size: 12px;
+  font-size: 11px;
 
-line-height: 1.7;
+  line-height: 1.7;
+
 }
 
+
 /* =========================================================
-PROGRESS BAR
+   PROGRESS BAR
 ========================================================= */
 
 .loading-progress {
-width: 100%;
 
-height: 4px;
+  position: relative;
 
-margin-top: 25px;
+  width: 100%;
 
-overflow: hidden;
+  max-width: 390px;
 
-border-radius: 20px;
+  height: 4px;
 
-background:
-rgba(255, 255, 255, 0.07);
+  margin-top: 28px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
 }
+
 
 .progress-bar {
-height: 100%;
 
-width: 0%;
+  position: absolute;
 
-border-radius: inherit;
+  left: 0;
 
-background:
-linear-gradient(
-90deg,
-#38bdf8,
-#6366f1,
-#a78bfa
-);
+  top: 0;
 
-box-shadow:
-0 0 12px
-rgba(56, 189, 248, 0.45);
+  height: 100%;
 
-animation:
-loadingProgress 5s
-cubic-bezier(0.16, 1, 0.3, 1)
-forwards;
+  width: 0%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(90, 190, 255, 0.3),
+      rgba(90, 190, 255, 1),
+      rgba(255, 255, 255, 0.9)
+    );
+
+  box-shadow:
+    0 0 15px rgba(90, 190, 255, 0.6);
+
+  animation:
+    loadingProgress 6s linear forwards;
 }
 
-/* =========================================================
-BOTTOM STATUS
-========================================================= */
-
-.loading-status {
-display: flex;
-
-align-items: center;
-justify-content: center;
-
-gap: 8px;
-
-margin-top: 16px;
-
-color: #475569;
-
-font-size: 10px;
-
-letter-spacing: 0.3px;
-}
-
-.pulse-circle {
-width: 6px;
-height: 6px;
-
-border-radius: 50%;
-
-background: #22c55e;
-
-box-shadow:
-0 0 8px
-rgba(34, 197, 94, 0.7);
-
-animation:
-pulse 1s ease-in-out infinite;
-}
-
-/* =========================================================
-PORTFOLIO SECTIONS
-========================================================= */
-
-.portfolio-section {
-min-height: 100vh;
-
-scroll-margin-top: 80px;
-
-opacity: 0;
-
-transform:
-scale(0.85)
-translateY(120px);
-
-filter: blur(8px);
-
-transition:
-opacity 0.8s ease,
-transform 1s
-cubic-bezier(
-0.16,
-1,
-0.3,
-1
-),
-filter 0.8s ease;
-
-will-change:
-transform,
-opacity,
-filter;
-}
-
-/* =========================================================
-SECTION ENTRANCE DIRECTIONS
-========================================================= */
-
-.portfolio-section:nth-child(1) {
-transform:
-translateX(-180px)
-translateY(80px)
-rotate(-4deg)
-scale(0.85);
-}
-
-.portfolio-section:nth-child(2) {
-transform:
-translateX(-180px)
-translateY(80px)
-rotate(4deg)
-scale(0.85);
-}
-
-.portfolio-section:nth-child(3) {
-transform:
-translateX(-180px)
-translateY(80px)
-rotate(-4deg)
-scale(0.85);
-}
-
-.portfolio-section:nth-child(4) {
-transform:
-translateX(100px)
-translateY(40px)
-rotate(2deg)
-scale(0.95);
-}
-
-.portfolio-section:nth-child(5) {
-transform:
-translateX(-180px)
-translateY(80px)
-rotate(-4deg)
-scale(0.85);
-}
-
-/* =========================================================
-SECTION VISIBLE
-========================================================= */
-
-.portfolio-section.show {
-opacity: 1;
-
-transform:
-translateX(0)
-translateY(0)
-rotate(0deg)
-scale(1);
-
-filter: blur(0);
-}
-
-/* =========================================================
-ANIMATIONS
-========================================================= */
-
-@keyframes spin {
-
-from {
-transform: rotate(0deg);
-}
-
-to {
-transform: rotate(360deg);
-}
-
-}
-
-@keyframes spinReverse {
-
-from {
-transform: rotate(360deg);
-}
-
-to {
-transform: rotate(0deg);
-}
-
-}
-
-@keyframes pulse {
-
-0%,
-100% {
-transform: scale(1);
-
- 
-opacity: 1;
- 
-
-}
-
-50% {
-transform: scale(1.5);
-
- 
-opacity: 0.5;
- 
-
-}
-
-}
-
-@keyframes dotBlink {
-
-0%,
-20% {
-opacity: 0;
-}
-
-50% {
-opacity: 1;
-}
-
-100% {
-opacity: 0;
-}
-
-}
-
-@keyframes cardFloat {
-
-0%,
-100% {
-transform:
-translateY(0);
-}
-
-50% {
-transform:
-translateY(-7px);
-}
-
-}
-
-@keyframes loaderFadeIn {
-
-from {
-opacity: 0;
-}
-
-to {
-opacity: 1;
-}
-
-}
-
-@keyframes glowPulse {
-
-0%,
-100% {
-opacity: 0.5;
-
- 
-transform:
-  scale(0.9);
- 
-
-}
-
-50% {
-opacity: 1;
-
- 
-transform:
-  scale(1.1);
- 
-
-}
-
-}
 
 @keyframes loadingProgress {
 
-0% {
-width: 0%;
-}
+  from {
 
-20% {
-width: 18%;
-}
+    width: 0%;
 
-45% {
-width: 42%;
-}
+  }
 
-70% {
-width: 68%;
-}
+  to {
 
-90% {
-width: 88%;
-}
+    width: 100%;
 
-100% {
-width: 100%;
-}
+  }
 
 }
+
 
 /* =========================================================
-RESPONSIVE
+   LOADING STATUS
 ========================================================= */
 
-@media (max-width: 576px) {
-
-.loader-card {
-width: 88%;
-
- 
-padding:
-  34px 22px;
-
-border-radius: 21px;
- 
-
-}
-
-.loader-animation {
-width: 95px;
-height: 95px;
-
- 
-margin-bottom: 24px;
- 
-
-}
-
-.loader-ring {
-width: 82px;
-height: 82px;
-}
-
-.loader-ring.inner {
-width: 59px;
-height: 59px;
-}
-
-.loader-icon {
-width: 46px;
-height: 46px;
-
- 
-font-size: 17px;
- 
-
-}
-
-.loader-content h2 {
-font-size: 24px;
-}
-
-.loader-content p {
-font-size: 13px;
-}
-
-.loader-info {
-gap: 6px;
-
- 
-font-size: 10px;
- 
-
-}
-
-.loader-content small {
-font-size: 11px;
-}
-
 .loading-status {
-font-size: 9px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 15px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 10px;
+
+  letter-spacing: 0.4px;
 }
+
+
+.pulse-circle {
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: rgba(90, 190, 255, 0.9);
+
+  box-shadow:
+    0 0 10px rgba(90, 190, 255, 0.7);
+
+  animation:
+    backendPulse 1.2s ease-in-out infinite;
+}
+
+
+@keyframes backendPulse {
+
+  0%,
+  100% {
+
+    opacity: 0.35;
+
+    transform: scale(0.8);
+
+  }
+
+  50% {
+
+    opacity: 1;
+
+    transform: scale(1.2);
+
+  }
+
+}
+
+
+/* =========================================================
+   CONTINUE CONTAINER
+========================================================= */
+
+.continue-container {
+
+  width: 100%;
+
+  margin-top: 28px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 12px;
+
+  animation:
+    continueAppear 0.7s ease forwards;
+}
+
+
+@keyframes continueAppear {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(15px)
+      scale(0.95);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+  }
+
+}
+
+
+/* =========================================================
+   READY MESSAGE
+========================================================= */
+
+.ready-message {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  color: #9effc3;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+}
+
+
+.ready-icon {
+
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid rgba(158, 255, 195, 0.6);
+
+  border-radius: 50%;
+
+  font-size: 12px;
+
+  box-shadow:
+    0 0 12px rgba(158, 255, 195, 0.12);
+}
+
+
+/* =========================================================
+   EXPLORE BUTTON
+========================================================= */
+
+.continue-button {
+
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  min-width: 240px;
+
+  padding: 14px 25px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 50px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+
+  outline: none;
+
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.continue-button::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.08),
+      transparent
+    );
+
+  transform:
+    translateX(-100%);
+
+  transition:
+    transform 0.6s ease;
+
+  pointer-events: none;
+}
+
+
+.continue-button:hover {
+
+  transform: translateY(-3px);
+
+  background:
+    rgba(255, 255, 255, 0.14);
+
+  border-color:
+    rgba(255, 255, 255, 0.5);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.3),
+    0 0 25px rgba(90, 190, 255, 0.08);
+}
+
+
+.continue-button:hover::before {
+
+  transform:
+    translateX(100%);
+
+}
+
+
+.continue-button:active {
+
+  transform:
+    translateY(-1px);
+
+}
+
+
+.continue-button .arrow {
+
+  display: inline-block;
+
+  font-size: 20px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.continue-button:hover .arrow {
+
+  transform:
+    translateX(5px);
+
+}
+
+
+/* =========================================================
+   CONTINUE HINT
+========================================================= */
+
+.continue-hint {
+
+  margin-top: 0 !important;
+
+  color: rgba(255, 255, 255, 0.42) !important;
+
+  font-size: 10px !important;
+
+  letter-spacing: 0.4px;
+
+}
+
+
+/* =========================================================
+   PORTFOLIO SECTIONS
+========================================================= */
+
+.portfolio-section {
+
+  position: relative;
+
+  opacity: 0;
+
+  transform:
+    translateY(50px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+
+}
+
+
+/* Section visible */
+
+.portfolio-section.show {
+
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+}
+
+
+/* =========================================================
+   SECTION ANIMATION VARIATIONS
+========================================================= */
+
+.portfolio-section:nth-child(1) {
+
+  transform:
+    translateY(45px);
+
+}
+
+
+.portfolio-section:nth-child(2) {
+
+  transform:
+    translateX(-45px);
+
+}
+
+
+.portfolio-section:nth-child(3) {
+
+  transform:
+    translateY(45px);
+
+}
+
+
+.portfolio-section:nth-child(4) {
+
+  transform:
+    translateX(45px);
+
+}
+
+
+.portfolio-section:nth-child(5) {
+
+  transform:
+    translateY(45px);
+
+}
+
+
+.portfolio-section:nth-child(1).show,
+.portfolio-section:nth-child(2).show,
+.portfolio-section:nth-child(3).show,
+.portfolio-section:nth-child(4).show,
+.portfolio-section:nth-child(5).show {
+
+  opacity: 1;
+
+  transform:
+    translateX(0)
+    translateY(0);
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .portfolio-loader {
+
+    padding: 15px;
+
+  }
+
+
+  .loader-card {
+
+    width: 100%;
+
+    max-width: 470px;
+
+    padding: 34px 24px;
+
+    border-radius: 20px;
+
+  }
+
+
+  .loader-animation {
+
+    width: 100px;
+    height: 100px;
+
+    margin-bottom: 23px;
+
+  }
+
+
+  .loader-ring {
+
+    width: 94px;
+    height: 94px;
+
+  }
+
+
+  .loader-ring.inner {
+
+    width: 67px;
+    height: 67px;
+
+  }
+
+
+  .loader-icon {
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 13px;
+
+    font-size: 15px;
+
+  }
+
+
+  .loader-content h2 {
+
+    font-size: 28px;
+
+  }
+
+
+  .loader-content p {
+
+    font-size: 13px;
+
+  }
+
+
+  .loader-info {
+
+    gap: 8px;
+
+    font-size: 10px;
+
+  }
+
+
+  .loader-content small {
+
+    font-size: 10px;
+
+  }
+
+
+  .loading-progress {
+
+    max-width: 330px;
+
+  }
+
+
+  .continue-button {
+
+    width: 100%;
+
+    max-width: 250px;
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .portfolio-loader {
+
+    padding: 12px;
+
+  }
+
+
+  .loader-card {
+
+    padding: 28px 18px;
+
+    border-radius: 18px;
+
+  }
+
+
+  .loader-animation {
+
+    width: 88px;
+    height: 88px;
+
+    margin-bottom: 20px;
+
+  }
+
+
+  .loader-ring {
+
+    width: 84px;
+    height: 84px;
+
+  }
+
+
+  .loader-ring.inner {
+
+    width: 60px;
+    height: 60px;
+
+  }
+
+
+  .loader-icon {
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+
+  }
+
+
+  .loader-status {
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+  }
+
+
+  .loader-content h2 {
+
+    font-size: 25px;
+
+  }
+
+
+  .loader-content p {
+
+    font-size: 12px;
+
+  }
+
+
+  .loader-info {
+
+    gap: 6px;
+
+    margin-top: 18px;
+
+  }
+
+
+  .loader-content small {
+
+    max-width: 290px;
+
+    font-size: 9px;
+
+    line-height: 1.6;
+
+  }
+
+
+  .loading-progress {
+
+    margin-top: 23px;
+
+  }
+
+
+  .loading-status {
+
+    font-size: 9px;
+
+  }
+
+
+  .continue-container {
+
+    margin-top: 23px;
+
+  }
+
+
+  .ready-message {
+
+    font-size: 12px;
+
+  }
+
+
+  .continue-button {
+
+    min-width: 0;
+
+    width: 100%;
+
+    max-width: 250px;
+
+    padding: 13px 20px;
+
+    font-size: 13px;
+
+  }
+
+
+  .continue-hint {
+
+    font-size: 9px !important;
+
+  }
+
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .portfolio-loader *,
+  .portfolio-section,
+  .continue-button {
+
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+
+  }
 
 }

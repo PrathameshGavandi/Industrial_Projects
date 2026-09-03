@@ -50,154 +50,74 @@ export class UserPortfolioComponent
   implements AfterViewInit, OnDestroy {
 
 
+  /*
+   * Loading screen visible initially
+   */
   isLoading = true;
 
 
   /*
-   * Minimum loader duration
-   * 7 seconds
+   * After 6 seconds,
+   * show the "Go To Content" button
    */
-  private readonly MIN_LOADING_TIME = 7000;
+  showContinueButton = false;
 
 
-  private loadingStartTime = Date.now();
-
-
-  /*
-   * Track API completion
-   */
-  private loadedSections = new Set<string>();
-
-
-  private readonly TOTAL_SECTIONS = 5;
+  private loadingTimer?: ReturnType<typeof setTimeout>;
 
 
   ngAfterViewInit(): void {
 
-    this.loadingStartTime = Date.now();
+    this.loadingTimer = setTimeout(() => {
+
+      this.showContinueButton = true;
+
+    }, 6000);
 
   }
 
 
   /*
-   * Called by child components
-   * when their API data is ready.
+   * User clicks the button
    */
-  onSectionLoaded(section: string): void {
-
-    this.loadedSections.add(section);
-
-
-    console.log(
-      `Portfolio section loaded: ${section}`
-    );
-
+  goToContent(): void {
 
     /*
-     * Check whether all APIs
-     * are completed.
+     * Remove loading screen
      */
-    if (
-      this.loadedSections.size ===
-      this.TOTAL_SECTIONS
-    ) {
-
-      this.finishLoadingWhenReady();
-
-    }
-
-  }
-
-
-  private finishLoadingWhenReady(): void {
-
-    const elapsed =
-      Date.now() - this.loadingStartTime;
-
-
-    const remainingTime =
-      Math.max(
-        0,
-        this.MIN_LOADING_TIME - elapsed
-      );
+    this.isLoading = false;
 
 
     /*
-     * If backend is already ready,
-     * wait only until 7 seconds.
-     *
-     * If backend took longer,
-     * remainingTime becomes 0
-     * and portfolio opens immediately.
+     * Wait until loader disappears
+     * and DOM becomes available.
      */
     setTimeout(() => {
 
-      this.isLoading = false;
+      const profileSection =
+        document.getElementById('profile');
 
+      if (profileSection) {
 
-      /*
-       * Wait for Angular DOM update
-       * before initializing animations.
-       */
-      setTimeout(() => {
+        profileSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
 
-        this.initializeSectionAnimations();
+      }
 
-      }, 50);
-
-    }, remainingTime);
-
-  }
-
-
-  private initializeSectionAnimations(): void {
-
-    const sections =
-      document.querySelectorAll(
-        '.portfolio-section'
-      );
-
-
-    const observer =
-      new IntersectionObserver(
-
-        (entries) => {
-
-          entries.forEach((entry) => {
-
-            if (entry.isIntersecting) {
-
-              entry.target.classList.add('show');
-
-            } else {
-
-              entry.target.classList.remove('show');
-
-            }
-
-          });
-
-        },
-
-        {
-          threshold: 0.05
-        }
-
-      );
-
-
-    sections.forEach((section) => {
-
-      observer.observe(section);
-
-    });
+    }, 150);
 
   }
 
 
   ngOnDestroy(): void {
 
-    this.isLoading = false;
+    if (this.loadingTimer) {
+
+      clearTimeout(this.loadingTimer);
+
+    }
 
   }
 
