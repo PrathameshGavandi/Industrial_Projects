@@ -1,164 +1,497 @@
-<!-- ================= LOADING SCREEN ================= -->
+<app-user-nav></app-user-nav>
+
+
+<!-- =====================================================
+     FULL SCREEN LOADING SCREEN
+====================================================== -->
 
 <div
-  class="loader-overlay"
+  class="portfolio-loader"
   *ngIf="isLoading"
-  (click)="$event.stopPropagation()">
 
-  <div class="loader-bg-shape shape-one"></div>
-  <div class="loader-bg-shape shape-two"></div>
-  <div class="loader-bg-shape shape-three"></div>
+  (wheel)="$event.preventDefault()"
 
-  <div class="loader-card">
+  (touchmove)="$event.preventDefault()"
 
-    <!-- Developer Icon -->
-    <div class="loader-icon-wrapper">
-      <div class="loader-icon">
-        <i class="bi bi-code-slash"></i>
-      </div>
-    </div>
+  (click)="$event.stopPropagation()"
+>
 
-    <!-- Title -->
-    <h1 class="loader-title">
-      Welcome to My Portfolio
-    </h1>
 
-    <!-- Loading Message -->
-    <p class="loader-description" *ngIf="!showContinueButton">
-      Preparing my portfolio...
-    </p>
+  <!-- =================================================
+       ANIMATED BACKGROUND PARTICLES
+  ================================================== -->
 
-    <!-- Ready Message -->
-    <p class="loader-description ready-message" *ngIf="showContinueButton">
-      Portfolio is ready. Let's explore!
-    </p>
+  <div class="loader-particles">
 
-    <!-- Technology Pills -->
-    <div class="tech-stack">
-      <span class="tech-pill angular">
-        <i class="bi bi-code-square"></i>
-        Angular
-      </span>
-
-      <span class="tech-pill java">
-        <i class="bi bi-cup-hot"></i>
-        Java
-      </span>
-
-      <span class="tech-pill spring">
-        <i class="bi bi-leaf"></i>
-        Spring Boot
-      </span>
-
-      <span class="tech-pill database">
-        <i class="bi bi-database"></i>
-        SQL
-      </span>
-    </div>
-
-    <!-- Progress -->
-    <div class="loader-progress">
-      <div
-        class="progress-bar"
-        [class.progress-complete]="showContinueButton">
-      </div>
-    </div>
-
-    <!-- Loading Status -->
-    <div class="loader-status" *ngIf="!showContinueButton">
-      <span class="status-dot"></span>
-      <span>Loading portfolio...</span>
-    </div>
-
-    <!-- Continue Button -->
-    <div
-      class="continue-container"
-      *ngIf="showContinueButton">
-
-      <div class="ready-badge">
-        <i class="bi bi-check-circle-fill"></i>
-        Portfolio Ready
-      </div>
-
-      <button
-        type="button"
-        class="continue-btn"
-        (click)="goToContent()">
-
-        <span>Explore My Portfolio</span>
-
-        <i class="bi bi-arrow-right"></i>
-
-      </button>
-
-      <small>
-        Click to continue
-      </small>
-
-    </div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
 
   </div>
 
+
+  <!-- =================================================
+       LOADER CARD
+  ================================================== -->
+
+  <div class="loader-card">
+
+
+    <!-- Top accent -->
+
+    <div class="card-top-line"></div>
+
+
+    <!-- =================================================
+         LOADER ANIMATION
+    ================================================== -->
+
+    <div class="loader-animation">
+
+
+      <!-- Outer rotating ring -->
+
+      <div class="loader-ring outer"></div>
+
+
+      <!-- Middle rotating ring -->
+
+      <div class="loader-ring middle"></div>
+
+
+      <!-- Inner rotating ring -->
+
+      <div class="loader-ring inner"></div>
+
+
+      <!-- Center -->
+
+      <div class="loader-center">
+
+        <span class="code-symbol">
+          &lt;/&gt;
+        </span>
+
+      </div>
+
+
+    </div>
+
+
+    <!-- =================================================
+         CONTENT
+    ================================================== -->
+
+    <div class="loader-content">
+
+
+      <!-- =================================================
+           STATUS
+      ================================================== -->
+
+      <div
+        class="loader-status"
+        [class.ready]="showContinueButton"
+      >
+
+        <span class="status-dot"></span>
+
+        <span>
+
+          <ng-container *ngIf="!showContinueButton">
+            SYSTEM INITIALIZING
+          </ng-container>
+
+          <ng-container *ngIf="showContinueButton">
+            SYSTEM READY
+          </ng-container>
+
+        </span>
+
+      </div>
+
+
+      <!-- =================================================
+           HEADING
+      ================================================== -->
+
+      <h1>
+
+        Loading Portfolio
+
+      </h1>
+
+
+      <!-- =================================================
+           DESCRIPTION - LOADING
+      ================================================== -->
+
+      <p
+        class="loader-description"
+        *ngIf="!showContinueButton"
+      >
+
+        Preparing my full-stack portfolio
+
+        <span class="dots">
+
+          <span>.</span>
+          <span>.</span>
+          <span>.</span>
+
+        </span>
+
+      </p>
+
+
+      <!-- =================================================
+           DESCRIPTION - READY
+      ================================================== -->
+
+      <p
+        class="loader-description ready-description"
+        *ngIf="showContinueButton"
+      >
+
+        Portfolio is ready. Let's explore!
+
+      </p>
+
+
+      <!-- =================================================
+           TECHNOLOGY STACK
+      ================================================== -->
+
+      <div class="loader-tech-stack">
+
+
+        <!-- Angular -->
+
+        <div class="tech-item angular-tech">
+
+          <div class="tech-logo angular-logo">
+            A
+          </div>
+
+          <span>
+            Angular
+          </span>
+
+        </div>
+
+
+        <span class="tech-separator">
+          •
+        </span>
+
+
+        <!-- Spring Boot -->
+
+        <div class="tech-item spring-tech">
+
+          <div class="tech-logo spring-logo">
+            S
+          </div>
+
+          <span>
+            Spring Boot
+          </span>
+
+        </div>
+
+
+        <span class="tech-separator">
+          •
+        </span>
+
+
+        <!-- SQL Server -->
+
+        <div class="tech-item sql-tech">
+
+          <div class="tech-logo sql-logo">
+            DB
+          </div>
+
+          <span>
+            SQL Server
+          </span>
+
+        </div>
+
+
+        <span class="tech-separator">
+          •
+        </span>
+
+
+        <!-- Java -->
+
+        <div class="tech-item java-tech">
+
+          <div class="tech-logo java-logo">
+            ☕
+          </div>
+
+          <span>
+            Java
+          </span>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- =================================================
+           BACKEND MESSAGE - LOADING
+      ================================================== -->
+
+      <div
+        class="loader-message"
+        *ngIf="!showContinueButton"
+      >
+
+        <span class="message-icon">
+          ⚡
+        </span>
+
+        <span>
+          Connecting to backend services
+        </span>
+
+      </div>
+
+
+      <!-- =================================================
+           BACKEND MESSAGE - READY
+      ================================================== -->
+
+      <div
+        class="loader-message ready-backend"
+        *ngIf="showContinueButton"
+      >
+
+        <span class="message-icon">
+          ✓
+        </span>
+
+        <span>
+          All systems ready
+        </span>
+
+      </div>
+
+
+      <!-- =================================================
+           PROGRESS
+      ================================================== -->
+
+      <div class="loading-progress">
+
+
+        <div class="progress-track">
+
+          <div
+            class="progress-bar"
+            [class.progress-complete]="showContinueButton"
+          ></div>
+
+        </div>
+
+
+        <div class="progress-info">
+
+          <span>
+
+            <ng-container *ngIf="!showContinueButton">
+              INITIALIZING
+            </ng-container>
+
+            <ng-container *ngIf="showContinueButton">
+              READY
+            </ng-container>
+
+          </span>
+
+
+          <span>
+            0% — 100%
+          </span>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- =================================================
+           READY / CONTINUE
+      ================================================== -->
+
+      <div
+        class="continue-container"
+        *ngIf="showContinueButton"
+      >
+
+
+        <!-- Ready message -->
+
+        <div class="ready-message">
+
+          <span class="ready-icon">
+            ✓
+          </span>
+
+          <span>
+            Portfolio Ready
+          </span>
+
+        </div>
+
+
+        <!-- =================================================
+             MAIN BUTTON
+        ================================================== -->
+
+        <button
+          type="button"
+
+          class="continue-button"
+
+          aria-label="Explore my portfolio"
+
+          (click)="goToContent()"
+        >
+
+          <span class="button-icon">
+            🚀
+          </span>
+
+
+          <span class="button-text">
+            Click Here to Explore
+          </span>
+
+
+          <span class="arrow">
+            →
+          </span>
+
+        </button>
+
+
+        <!-- Hint -->
+
+        <span class="continue-hint">
+
+          Enter the portfolio experience
+
+        </span>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
 </div>
 
 
-<!-- ================= PORTFOLIO ================= -->
 
-<div class="portfolio">
+<!-- =====================================================
+     PORTFOLIO CONTENT
+====================================================== -->
 
-  <app-user-nav></app-user-nav>
+<main
+  class="portfolio"
 
-  <main>
-
-    <!-- Profile -->
-    <section
-      id="profile"
-      class="portfolio-section">
-
-      <app-user-profile></app-user-profile>
-
-    </section>
+  [class.content-loaded]="!isLoading"
+>
 
 
-    <!-- Skills -->
-    <section
-      id="skills"
-      class="portfolio-section">
+  <!-- =================================================
+       PROFILE
+  ================================================== -->
 
-      <app-skills></app-skills>
+  <section
+    id="profile"
 
-    </section>
+    class="portfolio-section"
+  >
 
+    <app-user-profile></app-user-profile>
 
-    <!-- Experience -->
-    <section
-      id="experience"
-      class="portfolio-section">
-
-      <app-user-experience></app-user-experience>
-
-    </section>
+  </section>
 
 
-    <!-- Projects -->
-    <section
-      id="projects"
-      class="portfolio-section">
+  <!-- =================================================
+       SKILLS
+  ================================================== -->
 
-      <app-user-projects></app-user-projects>
+  <section
+    id="skills"
 
-    </section>
+    class="portfolio-section"
+  >
+
+    <app-skills></app-skills>
+
+  </section>
 
 
-    <!-- Education -->
-    <section
-      id="education"
-      class="portfolio-section">
+  <!-- =================================================
+       EXPERIENCE
+  ================================================== -->
 
-      <app-user-education></app-user-education>
+  <section
+    id="experience"
 
-    </section>
+    class="portfolio-section"
+  >
 
-  </main>
+    <app-user-experience></app-user-experience>
 
-</div>
+  </section>
+
+
+  <!-- =================================================
+       PROJECTS
+  ================================================== -->
+
+  <section
+    id="projects"
+
+    class="portfolio-section"
+  >
+
+    <app-user-projects></app-user-projects>
+
+  </section>
+
+
+  <!-- =================================================
+       EDUCATION
+  ================================================== -->
+
+  <section
+    id="education"
+
+    class="portfolio-section"
+  >
+
+    <app-user-education></app-user-education>
+
+  </section>
+
+
+</main>
