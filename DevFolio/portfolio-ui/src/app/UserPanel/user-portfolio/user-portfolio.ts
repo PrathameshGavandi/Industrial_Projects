@@ -51,16 +51,21 @@ export class UserPortfolioComponent
 
 
   /*
-   * Loading screen visible initially
+   * Loading screen is visible initially
    */
   isLoading = true;
 
 
   /*
-   * After 6 seconds,
-   * show the "Go To Content" button
+   * Button will appear after 8 seconds
    */
   showContinueButton = false;
+
+
+  /*
+   * 8 seconds loading time
+   */
+  private readonly LOADING_TIME = 8000;
 
 
   private loadingTimer?: ReturnType<typeof setTimeout>;
@@ -68,34 +73,39 @@ export class UserPortfolioComponent
 
   ngAfterViewInit(): void {
 
+    /*
+     * Keep loading screen for exactly 8 seconds
+     */
     this.loadingTimer = setTimeout(() => {
 
       this.showContinueButton = true;
 
-    }, 6000);
+    }, this.LOADING_TIME);
 
   }
 
 
   /*
-   * User clicks the button
+   * User clicks:
+   *
+   * Explore My Portfolio →
    */
   goToContent(): void {
 
     /*
-     * Remove loading screen
+     * Hide loading screen
      */
     this.isLoading = false;
 
 
     /*
-     * Wait until loader disappears
-     * and DOM becomes available.
+     * Wait for loader DOM to disappear
      */
     setTimeout(() => {
 
       const profileSection =
         document.getElementById('profile');
+
 
       if (profileSection) {
 

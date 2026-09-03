@@ -1,56 +1,120 @@
 <app-user-nav></app-user-nav>
 
 
-<!-- ==============================
-     LOADING SCREEN
-================================ -->
+<!-- =====================================================
+     FULL SCREEN LOADING SCREEN
+====================================================== -->
 
 <div
   class="portfolio-loader"
   *ngIf="isLoading"
+
   (wheel)="$event.preventDefault()"
+
   (touchmove)="$event.preventDefault()"
+
   (click)="$event.stopPropagation()"
 >
 
+
+  <!-- Animated background particles -->
+
+  <div class="loader-particles">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </div>
+
+
+  <!-- =================================================
+       LOADER CARD
+  ================================================== -->
+
   <div class="loader-card">
 
-    <!-- Animated Loader -->
+
+    <!-- Top accent -->
+
+    <div class="card-top-line"></div>
+
+
+    <!-- =================================================
+         ANIMATION
+    ================================================== -->
 
     <div class="loader-animation">
 
-      <div class="loader-ring"></div>
+
+      <!-- Outer rotating ring -->
+
+      <div class="loader-ring outer"></div>
+
+
+      <!-- Middle rotating ring -->
+
+      <div class="loader-ring middle"></div>
+
+
+      <!-- Inner rotating ring -->
 
       <div class="loader-ring inner"></div>
 
-      <div class="loader-icon">
-        &lt;/&gt;
+
+      <!-- Center -->
+
+      <div class="loader-center">
+
+        <span class="code-symbol">
+          &lt;/&gt;
+        </span>
+
       </div>
+
 
     </div>
 
 
-    <!-- Loader Content -->
+    <!-- =================================================
+         CONTENT
+    ================================================== -->
 
     <div class="loader-content">
 
-      <span class="loader-status">
+
+      <!-- Status -->
+
+      <div class="loader-status">
 
         <span class="status-dot"></span>
 
-        INITIALIZING FULL-STACK APP
+        <span>
+          SYSTEM INITIALIZING
+        </span>
 
-      </span>
+      </div>
 
 
-      <h2>
+      <!-- Heading -->
+
+      <h1>
+
         Loading Portfolio
-      </h2>
+
+      </h1>
 
 
-      <p>
+      <!-- Description -->
 
-        Fetching data from backend
+      <p class="loader-description">
+
+        Preparing my full-stack portfolio
 
         <span class="dots">
 
@@ -63,57 +127,106 @@
       </p>
 
 
-      <div class="loader-info">
+      <!-- Technology stack -->
 
-        <span>Angular</span>
+      <div class="loader-tech-stack">
 
-        <span>•</span>
 
-        <span>Spring Boot</span>
+        <span class="tech angular">
+          Angular
+        </span>
 
-        <span>•</span>
 
-        <span>SQL Server</span>
+        <span class="tech-separator">
+          •
+        </span>
+
+
+        <span class="tech spring">
+          Spring Boot
+        </span>
+
+
+        <span class="tech-separator">
+          •
+        </span>
+
+
+        <span class="tech sql">
+          SQL Server
+        </span>
+
+
+        <span class="tech-separator">
+          •
+        </span>
+
+
+        <span class="tech java">
+          Java
+        </span>
+
 
       </div>
 
 
-      <small>
+      <!-- Information -->
 
-        This is a full-stack portfolio.
+      <div class="loader-message">
 
-        Please wait while the backend prepares
-        your data and application content.
+        <span class="message-icon">
+          ⚡
+        </span>
 
-      </small>
+        <span>
+          Connecting to backend services
+        </span>
+
+      </div>
 
 
-      <!-- 6 Second Progress -->
+      <!-- =================================================
+           PROGRESS
+      ================================================== -->
 
       <div class="loading-progress">
 
-        <div class="progress-bar"></div>
+
+        <div class="progress-track">
+
+          <div class="progress-bar"></div>
+
+        </div>
+
+
+        <div class="progress-info">
+
+          <span>
+            INITIALIZING
+          </span>
+
+          <span>
+            0% — 100%
+          </span>
+
+        </div>
+
 
       </div>
 
 
-      <div class="loading-status">
-
-        <span class="pulse-circle"></span>
-
-        Connecting to backend services...
-
-      </div>
-
-
-      <!-- ==========================
-           CONTINUE BUTTON
-      =========================== -->
+      <!-- =================================================
+           READY / CONTINUE
+      ================================================== -->
 
       <div
         class="continue-container"
+
         *ngIf="showContinueButton"
       >
+
+
+        <!-- Ready message -->
 
         <div class="ready-message">
 
@@ -122,21 +235,31 @@
           </span>
 
           <span>
-            Portfolio is ready
+            Portfolio Ready
           </span>
 
         </div>
 
 
+        <!-- Main button -->
+
         <button
           type="button"
+
           class="continue-button"
+
           (click)="goToContent()"
         >
 
-          <span>
-            Explore My Portfolio
+          <span class="button-icon">
+            🚀
           </span>
+
+
+          <span class="button-text">
+            Click Here to Explore
+          </span>
+
 
           <span class="arrow">
             →
@@ -145,36 +268,46 @@
         </button>
 
 
-        <small class="continue-hint">
+        <!-- Hint -->
 
-          Click to continue to the portfolio
+        <span class="continue-hint">
 
-        </small>
+          Enter the portfolio experience
+
+        </span>
+
 
       </div>
 
+
     </div>
 
+
   </div>
+
 
 </div>
 
 
 
-<!-- ==============================
+<!-- =====================================================
      PORTFOLIO CONTENT
-================================ -->
+====================================================== -->
 
 <main
   class="portfolio"
+
   [class.content-loaded]="!isLoading"
 >
 
 
-  <!-- PROFILE -->
+  <!-- =================================================
+       PROFILE
+  ================================================== -->
 
   <section
     id="profile"
+
     class="portfolio-section"
   >
 
@@ -183,11 +316,13 @@
   </section>
 
 
-
-  <!-- SKILLS -->
+  <!-- =================================================
+       SKILLS
+  ================================================== -->
 
   <section
     id="skills"
+
     class="portfolio-section"
   >
 
@@ -196,11 +331,13 @@
   </section>
 
 
-
-  <!-- EXPERIENCE -->
+  <!-- =================================================
+       EXPERIENCE
+  ================================================== -->
 
   <section
     id="experience"
+
     class="portfolio-section"
   >
 
@@ -209,11 +346,13 @@
   </section>
 
 
-
-  <!-- PROJECTS -->
+  <!-- =================================================
+       PROJECTS
+  ================================================== -->
 
   <section
     id="projects"
+
     class="portfolio-section"
   >
 
@@ -222,11 +361,13 @@
   </section>
 
 
-
-  <!-- EDUCATION -->
+  <!-- =================================================
+       EDUCATION
+  ================================================== -->
 
   <section
     id="education"
+
     class="portfolio-section"
   >
 
