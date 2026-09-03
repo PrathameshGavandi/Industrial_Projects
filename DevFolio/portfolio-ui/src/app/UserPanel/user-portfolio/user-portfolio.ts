@@ -1,4 +1,9 @@
-import { AfterViewInit, Component } from '@angular/core';
+import {
+AfterViewInit,
+Component
+} from '@angular/core';
+
+import { CommonModule } from '@angular/common';
 
 import { UserNav } from '../user-nav/user-nav';
 import { UserProfileComponent } from '../user-profile/user-profile';
@@ -8,52 +13,95 @@ import { UserProjectsComponent } from '../user-projects/user-projects';
 import { UserEducationComponent } from '../user-education/user-education';
 
 @Component({
-  selector: 'app-user-portfolio',
-  standalone: true,
-  imports: [
-    UserNav,
-    UserProfileComponent,
-    UserSkillsComponent,
-    UserExperienceComponent,
-    UserProjectsComponent,
-    UserEducationComponent
-  ],
-  templateUrl: './user-portfolio.html',
-  styleUrls: ['./user-portfolio.scss']
+selector: 'app-user-portfolio',
+
+standalone: true,
+
+imports: [
+CommonModule,
+UserNav,
+UserProfileComponent,
+UserSkillsComponent,
+UserExperienceComponent,
+UserProjectsComponent,
+UserEducationComponent
+],
+
+templateUrl: './user-portfolio.html',
+
+styleUrls: ['./user-portfolio.scss']
 })
 export class UserPortfolioComponent implements AfterViewInit {
 
-  ngAfterViewInit(): void {
+/*
 
-    const sections =
-      document.querySelectorAll('.portfolio-section');
+* Controls the full-screen loading screen.
+*
+* Initially true because the portfolio needs
+* some time to fetch data from the backend.
+  */
+  isLoading = true;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
+ngAfterViewInit(): void {
 
-        entries.forEach((entry) => {
+ 
+/*
+ * Give Angular some time to initialize the
+ * child components and start their API calls.
+ */
+setTimeout(() => {
 
-          if (entry.isIntersecting) {
+  this.isLoading = false;
 
-            entry.target.classList.add('show');
+  this.initializeSectionAnimations();
 
-          } else {
+}, 1200);
+ 
 
-            entry.target.classList.remove('show');
+}
 
-          }
+private initializeSectionAnimations(): void {
 
-        });
+ 
+const sections =
+  document.querySelectorAll('.portfolio-section');
 
-      },
-      {
-        threshold: 0.05
-      }
-    );
 
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-  }
+const observer =
+  new IntersectionObserver(
+
+    (entries) => {
+
+      entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add('show');
+
+        } else {
+
+          entry.target.classList.remove('show');
+
+        }
+
+      });
+
+    },
+
+    {
+      threshold: 0.05
+    }
+
+  );
+
+
+sections.forEach((section) => {
+
+  observer.observe(section);
+
+});
+ 
+
+}
 
 }

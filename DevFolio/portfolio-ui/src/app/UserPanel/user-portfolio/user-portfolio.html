@@ -1,15 +1,64 @@
 <app-user-nav></app-user-nav>
 
-<main class="portfolio">
+<!-- Full-Stack Loading Screen -->
+
+<div class="portfolio-loader" *ngIf="isLoading">
+  <div class="loader-card">
+
+```
+<div class="loader-animation">
+  <div class="loader-ring"></div>
+  <div class="loader-ring inner"></div>
+
+  <div class="loader-icon">
+    &lt;/&gt;
+  </div>
+</div>
+
+<div class="loader-content">
+  <span class="loader-status">
+    <span class="status-dot"></span>
+    BACKEND CONNECTED
+  </span>
+
+  <h2>Loading Portfolio...</h2>
+
+  <p>
+    Fetching data from the backend
+    <span class="dots">
+      <span>.</span>
+      <span>.</span>
+      <span>.</span>
+    </span>
+  </p>
+
+  <div class="loader-info">
+    <span>⚡ Full-Stack Application</span>
+    <span>•</span>
+    <span>Spring Boot API</span>
+    <span>•</span>
+    <span>Angular</span>
+  </div>
+
+  <small>
+    Please wait while the portfolio data is being loaded.
+  </small>
+</div>
+```
+
+  </div>
+</div>
+
+<!-- Portfolio Content -->
+
+<main class="portfolio" [class.content-loaded]="!isLoading">
 
   <section id="profile" class="portfolio-section">
     <app-user-profile></app-user-profile>
   </section>
 
   <section id="skills" class="portfolio-section">
-    
     <app-skills></app-skills>
-    
   </section>
 
   <section id="experience" class="portfolio-section">
