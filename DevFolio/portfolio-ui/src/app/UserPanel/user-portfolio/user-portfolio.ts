@@ -1,7 +1,8 @@
 import {
   Component,
   OnDestroy,
-  OnInit
+  OnInit,
+  ChangeDetectorRef
 } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
@@ -45,40 +46,29 @@ import { UserEducationComponent }
   styleUrls: ['./user-portfolio.scss']
 })
 
-
 export class UserPortfolioComponent
   implements OnInit, OnDestroy {
 
 
-  /* =====================================================
-     LOADER STATE
-  ===================================================== */
-
+  /* Loader initially visible */
   isLoading = true;
 
 
-  /* =====================================================
-     BUTTON / SYSTEM READY STATE
-  ===================================================== */
-
+  /* Button initially disabled */
   showContinueButton = false;
 
 
-  /* =====================================================
-     EXACT LOADING TIME
-
-     9000 milliseconds = 9 seconds
-  ===================================================== */
-
+  /* EXACTLY 9 SECONDS */
   private readonly LOADING_TIME = 9000;
 
 
   private loadingTimer?: ReturnType<typeof setTimeout>;
 
 
-  /* =====================================================
-     COMPONENT START
-  ===================================================== */
+  constructor(
+    private cdr: ChangeDetectorRef
+  ) {}
+
 
   ngOnInit(): void {
 
@@ -87,10 +77,6 @@ export class UserPortfolioComponent
   }
 
 
-  /* =====================================================
-     START LOADER AUTOMATICALLY
-  ===================================================== */
-
   private startLoader(): void {
 
     this.isLoading = true;
@@ -98,39 +84,33 @@ export class UserPortfolioComponent
     this.showContinueButton = false;
 
 
-    /*
-     * Button is already visible.
-     *
-     * But it remains DISABLED for 9 seconds.
-     *
-     * After 9 seconds:
-     *
-     * - Progress completes
-     * - SYSTEM READY appears
-     * - Button becomes ENABLED automatically
-     */
-
     this.loadingTimer = setTimeout(() => {
 
+      /* 9 seconds completed */
+
       this.showContinueButton = true;
+
+
+      /*
+       * IMPORTANT:
+       * Force Angular UI refresh immediately
+       *
+       * त्यामुळे click करण्याची गरज पडणार नाही
+       */
+      this.cdr.detectChanges();
+
 
     }, this.LOADING_TIME);
 
   }
 
 
-  /* =====================================================
-     GO TO PORTFOLIO CONTENT
-  ===================================================== */
-
   goToContent(): void {
 
-
     /*
-     * Extra safety:
-     * Do nothing until system is ready
+     * सुरक्षा:
+     * 9 sec आधी click झालं तरी काही होणार नाही
      */
-
     if (!this.showContinueButton) {
 
       return;
@@ -138,16 +118,13 @@ export class UserPortfolioComponent
     }
 
 
-    /*
-     * Remove loader
-     */
-
+    /* Remove loader */
     this.isLoading = false;
 
 
-    /*
-     * Scroll to profile section
-     */
+    /* Refresh UI */
+    this.cdr.detectChanges();
+
 
     setTimeout(() => {
 
@@ -168,10 +145,6 @@ export class UserPortfolioComponent
 
   }
 
-
-  /* =====================================================
-     CLEANUP
-  ===================================================== */
 
   ngOnDestroy(): void {
 

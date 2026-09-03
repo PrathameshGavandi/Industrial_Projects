@@ -1,40 +1,38 @@
-/* =========================================================
-   PORTFOLIO MAIN
-========================================================= */
+/* =====================================================
+   PORTFOLIO
+===================================================== */
 
 .portfolio {
 
+  width: 100%;
+
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(31, 111, 235, 0.12),
+      transparent 35%
+    ),
+    #071421;
+
+}
+
+
+.portfolio-section {
+
+  width: 100%;
+
+  min-height: 100vh;
+
   position: relative;
 
-  opacity: 1;
-
-  visibility: visible;
-
-  pointer-events: none;
-
-  user-select: none;
-
-  transition:
-    opacity 0.6s ease,
-    visibility 0.6s ease;
-
 }
 
 
-/* Enable portfolio after loader */
-
-.portfolio.content-loaded {
-
-  pointer-events: auto;
-
-  user-select: auto;
-
-}
-
-
-/* =========================================================
+/* =====================================================
    FULL SCREEN LOADER
-========================================================= */
+===================================================== */
 
 .portfolio-loader {
 
@@ -50,149 +48,35 @@
 
   justify-content: center;
 
-  padding: 20px;
-
   overflow: hidden;
 
   background:
 
     radial-gradient(
-      circle at 50% 35%,
-      rgba(20, 120, 190, 0.22),
-      transparent 38%
-    ),
-
-    radial-gradient(
-      circle at 20% 80%,
-      rgba(110, 55, 210, 0.15),
+      circle at 50% 30%,
+      rgba(26, 111, 174, 0.15),
       transparent 35%
     ),
 
     radial-gradient(
-      circle at 85% 20%,
-      rgba(0, 210, 255, 0.12),
-      transparent 35%
+      circle at 80% 80%,
+      rgba(110, 72, 255, 0.12),
+      transparent 30%
     ),
 
     linear-gradient(
       135deg,
-      #020711 0%,
-      #06111f 45%,
-      #030712 100%
+      #06111d,
+      #081827,
+      #050d17
     );
-
-  backdrop-filter: blur(10px);
-
-  -webkit-backdrop-filter: blur(10px);
 
 }
 
 
-/* =========================================================
-   BACKGROUND GRID
-========================================================= */
-
-.portfolio-loader::before {
-
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  background-image:
-
-    linear-gradient(
-      rgba(70, 180, 255, 0.035) 1px,
-      transparent 1px
-    ),
-
-    linear-gradient(
-      90deg,
-      rgba(70, 180, 255, 0.035) 1px,
-      transparent 1px
-    );
-
-  background-size:
-    45px 45px;
-
-  mask-image:
-
-    linear-gradient(
-      to bottom,
-      transparent,
-      black 18%,
-      black 82%,
-      transparent
-    );
-
-  pointer-events: none;
-
-}
-
-
-/* =========================================================
-   BACKGROUND GLOW
-========================================================= */
-
-.portfolio-loader::after {
-
-  content: "";
-
-  position: absolute;
-
-  width: 650px;
-
-  height: 650px;
-
-  border-radius: 50%;
-
-  background:
-
-    radial-gradient(
-      circle,
-      rgba(0, 190, 255, 0.08),
-      rgba(100, 60, 255, 0.04),
-      transparent 68%
-    );
-
-  filter: blur(25px);
-
-  animation:
-    loaderGlow 5s ease-in-out infinite;
-
-  pointer-events: none;
-
-}
-
-
-@keyframes loaderGlow {
-
-  0%,
-  100% {
-
-    transform:
-      scale(0.85);
-
-    opacity: 0.6;
-
-  }
-
-  50% {
-
-    transform:
-      scale(1.15);
-
-    opacity: 1;
-
-  }
-
-}
-
-
-/* =========================================================
-   FLOATING PARTICLES
-========================================================= */
+/* =====================================================
+   PARTICLES
+===================================================== */
 
 .loader-particles {
 
@@ -211,40 +95,41 @@
 
   position: absolute;
 
-  width: 3px;
+  width: 4px;
 
-  height: 3px;
+  height: 4px;
 
   border-radius: 50%;
 
-  background:
-    rgba(80, 210, 255, 0.7);
+  background: #39d9ff;
 
   box-shadow:
-    0 0 12px rgba(80, 210, 255, 0.8);
+
+    0 0 10px #39d9ff,
+
+    0 0 20px rgba(57, 217, 255, 0.4);
 
   animation:
-    floatingParticle 6s linear infinite;
+
+    floatParticle 7s infinite ease-in-out;
 
 }
 
 
 .loader-particles span:nth-child(1) {
 
+  top: 10%;
+
   left: 10%;
-
-  top: 75%;
-
-  animation-delay: 0s;
 
 }
 
 
 .loader-particles span:nth-child(2) {
 
-  left: 18%;
+  top: 20%;
 
-  top: 25%;
+  left: 80%;
 
   animation-delay: 1s;
 
@@ -253,9 +138,9 @@
 
 .loader-particles span:nth-child(3) {
 
-  left: 30%;
+  top: 75%;
 
-  top: 85%;
+  left: 15%;
 
   animation-delay: 2s;
 
@@ -264,181 +149,121 @@
 
 .loader-particles span:nth-child(4) {
 
-  left: 72%;
+  top: 85%;
 
-  top: 20%;
+  left: 75%;
 
-  animation-delay: 0.8s;
+  animation-delay: 3s;
 
 }
 
 
 .loader-particles span:nth-child(5) {
 
-  left: 82%;
-
-  top: 70%;
-
-  animation-delay: 1.8s;
-
-}
-
-
-.loader-particles span:nth-child(6) {
-
-  left: 90%;
-
-  top: 40%;
-
-  animation-delay: 2.8s;
-
-}
-
-
-.loader-particles span:nth-child(7) {
-
-  left: 50%;
-
-  top: 10%;
-
-  animation-delay: 3.5s;
-
-}
-
-
-.loader-particles span:nth-child(8) {
+  top: 45%;
 
   left: 5%;
-
-  top: 45%;
 
   animation-delay: 4s;
 
 }
 
 
-@keyframes floatingParticle {
+.loader-particles span:nth-child(6) {
 
-  0% {
+  top: 50%;
 
-    opacity: 0;
+  left: 90%;
 
-    transform:
-      translateY(30px)
-      scale(0.5);
+  animation-delay: 2.5s;
 
-  }
+}
 
-  25% {
 
-    opacity: 1;
+.loader-particles span:nth-child(7) {
 
-  }
+  top: 30%;
 
-  75% {
+  left: 60%;
 
-    opacity: 0.8;
+  animation-delay: 1.5s;
 
-  }
+}
 
+
+.loader-particles span:nth-child(8) {
+
+  top: 65%;
+
+  left: 50%;
+
+  animation-delay: 3.5s;
+
+}
+
+
+@keyframes floatParticle {
+
+  0%,
   100% {
 
-    opacity: 0;
+    transform: translateY(0);
 
-    transform:
-      translateY(-100px)
-      scale(1.2);
+    opacity: 0.3;
+
+  }
+
+  50% {
+
+    transform: translateY(-40px);
+
+    opacity: 1;
 
   }
 
 }
 
 
-/* =========================================================
+/* =====================================================
    LOADER CARD
-========================================================= */
+===================================================== */
 
 .loader-card {
 
   position: relative;
 
-  z-index: 5;
+  width: min(720px, 92vw);
 
-  width: min(580px, 100%);
+  padding: 48px 55px 42px;
 
-  padding: 42px 42px 38px;
+  border-radius: 34px;
 
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  text-align: center;
-
-  border-radius: 28px;
-
-  border:
-    1px solid rgba(100, 210, 255, 0.18);
+  overflow: hidden;
 
   background:
 
     linear-gradient(
       145deg,
-      rgba(15, 35, 58, 0.88),
-      rgba(5, 15, 28, 0.9)
+      rgba(25, 44, 65, 0.96),
+      rgba(8, 23, 38, 0.98)
     );
+
+  border:
+
+    1px solid rgba(70, 175, 255, 0.28);
 
   box-shadow:
 
-    0 35px 100px rgba(0, 0, 0, 0.55),
+    0 25px 80px rgba(0, 0, 0, 0.5),
 
-    0 0 80px rgba(0, 160, 255, 0.08),
-
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
-
-  backdrop-filter:
-    blur(24px);
-
-  -webkit-backdrop-filter:
-    blur(24px);
-
-  overflow: hidden;
-
-  animation:
-    loaderCardAppear 0.8s ease forwards;
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
 
 }
 
 
-@keyframes loaderCardAppear {
-
-  from {
-
-    opacity: 0;
-
-    transform:
-      translateY(30px)
-      scale(0.94);
-
-  }
-
-  to {
-
-    opacity: 1;
-
-    transform:
-      translateY(0)
-      scale(1);
-
-  }
-
-}
-
-
-/* =========================================================
-   TOP ACCENT LINE
-========================================================= */
+/* =====================================================
+   TOP LINE
+===================================================== */
 
 .card-top-line {
 
@@ -446,9 +271,9 @@
 
   top: 0;
 
-  left: 12%;
+  left: 10%;
 
-  width: 76%;
+  width: 80%;
 
   height: 2px;
 
@@ -457,47 +282,34 @@
     linear-gradient(
       90deg,
       transparent,
-      #00c8ff,
-      #7c5cff,
-      #00c8ff,
+      #25d7ff,
+      #7f6cff,
       transparent
     );
 
   box-shadow:
 
-    0 0 18px rgba(0, 200, 255, 0.8),
-
-    0 0 35px rgba(110, 80, 255, 0.5);
+    0 0 15px rgba(37, 215, 255, 0.7);
 
 }
 
 
-/* =========================================================
+/* =====================================================
    LOADER ANIMATION
-========================================================= */
+===================================================== */
 
 .loader-animation {
 
+  width: 180px;
+
+  height: 180px;
+
+  margin: 0 auto 30px;
+
   position: relative;
-
-  width: 145px;
-
-  height: 145px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  margin-bottom: 28px;
 
 }
 
-
-/* =========================================================
-   RINGS
-========================================================= */
 
 .loader-ring {
 
@@ -505,92 +317,77 @@
 
   border-radius: 50%;
 
-  border-style: solid;
-
-  border-color: transparent;
+  inset: 0;
 
 }
 
 
 .loader-ring.outer {
 
-  width: 140px;
+  border:
 
-  height: 140px;
+    2px solid transparent;
 
-  border-width: 2px;
+  border-top-color: #23d7ff;
 
-  border-top-color:
-    #00d9ff;
-
-  border-right-color:
-    rgba(0, 217, 255, 0.3);
-
-  box-shadow:
-    0 0 25px rgba(0, 210, 255, 0.12);
+  border-right-color: #23d7ff;
 
   animation:
-    rotateClockwise 2.2s linear infinite;
+
+    rotateLoader 2.5s linear infinite;
 
 }
 
 
 .loader-ring.middle {
 
-  width: 108px;
+  inset: 16px;
 
-  height: 108px;
+  border:
 
-  border-width: 2px;
+    2px solid transparent;
 
-  border-left-color:
-    #7c5cff;
+  border-top-color: #8c6cff;
 
-  border-bottom-color:
-    rgba(124, 92, 255, 0.25);
-
-  box-shadow:
-    0 0 25px rgba(124, 92, 255, 0.1);
+  border-left-color: #8c6cff;
 
   animation:
-    rotateReverse 1.8s linear infinite;
+
+    rotateReverse 2s linear infinite;
 
 }
 
 
 .loader-ring.inner {
 
-  width: 78px;
+  inset: 36px;
 
-  height: 78px;
+  border:
 
-  border-width: 2px;
+    2px solid transparent;
 
-  border-top-color:
-    #ffffff;
+  border-top-color: #ffffff;
 
-  border-right-color:
-    rgba(0, 217, 255, 0.4);
+  opacity: 0.75;
 
   animation:
-    rotateClockwise 1.2s linear infinite;
+
+    rotateLoader 1.5s linear infinite;
 
 }
 
 
-@keyframes rotateClockwise {
+@keyframes rotateLoader {
 
   from {
 
-    transform:
-      rotate(0deg);
+    transform: rotate(0deg);
 
   }
 
   to {
 
-    transform:
-      rotate(360deg);
+    transform: rotate(360deg);
 
   }
 
@@ -601,34 +398,28 @@
 
   from {
 
-    transform:
-      rotate(360deg);
+    transform: rotate(360deg);
 
   }
 
   to {
 
-    transform:
-      rotate(0deg);
+    transform: rotate(0deg);
 
   }
 
 }
 
 
-/* =========================================================
+/* =====================================================
    CENTER
-========================================================= */
+===================================================== */
 
 .loader-center {
 
-  position: relative;
+  position: absolute;
 
-  z-index: 5;
-
-  width: 58px;
-
-  height: 58px;
+  inset: 52px;
 
   display: flex;
 
@@ -636,139 +427,129 @@
 
   justify-content: center;
 
-  border-radius: 17px;
-
-  border:
-    1px solid rgba(100, 220, 255, 0.3);
+  border-radius: 28px;
 
   background:
 
     linear-gradient(
       145deg,
-      rgba(0, 190, 255, 0.16),
-      rgba(100, 70, 255, 0.12)
+      #18334d,
+      #0d2033
     );
+
+  border:
+
+    1px solid rgba(74, 203, 255, 0.35);
 
   box-shadow:
 
-    0 0 25px rgba(0, 210, 255, 0.15),
+    inset 0 0 25px rgba(0, 190, 255, 0.1),
 
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-
-  animation:
-    centerPulse 2s ease-in-out infinite;
+    0 0 35px rgba(0, 174, 255, 0.12);
 
 }
 
 
 .code-symbol {
 
-  color: #ffffff;
-
-  font-size: 19px;
+  font-size: 38px;
 
   font-weight: 800;
 
-  letter-spacing: -2px;
+  color: #dff9ff;
 
   text-shadow:
-    0 0 10px rgba(0, 210, 255, 0.8);
+
+    0 0 10px rgba(67, 222, 255, 0.8);
 
 }
 
 
-@keyframes centerPulse {
-
-  0%,
-  100% {
-
-    transform:
-      scale(1);
-
-  }
-
-  50% {
-
-    transform:
-      scale(1.08);
-
-  }
-
-}
-
-
-/* =========================================================
+/* =====================================================
    CONTENT
-========================================================= */
+===================================================== */
 
 .loader-content {
 
-  width: 100%;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
+  text-align: center;
 
 }
 
 
-/* =========================================================
+/* =====================================================
    STATUS
-========================================================= */
+===================================================== */
 
 .loader-status {
 
-  display: inline-flex;
+  width: fit-content;
+
+  margin: 0 auto 22px;
+
+  padding: 11px 20px;
+
+  display: flex;
 
   align-items: center;
 
-  gap: 9px;
+  gap: 10px;
 
-  padding: 8px 15px;
+  border-radius: 999px;
 
-  margin-bottom: 15px;
-
-  border-radius: 30px;
-
-  border:
-    1px solid rgba(0, 210, 255, 0.18);
-
-  background:
-    rgba(0, 180, 255, 0.05);
-
-  color:
-    rgba(190, 235, 255, 0.75);
-
-  font-size: 10px;
+  font-size: 13px;
 
   font-weight: 700;
 
   letter-spacing: 1.5px;
+
+  color: #b7c8d8;
+
+  background:
+
+    rgba(20, 45, 67, 0.75);
+
+  border:
+
+    1px solid rgba(55, 167, 230, 0.35);
 
 }
 
 
 .status-dot {
 
-  width: 7px;
+  width: 10px;
 
-  height: 7px;
+  height: 10px;
 
   border-radius: 50%;
 
-  background:
-    #36ff9b;
+  background: #f2b84b;
 
   box-shadow:
 
-    0 0 8px #36ff9b,
-
-    0 0 18px rgba(54, 255, 155, 0.6);
+    0 0 12px rgba(242, 184, 75, 0.8);
 
   animation:
-    statusPulse 1.3s ease-in-out infinite;
+
+    statusPulse 1s infinite;
+
+}
+
+
+.loader-status.ready {
+
+  color: #a8f3cf;
+
+}
+
+
+.loader-status.ready .status-dot {
+
+  background: #4be39b;
+
+  box-shadow:
+
+    0 0 14px rgba(75, 227, 155, 0.9);
 
 }
 
@@ -778,101 +559,71 @@
   0%,
   100% {
 
-    transform:
-      scale(0.8);
-
-    opacity: 0.5;
+    transform: scale(1);
 
   }
 
   50% {
 
-    transform:
-      scale(1.2);
-
-    opacity: 1;
+    transform: scale(1.35);
 
   }
 
 }
 
 
-/* =========================================================
-   TITLE
-========================================================= */
+/* =====================================================
+   HEADING
+===================================================== */
 
 .loader-content h1 {
 
-  margin: 0 0 9px;
+  margin: 0;
+
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
 
   color: #ffffff;
-
-  font-size:
-    clamp(28px, 5vw, 38px);
-
-  font-weight: 750;
-
-  letter-spacing: -1px;
-
-  text-shadow:
-    0 0 25px rgba(0, 210, 255, 0.12);
 
 }
 
 
-/* =========================================================
+/* =====================================================
    DESCRIPTION
-========================================================= */
+===================================================== */
 
 .loader-description {
 
-  margin: 0;
+  margin: 16px 0 26px;
 
-  color:
-    rgba(220, 235, 245, 0.62);
+  font-size: 18px;
 
-  font-size: 14px;
-
-  line-height: 1.6;
+  color: #b7c9d8;
 
 }
 
 
 .ready-description {
 
-  color: #6dffad;
+  color: #9eeac5;
 
   font-weight: 600;
 
 }
 
 
-/* =========================================================
+/* =====================================================
    DOTS
-========================================================= */
-
-.dots {
-
-  display: inline-flex;
-
-  margin-left: 2px;
-
-}
-
+===================================================== */
 
 .dots span {
 
-  display: inline-block;
-
   animation:
-    loadingDot 1.4s infinite;
 
-}
-
-
-.dots span:nth-child(1) {
-
-  animation-delay: 0s;
+    dotAnimation 1.5s infinite;
 
 }
 
@@ -891,247 +642,12 @@
 }
 
 
-@keyframes loadingDot {
-
-  0%,
-  60%,
-  100% {
-
-    opacity: 0.2;
-
-    transform:
-      translateY(0);
-
-  }
-
-  30% {
-
-    opacity: 1;
-
-    transform:
-      translateY(-3px);
-
-  }
-
-}
-
-
-/* =========================================================
-   TECHNOLOGY STACK
-========================================================= */
-
-.loader-tech-stack {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  flex-wrap: wrap;
-
-  gap: 8px;
-
-  margin-top: 21px;
-
-}
-
-
-.tech-item {
-
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 7px;
-
-  padding: 5px 9px;
-
-  border-radius: 9px;
-
-  background:
-    rgba(255, 255, 255, 0.035);
-
-  border:
-    1px solid rgba(255, 255, 255, 0.07);
-
-  font-size: 9px;
-
-  font-weight: 700;
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
-
-}
-
-
-.tech-item:hover {
-
-  transform:
-    translateY(-2px);
-
-  background:
-    rgba(255, 255, 255, 0.07);
-
-}
-
-
-/* =========================================================
-   TECHNOLOGY LOGOS
-========================================================= */
-
-.tech-logo {
-
-  width: 24px;
-
-  height: 24px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  flex-shrink: 0;
-
-}
-
-
-.tech-logo img {
-
-  width: 100%;
-
-  height: 100%;
-
-  object-fit: contain;
-
-  display: block;
-
-}
-
-
-/* Angular */
-
-.angular-tech {
-
-  color: #ff6b81;
-
-  border-color:
-    rgba(255, 70, 100, 0.18);
-
-}
-
-
-/* Spring Boot */
-
-.spring-tech {
-
-  color: #6cff9c;
-
-  border-color:
-    rgba(70, 255, 130, 0.16);
-
-}
-
-
-/* SQL Server */
-
-.sql-tech {
-
-  color: #5fd8ff;
-
-  border-color:
-    rgba(70, 210, 255, 0.16);
-
-}
-
-
-/* Java */
-
-.java-tech {
-
-  color: #ffca6b;
-
-  border-color:
-    rgba(255, 190, 70, 0.18);
-
-}
-
-
-/* Separator */
-
-.tech-separator {
-
-  color:
-    rgba(255, 255, 255, 0.2);
-
-  font-size: 9px;
-
-}
-
-
-/* =========================================================
-   BACKEND MESSAGE
-========================================================= */
-
-.loader-message {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 8px;
-
-  margin-top: 21px;
-
-  color:
-    rgba(190, 215, 230, 0.48);
-
-  font-size: 10px;
-
-  letter-spacing: 0.4px;
-
-}
-
-
-.message-icon {
-
-  color:
-    #00d9ff;
-
-  font-size: 12px;
-
-  animation:
-    messagePulse 1.5s ease-in-out infinite;
-
-}
-
-
-.ready-backend {
-
-  color:
-    #6dffad;
-
-}
-
-
-.ready-backend .message-icon {
-
-  color:
-    #36ff9b;
-
-}
-
-
-@keyframes messagePulse {
+@keyframes dotAnimation {
 
   0%,
   100% {
 
-    opacity: 0.4;
+    opacity: 0.2;
 
   }
 
@@ -1144,53 +660,170 @@
 }
 
 
-/* =========================================================
+/* =====================================================
+   TECHNOLOGY STACK
+===================================================== */
+
+.loader-tech-stack {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-bottom: 28px;
+
+}
+
+
+.tech-item {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 9px 14px;
+
+  border-radius: 13px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  color: #d7e5ef;
+
+  background:
+
+    rgba(18, 41, 60, 0.7);
+
+  border:
+
+    1px solid rgba(79, 154, 210, 0.25);
+
+}
+
+
+.tech-logo {
+
+  width: 27px;
+
+  height: 27px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+
+.tech-logo img {
+
+  width: 27px;
+
+  height: 27px;
+
+  object-fit: contain;
+
+}
+
+
+.tech-separator {
+
+  color: #60788e;
+
+}
+
+
+/* =====================================================
+   BACKEND MESSAGE
+===================================================== */
+
+.loader-message {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 26px;
+
+  font-size: 14px;
+
+  color: #a7bac8;
+
+}
+
+
+.message-icon {
+
+  color: #4fdcff;
+
+  font-size: 17px;
+
+}
+
+
+.ready-backend {
+
+  color: #a8f3cf;
+
+}
+
+
+.ready-backend .message-icon {
+
+  color: #4be39b;
+
+}
+
+
+/* =====================================================
    PROGRESS
-========================================================= */
+===================================================== */
 
 .loading-progress {
 
   width: 100%;
 
-  max-width: 410px;
-
-  margin-top: 25px;
+  margin-bottom: 32px;
 
 }
 
 
 .progress-track {
 
-  position: relative;
-
   width: 100%;
 
-  height: 5px;
+  height: 6px;
 
   overflow: hidden;
 
-  border-radius: 20px;
+  border-radius: 10px;
 
   background:
-    rgba(255, 255, 255, 0.07);
 
-  border:
-    1px solid rgba(255, 255, 255, 0.04);
+    rgba(255, 255, 255, 0.08);
 
 }
 
 
 .progress-bar {
 
-  position: absolute;
-
-  left: 0;
-
-  top: 0;
+  width: 0%;
 
   height: 100%;
-
-  width: 0%;
 
   border-radius: inherit;
 
@@ -1198,43 +831,25 @@
 
     linear-gradient(
       90deg,
-      #008cff,
-      #00d9ff,
-      #7c5cff,
-      #00d9ff
+      #23d7ff,
+      #4aa7ff,
+      #8b6cff
     );
-
-  background-size:
-    200% 100%;
 
   box-shadow:
 
-    0 0 12px rgba(0, 210, 255, 0.8),
-
-    0 0 25px rgba(110, 80, 255, 0.35);
-
-  /*
-   * EXACTLY SAME 9 SECONDS
-   * AS TYPESCRIPT
-   */
+    0 0 14px rgba(55, 205, 255, 0.8);
 
   animation:
 
-    loadingProgress 9s linear forwards,
-
-    progressShimmer 1.5s linear infinite;
+    loadingProgress 9s linear forwards;
 
 }
 
 
-/* Progress completed */
-
-.progress-complete {
+.progress-bar.progress-complete {
 
   width: 100%;
-
-  animation:
-    progressShimmer 1.5s linear infinite;
 
 }
 
@@ -1256,54 +871,30 @@
 }
 
 
-@keyframes progressShimmer {
-
-  from {
-
-    background-position:
-      0% 50%;
-
-  }
-
-  to {
-
-    background-position:
-      200% 50%;
-
-  }
-
-}
-
-
-/* =========================================================
-   PROGRESS INFO
-========================================================= */
-
 .progress-info {
+
+  margin-top: 10px;
 
   display: flex;
 
   justify-content: space-between;
 
-  margin-top: 7px;
+  font-size: 10px;
 
-  color:
-    rgba(255, 255, 255, 0.3);
+  font-weight: 700;
 
-  font-size: 8px;
+  letter-spacing: 1.5px;
 
-  letter-spacing: 0.8px;
+  color: #7890a3;
 
 }
 
 
-/* =========================================================
+/* =====================================================
    CONTINUE CONTAINER
-========================================================= */
+===================================================== */
 
 .continue-container {
-
-  width: 100%;
 
   display: flex;
 
@@ -1311,21 +902,14 @@
 
   align-items: center;
 
-  gap: 12px;
-
-  margin-top: 26px;
-
-  /*
-   * IMPORTANT:
-   * Container is visible from beginning.
-   */
+  justify-content: center;
 
 }
 
 
-/* =========================================================
+/* =====================================================
    READY MESSAGE
-========================================================= */
+===================================================== */
 
 .ready-message {
 
@@ -1333,38 +917,35 @@
 
   align-items: center;
 
-  gap: 9px;
+  gap: 12px;
 
-  color:
-    rgba(109, 255, 173, 0.65);
+  margin-bottom: 18px;
 
-  font-size: 13px;
+  font-size: 18px;
 
   font-weight: 700;
 
-  letter-spacing: 0.5px;
+  color: #8ea5b6;
 
   transition:
-    color 0.4s ease;
+
+    0.4s ease;
 
 }
 
 
-/* Ready state */
+.ready-message.ready-active {
 
-.continue-container.ready .ready-message {
-
-  color:
-    #6dffad;
+  color: #9eeac5;
 
 }
 
 
 .ready-icon {
 
-  width: 23px;
+  width: 32px;
 
-  height: 23px;
+  height: 32px;
 
   display: flex;
 
@@ -1375,92 +956,39 @@
   border-radius: 50%;
 
   border:
-    1px solid rgba(90, 255, 165, 0.35);
 
-  background:
-    rgba(70, 255, 150, 0.05);
-
-  color:
-    rgba(109, 255, 173, 0.7);
-
-  box-shadow:
-    0 0 15px rgba(70, 255, 150, 0.08);
-
-  transition:
-    all 0.4s ease;
+    1px solid rgba(75, 227, 155, 0.6);
 
 }
 
 
-.continue-container.ready .ready-icon {
-
-  border-color:
-    rgba(90, 255, 165, 0.55);
-
-  background:
-    rgba(70, 255, 150, 0.08);
-
-  color:
-    #6dffad;
-
-  box-shadow:
-    0 0 15px rgba(70, 255, 150, 0.15);
-
-}
-
-
-/* =========================================================
-   EXPLORE BUTTON
-========================================================= */
+/* =====================================================
+   MAIN BUTTON
+===================================================== */
 
 .continue-button {
 
-  position: relative;
+  width: min(390px, 100%);
 
-  min-width: 275px;
+  min-height: 68px;
 
-  padding: 15px 24px;
+  border: none;
 
-  display: inline-flex;
+  border-radius: 999px;
+
+  display: flex;
 
   align-items: center;
 
   justify-content: center;
 
-  gap: 11px;
+  gap: 20px;
 
-  border: 1px solid transparent;
-
-  border-radius: 50px;
-
-  background:
-
-    linear-gradient(
-      135deg,
-      #087cff,
-      #00c8ff,
-      #7455ff
-    );
-
-  color: #ffffff;
-
-  font-family: inherit;
-
-  font-size: 14px;
+  font-size: 18px;
 
   font-weight: 700;
 
-  letter-spacing: 0.2px;
-
-  outline: none;
-
-  overflow: hidden;
-
-  box-shadow:
-
-    0 10px 30px rgba(0, 130, 255, 0.22),
-
-    0 0 25px rgba(0, 210, 255, 0.08);
+  color: white;
 
   transition:
 
@@ -1468,573 +996,319 @@
 
     box-shadow 0.3s ease,
 
-    filter 0.3s ease,
+    opacity 0.3s ease,
 
-    opacity 0.4s ease;
+    filter 0.3s ease;
 
 }
 
 
-/* =========================================================
-   DISABLED BUTTON
-
-   FIRST 9 SECONDS
-========================================================= */
+/* =====================================================
+   DISABLED STATE
+===================================================== */
 
 .continue-button:disabled {
 
   cursor: not-allowed;
 
-  pointer-events: none;
-
   opacity: 0.42;
 
-  filter:
-    grayscale(0.25)
-    brightness(0.75);
-
-  transform:
-    none;
-
-}
-
-
-/* =========================================================
-   ENABLED BUTTON
-
-   AFTER 9 SECONDS
-========================================================= */
-
-.continue-button.button-ready {
-
-  cursor: pointer;
-
-  pointer-events: auto;
-
-  opacity: 1;
-
-  filter:
-    none;
-
-}
-
-
-/* Button shine */
-
-.continue-button::before {
-
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-
-  left: -100%;
-
-  width: 70%;
-
-  height: 100%;
+  filter: grayscale(0.6);
 
   background:
 
     linear-gradient(
       90deg,
-      transparent,
-      rgba(255, 255, 255, 0.3),
-      transparent
+      #1c4b60,
+      #28526b
     );
 
-  transform:
-    skewX(-20deg);
-
-  transition:
-    left 0.7s ease;
+  box-shadow: none;
 
 }
 
 
-/* Hover only when enabled */
+/* =====================================================
+   ENABLED STATE AFTER 9 SECONDS
+===================================================== */
 
-.continue-button:not(:disabled):hover {
+.continue-button.button-ready {
+
+  cursor: pointer;
+
+  opacity: 1;
+
+  filter: none;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      #18aee8,
+      #2bbfe8,
+      #6060d8
+    );
+
+  box-shadow:
+
+    0 10px 35px rgba(23, 168, 236, 0.38),
+
+    0 0 25px rgba(85, 105, 255, 0.18);
+
+  animation:
+
+    buttonReadyPulse 2s infinite;
+
+}
+
+
+.continue-button.button-ready:hover {
 
   transform:
-    translateY(-4px)
+
+    translateY(-3px)
     scale(1.02);
 
   box-shadow:
 
-    0 15px 40px rgba(0, 130, 255, 0.35),
-
-    0 0 35px rgba(0, 210, 255, 0.18);
-
-  filter:
-    brightness(1.08);
+    0 18px 45px rgba(23, 168, 236, 0.5);
 
 }
 
 
-.continue-button:not(:disabled):hover::before {
-
-  left: 140%;
-
-}
-
-
-/* Click only when enabled */
-
-.continue-button:not(:disabled):active {
+.continue-button.button-ready:active {
 
   transform:
-    translateY(-1px)
-    scale(0.99);
+
+    scale(0.98);
 
 }
 
 
-/* Button icon */
+@keyframes buttonReadyPulse {
+
+  0%,
+  100% {
+
+    box-shadow:
+
+      0 10px 30px rgba(23, 168, 236, 0.35);
+
+  }
+
+  50% {
+
+    box-shadow:
+
+      0 10px 45px rgba(99, 100, 255, 0.65);
+
+  }
+
+}
+
+
+/* =====================================================
+   BUTTON CONTENT
+===================================================== */
 
 .button-icon {
 
-  font-size: 15px;
+  font-size: 20px;
 
 }
 
 
-/* Arrow */
+.button-text {
 
-.continue-button .arrow {
+  white-space: nowrap;
 
-  font-size: 20px;
+}
 
-  line-height: 1;
+
+.arrow {
+
+  font-size: 25px;
 
   transition:
+
     transform 0.3s ease;
 
 }
 
 
-.continue-button:not(:disabled):hover .arrow {
+.continue-button.button-ready:hover .arrow {
 
   transform:
+
     translateX(6px);
 
 }
 
 
-/* =========================================================
-   CONTINUE HINT
-========================================================= */
+/* =====================================================
+   HINT
+===================================================== */
 
 .continue-hint {
 
-  color:
-    rgba(255, 255, 255, 0.35);
+  margin-top: 16px;
 
-  font-size: 9px;
+  font-size: 12px;
 
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
 
-}
-
-
-/* =========================================================
-   PORTFOLIO SECTIONS
-========================================================= */
-
-.portfolio-section {
-
-  position: relative;
-
-  opacity: 0;
-
-  transform:
-    translateY(50px);
-
-  transition:
-
-    opacity 0.8s ease,
-
-    transform 0.8s ease;
+  color: #71889a;
 
 }
 
 
-.portfolio-section.show {
-
-  opacity: 1;
-
-  transform:
-    translateY(0);
-
-}
-
-
-/* =========================================================
-   SECTION ANIMATION VARIATIONS
-========================================================= */
-
-.portfolio-section:nth-child(1) {
-
-  transform:
-    translateY(45px);
-
-}
-
-
-.portfolio-section:nth-child(2) {
-
-  transform:
-    translateX(-45px);
-
-}
-
-
-.portfolio-section:nth-child(3) {
-
-  transform:
-    translateY(45px);
-
-}
-
-
-.portfolio-section:nth-child(4) {
-
-  transform:
-    translateX(45px);
-
-}
-
-
-.portfolio-section:nth-child(5) {
-
-  transform:
-    translateY(45px);
-
-}
-
-
-.portfolio-section:nth-child(1).show,
-.portfolio-section:nth-child(2).show,
-.portfolio-section:nth-child(3).show,
-.portfolio-section:nth-child(4).show,
-.portfolio-section:nth-child(5).show {
-
-  opacity: 1;
-
-  transform:
-    translateX(0)
-    translateY(0);
-
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
 @media (max-width: 768px) {
 
-  .portfolio-loader {
-
-    padding: 15px;
-
-  }
-
-
   .loader-card {
 
-    width: 100%;
-
-    max-width: 500px;
+    width: 92vw;
 
     padding:
-      35px 25px 30px;
 
-    border-radius: 23px;
+      35px 22px
+      30px;
+
+    border-radius: 25px;
 
   }
 
 
   .loader-animation {
 
-    width: 120px;
+    width: 145px;
 
-    height: 120px;
-
-    margin-bottom: 22px;
-
-  }
-
-
-  .loader-ring.outer {
-
-    width: 116px;
-
-    height: 116px;
-
-  }
-
-
-  .loader-ring.middle {
-
-    width: 90px;
-
-    height: 90px;
-
-  }
-
-
-  .loader-ring.inner {
-
-    width: 66px;
-
-    height: 66px;
+    height: 145px;
 
   }
 
 
   .loader-center {
 
-    width: 50px;
-
-    height: 50px;
+    inset: 42px;
 
   }
 
 
   .loader-content h1 {
 
-    font-size: 30px;
-
-  }
-
-
-  .loader-description {
-
-    font-size: 13px;
+    font-size: 2.5rem;
 
   }
 
 
   .loader-tech-stack {
 
-    gap: 6px;
+    gap: 8px;
 
   }
 
 
   .tech-item {
 
-    padding: 5px 7px;
-
-    font-size: 8px;
-
-  }
-
-
-  .tech-logo {
-
-    width: 20px;
-
-    height: 20px;
-
-  }
-
-
-  .loading-progress {
-
-    max-width: 340px;
-
-  }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 480px) {
-
-  .portfolio-loader {
-
-    padding: 12px;
-
-  }
-
-
-  .loader-card {
-
     padding:
-      28px 18px 25px;
 
-    border-radius: 20px;
-
-  }
-
-
-  .loader-animation {
-
-    width: 95px;
-
-    height: 95px;
-
-    margin-bottom: 19px;
-
-  }
-
-
-  .loader-ring.outer {
-
-    width: 92px;
-
-    height: 92px;
-
-  }
-
-
-  .loader-ring.middle {
-
-    width: 70px;
-
-    height: 70px;
-
-  }
-
-
-  .loader-ring.inner {
-
-    width: 51px;
-
-    height: 51px;
-
-  }
-
-
-  .loader-center {
-
-    width: 43px;
-
-    height: 43px;
-
-    border-radius: 12px;
-
-  }
-
-
-  .code-symbol {
-
-    font-size: 14px;
-
-  }
-
-
-  .loader-status {
-
-    font-size: 8px;
-
-    letter-spacing: 1px;
-
-    padding:
-      7px 11px;
-
-  }
-
-
-  .loader-content h1 {
-
-    font-size: 25px;
-
-    letter-spacing: -0.5px;
-
-  }
-
-
-  .loader-description {
+      7px 10px;
 
     font-size: 11px;
 
   }
 
 
-  .loader-tech-stack {
-
-    margin-top: 17px;
-
-    gap: 5px;
-
-  }
-
-
-  .tech-item {
-
-    padding:
-      4px 6px;
-
-    font-size: 7px;
-
-  }
-
-
   .tech-logo {
 
-    width: 18px;
+    width: 22px;
 
-    height: 18px;
+    height: 22px;
+
+  }
+
+
+  .tech-logo img {
+
+    width: 22px;
+
+    height: 22px;
 
   }
 
 
   .tech-separator {
 
-    font-size: 7px;
+    display: none;
 
   }
 
 
-  .loader-message {
+  .continue-button {
 
-    margin-top: 17px;
+    min-height: 62px;
 
-    font-size: 9px;
+    font-size: 16px;
+
+    gap: 13px;
+
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .portfolio-loader {
+
+    align-items: flex-start;
+
+    overflow-y: auto;
+
+    padding: 20px 0;
 
   }
 
 
-  .loading-progress {
+  .loader-card {
 
-    margin-top: 20px;
-
-  }
-
-
-  .progress-info {
-
-    font-size: 7px;
+    margin: auto 0;
 
   }
 
 
-  .continue-container {
+  .loader-tech-stack {
 
-    margin-top: 21px;
+    display: grid;
 
-  }
+    grid-template-columns:
 
-
-  .ready-message {
-
-    font-size: 11px;
+      repeat(2, 1fr);
 
   }
 
 
-  .ready-icon {
+  .tech-item {
 
-    width: 21px;
+    justify-content: center;
 
-    height: 21px;
+  }
+
+
+  .loader-content h1 {
+
+    font-size: 2.1rem;
+
+  }
+
+
+  .loader-description {
+
+    font-size: 15px;
 
   }
 
@@ -2043,110 +1317,7 @@
 
     width: 100%;
 
-    min-width: 0;
-
-    max-width: 270px;
-
-    padding:
-      13px 17px;
-
-    font-size: 12px;
-
-  }
-
-
-  .button-icon {
-
-    font-size: 13px;
-
-  }
-
-
-  .continue-button .arrow {
-
-    font-size: 18px;
-
-  }
-
-
-  .continue-hint {
-
-    font-size: 8px;
-
-  }
-
-}
-
-
-/* =========================================================
-   VERY SMALL MOBILE
-========================================================= */
-
-@media (max-width: 360px) {
-
-  .loader-card {
-
-    padding:
-      24px 14px;
-
-  }
-
-
-  .loader-animation {
-
-    margin-bottom: 15px;
-
-  }
-
-
-  .loader-content h1 {
-
-    font-size: 23px;
-
-  }
-
-
-  .loader-tech-stack {
-
-    display: none;
-
-  }
-
-
-  .loader-message {
-
-    margin-top: 14px;
-
-  }
-
-
-  .continue-button {
-
-    max-width: 240px;
-
-  }
-
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .portfolio-loader *,
-  .portfolio-section,
-  .continue-button {
-
-    animation-duration:
-      0.01ms !important;
-
-    animation-iteration-count:
-      1 !important;
-
-    transition-duration:
-      0.01ms !important;
+    font-size: 15px;
 
   }
 

@@ -3,7 +3,7 @@
 
 <!-- =====================================================
      FULL SCREEN LOADING SCREEN
-====================================================== -->
+===================================================== -->
 
 <div
   class="portfolio-loader"
@@ -36,7 +36,7 @@
   <div class="loader-card">
 
 
-    <!-- Top accent -->
+    <!-- TOP ACCENT -->
 
     <div class="card-top-line"></div>
 
@@ -54,7 +54,7 @@
       <div class="loader-ring inner"></div>
 
 
-      <!-- Center -->
+      <!-- CENTER -->
 
       <div class="loader-center">
 
@@ -120,7 +120,7 @@
 
 
       <!-- =================================================
-           DESCRIPTION - LOADING
+           DESCRIPTION
       ================================================== -->
 
       <p
@@ -141,9 +141,7 @@
       </p>
 
 
-      <!-- =================================================
-           DESCRIPTION - READY
-      ================================================== -->
+      <!-- READY DESCRIPTION -->
 
       <p
         class="loader-description ready-description"
@@ -162,7 +160,7 @@
       <div class="loader-tech-stack">
 
 
-        <!-- Angular -->
+        <!-- ANGULAR -->
 
         <div class="tech-item angular-tech">
 
@@ -191,7 +189,7 @@
         </span>
 
 
-        <!-- Spring Boot -->
+        <!-- SPRING BOOT -->
 
         <div class="tech-item spring-tech">
 
@@ -220,7 +218,7 @@
         </span>
 
 
-        <!-- SQL Server -->
+        <!-- SQL SERVER -->
 
         <div class="tech-item sql-tech">
 
@@ -249,7 +247,7 @@
         </span>
 
 
-        <!-- Java -->
+        <!-- JAVA -->
 
         <div class="tech-item java-tech">
 
@@ -270,52 +268,50 @@
 
         </div>
 
-
       </div>
 
 
       <!-- =================================================
-           BACKEND MESSAGE - LOADING
+           BACKEND MESSAGE
       ================================================== -->
 
       <div
         class="loader-message"
-        *ngIf="!showContinueButton"
+        [class.ready-backend]="showContinueButton"
       >
 
         <span class="message-icon">
 
-          ⚡
+          <ng-container *ngIf="!showContinueButton">
+
+            ⚡
+
+          </ng-container>
+
+
+          <ng-container *ngIf="showContinueButton">
+
+            ✓
+
+          </ng-container>
 
         </span>
+
 
         <span>
 
-          Connecting to backend services
+          <ng-container *ngIf="!showContinueButton">
 
-        </span>
+            Connecting to backend services
 
-      </div>
+          </ng-container>
 
 
-      <!-- =================================================
-           BACKEND MESSAGE - READY
-      ================================================== -->
+          <ng-container *ngIf="showContinueButton">
 
-      <div
-        class="loader-message ready-backend"
-        *ngIf="showContinueButton"
-      >
+            All systems ready
 
-        <span class="message-icon">
-
-          ✓
-
-        </span>
-
-        <span>
-
-          All systems ready
+          </ng-container>
 
         </span>
 
@@ -340,6 +336,7 @@
 
 
         <div class="progress-info">
+
 
           <span>
 
@@ -367,82 +364,50 @@
 
         </div>
 
-
       </div>
 
 
       <!-- =================================================
            CONTINUE SECTION
-
            ALWAYS VISIBLE
       ================================================== -->
 
-      <div
-        class="continue-container"
-        [class.ready]="showContinueButton"
-      >
+      <div class="continue-container">
 
-
-        <!-- Ready / Loading message -->
+        <!-- READY MESSAGE -->
 
         <div class="ready-message">
 
           <span class="ready-icon">
 
-            <ng-container *ngIf="!showContinueButton">
-
-              ○
-
-            </ng-container>
-
-            <ng-container *ngIf="showContinueButton">
-
-              ✓
-
-            </ng-container>
+            {{ showContinueButton ? '✓' : '○' }}
 
           </span>
 
 
           <span>
 
-            <ng-container *ngIf="!showContinueButton">
-
-              Portfolio Loading
-
-            </ng-container>
-
-            <ng-container *ngIf="showContinueButton">
-
-              Portfolio Ready
-
-            </ng-container>
+            {{
+              showContinueButton
+                ? 'Portfolio Ready'
+                : 'Preparing Portfolio...'
+            }}
 
           </span>
 
         </div>
 
 
-        <!-- =================================================
-             MAIN BUTTON
-
-             DISABLED UNTIL 9 SECONDS COMPLETE
-        ================================================== -->
+        <!-- MAIN BUTTON -->
 
         <button
           type="button"
-
           class="continue-button"
-
-          [class.button-ready]="showContinueButton"
-
           [disabled]="!showContinueButton"
-
+          [class.enabled]="showContinueButton"
           aria-label="Explore my portfolio"
-
           (click)="goToContent()"
         >
-
 
           <span class="button-icon">
 
@@ -453,7 +418,11 @@
 
           <span class="button-text">
 
-            Click Here to Explore
+            {{
+              showContinueButton
+                ? 'Click Here to Explore'
+                : 'Loading Portfolio...'
+            }}
 
           </span>
 
@@ -464,46 +433,34 @@
 
           </span>
 
-
         </button>
 
 
-        <!-- Hint -->
+        <!-- HINT -->
 
         <span class="continue-hint">
 
-          <ng-container *ngIf="!showContinueButton">
-
-            Please wait while the portfolio loads
-
-          </ng-container>
-
-
-          <ng-container *ngIf="showContinueButton">
-
-            Enter the portfolio experience
-
-          </ng-container>
+          {{
+            showContinueButton
+              ? 'Enter the portfolio experience'
+              : 'Please wait while the portfolio loads'
+          }}
 
         </span>
-
 
       </div>
 
 
     </div>
 
-
   </div>
-
 
 </div>
 
 
-
 <!-- =====================================================
      PORTFOLIO CONTENT
-====================================================== -->
+===================================================== -->
 
 <main
   class="portfolio"
@@ -511,9 +468,7 @@
 >
 
 
-  <!-- =================================================
-       PROFILE
-  ================================================== -->
+  <!-- PROFILE -->
 
   <section
     id="profile"
@@ -525,10 +480,7 @@
   </section>
 
 
-
-  <!-- =================================================
-       SKILLS
-  ================================================== -->
+  <!-- SKILLS -->
 
   <section
     id="skills"
@@ -540,10 +492,7 @@
   </section>
 
 
-
-  <!-- =================================================
-       EXPERIENCE
-  ================================================== -->
+  <!-- EXPERIENCE -->
 
   <section
     id="experience"
@@ -555,10 +504,7 @@
   </section>
 
 
-
-  <!-- =================================================
-       PROJECTS
-  ================================================== -->
+  <!-- PROJECTS -->
 
   <section
     id="projects"
@@ -570,10 +516,7 @@
   </section>
 
 
-
-  <!-- =================================================
-       EDUCATION
-  ================================================== -->
+  <!-- EDUCATION -->
 
   <section
     id="education"
