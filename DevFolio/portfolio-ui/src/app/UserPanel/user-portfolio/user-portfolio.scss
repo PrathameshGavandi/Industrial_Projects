@@ -981,12 +981,11 @@
 
 
 /* Small technology logos */
-
 .tech-logo {
 
-  width: 22px;
+  width: 24px;
 
-  height: 22px;
+  height: 24px;
 
   display: flex;
 
@@ -994,13 +993,18 @@
 
   justify-content: center;
 
-  border-radius: 6px;
+  flex-shrink: 0;
 
-  font-size: 9px;
+}
+.tech-logo img {
 
-  font-weight: 900;
+  width: 100%;
 
-  color: #ffffff;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
 
 }
 
@@ -1017,19 +1021,7 @@
 }
 
 
-.angular-logo {
 
-  background:
-    linear-gradient(
-      135deg,
-      #dd0031,
-      #ff1744
-    );
-
-  box-shadow:
-    0 0 12px rgba(255, 50, 80, 0.25);
-
-}
 
 
 /* Spring Boot */
@@ -1044,22 +1036,7 @@
 }
 
 
-.spring-logo {
 
-  background:
-    linear-gradient(
-      135deg,
-      #087f3e,
-      #48b84a
-    );
-
-  border-radius:
-    50% 50% 50% 8px;
-
-  box-shadow:
-    0 0 12px rgba(70, 255, 130, 0.2);
-
-}
 
 
 /* SQL Server */
@@ -1074,24 +1051,7 @@
 }
 
 
-.sql-logo {
 
-  background:
-    linear-gradient(
-      135deg,
-      #087ea4,
-      #00b7e8
-    );
-
-  border-radius:
-    6px 6px 9px 9px;
-
-  font-size: 7px;
-
-  box-shadow:
-    0 0 12px rgba(0, 200, 255, 0.2);
-
-}
 
 
 /* Java */
@@ -1106,21 +1066,7 @@
 }
 
 
-.java-logo {
 
-  background:
-    linear-gradient(
-      135deg,
-      #b72d2d,
-      #f89820
-    );
-
-  font-size: 11px;
-
-  box-shadow:
-    0 0 12px rgba(255, 170, 50, 0.2);
-
-}
 
 
 /* Separator */

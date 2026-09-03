@@ -8,12 +8,6 @@
 <div
   class="portfolio-loader"
   *ngIf="isLoading"
-
-  (wheel)="$event.preventDefault()"
-
-  (touchmove)="$event.preventDefault()"
-
-  (click)="$event.stopPropagation()"
 >
 
 
@@ -74,7 +68,9 @@
       <div class="loader-center">
 
         <span class="code-symbol">
+
           &lt;/&gt;
+
         </span>
 
       </div>
@@ -104,11 +100,16 @@
         <span>
 
           <ng-container *ngIf="!showContinueButton">
+
             SYSTEM INITIALIZING
+
           </ng-container>
 
+
           <ng-container *ngIf="showContinueButton">
+
             SYSTEM READY
+
           </ng-container>
 
         </span>
@@ -174,19 +175,28 @@
 
         <div class="tech-item angular-tech">
 
-          <div class="tech-logo angular-logo">
-            A
+          <div class="tech-logo">
+
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg"
+              alt="Angular"
+            >
+
           </div>
 
           <span>
+
             Angular
+
           </span>
 
         </div>
 
 
         <span class="tech-separator">
+
           •
+
         </span>
 
 
@@ -194,19 +204,28 @@
 
         <div class="tech-item spring-tech">
 
-          <div class="tech-logo spring-logo">
-            S
+          <div class="tech-logo">
+
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+              alt="Spring Boot"
+            >
+
           </div>
 
           <span>
+
             Spring Boot
+
           </span>
 
         </div>
 
 
         <span class="tech-separator">
+
           •
+
         </span>
 
 
@@ -214,19 +233,28 @@
 
         <div class="tech-item sql-tech">
 
-          <div class="tech-logo sql-logo">
-            DB
+          <div class="tech-logo">
+
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
+              alt="SQL Server"
+            >
+
           </div>
 
           <span>
+
             SQL Server
+
           </span>
 
         </div>
 
 
         <span class="tech-separator">
+
           •
+
         </span>
 
 
@@ -234,12 +262,19 @@
 
         <div class="tech-item java-tech">
 
-          <div class="tech-logo java-logo">
-            ☕
+          <div class="tech-logo">
+
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+              alt="Java"
+            >
+
           </div>
 
           <span>
+
             Java
+
           </span>
 
         </div>
@@ -258,11 +293,15 @@
       >
 
         <span class="message-icon">
+
           ⚡
+
         </span>
 
         <span>
+
           Connecting to backend services
+
         </span>
 
       </div>
@@ -278,11 +317,15 @@
       >
 
         <span class="message-icon">
+
           ✓
+
         </span>
 
         <span>
+
           All systems ready
+
         </span>
 
       </div>
@@ -310,18 +353,25 @@
           <span>
 
             <ng-container *ngIf="!showContinueButton">
+
               INITIALIZING
+
             </ng-container>
 
+
             <ng-container *ngIf="showContinueButton">
+
               READY
+
             </ng-container>
 
           </span>
 
 
           <span>
+
             0% — 100%
+
           </span>
 
         </div>
@@ -345,42 +395,47 @@
         <div class="ready-message">
 
           <span class="ready-icon">
+
             ✓
+
           </span>
 
           <span>
+
             Portfolio Ready
+
           </span>
 
         </div>
 
 
-        <!-- =================================================
-             MAIN BUTTON
-        ================================================== -->
+        <!-- MAIN BUTTON -->
 
         <button
           type="button"
-
           class="continue-button"
-
           aria-label="Explore my portfolio"
-
           (click)="goToContent()"
         >
 
           <span class="button-icon">
+
             🚀
+
           </span>
 
 
           <span class="button-text">
+
             Click Here to Explore
+
           </span>
 
 
           <span class="arrow">
+
             →
+
           </span>
 
         </button>
@@ -414,19 +469,15 @@
 
 <main
   class="portfolio"
-
   [class.content-loaded]="!isLoading"
 >
 
 
-  <!-- =================================================
-       PROFILE
-  ================================================== -->
+  <!-- PROFILE -->
 
   <section
     id="profile"
-
-    class="portfolio-section"
+    class="portfolio-section show"
   >
 
     <app-user-profile></app-user-profile>
@@ -434,14 +485,12 @@
   </section>
 
 
-  <!-- =================================================
-       SKILLS
-  ================================================== -->
+
+  <!-- SKILLS -->
 
   <section
     id="skills"
-
-    class="portfolio-section"
+    class="portfolio-section show"
   >
 
     <app-skills></app-skills>
@@ -449,14 +498,12 @@
   </section>
 
 
-  <!-- =================================================
-       EXPERIENCE
-  ================================================== -->
+
+  <!-- EXPERIENCE -->
 
   <section
     id="experience"
-
-    class="portfolio-section"
+    class="portfolio-section show"
   >
 
     <app-user-experience></app-user-experience>
@@ -464,14 +511,12 @@
   </section>
 
 
-  <!-- =================================================
-       PROJECTS
-  ================================================== -->
+
+  <!-- PROJECTS -->
 
   <section
     id="projects"
-
-    class="portfolio-section"
+    class="portfolio-section show"
   >
 
     <app-user-projects></app-user-projects>
@@ -479,14 +524,12 @@
   </section>
 
 
-  <!-- =================================================
-       EDUCATION
-  ================================================== -->
+
+  <!-- EDUCATION -->
 
   <section
     id="education"
-
-    class="portfolio-section"
+    class="portfolio-section show"
   >
 
     <app-user-education></app-user-education>

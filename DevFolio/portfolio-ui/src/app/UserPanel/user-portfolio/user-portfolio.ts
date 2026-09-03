@@ -1,7 +1,7 @@
 import {
-  AfterViewInit,
   Component,
-  OnDestroy
+  OnDestroy,
+  OnInit
 } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
@@ -47,7 +47,7 @@ import { UserEducationComponent }
 
 
 export class UserPortfolioComponent
-  implements AfterViewInit, OnDestroy {
+  implements OnInit, OnDestroy {
 
 
   /*
@@ -63,9 +63,7 @@ export class UserPortfolioComponent
 
 
   /*
-   * EXACT 9 SECONDS
-   *
-   * 9000 milliseconds = 9 seconds
+   * EXACTLY 9 SECONDS
    */
   private readonly LOADING_TIME = 9000;
 
@@ -73,15 +71,32 @@ export class UserPortfolioComponent
   private loadingTimer?: ReturnType<typeof setTimeout>;
 
 
-  ngAfterViewInit(): void {
+  /*
+   * Component starts
+   */
+  ngOnInit(): void {
+
+    this.startLoader();
+
+  }
+
+
+  /*
+   * Start loader automatically
+   */
+  private startLoader(): void {
+
+    this.isLoading = true;
+
+    this.showContinueButton = false;
+
 
     /*
-     * Start 9 second timer
+     * After EXACTLY 9 seconds
      *
-     * IMPORTANT:
-     * Loader will NOT disappear automatically.
+     * Button appears automatically
      *
-     * After 9 seconds only the button will appear.
+     * NO CLICK REQUIRED
      */
     this.loadingTimer = setTimeout(() => {
 
@@ -94,18 +109,18 @@ export class UserPortfolioComponent
 
   /*
    * Called when user clicks:
-   * "Click Here to Explore"
+   * Click Here to Explore
    */
   goToContent(): void {
 
     /*
-     * Remove loader immediately
+     * Remove loader
      */
     this.isLoading = false;
 
 
     /*
-     * Allow portfolio interaction
+     * Enable portfolio
      */
     setTimeout(() => {
 
@@ -127,6 +142,9 @@ export class UserPortfolioComponent
   }
 
 
+  /*
+   * Clear timer when component destroyed
+   */
   ngOnDestroy(): void {
 
     if (this.loadingTimer) {
