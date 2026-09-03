@@ -1,143 +1,137 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProfileService, Profile } from '../../Services/ProfileService';
-import { map, Observable } from 'rxjs';
+import { map, Observable, catchError, of, tap } from 'rxjs';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
-selector: 'app-user-profile',
-standalone: true,
-imports: [CommonModule],
-templateUrl: './user-profile.html',
-styleUrls: ['./user-profile.scss'],
+  selector: 'app-user-profile',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './user-profile.html',
+  styleUrls: ['./user-profile.scss'],
 })
-
 export class UserProfileComponent {
 
-profile$!: Observable<Profile>;
+  @Output() loaded = new EventEmitter<void>();
 
-constructor(
-private profileService: ProfileService,
-private router: Router
-) {
-this.loadProfile();
-}
+  profile$!: Observable<Profile>;
 
-/* ===============================
-LOAD PROFILE
-================================ */
+  constructor(
+    private profileService: ProfileService,
+    private router: Router
+  ) {
+    this.loadProfile();
+  }
 
-loadProfile(): void {
+  loadProfile(): void {
 
- 
-this.profile$ = this.profileService
-  .getallProfiles()
-  .pipe(
+    this.profile$ = this.profileService
+      .getallProfiles()
+      .pipe(
 
-    map((res: any[]) => {
+        map((res: any[]) => {
 
-      const p = res?.[0];
+          const p = res?.[0];
 
-      return {
+          return {
 
-        ...p,
+            ...p,
 
-        name: p?.Name ?? p?.name ?? 'Your Name',
+            name: p?.Name ?? p?.name ?? 'Your Name',
 
-        email: p?.Email ?? p?.email ?? '',
+            email: p?.Email ?? p?.email ?? '',
 
-        phone: p?.Phone ?? p?.phone ?? '',
+            phone: p?.Phone ?? p?.phone ?? '',
 
-        bio: p?.Bio ?? p?.bio ?? ''
+            bio: p?.Bio ?? p?.bio ?? ''
 
-      } as Profile;
+          } as Profile;
 
-    })
+        }),
 
-  );
- 
+        tap(() => {
+          this.loaded.emit();
+        }),
 
-}
+        catchError((error) => {
 
-/* ===============================
-BIO BULLET POINTS
-================================ */
+          console.error('Profile API Error:', error);
 
-getBioPoints(bio: string | undefined): string[] {
+          this.loaded.emit();
 
- 
-if (!bio) {
-  return [];
-}
+          return of({
+            name: 'Your Name',
+            email: '',
+            phone: '',
+            bio: ''
+          } as Profile);
 
-return bio
-  .split('||')
-  .map((point: string) => point.trim())
-  .filter((point: string) => point.length > 0);
- 
+        })
 
-}
+      );
 
-/* ===============================
-OPEN MAIL
-================================ */
+  }
 
-openMail(email: string | undefined): void {
+  getBioPoints(bio: string | undefined): string[] {
 
- 
-if (!email) {
-  return;
-}
+    if (!bio) {
+      return [];
+    }
 
-window.location.href = 'mailto:' + email;
- 
+    return bio
+      .split('||')
+      .map((point: string) => point.trim())
+      .filter((point: string) => point.length > 0);
 
-}
+  }
 
-/* ===============================
-ADMIN SHORTCUT
-CTRL + SHIFT + A
-================================ */
+  openMail(email: string | undefined): void {
 
-@HostListener('document:keydown', ['$event'])
+    if (!email) {
+      return;
+    }
 
-handleAdminShortcut(event: KeyboardEvent): void {
+    window.location.href = 'mailto:' + email;
 
- 
-if (
-  event.ctrlKey &&
-  event.shiftKey &&
-  event.key.toLowerCase() === 'a'
-) {
+  }
 
-  event.preventDefault();
+  @HostListener('document:keydown', ['$event'])
+  handleAdminShortcut(event: KeyboardEvent): void {
 
-  Swal.fire({
+    if (
+      event.ctrlKey &&
+      event.shiftKey &&
+      event.key.toLowerCase() === 'a'
+    ) {
 
-    icon: 'info',
+      event.preventDefault();
 
-    title: 'Admin Access',
+      Swal.fire({
 
-    text: 'Redirecting to Admin Login...',
+        icon: 'info',
 
-    timer: 1200,
+        title: 'Admin Access',
 
-    showConfirmButton: false,
+        text: 'Redirecting to Admin Login...',
 
-    background: '#0b1c2d',
+        timer: 1200,
 
-    color: '#ffffff'
+        showConfirmButton: false,
 
-  }).then(() => {
+        background: '#0b1c2d',
 
-    this.router.navigate(['/login']);
+        color: '#ffffff'
 
-  });
+      }).then(() => {
 
-}
- 
+        this.router.navigate(['/login']);
 
-}
+      });
+
+    }
+
+  }
 
 }
