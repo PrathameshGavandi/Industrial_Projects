@@ -56,8 +56,21 @@ export class UserSkillsComponent
   loaded = new EventEmitter<void>();
 
 
+  /*
+   * Every array inside this observable
+   * represents ONE ROW.
+   *
+   * Example:
+   *
+   * [
+   *   [skill1, skill2],
+   *   [skill3, skill4],
+   *   [skill5, skill6]
+   * ]
+   */
+
   skills$!:
-    Observable<SkillRow[]>;
+    Observable<SkillRow[][]>;
 
 
   constructor(
@@ -75,12 +88,11 @@ export class UserSkillsComponent
   }
 
 
-  /* ==========================================
+  /* =====================================================
      LOAD SKILLS
-  ========================================== */
+  ===================================================== */
 
   private loadSkills(): void {
-
 
     this.skills$ =
 
@@ -88,9 +100,11 @@ export class UserSkillsComponent
         .getAllSkills()
         .pipe(
 
+          /* ===============================================
+             CONVERT API RESPONSE
+          =============================================== */
 
           map((res: any[]) => {
-
 
             if (
               !res ||
@@ -105,7 +119,7 @@ export class UserSkillsComponent
             const s = res[0];
 
 
-            return [
+            const skills: SkillRow[] = [
 
               {
                 label:
@@ -240,22 +254,33 @@ export class UserSkillsComponent
 
             ];
 
+
+            return this.groupSkills(
+              skills
+            );
+
           }),
 
 
-          catchError((error) => {
+          /* ===============================================
+             ERROR HANDLING
+          =============================================== */
 
+          catchError((error) => {
 
             console.error(
               'Skills API Error:',
               error
             );
 
-
             return of([]);
 
           }),
 
+
+          /* ===============================================
+             LOADING COMPLETE
+          =============================================== */
 
           finalize(() => {
 
@@ -271,15 +296,94 @@ export class UserSkillsComponent
   }
 
 
-  /* ==========================================
-     TRACK BY
-  ========================================== */
+  /* =====================================================
+     GROUP SKILLS INTO 2-CARD ROWS
+  ===================================================== */
 
-  trackByIndex(
+  private groupSkills(
+    skills: SkillRow[]
+  ): SkillRow[][] {
+
+    const rows: SkillRow[][] = [];
+
+    for (
+      let i = 0;
+      i < skills.length;
+      i += 2
+    ) {
+
+      rows.push(
+        skills.slice(
+          i,
+          i + 2
+        )
+      );
+
+    }
+
+    return rows;
+
+  }
+
+
+  /* =====================================================
+     TRACK ROW
+  ===================================================== */
+
+  trackByRow(
     index: number
   ): number {
 
     return index;
+
+  }
+
+
+  /* =====================================================
+     TRACK SKILL
+  ===================================================== */
+
+  trackBySkill(
+    index: number,
+    skill: SkillRow
+  ): string {
+
+    return skill.label;
+
+  }
+
+
+  /* =====================================================
+     TRACK VALUE
+  ===================================================== */
+
+  trackByValue(
+    index: number,
+    value: string
+  ): string {
+
+    return value;
+
+  }
+
+
+  /* =====================================================
+     CARD NUMBER
+  ===================================================== */
+
+  getSkillNumber(
+    rowIndex: number,
+    cardIndex: number
+  ): string {
+
+    const number =
+      (rowIndex * 2) +
+      cardIndex +
+      1;
+
+    return number
+      .toString()
+      .padStart(2, '0');
 
   }
 

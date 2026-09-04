@@ -1,23 +1,17 @@
 <section class="skills-wrapper">
 
   <!-- BACKGROUND -->
-
   <div class="skills-bg-orb orb-one"></div>
-
   <div class="skills-bg-orb orb-two"></div>
-
   <div class="skills-grid-lines"></div>
-
 
   <div class="skills-container">
 
-
-    <!-- =================================================
+    <!-- =====================================================
          HEADER
-    ================================================== -->
+    ===================================================== -->
 
     <div class="skills-top">
-
 
       <div class="skills-image-wrap">
 
@@ -32,7 +26,6 @@
 
       </div>
 
-
       <div class="section-label">
 
         <span></span>
@@ -42,7 +35,6 @@
         <span></span>
 
       </div>
-
 
       <h2 class="skills-title">
 
@@ -54,7 +46,6 @@
 
       </h2>
 
-
       <p class="skills-subtitle">
 
         Technologies & tools I use to build modern,
@@ -62,146 +53,150 @@
 
       </p>
 
-
       <div class="title-line"></div>
 
     </div>
 
 
-    <!-- =================================================
-         SKILLS STACK
-    ================================================== -->
+    <!-- =====================================================
+         STICKY SKILL ROWS
+    ===================================================== -->
 
     <div class="skills-grid">
 
-
       <ng-container
-        *ngIf="skills$ | async as skills"
+        *ngIf="skills$ | async as skillRows"
       >
 
+        <!-- EACH ROW CONTAINS EXACTLY 2 CARDS -->
 
         <div
-          class="skill-card
-                 stack-card
-                 animate__animated"
-
+          class="skill-stack-row"
           *ngFor="
-            let row of skills;
-            let i = index;
-            trackBy: trackByIndex
+            let row of skillRows;
+            let rowIndex = index;
+            trackBy: trackByRow
           "
-
-          [style.--card-index]="i"
-
-          [style.animationDelay]="
-            (i * 0.12) + 's'
-          "
-
-          [ngClass]="{
-
-            'animate__fadeInLeft':
-              i % 2 === 0,
-
-            'animate__fadeInRight':
-              i % 2 !== 0
-
-          }"
+          [style.z-index]="rowIndex + 10"
         >
 
+          <!-- =================================================
+               CARD
+          ================================================= -->
 
-          <!-- CARD TOP -->
+          <article
+            class="skill-card"
+            *ngFor="
+              let skill of row;
+              let cardIndex = index;
+              trackBy: trackBySkill
+            "
+          >
 
-          <div class="card-top">
+            <!-- CARD NUMBER / ICON -->
 
+            <div class="card-top">
 
-            <div class="skill-number">
+              <div class="skill-number">
 
-              {{
-                (i + 1)
-                  .toString()
-                  .padStart(2, '0')
-              }}
+                {{ getSkillNumber(rowIndex, cardIndex) }}
+
+              </div>
+
+              <div class="card-icon">
+
+                <span>✦</span>
+
+              </div>
 
             </div>
 
 
-            <div class="card-icon">
+            <!-- CARD HEADING -->
 
-              ✦
+            <div class="card-heading">
+
+              <div class="heading-meta">
+
+                <span>
+                  SKILL CATEGORY
+                </span>
+
+                <span>
+                  0{{ rowIndex + 1 }}
+                </span>
+
+              </div>
+
+              <h3 class="skill-title">
+
+                {{ skill.label }}
+
+              </h3>
+
+              <div class="heading-line">
+
+                <span></span>
+
+              </div>
 
             </div>
 
-          </div>
+
+            <!-- SKILLS -->
+
+            <div class="skill-values">
+
+              <div
+                class="skill-chip"
+                *ngFor="
+                  let value of skill.values;
+                  trackBy: trackByValue
+                "
+              >
+
+                <span class="chip-dot"></span>
+
+                <span class="chip-text">
+
+                  {{ value.trim() }}
+
+                </span>
+
+              </div>
+
+            </div>
 
 
-          <!-- CARD HEADING -->
+            <!-- CARD FOOTER -->
 
-          <div class="card-heading">
-
-
-            <h3 class="skill-title">
-
-              {{ row.label }}
-
-            </h3>
-
-
-            <div
-              class="heading-line"
-            ></div>
-
-          </div>
-
-
-          <!-- SKILL VALUES -->
-
-          <div class="skill-values">
-
-
-            <div
-              class="skill-chip"
-
-              *ngFor="
-                let v of row.values
-              "
-            >
-
-
-              <span
-                class="chip-dot"
-              ></span>
-
+            <div class="card-footer">
 
               <span>
-
-                {{ v.trim() }}
-
+                TECHNICAL EXPERTISE
               </span>
 
+              <span class="footer-arrow">
+                ↗
+              </span>
 
             </div>
 
 
-          </div>
+            <!-- DECORATIVE CORNERS -->
 
+            <span class="card-corner corner-tl"></span>
+            <span class="card-corner corner-tr"></span>
+            <span class="card-corner corner-bl"></span>
+            <span class="card-corner corner-br"></span>
 
-          <!-- STACK NUMBER -->
-
-          <div class="stack-card-index">
-
-            {{ (i + 1).toString().padStart(2, '0') }}
-
-          </div>
-
+          </article>
 
         </div>
 
-
       </ng-container>
 
-
     </div>
-
 
   </div>
 
