@@ -1,89 +1,152 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import {
+Component,
+EventEmitter,
+Output,
+OnInit
+} from '@angular/core';
+
 import { CommonModule } from '@angular/common';
-import { ProjectsService } from '../../Services/ProjectsService';
-import { Observable, catchError, of, tap } from 'rxjs';
+
+import { ProjectsService }
+from '../../Services/ProjectsService';
+
+import {
+Observable,
+catchError,
+of,
+finalize,
+shareReplay
+} from 'rxjs';
 
 export interface Project {
 
-  id?: number;
-  name: string;
-  type: string;
-  description: string;
-  technologies: string;
+id?: number;
+
+name: string;
+
+type: string;
+
+description: string;
+
+technologies: string;
 
 }
 
 @Component({
 
-  selector: 'app-user-projects',
+selector: 'app-user-projects',
 
-  standalone: true,
+standalone: true,
 
-  imports: [CommonModule],
+imports: [
+CommonModule
+],
 
-  templateUrl: './user-projects.html',
+templateUrl: './user-projects.html',
 
-  styleUrls: ['./user-projects.scss'],
+styleUrls: ['./user-projects.scss']
 
 })
 
-export class UserProjectsComponent {
+export class UserProjectsComponent
+implements OnInit {
 
-  @Output() loaded = new EventEmitter<void>();
+@Output()
+loaded = new EventEmitter<void>();
 
-  projects$!: Observable<Project[]>;
+projects$!:
+Observable<Project[]>;
 
-  radius = 260;
+radius = 260;
 
-  constructor(private projectsService: ProjectsService) {
+constructor(
+private projectsService:
+ProjectsService
+) {}
 
-    this.loadProjects();
+ngOnInit(): void {
 
-  }
+ 
+this.loadProjects();
+ 
 
-  loadProjects() {
+}
 
-    this.projects$ = this.projectsService
-      .getAllProjects()
-      .pipe(
+private loadProjects(): void {
 
-        tap(() => {
-          this.loaded.emit();
-        }),
+ 
+this.projects$ =
 
-        catchError((error) => {
+  this.projectsService
+    .getAllProjects()
+    .pipe(
 
-          console.error('Projects API Error:', error);
 
-          this.loaded.emit();
+      catchError((error) => {
 
-          return of([]);
 
-        })
+        console.error(
+          'Projects API Error:',
+          error
+        );
 
-      );
 
-  }
+        return of([]);
 
-  trackById(index: number, project: Project): number {
+      }),
 
-    return project.id ?? index;
 
-  }
+      finalize(() => {
 
-  getPosition(index: number, total: number) {
+        this.loaded.emit();
 
-    const angle =
-      (2 * Math.PI / total) * index - Math.PI / 2;
+      }),
 
-    return {
 
-      x: this.radius * Math.cos(angle),
+      shareReplay(1)
 
-      y: this.radius * Math.sin(angle)
+    );
+ 
 
-    };
+}
 
-  }
+trackById(
+index: number,
+project: Project
+): number {
+
+ 
+return project.id ?? index;
+ 
+
+}
+
+getPosition(
+index: number,
+total: number
+) {
+
+ 
+const angle =
+
+  (2 * Math.PI / total) *
+  index -
+  Math.PI / 2;
+
+
+return {
+
+  x:
+    this.radius *
+    Math.cos(angle),
+
+  y:
+    this.radius *
+    Math.sin(angle)
+
+};
+ 
+
+}
 
 }

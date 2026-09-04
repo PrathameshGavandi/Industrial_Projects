@@ -1,6 +1,5 @@
 <app-user-nav></app-user-nav>
 
-
 <!-- =====================================================
      FULL SCREEN LOADING SCREEN
 ===================================================== -->
@@ -10,24 +9,24 @@
   *ngIf="isLoading"
 >
 
-
   <!-- =================================================
        ANIMATED BACKGROUND PARTICLES
   ================================================== -->
 
   <div class="loader-particles">
 
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+```
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+```
 
   </div>
-
 
   <!-- =================================================
        LOADER CONTENT
@@ -35,455 +34,372 @@
 
   <div class="loader-card">
 
-
-    <!-- TOP ACCENT -->
-
-    <div class="card-top-line"></div>
+```
+<div class="card-top-line"></div>
 
 
-    <!-- =================================================
-         LOADER ANIMATION
-    ================================================== -->
+<!-- LOADER ANIMATION -->
 
-    <div class="loader-animation">
+<div class="loader-animation">
 
+  <div class="loader-ring outer"></div>
 
-      <div class="loader-ring outer"></div>
+  <div class="loader-ring middle"></div>
 
-      <div class="loader-ring middle"></div>
-
-      <div class="loader-ring inner"></div>
+  <div class="loader-ring inner"></div>
 
 
-      <!-- CENTER -->
+  <div class="loader-center">
 
-      <div class="loader-center">
+    <span class="code-symbol">
 
-        <span class="code-symbol">
+      &lt;/&gt;
 
-          &lt;/&gt;
+    </span>
 
-        </span>
+  </div>
+
+</div>
+
+
+<!-- CONTENT -->
+
+<div class="loader-content">
+
+
+  <!-- STATUS -->
+
+  <div
+    class="loader-status"
+    [class.ready]="showContinueButton"
+  >
+
+    <span class="status-dot"></span>
+
+
+    <span>
+
+      <ng-container *ngIf="!showContinueButton">
+
+        SYSTEM INITIALIZING
+
+      </ng-container>
+
+
+      <ng-container *ngIf="showContinueButton">
+
+        SYSTEM READY
+
+      </ng-container>
+
+    </span>
+
+  </div>
+
+
+  <!-- HEADING -->
+
+  <h1>
+
+    Loading Portfolio
+
+  </h1>
+
+
+  <!-- DESCRIPTION -->
+
+  <p
+    class="loader-description"
+    *ngIf="!showContinueButton"
+  >
+
+    Preparing my full-stack portfolio
+
+    <span class="dots">
+
+      <span>.</span>
+      <span>.</span>
+      <span>.</span>
+
+    </span>
+
+  </p>
+
+
+  <p
+    class="loader-description ready-description"
+    *ngIf="showContinueButton"
+  >
+
+    Portfolio is ready. Let's explore!
+
+  </p>
+
+
+  <!-- TECHNOLOGY STACK -->
+
+  <div class="loader-tech-stack">
+
+
+    <div class="tech-item angular-tech">
+
+      <div class="tech-logo">
+
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg"
+          alt="Angular"
+        >
 
       </div>
 
+      <span>Angular</span>
 
     </div>
 
 
-    <!-- =================================================
-         CONTENT
-    ================================================== -->
+    <span class="tech-separator">•</span>
 
-    <div class="loader-content">
 
+    <div class="tech-item spring-tech">
 
-      <!-- =================================================
-           STATUS
-      ================================================== -->
+      <div class="tech-logo">
 
-      <div
-        class="loader-status"
-        [class.ready]="showContinueButton"
-      >
-
-        <span class="status-dot"></span>
-
-
-        <span>
-
-          <ng-container *ngIf="!showContinueButton">
-
-            SYSTEM INITIALIZING
-
-          </ng-container>
-
-
-          <ng-container *ngIf="showContinueButton">
-
-            SYSTEM READY
-
-          </ng-container>
-
-        </span>
-
-      </div>
-
-
-      <!-- =================================================
-           HEADING
-      ================================================== -->
-
-      <h1>
-
-        Loading Portfolio
-
-      </h1>
-
-
-      <!-- =================================================
-           DESCRIPTION
-      ================================================== -->
-
-      <p
-        class="loader-description"
-        *ngIf="!showContinueButton"
-      >
-
-        Preparing my full-stack portfolio
-
-        <span class="dots">
-
-          <span>.</span>
-          <span>.</span>
-          <span>.</span>
-
-        </span>
-
-      </p>
-
-
-      <!-- READY DESCRIPTION -->
-
-      <p
-        class="loader-description ready-description"
-        *ngIf="showContinueButton"
-      >
-
-        Portfolio is ready. Let's explore!
-
-      </p>
-
-
-      <!-- =================================================
-           TECHNOLOGY STACK
-      ================================================== -->
-
-      <div class="loader-tech-stack">
-
-
-        <!-- ANGULAR -->
-
-        <div class="tech-item angular-tech">
-
-          <div class="tech-logo">
-
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg"
-              alt="Angular"
-            >
-
-          </div>
-
-          <span>
-
-            Angular
-
-          </span>
-
-        </div>
-
-
-        <span class="tech-separator">
-
-          •
-
-        </span>
-
-
-        <!-- SPRING BOOT -->
-
-        <div class="tech-item spring-tech">
-
-          <div class="tech-logo">
-
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
-              alt="Spring Boot"
-            >
-
-          </div>
-
-          <span>
-
-            Spring Boot
-
-          </span>
-
-        </div>
-
-
-        <span class="tech-separator">
-
-          •
-
-        </span>
-
-
-        <!-- SQL SERVER -->
-
-        <div class="tech-item sql-tech">
-
-          <div class="tech-logo">
-
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
-              alt="SQL Server"
-            >
-
-          </div>
-
-          <span>
-
-            SQL Server
-
-          </span>
-
-        </div>
-
-
-        <span class="tech-separator">
-
-          •
-
-        </span>
-
-
-        <!-- JAVA -->
-
-        <div class="tech-item java-tech">
-
-          <div class="tech-logo">
-
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-              alt="Java"
-            >
-
-          </div>
-
-          <span>
-
-            Java
-
-          </span>
-
-        </div>
-
-
-      </div>
-
-
-      <!-- =================================================
-           BACKEND MESSAGE
-      ================================================== -->
-
-      <div
-        class="loader-message"
-        [class.ready-backend]="showContinueButton"
-      >
-
-
-        <span class="message-icon">
-
-          <ng-container *ngIf="!showContinueButton">
-
-            ⚡
-
-          </ng-container>
-
-
-          <ng-container *ngIf="showContinueButton">
-
-            ✓
-
-          </ng-container>
-
-        </span>
-
-
-        <span>
-
-          <ng-container *ngIf="!showContinueButton">
-
-            Connecting to backend services
-
-          </ng-container>
-
-
-          <ng-container *ngIf="showContinueButton">
-
-            All systems ready
-
-          </ng-container>
-
-        </span>
-
-
-      </div>
-
-
-      <!-- =================================================
-           PROGRESS
-      ================================================== -->
-
-      <div class="loading-progress">
-
-
-        <div class="progress-track">
-
-          <div
-            class="progress-bar"
-            [style.width.%]="progressValue"
-          ></div>
-
-        </div>
-
-
-        <div class="progress-info">
-
-
-          <span>
-
-            <ng-container *ngIf="!showContinueButton">
-
-              INITIALIZING
-
-            </ng-container>
-
-
-            <ng-container *ngIf="showContinueButton">
-
-              READY
-
-            </ng-container>
-
-          </span>
-
-
-          <!-- ACTUAL PROGRESS -->
-
-          <span class="progress-percentage">
-
-            {{ progressValue }}%
-
-          </span>
-
-
-        </div>
-
-
-      </div>
-
-
-      <!-- =================================================
-           CONTINUE SECTION
-           ALWAYS VISIBLE
-      ================================================== -->
-
-      <div class="continue-container">
-
-
-        <!-- READY MESSAGE -->
-
-        <div
-          class="ready-message"
-          [class.ready-active]="showContinueButton"
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+          alt="Spring Boot"
         >
 
-
-          <span class="ready-icon">
-
-            {{ showContinueButton ? '✓' : '○' }}
-
-          </span>
-
-
-          <span>
-
-            {{
-              showContinueButton
-                ? 'Portfolio Ready'
-                : 'Preparing Portfolio...'
-            }}
-
-          </span>
-
-
-        </div>
-
-
-        <!-- =================================================
-             MAIN BUTTON
-        ================================================== -->
-
-        <button
-          type="button"
-
-          class="continue-button"
-
-          [disabled]="!showContinueButton"
-
-          [class.enabled]="showContinueButton"
-
-          aria-label="Explore my portfolio"
-
-          (click)="goToContent()"
-        >
-
-
-          <span class="button-icon">
-
-            🚀
-
-          </span>
-
-
-          <span class="button-text">
-
-            {{
-              showContinueButton
-                ? 'Click Here to Explore'
-                : 'Loading Portfolio...'
-            }}
-
-          </span>
-
-
-          <span class="arrow">
-
-            →
-
-          </span>
-
-
-        </button>
-
-
-        <!-- HINT -->
-
-        <span class="continue-hint">
-
-          {{
-            showContinueButton
-              ? 'Enter the portfolio experience'
-              : 'Please wait while the portfolio loads'
-          }}
-
-        </span>
-
-
       </div>
 
+      <span>Spring Boot</span>
 
     </div>
 
+
+    <span class="tech-separator">•</span>
+
+
+    <div class="tech-item sql-tech">
+
+      <div class="tech-logo">
+
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
+          alt="SQL Server"
+        >
+
+      </div>
+
+      <span>SQL Server</span>
+
+    </div>
+
+
+    <span class="tech-separator">•</span>
+
+
+    <div class="tech-item java-tech">
+
+      <div class="tech-logo">
+
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+          alt="Java"
+        >
+
+      </div>
+
+      <span>Java</span>
+
+    </div>
+
+  </div>
+
+
+  <!-- BACKEND MESSAGE -->
+
+  <div
+    class="loader-message"
+    [class.ready-backend]="showContinueButton"
+  >
+
+    <span class="message-icon">
+
+      <ng-container *ngIf="!showContinueButton">
+
+        ⚡
+
+      </ng-container>
+
+
+      <ng-container *ngIf="showContinueButton">
+
+        ✓
+
+      </ng-container>
+
+    </span>
+
+
+    <span>
+
+      <ng-container *ngIf="!showContinueButton">
+
+        Connecting to backend services
+
+      </ng-container>
+
+
+      <ng-container *ngIf="showContinueButton">
+
+        All systems ready
+
+      </ng-container>
+
+    </span>
+
+  </div>
+
+
+  <!-- PROGRESS -->
+
+  <div class="loading-progress">
+
+
+    <div class="progress-track">
+
+      <div
+        class="progress-bar"
+        [style.width.%]="progressValue"
+      ></div>
+
+    </div>
+
+
+    <div class="progress-info">
+
+      <span>
+
+        <ng-container *ngIf="!showContinueButton">
+
+          INITIALIZING
+
+        </ng-container>
+
+
+        <ng-container *ngIf="showContinueButton">
+
+          READY
+
+        </ng-container>
+
+      </span>
+
+
+      <span class="progress-percentage">
+
+        {{ progressValue }}%
+
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <!-- CONTINUE SECTION -->
+
+  <div class="continue-container">
+
+
+    <div
+      class="ready-message"
+      [class.ready-active]="showContinueButton"
+    >
+
+      <span class="ready-icon">
+
+        {{
+          showContinueButton
+            ? '✓'
+            : '○'
+        }}
+
+      </span>
+
+
+      <span>
+
+        {{
+          showContinueButton
+            ? 'Portfolio Ready'
+            : 'Preparing Portfolio...'
+        }}
+
+      </span>
+
+    </div>
+
+
+    <!-- BUTTON -->
+
+    <button
+      type="button"
+      class="continue-button"
+      [disabled]="!showContinueButton"
+      [class.enabled]="showContinueButton"
+      aria-label="Explore my portfolio"
+      (click)="goToContent()"
+    >
+
+      <span class="button-icon">
+
+        🚀
+
+      </span>
+
+
+      <span class="button-text">
+
+        {{
+          showContinueButton
+            ? 'Click Here to Explore'
+            : 'Loading Portfolio...'
+        }}
+
+      </span>
+
+
+      <span class="arrow">
+
+        →
+
+      </span>
+
+    </button>
+
+
+    <!-- HINT -->
+
+    <span class="continue-hint">
+
+      {{
+        showContinueButton
+          ? 'Enter the portfolio experience'
+          : 'Please wait while the portfolio loads'
+      }}
+
+    </span>
 
   </div>
 
 
 </div>
+```
 
+  </div>
+
+</div>
 
 <!-- =====================================================
      PORTFOLIO CONTENT
@@ -494,7 +410,6 @@
   [class.content-loaded]="!isLoading"
 >
 
-
   <!-- PROFILE -->
 
   <section
@@ -502,10 +417,13 @@
     class="portfolio-section show"
   >
 
-    <app-user-profile></app-user-profile>
+```
+<app-user-profile
+  (loaded)="onComponentLoaded('profile')"
+></app-user-profile>
+```
 
   </section>
-
 
   <!-- SKILLS -->
 
@@ -514,10 +432,13 @@
     class="portfolio-section show"
   >
 
-    <app-skills></app-skills>
+```
+<app-skills
+  (loaded)="onComponentLoaded('skills')"
+></app-skills>
+```
 
   </section>
-
 
   <!-- EXPERIENCE -->
 
@@ -526,10 +447,13 @@
     class="portfolio-section show"
   >
 
-    <app-user-experience></app-user-experience>
+```
+<app-user-experience
+  (loaded)="onComponentLoaded('experience')"
+></app-user-experience>
+```
 
   </section>
-
 
   <!-- PROJECTS -->
 
@@ -538,10 +462,13 @@
     class="portfolio-section show"
   >
 
-    <app-user-projects></app-user-projects>
+```
+<app-user-projects
+  (loaded)="onComponentLoaded('projects')"
+></app-user-projects>
+```
 
   </section>
-
 
   <!-- EDUCATION -->
 
@@ -550,9 +477,12 @@
     class="portfolio-section show"
   >
 
-    <app-user-education></app-user-education>
+```
+<app-user-education
+  (loaded)="onComponentLoaded('education')"
+></app-user-education>
+```
 
   </section>
-
 
 </main>

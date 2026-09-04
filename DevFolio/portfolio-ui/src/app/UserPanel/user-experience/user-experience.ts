@@ -1,89 +1,151 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import {
+Component,
+EventEmitter,
+Output,
+OnInit
+} from '@angular/core';
+
 import { CommonModule } from '@angular/common';
-import { ExperienceService } from '../../Services/ExperienceService';
-import { Observable, catchError, of, tap } from 'rxjs';
+
+import { ExperienceService }
+from '../../Services/ExperienceService';
+
+import {
+Observable,
+catchError,
+of,
+finalize,
+shareReplay
+} from 'rxjs';
 
 export interface Experience {
 
-  id?: number;
-  company: string;
-  role: string;
-  duration: string;
-  description: string;
+id?: number;
+
+company: string;
+
+role: string;
+
+duration: string;
+
+description: string;
 
 }
 
 @Component({
 
-  selector: 'app-user-experience',
+selector: 'app-user-experience',
 
-  standalone: true,
+standalone: true,
 
-  imports: [CommonModule],
+imports: [
+CommonModule
+],
 
-  templateUrl: './user-experience.html',
+templateUrl: './user-experience.html',
 
-  styleUrl: './user-experience.scss',
+styleUrls: ['./user-experience.scss']
 
 })
 
-export class UserExperienceComponent {
+export class UserExperienceComponent
+implements OnInit {
 
-  @Output() loaded = new EventEmitter<void>();
+@Output()
+loaded = new EventEmitter<void>();
 
-  experiences$!: Observable<Experience[]>;
+experiences$!:
+Observable<Experience[]>;
 
-  constructor(private experienceService: ExperienceService) {
+constructor(
+private experienceService:
+ExperienceService
+) {}
 
-    this.loadExperiences();
+ngOnInit(): void {
 
-  }
+ 
+this.loadExperiences();
+ 
 
-  loadExperiences() {
+}
 
-    this.experiences$ = this.experienceService
-      .getallExperiences()
-      .pipe(
+private loadExperiences(): void {
 
-        tap(() => {
-          this.loaded.emit();
-        }),
+ 
+this.experiences$ =
 
-        catchError((error) => {
+  this.experienceService
+    .getallExperiences()
+    .pipe(
 
-          console.error('Experience API Error:', error);
 
-          this.loaded.emit();
+      catchError((error) => {
 
-          return of([]);
 
-        })
+        console.error(
+          'Experience API Error:',
+          error
+        );
 
-      );
 
-  }
+        return of([]);
 
-  trackById(index: number, exp: Experience): number {
+      }),
 
-    return exp.id ?? index;
 
-  }
+      finalize(() => {
 
-  getDescriptionPoints(description: string | string[]): string[] {
+        this.loaded.emit();
 
-    if (Array.isArray(description)) {
-      return description;
-    }
+      }),
 
-    if (!description) {
-      return [];
-    }
 
-    return description
-      .split('||')
-      .map(point => point.trim())
-      .filter(point => point.length > 0);
+      shareReplay(1)
 
-  }
+    );
+ 
+
+}
+
+trackById(
+index: number,
+exp: Experience
+): number {
+
+ 
+return exp.id ?? index;
+ 
+
+}
+
+getDescriptionPoints(
+description: string | string[]
+): string[] {
+
+ 
+if (
+  Array.isArray(description)
+) {
+
+  return description;
+
+}
+
+
+if (!description) {
+
+  return [];
+
+}
+
+
+return description
+  .split('||')
+  .map(point => point.trim())
+  .filter(point => point.length > 0);
+ 
+
+}
 
 }

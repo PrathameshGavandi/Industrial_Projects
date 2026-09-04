@@ -1,62 +1,110 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import {
+Component,
+EventEmitter,
+Output,
+OnInit
+} from '@angular/core';
+
 import { CommonModule } from '@angular/common';
-import { EducationService, Education } from '../../Services/EducationService';
-import { Observable, catchError, of, tap } from 'rxjs';
+
+import {
+EducationService,
+Education
+} from '../../Services/EducationService';
+
+import {
+Observable,
+catchError,
+of,
+finalize,
+shareReplay
+} from 'rxjs';
 
 @Component({
 
-  selector: 'app-user-education',
+selector: 'app-user-education',
 
-  standalone: true,
+standalone: true,
 
-  imports: [CommonModule],
+imports: [
+CommonModule
+],
 
-  templateUrl: './user-education.html',
+templateUrl: './user-education.html',
 
-  styleUrls: ['./user-education.scss']
+styleUrls: ['./user-education.scss']
 
 })
 
-export class UserEducationComponent {
+export class UserEducationComponent
+implements OnInit {
 
-  @Output() loaded = new EventEmitter<void>();
+@Output()
+loaded = new EventEmitter<void>();
 
-  educations$!: Observable<Education[]>;
+educations$!:
+Observable<Education[]>;
 
-  constructor(private educationService: EducationService) {
+constructor(
+private educationService:
+EducationService
+) {}
 
-    this.loadEducations();
+ngOnInit(): void {
 
-  }
+ 
+this.loadEducations();
+ 
 
-  loadEducations(): void {
+}
 
-    this.educations$ = this.educationService
-      .getAllEducations()
-      .pipe(
+private loadEducations(): void {
 
-        tap(() => {
-          this.loaded.emit();
-        }),
+ 
+this.educations$ =
 
-        catchError((error) => {
+  this.educationService
+    .getAllEducations()
+    .pipe(
 
-          console.error('Education API Error:', error);
 
-          this.loaded.emit();
+      catchError((error) => {
 
-          return of([]);
 
-        })
+        console.error(
+          'Education API Error:',
+          error
+        );
 
-      );
 
-  }
+        return of([]);
 
-  trackById(index: number, edu: Education): number {
+      }),
 
-    return edu.id ?? index;
 
-  }
+      finalize(() => {
+
+        this.loaded.emit();
+
+      }),
+
+
+      shareReplay(1)
+
+    );
+ 
+
+}
+
+trackById(
+index: number,
+edu: Education
+): number {
+
+ 
+return edu.id ?? index;
+ 
+
+}
 
 }

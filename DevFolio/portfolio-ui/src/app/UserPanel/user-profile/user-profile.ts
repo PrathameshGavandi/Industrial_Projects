@@ -1,137 +1,249 @@
-import { Component, EventEmitter, HostListener, Output } from '@angular/core';
+import {
+Component,
+EventEmitter,
+HostListener,
+Output,
+OnInit
+} from '@angular/core';
+
 import { CommonModule } from '@angular/common';
-import { ProfileService, Profile } from '../../Services/ProfileService';
-import { map, Observable, catchError, of, tap } from 'rxjs';
+
+import {
+ProfileService,
+Profile
+} from '../../Services/ProfileService';
+
+import {
+Observable,
+map,
+catchError,
+of,
+finalize,
+shareReplay
+} from 'rxjs';
+
 import { Router } from '@angular/router';
+
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-user-profile',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './user-profile.html',
-  styleUrls: ['./user-profile.scss'],
+
+selector: 'app-user-profile',
+
+standalone: true,
+
+imports: [
+CommonModule
+],
+
+templateUrl: './user-profile.html',
+
+styleUrls: ['./user-profile.scss']
+
 })
-export class UserProfileComponent {
 
-  @Output() loaded = new EventEmitter<void>();
+export class UserProfileComponent
+implements OnInit {
 
-  profile$!: Observable<Profile>;
+@Output()
+loaded = new EventEmitter<void>();
 
-  constructor(
-    private profileService: ProfileService,
-    private router: Router
-  ) {
-    this.loadProfile();
-  }
+profile$!: Observable<Profile>;
 
-  loadProfile(): void {
+constructor(
 
-    this.profile$ = this.profileService
-      .getallProfiles()
-      .pipe(
+ 
+private profileService: ProfileService,
 
-        map((res: any[]) => {
+private router: Router
+ 
 
-          const p = res?.[0];
+) {}
 
-          return {
+ngOnInit(): void {
 
-            ...p,
+ 
+this.loadProfile();
+ 
 
-            name: p?.Name ?? p?.name ?? 'Your Name',
+}
 
-            email: p?.Email ?? p?.email ?? '',
+private loadProfile(): void {
 
-            phone: p?.Phone ?? p?.phone ?? '',
+ 
+this.profile$ =
 
-            bio: p?.Bio ?? p?.bio ?? ''
+  this.profileService
+    .getallProfiles()
+    .pipe(
 
-          } as Profile;
 
-        }),
+      map((res: any[]) => {
 
-        tap(() => {
-          this.loaded.emit();
-        }),
 
-        catchError((error) => {
+        const p = res?.[0];
 
-          console.error('Profile API Error:', error);
 
-          this.loaded.emit();
+        return {
 
-          return of({
-            name: 'Your Name',
-            email: '',
-            phone: '',
-            bio: ''
-          } as Profile);
+          ...p,
 
-        })
+          name:
+            p?.Name ??
+            p?.name ??
+            'Your Name',
 
-      );
+          email:
+            p?.Email ??
+            p?.email ??
+            '',
 
-  }
+          phone:
+            p?.Phone ??
+            p?.phone ??
+            '',
 
-  getBioPoints(bio: string | undefined): string[] {
+          bio:
+            p?.Bio ??
+            p?.bio ??
+            ''
 
-    if (!bio) {
-      return [];
-    }
+        } as Profile;
 
-    return bio
-      .split('||')
-      .map((point: string) => point.trim())
-      .filter((point: string) => point.length > 0);
 
-  }
+      }),
 
-  openMail(email: string | undefined): void {
 
-    if (!email) {
-      return;
-    }
+      catchError((error) => {
 
-    window.location.href = 'mailto:' + email;
 
-  }
+        console.error(
+          'Profile API Error:',
+          error
+        );
 
-  @HostListener('document:keydown', ['$event'])
-  handleAdminShortcut(event: KeyboardEvent): void {
 
-    if (
-      event.ctrlKey &&
-      event.shiftKey &&
-      event.key.toLowerCase() === 'a'
-    ) {
+        return of({
 
-      event.preventDefault();
+          name: 'Your Name',
 
-      Swal.fire({
+          email: '',
 
-        icon: 'info',
+          phone: '',
 
-        title: 'Admin Access',
+          bio: ''
 
-        text: 'Redirecting to Admin Login...',
+        } as Profile);
 
-        timer: 1200,
 
-        showConfirmButton: false,
+      }),
 
-        background: '#0b1c2d',
 
-        color: '#ffffff'
+      finalize(() => {
 
-      }).then(() => {
+        this.loaded.emit();
 
-        this.router.navigate(['/login']);
+      }),
 
-      });
 
-    }
+      shareReplay(1)
 
-  }
+    );
+ 
+
+}
+
+getBioPoints(
+bio: string | undefined
+): string[] {
+
+ 
+if (!bio) {
+
+  return [];
+
+}
+
+
+return bio
+  .split('||')
+  .map(point => point.trim())
+  .filter(point => point.length > 0);
+ 
+
+}
+
+openMail(
+email: string | undefined
+): void {
+
+ 
+if (!email) {
+
+  return;
+
+}
+
+
+window.location.href =
+  'mailto:' + email;
+ 
+
+}
+
+@HostListener(
+'document:keydown',
+['$event']
+)
+
+handleAdminShortcut(
+event: KeyboardEvent
+): void {
+
+ 
+if (
+
+  event.ctrlKey &&
+
+  event.shiftKey &&
+
+  event.key.toLowerCase() === 'a'
+
+) {
+
+
+  event.preventDefault();
+
+
+  Swal.fire({
+
+    icon: 'info',
+
+    title: 'Admin Access',
+
+    text:
+      'Redirecting to Admin Login...',
+
+    timer: 1200,
+
+    showConfirmButton: false,
+
+    background: '#0b1c2d',
+
+    color: '#ffffff'
+
+  })
+  .then(() => {
+
+    this.router.navigate([
+      '/login'
+    ]);
+
+  });
+
+}
+ 
+
+}
 
 }

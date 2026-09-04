@@ -1,284 +1,348 @@
 import {
-  Component,
-  OnDestroy,
-  OnInit,
-  ChangeDetectorRef
+Component,
+OnInit,
+OnDestroy,
+ChangeDetectorRef
 } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 
 import { UserNav }
-  from '../user-nav/user-nav';
+from '../user-nav/user-nav';
 
 import { UserProfileComponent }
-  from '../user-profile/user-profile';
+from '../user-profile/user-profile';
 
 import { UserSkillsComponent }
-  from '../user-skills/user-skills';
+from '../user-skills/user-skills';
 
 import { UserExperienceComponent }
-  from '../user-experience/user-experience';
+from '../user-experience/user-experience';
 
 import { UserProjectsComponent }
-  from '../user-projects/user-projects';
+from '../user-projects/user-projects';
 
 import { UserEducationComponent }
-  from '../user-education/user-education';
-
+from '../user-education/user-education';
 
 @Component({
-  selector: 'app-user-portfolio',
 
-  standalone: true,
+selector: 'app-user-portfolio',
 
-  imports: [
-    CommonModule,
-    UserNav,
-    UserProfileComponent,
-    UserSkillsComponent,
-    UserExperienceComponent,
-    UserProjectsComponent,
-    UserEducationComponent
-  ],
+standalone: true,
 
-  templateUrl: './user-portfolio.html',
+imports: [
 
-  styleUrls: ['./user-portfolio.scss']
+ 
+CommonModule,
+
+UserNav,
+
+UserProfileComponent,
+
+UserSkillsComponent,
+
+UserExperienceComponent,
+
+UserProjectsComponent,
+
+UserEducationComponent
+ 
+
+],
+
+templateUrl: './user-portfolio.html',
+
+styleUrls: ['./user-portfolio.scss']
+
 })
 
 export class UserPortfolioComponent
-  implements OnInit, OnDestroy {
+implements OnInit, OnDestroy {
+
+/* ==========================================
+LOADER STATE
+========================================== */
+
+isLoading = true;
+
+showContinueButton = false;
+
+progressValue = 0;
+
+/* ==========================================
+COMPONENT STATUS
+========================================== */
+
+private componentStatus: Record<string, boolean> = {
+
+ 
+profile: false,
+
+skills: false,
+
+experience: false,
+
+projects: false,
+
+education: false
+ 
+
+};
+
+/* ==========================================
+MAXIMUM LOADING TIME
+
+ 
+ 10 seconds maximum
+ 
+
+========================================== */
+
+private readonly MAX_LOADING_TIME = 10000;
+
+private fallbackTimer?: ReturnType<typeof setTimeout>;
+
+constructor(
+private cdr: ChangeDetectorRef
+) {}
+
+ngOnInit(): void {
+
+ 
+this.startLoader();
+ 
+
+}
+
+private startLoader(): void {
+
+ 
+this.isLoading = true;
+
+this.showContinueButton = false;
+
+this.progressValue = 0;
 
 
-  /* ==========================================
-     LOADER STATE
-  ========================================== */
+this.componentStatus = {
 
-  isLoading = true;
+  profile: false,
 
+  skills: false,
 
-  /* ==========================================
-     BUTTON STATE
-  ========================================== */
+  experience: false,
 
-  showContinueButton = false;
+  projects: false,
 
+  education: false
 
-  /* ==========================================
-     PROGRESS
-     0 → 100
-  ========================================== */
-
-  progressValue = 0;
+};
 
 
-  /* ==========================================
-     LOADING TIME
-     EXACTLY 9 SECONDS
-  ========================================== */
+/* Maximum 10 seconds */
 
-  private readonly LOADING_TIME = 9000;
+this.fallbackTimer = setTimeout(() => {
 
 
-  /* ==========================================
-     TIMERS
-  ========================================== */
-
-  private loadingTimer?: ReturnType<typeof setTimeout>;
-
-  private progressTimer?: ReturnType<typeof setInterval>;
+  if (!this.showContinueButton) {
 
 
-  constructor(
-    private cdr: ChangeDetectorRef
-  ) {}
+    console.warn(
+      'Maximum loading time reached.'
+    );
 
 
-  /* ==========================================
-     COMPONENT START
-  ========================================== */
-
-  ngOnInit(): void {
-
-    this.startLoader();
+    this.finishLoading();
 
   }
 
 
-  /* ==========================================
-     START LOADER
-  ========================================== */
+}, this.MAX_LOADING_TIME);
+ 
 
-  private startLoader(): void {
+}
 
+/* ==========================================
+CHILD COMPONENT LOADED
+========================================== */
 
-    /* Reset */
+onComponentLoaded(
+componentName: string
+): void {
 
-    this.isLoading = true;
+ 
+/* Avoid duplicate events */
 
-    this.showContinueButton = false;
+if (
+  this.componentStatus[componentName]
+) {
 
-    this.progressValue = 0;
+  return;
 
-
-    /* ==========================================
-       PROGRESS TIMER
-
-       100 steps in 9000ms
-
-       9000 / 100 = 90ms
-    ========================================== */
-
-    const progressInterval =
-      this.LOADING_TIME / 100;
+}
 
 
-    this.progressTimer = setInterval(() => {
+this.componentStatus[componentName] = true;
 
 
-      if (this.progressValue < 100) {
-
-        this.progressValue++;
-
-        this.cdr.detectChanges();
-
-      }
+const totalComponents =
+  Object.keys(
+    this.componentStatus
+  ).length;
 
 
-      /* Stop at 100 */
-
-      if (this.progressValue >= 100) {
-
-        this.progressValue = 100;
-
-
-        if (this.progressTimer) {
-
-          clearInterval(this.progressTimer);
-
-          this.progressTimer = undefined;
-
-        }
+const loadedComponents =
+  Object.values(
+    this.componentStatus
+  ).filter(Boolean)
+  .length;
 
 
-        this.cdr.detectChanges();
+this.progressValue = Math.round(
 
-      }
+  (
+    loadedComponents /
+    totalComponents
+  ) * 100
 
-
-    }, progressInterval);
-
-
-    /* ==========================================
-       EXACTLY AFTER 9 SECONDS
-       ENABLE BUTTON
-    ========================================== */
-
-    this.loadingTimer = setTimeout(() => {
+);
 
 
-      /* Ensure exactly 100 */
+console.log(
 
-      this.progressValue = 100;
+  `Loaded: ${componentName}`,
 
+  `${loadedComponents}/${totalComponents}`
 
-      /* Enable Explore Button */
-
-      this.showContinueButton = true;
-
-
-      /* Clear progress timer */
-
-      if (this.progressTimer) {
-
-        clearInterval(this.progressTimer);
-
-        this.progressTimer = undefined;
-
-      }
+);
 
 
-      /* Refresh Angular UI */
+/* All APIs finished */
 
-      this.cdr.detectChanges();
+if (
+  loadedComponents === totalComponents
+) {
+
+  this.finishLoading();
+
+}
 
 
-    }, this.LOADING_TIME);
+this.cdr.detectChanges();
+ 
+
+}
+
+/* ==========================================
+FINISH LOADING
+========================================== */
+
+private finishLoading(): void {
+
+ 
+if (
+  this.showContinueButton
+) {
+
+  return;
+
+}
+
+
+this.progressValue = 100;
+
+this.showContinueButton = true;
+
+
+if (
+  this.fallbackTimer
+) {
+
+  clearTimeout(
+    this.fallbackTimer
+  );
+
+  this.fallbackTimer = undefined;
+
+}
+
+
+console.log(
+  '🚀 Portfolio loading completed!'
+);
+
+
+this.cdr.detectChanges();
+ 
+
+}
+
+/* ==========================================
+ENTER PORTFOLIO
+========================================== */
+
+goToContent(): void {
+
+ 
+if (
+  !this.showContinueButton
+) {
+
+  return;
+
+}
+
+
+this.isLoading = false;
+
+
+this.cdr.detectChanges();
+
+
+setTimeout(() => {
+
+
+  const profileSection =
+    document.getElementById(
+      'profile'
+    );
+
+
+  if (
+    profileSection
+  ) {
+
+    profileSection.scrollIntoView({
+
+      behavior: 'smooth',
+
+      block: 'start'
+
+    });
 
   }
 
 
-  /* ==========================================
-     EXPLORE PORTFOLIO
-  ========================================== */
+}, 100);
+ 
 
-  goToContent(): void {
+}
 
+ngOnDestroy(): void {
 
-    /* सुरक्षा */
+ 
+if (
+  this.fallbackTimer
+) {
 
-    if (!this.showContinueButton) {
+  clearTimeout(
+    this.fallbackTimer
+  );
 
-      return;
+}
+ 
 
-    }
-
-
-    /* Hide loader */
-
-    this.isLoading = false;
-
-
-    this.cdr.detectChanges();
-
-
-    /* Scroll to profile */
-
-    setTimeout(() => {
-
-
-      const profileSection =
-        document.getElementById('profile');
-
-
-      if (profileSection) {
-
-        profileSection.scrollIntoView({
-
-          behavior: 'smooth',
-
-          block: 'start'
-
-        });
-
-      }
-
-
-    }, 100);
-
-  }
-
-
-  /* ==========================================
-     CLEANUP
-  ========================================== */
-
-  ngOnDestroy(): void {
-
-
-    if (this.loadingTimer) {
-
-      clearTimeout(this.loadingTimer);
-
-    }
-
-
-    if (this.progressTimer) {
-
-      clearInterval(this.progressTimer);
-
-    }
-
-  }
+}
 
 }
