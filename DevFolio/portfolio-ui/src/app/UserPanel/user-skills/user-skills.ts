@@ -20,6 +20,7 @@ import {
 } from 'rxjs';
 
 
+
 interface SkillRow {
 
   label: string;
@@ -29,6 +30,7 @@ interface SkillRow {
 }
 
 
+
 @Component({
 
   selector: 'app-skills',
@@ -36,16 +38,18 @@ interface SkillRow {
   standalone: true,
 
   imports: [
-
     CommonModule
-
   ],
 
-  templateUrl: './user-skills.html',
+  templateUrl:
+    './user-skills.html',
 
-  styleUrls: ['./user-skills.scss']
+  styleUrls: [
+    './user-skills.scss'
+  ]
 
 })
+
 
 
 export class UserSkillsComponent
@@ -53,19 +57,17 @@ export class UserSkillsComponent
 
 
   @Output()
-  loaded = new EventEmitter<void>();
+  loaded =
+    new EventEmitter<void>();
 
 
   /*
-   * Every array inside this observable
-   * represents ONE ROW.
-   *
-   * Example:
+   * Each array = ONE ROW
    *
    * [
-   *   [skill1, skill2],
-   *   [skill3, skill4],
-   *   [skill5, skill6]
+   *   [01, 02],
+   *   [03, 04],
+   *   [05, 06]
    * ]
    */
 
@@ -73,12 +75,12 @@ export class UserSkillsComponent
     Observable<SkillRow[][]>;
 
 
-  constructor(
 
+  constructor(
     private skillsService:
       SkillsService
-
   ) {}
+
 
 
   ngOnInit(): void {
@@ -86,6 +88,7 @@ export class UserSkillsComponent
     this.loadSkills();
 
   }
+
 
 
   /* =====================================================
@@ -100,8 +103,9 @@ export class UserSkillsComponent
         .getAllSkills()
         .pipe(
 
+
           /* ===============================================
-             CONVERT API RESPONSE
+             API RESPONSE
           =============================================== */
 
           map((res: any[]) => {
@@ -119,7 +123,9 @@ export class UserSkillsComponent
             const s = res[0];
 
 
-            const skills: SkillRow[] = [
+            const skills:
+              SkillRow[] = [
+
 
               {
                 label:
@@ -128,7 +134,6 @@ export class UserSkillsComponent
                 values:
                   s.pop?.split(',')
                   ?? []
-
               },
 
 
@@ -139,7 +144,6 @@ export class UserSkillsComponent
                 values:
                   s.oop?.split(',')
                   ?? []
-
               },
 
 
@@ -150,7 +154,6 @@ export class UserSkillsComponent
                 values:
                   s.vm?.split(',')
                   ?? []
-
               },
 
 
@@ -161,7 +164,6 @@ export class UserSkillsComponent
                 values:
                   s.fw?.split(',')
                   ?? []
-
               },
 
 
@@ -172,7 +174,6 @@ export class UserSkillsComponent
                 values:
                   s.script?.split(',')
                   ?? []
-
               },
 
 
@@ -183,7 +184,6 @@ export class UserSkillsComponent
                 values:
                   s.web?.split(',')
                   ?? []
-
               },
 
 
@@ -194,7 +194,6 @@ export class UserSkillsComponent
                 values:
                   s.ide?.split(',')
                   ?? []
-
               },
 
 
@@ -205,7 +204,6 @@ export class UserSkillsComponent
                 values:
                   s.server?.split(',')
                   ?? []
-
               },
 
 
@@ -216,7 +214,6 @@ export class UserSkillsComponent
                 values:
                   s.vcs?.split(',')
                   ?? []
-
               },
 
 
@@ -227,7 +224,6 @@ export class UserSkillsComponent
                 values:
                   s.db?.split(',')
                   ?? []
-
               },
 
 
@@ -238,7 +234,6 @@ export class UserSkillsComponent
                 values:
                   s.os?.split(',')
                   ?? []
-
               },
 
 
@@ -249,7 +244,6 @@ export class UserSkillsComponent
                 values:
                   s.method?.split(',')
                   ?? []
-
               }
 
             ];
@@ -262,8 +256,9 @@ export class UserSkillsComponent
           }),
 
 
+
           /* ===============================================
-             ERROR HANDLING
+             ERROR
           =============================================== */
 
           catchError((error) => {
@@ -276,6 +271,7 @@ export class UserSkillsComponent
             return of([]);
 
           }),
+
 
 
           /* ===============================================
@@ -296,15 +292,18 @@ export class UserSkillsComponent
   }
 
 
+
   /* =====================================================
-     GROUP SKILLS INTO 2-CARD ROWS
+     GROUP INTO TWO CARD ROWS
   ===================================================== */
 
   private groupSkills(
     skills: SkillRow[]
   ): SkillRow[][] {
 
-    const rows: SkillRow[][] = [];
+    const rows:
+      SkillRow[][] = [];
+
 
     for (
       let i = 0;
@@ -321,9 +320,11 @@ export class UserSkillsComponent
 
     }
 
+
     return rows;
 
   }
+
 
 
   /* =====================================================
@@ -337,6 +338,7 @@ export class UserSkillsComponent
     return index;
 
   }
+
 
 
   /* =====================================================
@@ -353,6 +355,7 @@ export class UserSkillsComponent
   }
 
 
+
   /* =====================================================
      TRACK VALUE
   ===================================================== */
@@ -367,6 +370,7 @@ export class UserSkillsComponent
   }
 
 
+
   /* =====================================================
      CARD NUMBER
   ===================================================== */
@@ -377,9 +381,12 @@ export class UserSkillsComponent
   ): string {
 
     const number =
-      (rowIndex * 2) +
-      cardIndex +
+      (rowIndex * 2)
+      +
+      cardIndex
+      +
       1;
+
 
     return number
       .toString()

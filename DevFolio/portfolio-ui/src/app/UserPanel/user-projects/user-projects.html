@@ -1,6 +1,6 @@
 <section class="projects-wrapper">
 
-  <!-- BACKGROUND EFFECTS -->
+  <!-- BACKGROUND -->
   <div class="projects-orb projects-orb-one"></div>
   <div class="projects-orb projects-orb-two"></div>
   <div class="projects-grid-bg"></div>
@@ -8,7 +8,7 @@
   <div class="projects-container">
 
     <!-- HEADER -->
-    <div class="projects-header animate__animated animate__fadeInUp">
+    <div class="projects-header">
 
       <div class="projects-kicker">
         <span></span>
@@ -44,20 +44,31 @@
     </div>
 
 
-    <!-- PROJECTS -->
+    <!-- PROJECT STACK -->
     <div
-      class="projects-grid"
+      class="projects-stack"
       *ngIf="projects$ | async as projects; else loading"
     >
 
       <article
-        class="project-card animate__animated animate__fadeInUp"
-        *ngFor="let project of projects; let i = index"
-        [style.animationDelay]="(i * 0.15) + 's'"
+        class="project-card"
+        *ngFor="
+          let project of projects;
+          let i = index;
+          trackBy: trackById
+        "
+        [style.z-index]="i + 10"
       >
 
         <!-- CARD GLOW -->
         <div class="card-glow"></div>
+
+        <!-- DECORATIVE GRID -->
+        <div class="card-grid"></div>
+
+        <!-- TOP LINE -->
+        <div class="card-top-line"></div>
+
 
         <!-- PROJECT NUMBER -->
         <div class="project-number">
@@ -65,46 +76,63 @@
         </div>
 
 
-        <!-- TOP -->
+        <!-- CARD HEADER -->
         <div class="project-top">
 
-          <div class="project-icon">
-            <i class="fas fa-code"></i>
+          <div class="project-index-box">
+            <span class="index-small">PROJECT</span>
+
+            <strong>
+              {{ (i + 1).toString().padStart(2, '0') }}
+            </strong>
           </div>
 
-          <span class="project-type">
+
+          <div class="project-type">
+            <span class="type-dot"></span>
             {{ project.type }}
-          </span>
+          </div>
 
         </div>
 
 
-        <!-- PROJECT NAME -->
-        <h3 class="project-name">
-          {{ project.name }}
-        </h3>
+        <!-- PROJECT CONTENT -->
+        <div class="project-main">
 
+          <div class="project-label">
+            <span></span>
+            FEATURED DEVELOPMENT
+          </div>
 
-        <!-- DESCRIPTION -->
-        <p
-          class="project-description"
-          [innerHTML]="project.description"
-        ></p>
+          <h3 class="project-name">
+            {{ project.name }}
+          </h3>
+
+          <p
+            class="project-description"
+            [innerHTML]="project.description"
+          ></p>
+
+        </div>
 
 
         <!-- TECHNOLOGIES -->
         <div class="technology-section">
 
-          <span class="tech-label">
-            TECHNOLOGIES
-          </span>
+          <div class="tech-heading">
+            <span>TECH STACK</span>
+            <span class="tech-line"></span>
+          </div>
 
           <div class="tech-list">
 
             <span
               class="tech-pill"
-              *ngFor="let tech of project.technologies.split(',')"
+              *ngFor="
+                let tech of project.technologies.split(',')
+              "
             >
+              <span class="pill-dot"></span>
               {{ tech.trim() }}
             </span>
 
@@ -113,19 +141,42 @@
         </div>
 
 
-        <!-- FOOTER -->
+        <!-- BOTTOM -->
         <div class="project-footer">
 
-          <span class="project-status">
-            <span class="status-dot"></span>
-            PROJECT COMPLETED
-          </span>
+          <div class="project-status">
 
-          <span class="project-arrow">
-            ↗
-          </span>
+            <span class="status-indicator">
+              <span></span>
+            </span>
+
+            <span>
+              PROJECT COMPLETED
+            </span>
+
+          </div>
+
+
+          <div class="project-footer-right">
+
+            <span class="footer-label">
+              VIEW PROJECT
+            </span>
+
+            <span class="project-arrow">
+              ↗
+            </span>
+
+          </div>
 
         </div>
+
+
+        <!-- CORNER DETAILS -->
+        <span class="corner corner-tl"></span>
+        <span class="corner corner-tr"></span>
+        <span class="corner corner-bl"></span>
+        <span class="corner corner-br"></span>
 
       </article>
 
@@ -135,22 +186,32 @@
     <!-- LOADING -->
     <ng-template #loading>
 
-      <div class="projects-grid loading-grid">
+      <div class="projects-stack loading-stack">
 
         <div
           class="project-card skeleton-card"
-          *ngFor="let i of [1,2,3,4]"
+          *ngFor="let i of [1,2,3]"
         >
 
-          <div class="skeleton-icon"></div>
+          <div class="skeleton-top">
+            <div class="skeleton-box"></div>
+            <div class="skeleton-type"></div>
+          </div>
 
-          <div class="skeleton-line large"></div>
+          <div class="skeleton-label"></div>
+
+          <div class="skeleton-title"></div>
 
           <div class="skeleton-line"></div>
+          <div class="skeleton-line medium"></div>
 
-          <div class="skeleton-line short"></div>
+          <div class="skeleton-tech">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
 
-          <div class="skeleton-bottom"></div>
+          <div class="skeleton-footer"></div>
 
         </div>
 

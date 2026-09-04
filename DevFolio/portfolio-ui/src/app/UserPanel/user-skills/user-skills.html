@@ -1,11 +1,16 @@
 <section class="skills-wrapper">
 
-  <!-- BACKGROUND -->
+  <!-- =====================================================
+       BACKGROUND
+  ===================================================== -->
+
   <div class="skills-bg-orb orb-one"></div>
   <div class="skills-bg-orb orb-two"></div>
   <div class="skills-grid-lines"></div>
 
+
   <div class="skills-container">
+
 
     <!-- =====================================================
          HEADER
@@ -26,6 +31,7 @@
 
       </div>
 
+
       <div class="section-label">
 
         <span></span>
@@ -35,6 +41,7 @@
         <span></span>
 
       </div>
+
 
       <h2 class="skills-title">
 
@@ -46,6 +53,7 @@
 
       </h2>
 
+
       <p class="skills-subtitle">
 
         Technologies & tools I use to build modern,
@@ -53,9 +61,11 @@
 
       </p>
 
+
       <div class="title-line"></div>
 
     </div>
+
 
 
     <!-- =====================================================
@@ -68,24 +78,31 @@
         *ngIf="skills$ | async as skillRows"
       >
 
-        <!-- EACH ROW CONTAINS EXACTLY 2 CARDS -->
+
+        <!-- =================================================
+             ONE STICKY ROW = TWO CARDS
+        ================================================= -->
 
         <div
           class="skill-stack-row"
+
           *ngFor="
             let row of skillRows;
             let rowIndex = index;
             trackBy: trackByRow
           "
+
           [style.z-index]="rowIndex + 10"
         >
 
+
           <!-- =================================================
-               CARD
+               SKILL CARD
           ================================================= -->
 
           <article
             class="skill-card"
+
             *ngFor="
               let skill of row;
               let cardIndex = index;
@@ -93,7 +110,20 @@
             "
           >
 
-            <!-- CARD NUMBER / ICON -->
+
+            <!-- CARD BACKGROUND DETAILS -->
+
+            <div class="card-grid"></div>
+
+            <div class="card-glow"></div>
+
+            <div class="card-noise"></div>
+
+
+
+            <!-- =================================================
+                 TOP BAR
+            ================================================= -->
 
             <div class="card-top">
 
@@ -103,36 +133,44 @@
 
               </div>
 
-              <div class="card-icon">
 
-                <span>✦</span>
+              <div class="skill-status">
+
+                <span class="status-dot"></span>
+
+                ACTIVE
 
               </div>
 
             </div>
 
 
-            <!-- CARD HEADING -->
+
+            <!-- =================================================
+                 HEADING
+            ================================================= -->
 
             <div class="card-heading">
 
               <div class="heading-meta">
 
                 <span>
-                  SKILL CATEGORY
+                  TECHNICAL CATEGORY
                 </span>
 
                 <span>
-                  0{{ rowIndex + 1 }}
+                  {{ getSkillNumber(rowIndex, cardIndex) }}
                 </span>
 
               </div>
+
 
               <h3 class="skill-title">
 
                 {{ skill.label }}
 
               </h3>
+
 
               <div class="heading-line">
 
@@ -143,12 +181,16 @@
             </div>
 
 
-            <!-- SKILLS -->
+
+            <!-- =================================================
+                 SKILL VALUES
+            ================================================= -->
 
             <div class="skill-values">
 
               <div
                 class="skill-chip"
+
                 *ngFor="
                   let value of skill.values;
                   trackBy: trackByValue
@@ -168,13 +210,23 @@
             </div>
 
 
-            <!-- CARD FOOTER -->
+
+            <!-- =================================================
+                 CARD FOOTER
+            ================================================= -->
 
             <div class="card-footer">
 
-              <span>
-                TECHNICAL EXPERTISE
-              </span>
+              <div class="footer-left">
+
+                <span class="footer-line"></span>
+
+                <span>
+                  TECHNICAL EXPERTISE
+                </span>
+
+              </div>
+
 
               <span class="footer-arrow">
                 ↗
@@ -183,12 +235,27 @@
             </div>
 
 
-            <!-- DECORATIVE CORNERS -->
 
-            <span class="card-corner corner-tl"></span>
-            <span class="card-corner corner-tr"></span>
-            <span class="card-corner corner-bl"></span>
-            <span class="card-corner corner-br"></span>
+            <!-- =================================================
+                 DECORATIVE CORNERS
+            ================================================= -->
+
+            <span
+              class="card-corner corner-tl"
+            ></span>
+
+            <span
+              class="card-corner corner-tr"
+            ></span>
+
+            <span
+              class="card-corner corner-bl"
+            ></span>
+
+            <span
+              class="card-corner corner-br"
+            ></span>
+
 
           </article>
 
