@@ -8,7 +8,7 @@
   <div class="education-container">
 
     <!-- HEADER -->
-    <div class="education-header animate__animated animate__fadeInUp">
+    <header class="education-header">
 
       <div class="education-kicker">
         <span></span>
@@ -17,8 +17,7 @@
       </div>
 
       <h2 class="education-title">
-        My
-        <span>Education</span>
+        My <span>Education</span>
       </h2>
 
       <p class="education-subtitle">
@@ -26,22 +25,30 @@
         problem-solving mindset, and journey as a developer.
       </p>
 
-    </div>
+      <div class="education-title-line">
+        <span></span>
+      </div>
+
+    </header>
 
 
     <!-- EDUCATION TIMELINE -->
     <div class="education-timeline">
 
       <div
-        class="education-entry animate__animated animate__fadeInUp"
-        *ngFor="let edu of educations$ | async; let i = index; trackBy: trackById"
-        [style.animationDelay]="(i * 0.2) + 's'"
+        class="education-entry"
+        *ngFor="
+          let edu of educations$ | async;
+          let i = index;
+          trackBy: trackById
+        "
+        [style.z-index]="i + 10"
       >
 
         <!-- YEAR -->
         <div class="education-year">
 
-          <span class="year-small">
+          <span class="year-label">
             COMPLETED
           </span>
 
@@ -52,19 +59,28 @@
         </div>
 
 
-        <!-- TIMELINE -->
+        <!-- TIMELINE LINE -->
         <div class="education-marker">
 
+          <div class="marker-glow"></div>
           <div class="education-dot"></div>
 
         </div>
 
 
         <!-- MAIN CARD -->
-        <div class="education-card">
+        <article class="education-card">
 
-          <!-- CARD GLOW -->
+          <!-- TOP ACCENT -->
+          <div class="card-accent"></div>
+
+          <!-- CARD BACKGROUND GLOW -->
           <div class="education-card-glow"></div>
+
+          <!-- CARD NUMBER -->
+          <div class="card-number">
+            {{ (i + 1).toString().padStart(2, '0') }}
+          </div>
 
 
           <!-- CARD TOP -->
@@ -74,19 +90,25 @@
               <i class="fas fa-graduation-cap"></i>
             </div>
 
+            <div class="card-status">
+              <span class="status-dot"></span>
+              COMPLETED
+            </div>
+
           </div>
 
 
-          <!-- DEGREE + SPECIALIZATION -->
-          <div class="degree-heading-row">
+          <!-- DEGREE -->
+          <div class="degree-section">
 
-            <!-- DEGREE -->
+            <span class="section-mini-label">
+              DEGREE
+            </span>
+
             <h3 class="degree-title">
               {{ edu.degree }}
             </h3>
 
-
-            <!-- SPECIALIZATION -->
             <span class="degree-badge">
               {{ edu.specialization }}
             </span>
@@ -94,14 +116,14 @@
           </div>
 
 
-          <!-- COLLEGE -->
+          <!-- INSTITUTION -->
           <div class="college-info">
 
             <div class="college-icon">
               <i class="fas fa-building-columns"></i>
             </div>
 
-            <div>
+            <div class="college-content">
 
               <span class="info-label">
                 INSTITUTION
@@ -163,12 +185,12 @@
           </div>
 
 
-          <!-- BOTTOM -->
+          <!-- RESULT -->
           <div class="education-result">
 
-            <div class="result-text">
+            <div class="result-content">
 
-              <span>
+              <span class="result-label">
                 ACADEMIC RESULT
               </span>
 
@@ -177,7 +199,6 @@
               </strong>
 
             </div>
-
 
             <div class="result-ring">
 
@@ -193,7 +214,7 @@
           <!-- FOOTER -->
           <div class="education-footer">
 
-            <span>
+            <span class="footer-category">
               <span class="footer-dot"></span>
               COMPUTER SCIENCE
             </span>
@@ -204,7 +225,14 @@
 
           </div>
 
-        </div>
+
+          <!-- DECORATIVE CORNERS -->
+          <span class="card-corner corner-tl"></span>
+          <span class="card-corner corner-tr"></span>
+          <span class="card-corner corner-bl"></span>
+          <span class="card-corner corner-br"></span>
+
+        </article>
 
       </div>
 

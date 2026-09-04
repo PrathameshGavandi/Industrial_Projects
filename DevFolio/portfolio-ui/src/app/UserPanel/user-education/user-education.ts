@@ -1,110 +1,127 @@
 import {
-Component,
-EventEmitter,
-Output,
-OnInit
+  Component,
+  EventEmitter,
+  Output,
+  OnInit
 } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 
 import {
-EducationService,
-Education
+  EducationService,
+  Education
 } from '../../Services/EducationService';
 
 import {
-Observable,
-catchError,
-of,
-finalize,
-shareReplay
+  Observable,
+  catchError,
+  of,
+  finalize,
+  shareReplay
 } from 'rxjs';
+
 
 @Component({
 
-selector: 'app-user-education',
+  selector: 'app-user-education',
 
-standalone: true,
+  standalone: true,
 
-imports: [
-CommonModule
-],
+  imports: [
+    CommonModule
+  ],
 
-templateUrl: './user-education.html',
+  templateUrl: './user-education.html',
 
-styleUrls: ['./user-education.scss']
+  styleUrls: ['./user-education.scss']
 
 })
 
+
 export class UserEducationComponent
-implements OnInit {
-
-@Output()
-loaded = new EventEmitter<void>();
-
-educations$!:
-Observable<Education[]>;
-
-constructor(
-private educationService:
-EducationService
-) {}
-
-ngOnInit(): void {
-
- 
-this.loadEducations();
- 
-
-}
-
-private loadEducations(): void {
-
- 
-this.educations$ =
-
-  this.educationService
-    .getAllEducations()
-    .pipe(
+  implements OnInit {
 
 
-      catchError((error) => {
+  /* =====================================================
+     LOADING EVENT
+  ===================================================== */
+
+  @Output()
+  loaded = new EventEmitter<void>();
 
 
-        console.error(
-          'Education API Error:',
-          error
-        );
+  /* =====================================================
+     EDUCATION DATA
+  ===================================================== */
+
+  educations$!: Observable<Education[]>;
 
 
-        return of([]);
+  /* =====================================================
+     CONSTRUCTOR
+  ===================================================== */
 
-      }),
-
-
-      finalize(() => {
-
-        this.loaded.emit();
-
-      }),
+  constructor(
+    private educationService: EducationService
+  ) {}
 
 
-      shareReplay(1)
+  /* =====================================================
+     INIT
+  ===================================================== */
 
-    );
- 
+  ngOnInit(): void {
 
-}
+    this.loadEducations();
 
-trackById(
-index: number,
-edu: Education
-): number {
+  }
 
- 
-return edu.id ?? index;
- 
 
-}
+  /* =====================================================
+     LOAD EDUCATION
+  ===================================================== */
+
+  private loadEducations(): void {
+
+    this.educations$ = this.educationService
+      .getAllEducations()
+      .pipe(
+
+        catchError((error) => {
+
+          console.error(
+            'Education API Error:',
+            error
+          );
+
+          return of([]);
+
+        }),
+
+        finalize(() => {
+
+          this.loaded.emit();
+
+        }),
+
+        shareReplay(1)
+
+      );
+
+  }
+
+
+  /* =====================================================
+     TRACK BY
+  ===================================================== */
+
+  trackById(
+    index: number,
+    edu: Education
+  ): number {
+
+    return edu.id ?? index;
+
+  }
 
 }

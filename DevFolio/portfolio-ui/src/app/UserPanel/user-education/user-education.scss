@@ -3,21 +3,25 @@
 ===================================================== */
 
 .education-wrapper {
+
   position: relative;
+
   width: 100%;
+
   min-height: 100vh;
 
-  padding: 110px 60px;
+  padding: 110px 60px 130px;
 
-  overflow: hidden;
+  overflow: visible;
 
   background:
     radial-gradient(
-      circle at 88% 20%,
+      circle at 85% 15%,
       #102d52 0%,
-      #0b1c2d 48%,
+      #0b1c2d 45%,
       #081827 100%
     );
+
 }
 
 
@@ -26,54 +30,55 @@
 ===================================================== */
 
 .education-orb {
+
   position: absolute;
+
   border-radius: 50%;
+
   pointer-events: none;
-  filter: blur(110px);
+
+  opacity: 0.55;
+
 }
+
 
 .education-orb-one {
-  width: 430px;
-  height: 430px;
 
-  left: -230px;
-  top: 10%;
+  width: 420px;
 
-  background: rgba(56, 189, 248, 0.075);
+  height: 420px;
 
-  animation: educationOrbOne 9s ease-in-out infinite alternate;
+  left: -250px;
+
+  top: 12%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(56, 189, 248, 0.13),
+      transparent 68%
+    );
+
 }
+
 
 .education-orb-two {
-  width: 450px;
-  height: 450px;
 
-  right: -230px;
-  bottom: -150px;
+  width: 480px;
 
-  background: rgba(37, 99, 235, 0.10);
+  height: 480px;
 
-  animation: educationOrbTwo 10s ease-in-out infinite alternate;
-}
+  right: -260px;
 
-@keyframes educationOrbOne {
-  from {
-    transform: translate(0, 0) scale(1);
-  }
+  bottom: -100px;
 
-  to {
-    transform: translate(60px, -35px) scale(1.15);
-  }
-}
+  background:
+    radial-gradient(
+      circle,
+      rgba(37, 99, 235, 0.14),
+      transparent 68%
+    );
 
-@keyframes educationOrbTwo {
-  from {
-    transform: translate(0, 0) scale(1);
-  }
-
-  to {
-    transform: translate(-50px, -40px) scale(1.12);
-  }
 }
 
 
@@ -82,16 +87,22 @@
 ===================================================== */
 
 .education-grid-bg {
+
   position: absolute;
+
   inset: 0;
 
   pointer-events: none;
 
+  opacity: 0.55;
+
   background-image:
+
     linear-gradient(
       rgba(148, 163, 184, 0.025) 1px,
       transparent 1px
     ),
+
     linear-gradient(
       90deg,
       rgba(148, 163, 184, 0.025) 1px,
@@ -104,8 +115,9 @@
     linear-gradient(
       to bottom,
       black,
-      transparent
+      transparent 90%
     );
+
 }
 
 
@@ -114,13 +126,17 @@
 ===================================================== */
 
 .education-container {
+
   position: relative;
+
   z-index: 2;
 
   width: 100%;
+
   max-width: 1150px;
 
   margin: 0 auto;
+
 }
 
 
@@ -129,17 +145,22 @@
 ===================================================== */
 
 .education-header {
+
   max-width: 760px;
 
-  margin: 0 auto 75px;
+  margin: 0 auto 90px;
 
   text-align: center;
+
 }
 
+
 .education-kicker {
+
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   gap: 12px;
@@ -153,17 +174,22 @@
   font-weight: 800;
 
   letter-spacing: 3px;
+
 }
 
+
 .education-kicker span {
-  width: 32px;
+
+  width: 34px;
+
   height: 1px;
 
   background: #38bdf8;
 
   box-shadow:
     0 0 12px
-    rgba(56, 189, 248, 0.5);
+    rgba(56, 189, 248, 0.55);
+
 }
 
 
@@ -172,6 +198,7 @@
 ===================================================== */
 
 .education-title {
+
   margin: 0;
 
   color: #ffffff !important;
@@ -188,9 +215,12 @@
   font-weight: 800;
 
   letter-spacing: -2.5px;
+
 }
 
+
 .education-title span {
+
   display: inline-block;
 
   margin-left: 10px;
@@ -211,14 +241,6 @@
 
   -webkit-text-fill-color: transparent;
 
-  animation:
-    educationTextGradient 4s linear infinite;
-}
-
-@keyframes educationTextGradient {
-  to {
-    background-position: 200% center;
-  }
 }
 
 
@@ -226,23 +248,40 @@
    TITLE LINE
 ===================================================== */
 
-.education-title::after {
-  content: "";
+.education-title-line {
 
-  display: block;
+  width: 90px;
 
-  width: 70px;
   height: 3px;
 
   margin: 22px auto 0;
 
+  overflow: hidden;
+
   border-radius: 20px;
+
+  background:
+    rgba(56, 189, 248, 0.15);
+
+}
+
+
+.education-title-line span {
+
+  display: block;
+
+  width: 45px;
+
+  height: 100%;
+
+  margin: auto;
 
   background: #38bdf8;
 
   box-shadow:
-    0 0 20px
-    rgba(56, 189, 248, 0.5);
+    0 0 18px
+    rgba(56, 189, 248, 0.7);
+
 }
 
 
@@ -251,6 +290,7 @@
 ===================================================== */
 
 .education-subtitle {
+
   max-width: 680px;
 
   margin: 26px auto 0;
@@ -260,39 +300,56 @@
   font-size: 0.95rem;
 
   line-height: 1.8;
+
 }
 
 
 /* =====================================================
-   TIMELINE
+   EDUCATION TIMELINE
 ===================================================== */
 
 .education-timeline {
+
   position: relative;
+
+  width: 100%;
+
 }
 
 
 /* =====================================================
-   TIMELINE ENTRY
+   EDUCATION ENTRY
+   ONE CARD PER LINE + STICKY STACK
 ===================================================== */
 
 .education-entry {
-  position: relative;
+
+  position: sticky;
+
+  top: 105px;
 
   display: grid;
 
   grid-template-columns:
     130px
-    40px
+    42px
     minmax(0, 1fr);
 
-  gap: 0;
+  width: 100%;
 
-  margin-bottom: 55px;
+  min-height: 455px;
+
+  margin-bottom: 105px;
+
 }
 
+
+/* Last item still needs scroll space */
+
 .education-entry:last-child {
-  margin-bottom: 0;
+
+  margin-bottom: 30px;
+
 }
 
 
@@ -301,39 +358,52 @@
 ===================================================== */
 
 .education-year {
-  padding-top: 28px;
+
+  align-self: start;
+
+  padding-top: 35px;
+
+  padding-right: 25px;
 
   text-align: right;
 
-  padding-right: 25px;
 }
 
-.year-small {
+
+.year-label {
+
   display: block;
 
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 
   color:
     rgba(148, 163, 184, 0.45);
 
-  font-size: 0.53rem;
+  font-size: 0.52rem;
 
   font-weight: 800;
 
   letter-spacing: 1.8px;
+
 }
 
+
 .education-year strong {
+
   display: block;
 
-  color:
-    rgba(125, 211, 252, 0.75);
+  color: #7dd3fc;
 
-  font-size: 1.35rem;
+  font-size: 1.4rem;
 
-  font-weight: 800;
+  font-weight: 850;
 
   letter-spacing: -0.5px;
+
+  text-shadow:
+    0 0 18px
+    rgba(56, 189, 248, 0.25);
+
 }
 
 
@@ -342,20 +412,25 @@
 ===================================================== */
 
 .education-marker {
+
   position: relative;
 
   display: flex;
 
   justify-content: center;
+
 }
 
+
 .education-marker::before {
+
   content: "";
 
   position: absolute;
 
   top: 0;
-  bottom: -55px;
+
+  bottom: -105px;
 
   left: 50%;
 
@@ -364,25 +439,36 @@
   background:
     linear-gradient(
       to bottom,
-      rgba(56, 189, 248, 0.45),
+      rgba(56, 189, 248, 0.65),
       rgba(56, 189, 248, 0.08)
     );
+
 }
+
 
 .education-entry:last-child
 .education-marker::before {
+
   bottom: 100%;
+
 }
 
+
+/* =====================================================
+   MARKER DOT
+===================================================== */
+
 .education-dot {
+
   position: relative;
 
-  z-index: 3;
+  z-index: 5;
 
   width: 15px;
+
   height: 15px;
 
-  margin-top: 30px;
+  margin-top: 38px;
 
   border-radius: 50%;
 
@@ -392,59 +478,95 @@
     2px solid #38bdf8;
 
   box-shadow:
-    0 0 0 6px
-    rgba(56, 189, 248, 0.07),
 
-    0 0 22px
-    rgba(56, 189, 248, 0.55);
+    0 0 0 6px
+    rgba(56, 189, 248, 0.06),
+
+    0 0 24px
+    rgba(56, 189, 248, 0.65);
+
+}
+
+
+.marker-glow {
+
+  position: absolute;
+
+  top: 34px;
+
+  width: 28px;
+
+  height: 28px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(56, 189, 248, 0.12);
+
 }
 
 
 /* =====================================================
-   EDUCATION CARD
+   MAIN CARD
 ===================================================== */
 
 .education-card {
+
   position: relative;
 
-  padding: 30px 32px;
+  isolation: isolate;
 
-  border-radius: 20px;
+  min-height: 455px;
+
+  height: 455px;
+
+  padding: 30px 34px;
 
   overflow: hidden;
 
+  border-radius: 24px;
+
   background:
+
     linear-gradient(
       145deg,
-      rgba(15, 40, 63, 0.86),
-      rgba(8, 24, 39, 0.95)
+      rgba(15, 40, 63, 0.98),
+      rgba(7, 22, 36, 0.98)
     );
 
   border:
     1px solid
-    rgba(56, 189, 248, 0.13);
-
-  backdrop-filter: blur(18px);
+    rgba(56, 189, 248, 0.16);
 
   box-shadow:
-    0 25px 60px
-    rgba(0, 0, 0, 0.25);
+
+    0 30px 70px
+    rgba(0, 0, 0, 0.30),
+
+    inset 0 1px 0
+    rgba(255, 255, 255, 0.035);
 
   transition:
-    transform 0.45s ease,
-    border-color 0.45s ease,
-    box-shadow 0.45s ease;
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
 }
 
-.education-card::before {
-  content: "";
+
+/* =====================================================
+   CARD ACCENT
+===================================================== */
+
+.card-accent {
 
   position: absolute;
 
-  left: 0;
   top: 0;
 
-  width: 100%;
+  left: 7%;
+
+  width: 86%;
+
   height: 2px;
 
   background:
@@ -452,25 +574,15 @@
       90deg,
       transparent,
       #38bdf8,
-      #2563eb,
+      #60a5fa,
+      #38bdf8,
       transparent
     );
 
-  opacity: 0.7;
-}
-
-.education-card:hover {
-  transform: translateY(-8px);
-
-  border-color:
-    rgba(56, 189, 248, 0.35);
-
   box-shadow:
-    0 35px 75px
-    rgba(0, 0, 0, 0.38),
+    0 0 20px
+    rgba(56, 189, 248, 0.45);
 
-    0 0 35px
-    rgba(56, 189, 248, 0.07);
 }
 
 
@@ -479,29 +591,56 @@
 ===================================================== */
 
 .education-card-glow {
+
   position: absolute;
 
-  width: 230px;
-  height: 230px;
+  top: -170px;
 
-  right: -120px;
-  top: -120px;
+  right: -140px;
+
+  width: 330px;
+
+  height: 330px;
 
   border-radius: 50%;
 
+  pointer-events: none;
+
   background:
-    rgba(56, 189, 248, 0.10);
+    radial-gradient(
+      circle,
+      rgba(56, 189, 248, 0.12),
+      transparent 68%
+    );
 
-  filter: blur(45px);
-
-  opacity: 0;
-
-  transition: opacity 0.45s ease;
 }
 
-.education-card:hover
-.education-card-glow {
-  opacity: 1;
+
+/* =====================================================
+   CARD NUMBER
+===================================================== */
+
+.card-number {
+
+  position: absolute;
+
+  top: 20px;
+
+  right: 28px;
+
+  color:
+    rgba(125, 211, 252, 0.055);
+
+  font-size: 5.5rem;
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  letter-spacing: -5px;
+
+  pointer-events: none;
+
 }
 
 
@@ -510,11 +649,19 @@
 ===================================================== */
 
 .education-card-top {
+
+  position: relative;
+
+  z-index: 2;
+
   display: flex;
 
   align-items: center;
 
-  margin-bottom: 18px;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+
 }
 
 
@@ -523,106 +670,168 @@
 ===================================================== */
 
 .degree-icon {
+
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
-  width: 48px;
-  height: 48px;
+  width: 52px;
 
-  border-radius: 13px;
+  height: 52px;
+
+  border-radius: 15px;
 
   color: #38bdf8;
 
   background:
+
     linear-gradient(
       145deg,
-      rgba(56, 189, 248, 0.14),
+      rgba(56, 189, 248, 0.15),
       rgba(37, 99, 235, 0.07)
     );
 
   border:
     1px solid
-    rgba(56, 189, 248, 0.18);
+    rgba(56, 189, 248, 0.22);
 
   box-shadow:
-    0 10px 25px
-    rgba(0, 0, 0, 0.18);
 
-  transition: transform 0.35s ease;
-}
+    0 12px 28px
+    rgba(0, 0, 0, 0.22),
 
-.education-card:hover
-.degree-icon {
-  transform:
-    rotate(-5deg)
-    scale(1.07);
+    inset 0 1px 0
+    rgba(255, 255, 255, 0.05);
+
+  font-size: 19px;
+
 }
 
 
 /* =====================================================
-   DEGREE + SPECIALIZATION ROW ⭐ UPDATED
+   STATUS
 ===================================================== */
 
-.degree-heading-row {
+.card-status {
+
   display: flex;
 
   align-items: center;
-  //justify-content: space-between;
-  gap: 50px; /* Degree आणि specialization मधलं अंतर */
 
-  gap: 20px;
+  gap: 8px;
 
-  width: 100%;
-}
+  padding: 7px 11px;
 
+  border-radius: 20px;
 
-/* =====================================================
-   DEGREE TITLE
-===================================================== */
-
-.degree-title {
-  margin: 0;
-
-  color: #ffffff;
-
-  font-size: 1.65rem;
-
-  line-height: 1.3;
-
-  font-weight: 750;
-
-  letter-spacing: -0.5px;
-}
-
-
-/* =====================================================
-   SPECIALIZATION BADGE ⭐ UPDATED
-===================================================== */
-
-.degree-badge {
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: center;
-
-  flex-shrink: 0;
-
-  padding: 8px 14px;
-
-  border-radius: 8px;
-
-  color: #7dd3fc;
+  color:
+    rgba(125, 211, 252, 0.7);
 
   background:
     rgba(56, 189, 248, 0.045);
 
   border:
     1px solid
-    rgba(56, 189, 248, 0.13);
+    rgba(56, 189, 248, 0.11);
 
-  font-size: 0.58rem;
+  font-size: 0.5rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+}
+
+
+.status-dot {
+
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #38bdf8;
+
+  box-shadow:
+    0 0 10px
+    rgba(56, 189, 248, 0.8);
+
+}
+
+
+/* =====================================================
+   DEGREE SECTION
+===================================================== */
+
+.degree-section {
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+
+.section-mini-label {
+
+  display: block;
+
+  margin-bottom: 7px;
+
+  color:
+    rgba(148, 163, 184, 0.5);
+
+  font-size: 0.5rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+
+}
+
+
+.degree-title {
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 1.75rem;
+
+  line-height: 1.25;
+
+  font-weight: 800;
+
+  letter-spacing: -0.6px;
+
+}
+
+
+.degree-badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  margin-top: 12px;
+
+  padding: 7px 12px;
+
+  border-radius: 8px;
+
+  color: #7dd3fc;
+
+  background:
+    rgba(56, 189, 248, 0.055);
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.14);
+
+  font-size: 0.54rem;
 
   font-weight: 800;
 
@@ -630,77 +839,100 @@
 
   text-transform: uppercase;
 
-  white-space: nowrap;
 }
 
 
 /* =====================================================
-   COLLEGE INFO
+   COLLEGE
 ===================================================== */
 
 .college-info {
+
+  position: relative;
+
+  z-index: 2;
+
   display: flex;
 
-  align-items: flex-start;
+  align-items: center;
 
   gap: 13px;
 
-  margin-top: 20px;
+  margin-top: 22px;
 
-  padding: 15px;
+  padding: 14px 15px;
 
-  border-radius: 12px;
+  border-radius: 13px;
 
   background:
     rgba(56, 189, 248, 0.035);
 
   border:
     1px solid
-    rgba(56, 189, 248, 0.08);
+    rgba(56, 189, 248, 0.09);
+
 }
 
+
 .college-icon {
+
   display: flex;
 
   align-items: center;
-  justify-content: center;
 
-  width: 32px;
-  height: 32px;
+  justify-content: center;
 
   flex-shrink: 0;
 
-  border-radius: 9px;
+  width: 35px;
+
+  height: 35px;
+
+  border-radius: 10px;
 
   color: #38bdf8;
 
   background:
     rgba(56, 189, 248, 0.08);
+
 }
 
+
+.college-content {
+
+  min-width: 0;
+
+}
+
+
 .info-label {
+
   display: block;
 
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 
   color:
-    rgba(148, 163, 184, 0.55);
+    rgba(148, 163, 184, 0.5);
 
-  font-size: 0.52rem;
+  font-size: 0.5rem;
 
   font-weight: 800;
 
-  letter-spacing: 1.7px;
+  letter-spacing: 1.6px;
+
 }
 
+
 .college-info p {
+
   margin: 0;
 
   color: #cbd5e1;
 
-  font-size: 0.85rem;
+  font-size: 0.83rem;
 
-  line-height: 1.5;
+  line-height: 1.45;
+
 }
 
 
@@ -709,24 +941,32 @@
 ===================================================== */
 
 .education-meta {
+
+  position: relative;
+
+  z-index: 2;
+
   display: grid;
 
   grid-template-columns:
     repeat(2, minmax(0, 1fr));
 
-  gap: 15px;
+  gap: 13px;
 
-  margin-top: 15px;
+  margin-top: 13px;
+
 }
 
+
 .meta-item {
+
   display: flex;
 
   align-items: flex-start;
 
   gap: 10px;
 
-  padding: 13px;
+  padding: 12px;
 
   border-radius: 11px;
 
@@ -736,32 +976,46 @@
   border:
     1px solid
     rgba(148, 163, 184, 0.07);
+
 }
 
+
 .meta-icon {
+
   display: flex;
 
   align-items: center;
-  justify-content: center;
 
-  width: 27px;
-  height: 27px;
+  justify-content: center;
 
   flex-shrink: 0;
 
+  width: 28px;
+
+  height: 28px;
+
+  border-radius: 8px;
+
   color: #60a5fa;
 
+  background:
+    rgba(96, 165, 250, 0.06);
+
   font-size: 11px;
+
 }
 
+
 .meta-item p {
+
   margin: 0;
 
   color: #94a3b8;
 
-  font-size: 0.72rem;
+  font-size: 0.7rem;
 
-  line-height: 1.5;
+  line-height: 1.45;
+
 }
 
 
@@ -770,51 +1024,63 @@
 ===================================================== */
 
 .education-result {
+
+  position: relative;
+
+  z-index: 2;
+
   display: flex;
 
   align-items: center;
 
   justify-content: space-between;
 
-  margin-top: 24px;
+  margin-top: 15px;
 
-  padding: 17px 18px;
+  padding: 14px 16px;
 
   border-radius: 13px;
 
   background:
     linear-gradient(
       90deg,
-      rgba(56, 189, 248, 0.07),
-      rgba(37, 99, 235, 0.035)
+      rgba(56, 189, 248, 0.065),
+      rgba(37, 99, 235, 0.025)
     );
 
   border:
     1px solid
-    rgba(56, 189, 248, 0.10);
+    rgba(56, 189, 248, 0.09);
+
 }
 
-.result-text span {
+
+.result-label {
+
   display: block;
 
   margin-bottom: 4px;
 
   color:
-    rgba(148, 163, 184, 0.55);
+    rgba(148, 163, 184, 0.5);
 
-  font-size: 0.52rem;
+  font-size: 0.49rem;
 
   font-weight: 800;
 
   letter-spacing: 1.7px;
+
 }
 
-.result-text strong {
+
+.result-content strong {
+
   color: #7dd3fc;
 
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 
-  font-weight: 800;
+  font-weight: 850;
+
 }
 
 
@@ -823,13 +1089,16 @@
 ===================================================== */
 
 .result-ring {
+
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
-  width: 43px;
-  height: 43px;
+  width: 42px;
+
+  height: 42px;
 
   border-radius: 50%;
 
@@ -837,23 +1106,24 @@
     conic-gradient(
       #38bdf8,
       #2563eb,
-      rgba(56, 189, 248, 0.10),
+      rgba(56, 189, 248, 0.08),
       #38bdf8
     );
 
-  box-shadow:
-    0 0 20px
-    rgba(56, 189, 248, 0.12);
 }
 
+
 .ring-inner {
+
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
-  width: 35px;
-  height: 35px;
+  width: 34px;
+
+  height: 34px;
 
   border-radius: 50%;
 
@@ -861,7 +1131,8 @@
 
   color: #38bdf8;
 
-  font-size: 13px;
+  font-size: 12px;
+
 }
 
 
@@ -870,40 +1141,56 @@
 ===================================================== */
 
 .education-footer {
+
+  position: absolute;
+
+  z-index: 2;
+
+  right: 34px;
+
+  bottom: 25px;
+
+  left: 34px;
+
   display: flex;
 
   align-items: center;
 
   justify-content: space-between;
 
-  margin-top: 20px;
-
-  padding-top: 15px;
+  padding-top: 14px;
 
   border-top:
     1px solid
     rgba(148, 163, 184, 0.07);
 
-  color:
-    rgba(125, 211, 252, 0.48);
-
-  font-size: 0.52rem;
-
-  font-weight: 800;
-
-  letter-spacing: 1.7px;
 }
 
-.education-footer > span:first-child {
+
+.footer-category {
+
   display: flex;
 
   align-items: center;
 
   gap: 7px;
+
+  color:
+    rgba(125, 211, 252, 0.45);
+
+  font-size: 0.5rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+
 }
 
+
 .footer-dot {
+
   width: 6px;
+
   height: 6px;
 
   border-radius: 50%;
@@ -913,38 +1200,150 @@
   box-shadow:
     0 0 9px
     rgba(56, 189, 248, 0.8);
+
 }
 
+
 .footer-arrow {
+
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
-  width: 29px;
-  height: 29px;
+  width: 30px;
+
+  height: 30px;
 
   border-radius: 50%;
 
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.16);
-
   color: #38bdf8;
 
-  transition: 0.3s ease;
-}
-
-.education-card:hover
-.footer-arrow {
-  transform:
-    translate(3px, -3px);
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.15);
 
   background:
-    rgba(56, 189, 248, 0.08);
+    rgba(56, 189, 248, 0.025);
+
+}
+
+
+/* =====================================================
+   DECORATIVE CORNERS
+===================================================== */
+
+.card-corner {
+
+  position: absolute;
+
+  width: 18px;
+
+  height: 18px;
+
+  pointer-events: none;
+
+}
+
+
+.corner-tl {
+
+  top: 13px;
+
+  left: 13px;
+
+  border-top:
+    1px solid
+    rgba(56, 189, 248, 0.3);
+
+  border-left:
+    1px solid
+    rgba(56, 189, 248, 0.3);
+
+}
+
+
+.corner-tr {
+
+  top: 13px;
+
+  right: 13px;
+
+  border-top:
+    1px solid
+    rgba(56, 189, 248, 0.3);
+
+  border-right:
+    1px solid
+    rgba(56, 189, 248, 0.3);
+
+}
+
+
+.corner-bl {
+
+  bottom: 13px;
+
+  left: 13px;
+
+  border-bottom:
+    1px solid
+    rgba(56, 189, 248, 0.18);
+
+  border-left:
+    1px solid
+    rgba(56, 189, 248, 0.18);
+
+}
+
+
+.corner-br {
+
+  right: 13px;
+
+  bottom: 13px;
+
+  border-right:
+    1px solid
+    rgba(56, 189, 248, 0.18);
+
+  border-bottom:
+    1px solid
+    rgba(56, 189, 248, 0.18);
+
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.education-card:hover {
+
+  border-color:
+    rgba(56, 189, 248, 0.32);
+
+  box-shadow:
+
+    0 35px 75px
+    rgba(0, 0, 0, 0.38),
+
+    0 0 35px
+    rgba(56, 189, 248, 0.055),
+
+    inset 0 1px 0
+    rgba(255, 255, 255, 0.05);
+
+}
+
+
+.education-card:hover
+.degree-icon {
 
   border-color:
     rgba(56, 189, 248, 0.35);
+
 }
 
 
@@ -955,26 +1354,56 @@
 @media (max-width: 900px) {
 
   .education-wrapper {
-    padding: 90px 35px;
+
+    padding:
+      90px 35px 110px;
+
   }
+
 
   .education-header {
-    margin-bottom: 60px;
+
+    margin-bottom: 70px;
+
   }
+
 
   .education-entry {
+
     grid-template-columns:
-      95px
+      90px
       35px
       minmax(0, 1fr);
+
+    min-height: 450px;
+
+    margin-bottom: 90px;
+
   }
+
+
+  .education-card {
+
+    min-height: 450px;
+
+    height: 450px;
+
+    padding: 28px;
+
+  }
+
 
   .education-year {
+
     padding-right: 18px;
+
   }
 
-  .education-year strong {
-    font-size: 1.1rem;
+
+  .education-meta {
+
+    gap: 10px;
+
   }
 
 }
@@ -987,209 +1416,356 @@
 @media (max-width: 600px) {
 
   .education-wrapper {
+
     min-height: auto;
 
     padding:
-      80px 18px 90px;
+      80px 15px 100px;
+
   }
+
 
   .education-header {
-    margin-bottom: 48px;
+
+    margin-bottom: 60px;
+
   }
 
+
   .education-kicker {
-    font-size: 0.57rem;
+
+    gap: 8px;
+
+    font-size: 0.55rem;
 
     letter-spacing: 2px;
 
-    gap: 8px;
   }
+
 
   .education-kicker span {
+
     width: 20px;
+
   }
+
 
   .education-title {
-    font-size: 2.7rem;
 
-    letter-spacing: -1.7px;
+    font-size: 2.65rem;
+
+    letter-spacing: -1.8px;
+
   }
+
 
   .education-title span {
+
     display: block;
 
-    margin:
-      5px 0 0;
+    margin: 6px 0 0;
+
   }
 
+
   .education-subtitle {
-    font-size: 0.84rem;
+
+    font-size: 0.82rem;
 
     line-height: 1.7;
+
   }
 
 
   /* MOBILE TIMELINE */
 
   .education-entry {
+
+    top: 80px;
+
     grid-template-columns:
-      27px
+      28px
       minmax(0, 1fr);
 
     gap: 12px;
 
-    margin-bottom: 35px;
+    min-height: 520px;
+
+    margin-bottom: 55px;
+
   }
 
+
+  /* YEAR BECOMES BADGE */
+
   .education-year {
+
     position: absolute;
 
     top: -13px;
-    left: 40px;
 
-    z-index: 5;
+    left: 42px;
 
-    padding: 6px 9px;
+    z-index: 8;
+
+    padding: 6px 10px;
 
     border-radius: 7px;
 
     background:
-      rgba(8, 24, 39, 0.95);
+      rgba(8, 24, 39, 0.97);
 
     border:
       1px solid
-      rgba(56, 189, 248, 0.13);
+      rgba(56, 189, 248, 0.14);
 
     text-align: left;
+
   }
 
-  .year-small {
+
+  .year-label {
+
     display: inline;
 
     margin-right: 5px;
 
-    font-size: 0.45rem;
+    font-size: 0.43rem;
+
   }
+
 
   .education-year strong {
+
     display: inline;
 
-    font-size: 0.68rem;
+    font-size: 0.67rem;
+
   }
+
+
+  /* MARKER */
 
   .education-marker {
+
     grid-column: 1;
+
   }
+
 
   .education-marker::before {
-    bottom: -35px;
+
+    bottom: -55px;
+
   }
+
 
   .education-dot {
+
     width: 11px;
+
     height: 11px;
 
-    margin-top: 35px;
+    margin-top: 32px;
+
   }
+
+
+  .marker-glow {
+
+    top: 28px;
+
+    width: 22px;
+
+    height: 22px;
+
+  }
+
+
+  /* CARD */
 
   .education-card {
+
     grid-column: 2;
 
-    padding: 25px 20px;
+    min-height: 520px;
 
-    border-radius: 16px;
+    height: 520px;
+
+    padding: 27px 19px;
+
+    border-radius: 18px;
+
   }
+
+
+  .card-number {
+
+    top: 20px;
+
+    right: 20px;
+
+    font-size: 4.3rem;
+
+  }
+
 
   .education-card-top {
-    margin-bottom: 15px;
+
+    margin-bottom: 18px;
+
   }
 
-  /* DEGREE + SPECIALIZATION MOBILE */
 
-  .degree-heading-row {
-    align-items: flex-start;
+  .degree-icon {
 
-    flex-direction: column;
+    width: 44px;
 
-    gap: 10px;
+    height: 44px;
+
+    font-size: 16px;
+
   }
+
+
+  .card-status {
+
+    padding: 6px 9px;
+
+    font-size: 0.44rem;
+
+  }
+
+
+  .degree-title {
+
+    font-size: 1.32rem;
+
+  }
+
 
   .degree-badge {
+
     max-width: 100%;
-
-    font-size: 0.48rem;
-
-    padding: 6px 10px;
 
     white-space: normal;
 
-    text-align: center;
+    font-size: 0.47rem;
+
+    line-height: 1.4;
+
   }
 
-  .degree-icon {
-    width: 42px;
-    height: 42px;
-  }
-
-  .degree-title {
-    font-size: 1.3rem;
-  }
 
   .college-info {
+
+    margin-top: 19px;
+
     padding: 12px;
+
   }
+
 
   .college-info p {
-    font-size: 0.76rem;
+
+    font-size: 0.73rem;
+
   }
+
 
   .education-meta {
+
     grid-template-columns: 1fr;
 
-    gap: 9px;
+    gap: 8px;
+
+    margin-top: 10px;
+
   }
+
 
   .meta-item {
+
     padding: 10px;
+
   }
+
+
+  .meta-item p {
+
+    font-size: 0.67rem;
+
+  }
+
 
   .education-result {
-    padding: 14px;
+
+    margin-top: 11px;
+
+    padding: 12px;
+
   }
+
 
   .result-ring {
-    width: 38px;
-    height: 38px;
+
+    width: 37px;
+
+    height: 37px;
+
   }
+
 
   .ring-inner {
-    width: 30px;
-    height: 30px;
+
+    width: 29px;
+
+    height: 29px;
+
+    font-size: 10px;
+
   }
 
+
   .education-footer {
-    font-size: 0.46rem;
+
+    right: 19px;
+
+    bottom: 20px;
+
+    left: 19px;
+
+  }
+
+
+  .footer-category {
+
+    font-size: 0.43rem;
+
+  }
+
+
+  .footer-arrow {
+
+    width: 27px;
+
+    height: 27px;
+
   }
 
 }
 
 
 /* =====================================================
-   REDUCED MOTION
+   ACCESSIBILITY / REDUCED MOTION
 ===================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
-  .education-orb-one,
-  .education-orb-two,
-  .education-title span {
-    animation: none;
-  }
+  .education-card {
 
-  .education-card,
-  .degree-icon,
-  .footer-arrow {
     transition: none;
+
   }
 
 }
