@@ -1,16 +1,24 @@
 <section class="projects-wrapper">
 
-  <!-- BACKGROUND -->
-  <div class="projects-grid-bg"></div>
+  <!-- =====================================================
+       BACKGROUND
+  ====================================================== -->
+
+  <div
+    class="projects-grid-bg"
+    aria-hidden="true"
+  ></div>
+
 
   <div class="projects-container">
 
 
-    <!-- =================================================
+    <!-- =====================================================
          HEADER
-    ================================================== -->
+    ====================================================== -->
 
     <header class="projects-header">
+
 
       <div class="projects-kicker">
 
@@ -56,27 +64,24 @@
 
 
         <span class="github-text">
-
           Explore GitHub
-
         </span>
 
 
         <span class="github-arrow">
-
           ↗
-
         </span>
 
       </a>
+
 
     </header>
 
 
 
-    <!-- =================================================
-         PROJECT STACK
-    ================================================== -->
+    <!-- =====================================================
+         PROJECTS
+    ====================================================== -->
 
     <div
       class="projects-stack"
@@ -88,7 +93,7 @@
 
 
       <!-- =================================================
-           ONE STICKY ROW
+           STICKY ROW
       ================================================== -->
 
       <div
@@ -102,9 +107,9 @@
       >
 
 
-        <!-- =================================================
+        <!-- ===============================================
              PROJECT CARD
-        ================================================== -->
+        ================================================ -->
 
         <article
           class="project-card"
@@ -116,31 +121,53 @@
         >
 
 
-          <!-- CARD TOP GLOW -->
-          <div class="card-top-glow"></div>
+          <!-- CARD BACKGROUND -->
+          <div
+            class="card-grid"
+            aria-hidden="true"
+          ></div>
+
+
+          <div
+            class="card-top-glow"
+            aria-hidden="true"
+          ></div>
 
 
           <!-- LARGE NUMBER -->
-          <div class="project-number">
 
-            {{ getProjectNumber(
-              rowIndex,
-              cardIndex
-            ) }}
+          <div
+            class="project-number"
+            aria-hidden="true"
+          >
+
+            {{
+              getProjectNumber(
+                rowIndex,
+                cardIndex
+              )
+            }}
 
           </div>
 
 
-          <!-- SIDE INDEX -->
-          <div class="project-index">
+
+          <!-- SIDE LABEL -->
+
+          <div
+            class="project-index"
+            aria-hidden="true"
+          >
 
             <span>PROJECT</span>
 
             <strong>
-              {{ getProjectNumber(
-                rowIndex,
-                cardIndex
-              ) }}
+              {{
+                getProjectNumber(
+                  rowIndex,
+                  cardIndex
+                )
+              }}
             </strong>
 
           </div>
@@ -155,6 +182,7 @@
 
 
             <!-- TOP -->
+
             <div class="project-top">
 
 
@@ -176,7 +204,8 @@
 
 
 
-            <!-- NAME -->
+            <!-- PROJECT NAME -->
+
             <h3 class="project-name">
 
               {{ project.name }}
@@ -185,7 +214,8 @@
 
 
 
-            <!-- MINI LINE -->
+            <!-- TITLE LINE -->
+
             <div class="project-line">
 
               <span></span>
@@ -194,11 +224,14 @@
 
 
 
-            <!-- DESCRIPTION -->
-            <p
+            <!-- =================================================
+                 FULL DESCRIPTION
+            ================================================== -->
+
+            <div
               class="project-description"
               [innerHTML]="project.description"
-            ></p>
+            ></div>
 
 
 
@@ -225,7 +258,7 @@
                 <span
                   class="tech-pill"
                   *ngFor="
-                    let tech of getTechnologies(project);
+                    let tech of project.technologyList;
                     trackBy: trackByTechnology
                   "
                 >
@@ -274,7 +307,7 @@
 
 
           <!-- =================================================
-               DECORATIVE CORNERS
+               CORNERS
           ================================================== -->
 
           <span class="corner corner-tl"></span>
@@ -286,24 +319,35 @@
           <span class="corner corner-br"></span>
 
 
-          <!-- CARD GRID -->
-          <div class="card-grid"></div>
-
-
         </article>
 
 
       </div>
 
+
+      <!--
+        Extra space is intentional.
+
+        It gives the final sticky row enough room
+        to release naturally before the footer.
+      -->
+
+      <div
+        class="projects-stack-end"
+        aria-hidden="true"
+      ></div>
+
+
     </div>
 
 
 
-    <!-- =================================================
+    <!-- =====================================================
          LOADING
-    ================================================== -->
+    ====================================================== -->
 
     <ng-template #loading>
+
 
       <div class="projects-loading">
 
@@ -312,6 +356,7 @@
           class="loading-row"
           *ngFor="let row of [1, 2]"
         >
+
 
           <div
             class="loading-card"
@@ -324,16 +369,20 @@
 
             <div class="loading-line"></div>
 
+            <div class="loading-line"></div>
+
             <div class="loading-line short"></div>
 
             <div class="loading-tags"></div>
 
           </div>
 
+
         </div>
 
 
       </div>
+
 
     </ng-template>
 

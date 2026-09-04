@@ -7,15 +7,14 @@ import {
 
 import { CommonModule } from '@angular/common';
 
-import { ProjectsService }
-  from '../../Services/ProjectsService';
+import { ProjectsService } from '../../Services/ProjectsService';
 
 import {
   Observable,
   catchError,
-  of,
   finalize,
   map,
+  of,
   shareReplay
 } from 'rxjs';
 
@@ -31,6 +30,13 @@ export interface Project {
   description: string;
 
   technologies: string;
+
+}
+
+
+interface ProjectView extends Project {
+
+  technologyList: string[];
 
 }
 
@@ -61,10 +67,15 @@ implements OnInit {
 
 
   /*
-   * Projects are already grouped into
-   * rows of 2 cards.
+   * Projects are grouped as:
+   *
+   * [01] [02]
+   * [03] [04]
+   * [05] [06]
+   *
+   * Each complete row becomes sticky.
    */
-  projectRows$!: Observable<Project[][]>;
+  projectRows$!: Observable<ProjectView[][]>;
 
 
   constructor(
@@ -89,10 +100,23 @@ implements OnInit {
         .pipe(
 
           map(
-            (projects: Project[] | null | undefined) => {
+            (
+              projects:
+              Project[] |
+              null |
+              undefined
+            ) => {
+
+              const preparedProjects =
+                (projects ?? []).map(
+                  project => this.prepareProject(
+                    project
+                  )
+                );
+
 
               return this.groupProjects(
-                projects ?? []
+                preparedProjects
               );
 
             }
@@ -107,7 +131,7 @@ implements OnInit {
             );
 
             return of(
-              [] as Project[][]
+              [] as ProjectView[][]
             );
 
           }),
@@ -131,23 +155,43 @@ implements OnInit {
 
 
   /*
-   * Converts:
+   * Prepare project data once.
    *
-   * 01
-   * 02
-   * 03
-   * 04
-   *
-   * into:
-   *
-   * [01, 02]
-   * [03, 04]
+   * This prevents split/map work
+   * from happening repeatedly in HTML.
+   */
+  private prepareProject(
+    project: Project
+  ): ProjectView {
+
+    return {
+
+      ...project,
+
+      technologyList:
+        (project.technologies ?? '')
+          .split(',')
+          .map(
+            tech => tech.trim()
+          )
+          .filter(
+            tech => tech.length > 0
+          )
+
+    };
+
+  }
+
+
+  /*
+   * Group projects into 2-card rows.
    */
   private groupProjects(
-    projects: Project[]
-  ): Project[][] {
+    projects: ProjectView[]
+  ): ProjectView[][] {
 
-    const rows: Project[][] = [];
+    const rows: ProjectView[][] = [];
+
 
     for (
       let i = 0;
@@ -160,6 +204,7 @@ implements OnInit {
       );
 
     }
+
 
     return rows;
 
@@ -177,32 +222,11 @@ implements OnInit {
 
   trackById(
     index: number,
-    project: Project
+    project: ProjectView
   ): number | string {
 
     return project.id ??
       `${index}-${project.name}`;
-
-  }
-
-
-  getTechnologies(
-    project: Project
-  ): string[] {
-
-    return (
-      project.technologies ?? ''
-    )
-
-      .split(',')
-
-      .map(
-        tech => tech.trim()
-      )
-
-      .filter(
-        tech => tech.length > 0
-      );
 
   }
 
@@ -226,6 +250,7 @@ implements OnInit {
       (rowIndex * 2) +
       cardIndex +
       1;
+
 
     return number
       .toString()

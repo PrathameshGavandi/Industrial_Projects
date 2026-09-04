@@ -1,5 +1,6 @@
 /* =========================================================
-   PROJECTS — PREMIUM STACKED PORTFOLIO
+   PROJECTS
+   Premium Stacked Portfolio
 ========================================================= */
 
 .projects-wrapper {
@@ -13,7 +14,7 @@
   padding:
     110px
     60px
-    150px;
+    0;
 
   overflow: visible;
 
@@ -40,7 +41,7 @@
 
   pointer-events: none;
 
-  opacity: 0.42;
+  opacity: 0.4;
 
   background-image:
 
@@ -62,9 +63,8 @@
   mask-image:
     linear-gradient(
       to bottom,
-      black 0%,
-      rgba(0, 0, 0, 0.5) 55%,
-      transparent 100%
+      black,
+      transparent
     );
 
 }
@@ -266,7 +266,7 @@
 
 
 /* =========================================================
-   GITHUB BUTTON
+   GITHUB
 ========================================================= */
 
 .github-cta {
@@ -294,11 +294,7 @@
   text-decoration: none;
 
   background:
-    rgba(8, 30, 48, 0.78);
-
-  box-shadow:
-    inset 0 0 0 1px
-    rgba(255, 255, 255, 0.015);
+    rgba(8, 30, 48, 0.9);
 
   transition:
     transform 0.25s ease,
@@ -380,7 +376,7 @@
 
 
 /* =========================================================
-   STACK CONTAINER
+   PROJECT STACK
 ========================================================= */
 
 .projects-stack {
@@ -395,8 +391,7 @@
 
 
 /* =========================================================
-   IMPORTANT:
-   WHOLE ROW IS STICKY
+   STICKY ROW
 ========================================================= */
 
 .project-stack-row {
@@ -416,11 +411,13 @@
       )
     );
 
+  align-items: stretch;
+
   gap: 24px;
 
   width: 100%;
 
-  margin-bottom: 120px;
+  margin-bottom: 125px;
 
   isolation: isolate;
 
@@ -428,8 +425,20 @@
 
 
 /*
- * This spacing creates enough scroll distance
- * between each sticky row.
+ * IMPORTANT
+ *
+ * Row is sticky.
+ * Card is NOT sticky.
+ *
+ * Therefore:
+ *
+ * [01] [02]
+ *
+ * then
+ *
+ * [03] [04]
+ *
+ * comes over the first row.
  */
 
 
@@ -445,13 +454,23 @@
 
   width: 100%;
 
-  height: 430px;
+  /*
+   * Same size for every card.
+   */
+  height: 470px;
 
-  min-height: 430px;
+  min-height: 470px;
 
-  padding: 30px;
+  padding:
+    30px
+    30px
+    25px;
 
   overflow: hidden;
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.20);
 
   border-radius: 22px;
 
@@ -459,13 +478,9 @@
     linear-gradient(
       145deg,
       #102b44 0%,
-      #0c2237 45%,
+      #0c2237 48%,
       #081a2b 100%
     );
-
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.20);
 
   box-shadow:
 
@@ -476,15 +491,15 @@
     rgba(255, 255, 255, 0.045);
 
   transition:
-    transform 0.28s ease,
-    border-color 0.28s ease,
-    box-shadow 0.28s ease;
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 
 }
 
 
 /* =========================================================
-   TOP ACCENT
+   TOP BORDER
 ========================================================= */
 
 .project-card::before {
@@ -510,8 +525,6 @@
       transparent
     );
 
-  opacity: 0.85;
-
   box-shadow:
     0 0 14px
     rgba(56, 189, 248, 0.45);
@@ -520,23 +533,23 @@
 
 
 /* =========================================================
-   CARD HOVER
+   HOVER
 ========================================================= */
 
 .project-card:hover {
 
   transform:
-    translateY(-7px);
+    translateY(-6px);
 
   border-color:
-    rgba(56, 189, 248, 0.46);
+    rgba(56, 189, 248, 0.45);
 
   box-shadow:
 
     0 32px 70px
     rgba(0, 0, 0, 0.38),
 
-    0 0 30px
+    0 0 28px
     rgba(56, 189, 248, 0.07),
 
     inset 0 1px 0
@@ -557,7 +570,7 @@
 
   pointer-events: none;
 
-  opacity: 0.35;
+  opacity: 0.32;
 
   background-image:
 
@@ -580,7 +593,7 @@
     linear-gradient(
       135deg,
       black,
-      transparent 70%
+      transparent 75%
     );
 
 }
@@ -594,20 +607,20 @@
 
   position: absolute;
 
-  width: 260px;
-
-  height: 160px;
-
   top: -100px;
 
-  right: -80px;
+  right: -90px;
+
+  width: 260px;
+
+  height: 190px;
 
   pointer-events: none;
 
   background:
     radial-gradient(
       circle,
-      rgba(56, 189, 248, 0.15),
+      rgba(56, 189, 248, 0.14),
       transparent 70%
     );
 
@@ -615,16 +628,16 @@
 
 
 /* =========================================================
-   PROJECT NUMBER
+   NUMBER
 ========================================================= */
 
 .project-number {
 
   position: absolute;
 
-  top: 18px;
+  top: 16px;
 
-  right: 24px;
+  right: 22px;
 
   color:
     rgba(125, 211, 252, 0.055);
@@ -643,7 +656,7 @@
 
 
 /* =========================================================
-   SIDE INDEX
+   SIDE LABEL
 ========================================================= */
 
 .project-index {
@@ -709,7 +722,7 @@
 
 
 /* =========================================================
-   PROJECT TOP
+   TOP
 ========================================================= */
 
 .project-top {
@@ -720,7 +733,7 @@
 
   justify-content: space-between;
 
-  margin-bottom: 22px;
+  margin-bottom: 21px;
 
 }
 
@@ -741,6 +754,12 @@
 
   height: 48px;
 
+  flex-shrink: 0;
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.22);
+
   border-radius: 14px;
 
   color: #38bdf8;
@@ -752,17 +771,12 @@
       rgba(37, 99, 235, 0.08)
     );
 
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.22);
-
   box-shadow:
     0 10px 25px
     rgba(0, 0, 0, 0.18);
 
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+    transform 0.25s ease;
 
 }
 
@@ -773,10 +787,6 @@
   transform:
     rotate(-4deg)
     scale(1.05);
-
-  box-shadow:
-    0 12px 30px
-    rgba(56, 189, 248, 0.15);
 
 }
 
@@ -799,16 +809,16 @@
 
   white-space: nowrap;
 
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.16);
+
   border-radius: 8px;
 
   color: #7dd3fc;
 
   background:
     rgba(56, 189, 248, 0.055);
-
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.16);
 
   font-size: 0.56rem;
 
@@ -827,11 +837,11 @@
 
 .project-name {
 
-  max-width: 88%;
-
-  min-height: 40px;
-
   margin: 0;
+
+  max-width: 90%;
+
+  min-height: 42px;
 
   color: #ffffff;
 
@@ -843,20 +853,11 @@
 
   letter-spacing: -0.5px;
 
-  display:
-    -webkit-box;
-
-  -webkit-line-clamp: 2;
-
-  -webkit-box-orient: vertical;
-
-  overflow: hidden;
-
 }
 
 
 /* =========================================================
-   PROJECT LINE
+   LINE
 ========================================================= */
 
 .project-line {
@@ -866,9 +867,9 @@
   height: 1px;
 
   margin:
-    13px
+    14px
     0
-    16px;
+    17px;
 
   background:
     rgba(148, 163, 184, 0.08);
@@ -880,7 +881,7 @@
 
   display: block;
 
-  width: 55px;
+  width: 68px;
 
   height: 1px;
 
@@ -888,7 +889,7 @@
 
   box-shadow:
     0 0 10px
-    rgba(56, 189, 248, 0.5);
+    rgba(56, 189, 248, 0.55);
 
 }
 
@@ -897,39 +898,73 @@
    DESCRIPTION
 ========================================================= */
 
+/*
+ * NO line-clamp here.
+ *
+ * This was the main reason your previous
+ * project descriptions were getting cut.
+ */
+
 .project-description {
 
-  height: 88px;
+  flex: 0 0 auto;
+
+  width: 100%;
 
   margin: 0;
 
-  overflow: hidden;
+  padding-right: 3px;
 
-  color: #94a3b8;
+  color: #9aaabd;
 
   font-size: 0.82rem;
 
-  line-height: 1.75;
+  line-height: 1.72;
 
-  display:
-    -webkit-box;
+  overflow: visible;
 
-  -webkit-line-clamp: 4;
+}
 
-  -webkit-box-orient: vertical;
+
+/*
+ * Normalize HTML coming from API.
+ */
+
+.project-description p {
+
+  margin:
+    0
+    0
+    8px;
+
+}
+
+
+.project-description p:last-child {
+
+  margin-bottom: 0;
+
+}
+
+
+.project-description br {
+
+  line-height: 1.72;
 
 }
 
 
 /* =========================================================
-   TECHNOLOGY
+   TECHNOLOGIES
 ========================================================= */
 
 .technology-section {
 
+  margin-top: auto;
+
   min-height: 82px;
 
-  margin-top: auto;
+  padding-top: 18px;
 
 }
 
@@ -949,7 +984,7 @@
   margin-bottom: 11px;
 
   color:
-    rgba(148, 163, 184, 0.58);
+    rgba(148, 163, 184, 0.60);
 
   font-size: 0.55rem;
 
@@ -965,6 +1000,8 @@
   width: 5px;
 
   height: 5px;
+
+  flex-shrink: 0;
 
   border-radius: 50%;
 
@@ -991,7 +1028,7 @@
 
   gap: 7px;
 
-  max-height: 55px;
+  max-height: 64px;
 
   overflow: hidden;
 
@@ -1008,7 +1045,7 @@
 
   align-items: center;
 
-  max-width: 125px;
+  max-width: 135px;
 
   padding:
     6px
@@ -1020,6 +1057,10 @@
 
   white-space: nowrap;
 
+  border:
+    1px solid
+    rgba(148, 163, 184, 0.10);
+
   border-radius: 7px;
 
   color: #cbd5e1;
@@ -1027,32 +1068,9 @@
   background:
     rgba(148, 163, 184, 0.045);
 
-  border:
-    1px solid
-    rgba(148, 163, 184, 0.10);
-
   font-size: 0.61rem;
 
   font-weight: 600;
-
-  transition:
-    border-color 0.25s ease,
-    color 0.25s ease,
-    background 0.25s ease;
-
-}
-
-
-.project-card:hover
-.tech-pill {
-
-  color: #bae6fd;
-
-  background:
-    rgba(56, 189, 248, 0.045);
-
-  border-color:
-    rgba(56, 189, 248, 0.18);
 
 }
 
@@ -1069,7 +1087,9 @@
 
   justify-content: space-between;
 
-  margin-top: 20px;
+  flex-shrink: 0;
+
+  margin-top: 19px;
 
   padding-top: 15px;
 
@@ -1093,7 +1113,7 @@
   gap: 7px;
 
   color:
-    rgba(125, 211, 252, 0.55);
+    rgba(125, 211, 252, 0.58);
 
   font-size: 0.5rem;
 
@@ -1109,6 +1129,8 @@
   width: 6px;
 
   height: 6px;
+
+  flex-shrink: 0;
 
   border-radius: 50%;
 
@@ -1137,6 +1159,12 @@
 
   height: 31px;
 
+  flex-shrink: 0;
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.18);
+
   border-radius: 50%;
 
   color: #38bdf8;
@@ -1144,16 +1172,12 @@
   background:
     rgba(56, 189, 248, 0.035);
 
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.18);
-
   font-size: 14px;
 
   transition:
     transform 0.25s ease,
-    background 0.25s ease,
-    border-color 0.25s ease;
+    border-color 0.25s ease,
+    background 0.25s ease;
 
 }
 
@@ -1167,11 +1191,11 @@
       -3px
     );
 
+  border-color:
+    rgba(56, 189, 248, 0.40);
+
   background:
     rgba(56, 189, 248, 0.10);
-
-  border-color:
-    rgba(56, 189, 248, 0.4);
 
 }
 
@@ -1184,11 +1208,11 @@
 
   position: absolute;
 
-  width: 15px;
-
-  height: 15px;
-
   z-index: 5;
+
+  width: 16px;
+
+  height: 16px;
 
   pointer-events: none;
 
@@ -1203,11 +1227,11 @@
 
   border-top:
     1px solid
-    rgba(56, 189, 248, 0.55);
+    rgba(56, 189, 248, 0.58);
 
   border-left:
     1px solid
-    rgba(56, 189, 248, 0.55);
+    rgba(56, 189, 248, 0.58);
 
 }
 
@@ -1220,11 +1244,11 @@
 
   border-top:
     1px solid
-    rgba(56, 189, 248, 0.55);
+    rgba(56, 189, 248, 0.58);
 
   border-right:
     1px solid
-    rgba(56, 189, 248, 0.55);
+    rgba(56, 189, 248, 0.58);
 
 }
 
@@ -1237,11 +1261,11 @@
 
   border-bottom:
     1px solid
-    rgba(56, 189, 248, 0.55);
+    rgba(56, 189, 248, 0.58);
 
   border-left:
     1px solid
-    rgba(56, 189, 248, 0.55);
+    rgba(56, 189, 248, 0.58);
 
 }
 
@@ -1254,11 +1278,31 @@
 
   border-bottom:
     1px solid
-    rgba(56, 189, 248, 0.55);
+    rgba(56, 189, 248, 0.58);
 
   border-right:
     1px solid
-    rgba(56, 189, 248, 0.55);
+    rgba(56, 189, 248, 0.58);
+
+}
+
+
+/* =========================================================
+   LAST ROW RELEASE SPACE
+========================================================= */
+
+/*
+ * This prevents the final sticky row from visually
+ * colliding with the portfolio footer.
+ */
+
+.projects-stack-end {
+
+  height: 360px;
+
+  width: 100%;
+
+  pointer-events: none;
 
 }
 
@@ -1273,7 +1317,7 @@
 
   flex-direction: column;
 
-  gap: 120px;
+  gap: 125px;
 
 }
 
@@ -1300,9 +1344,13 @@
 
   box-sizing: border-box;
 
-  height: 430px;
+  height: 470px;
 
   padding: 30px;
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.10);
 
   border-radius: 22px;
 
@@ -1312,10 +1360,6 @@
       #102b44,
       #081a2b
     );
-
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.10);
 
 }
 
@@ -1435,7 +1479,7 @@
     padding:
       90px
       35px
-      130px;
+      0;
 
   }
 
@@ -1453,18 +1497,21 @@
 
     gap: 18px;
 
-    margin-bottom: 100px;
+    margin-bottom: 105px;
 
   }
 
 
   .project-card {
 
-    height: 420px;
+    height: 480px;
 
-    min-height: 420px;
+    min-height: 480px;
 
-    padding: 26px;
+    padding:
+      27px
+      25px
+      23px;
 
   }
 
@@ -1478,7 +1525,14 @@
 
   .loading-card {
 
-    height: 420px;
+    height: 480px;
+
+  }
+
+
+  .projects-stack-end {
+
+    height: 300px;
 
   }
 
@@ -1496,7 +1550,7 @@
     padding:
       80px
       18px
-      110px;
+      0;
 
   }
 
@@ -1510,11 +1564,11 @@
 
   .projects-kicker {
 
+    gap: 8px;
+
     font-size: 0.56rem;
 
     letter-spacing: 2px;
-
-    gap: 8px;
 
   }
 
@@ -1557,8 +1611,7 @@
 
 
   /*
-   * Mobile becomes one card per row.
-   * Desktop/tablet = 2 cards per row.
+   * One card per row on mobile.
    */
 
   .project-stack-row {
@@ -1569,19 +1622,20 @@
 
     gap: 18px;
 
-    margin-bottom: 80px;
+    margin-bottom: 85px;
 
   }
 
 
   .project-card {
 
-    height: 405px;
+    height: 455px;
 
-    min-height: 405px;
+    min-height: 455px;
 
     padding:
       25px
+      22px
       22px;
 
     border-radius: 18px;
@@ -1591,9 +1645,9 @@
 
   .project-number {
 
-    right: 18px;
-
     top: 18px;
+
+    right: 18px;
 
     font-size: 4.8rem;
 
@@ -1601,6 +1655,8 @@
 
 
   .project-name {
+
+    max-width: 88%;
 
     font-size: 1.25rem;
 
@@ -1610,6 +1666,8 @@
   .project-description {
 
     font-size: 0.77rem;
+
+    line-height: 1.7;
 
   }
 
@@ -1637,9 +1695,16 @@
   }
 
 
+  .projects-stack-end {
+
+    height: 250px;
+
+  }
+
+
   .projects-loading {
 
-    gap: 80px;
+    gap: 85px;
 
   }
 
@@ -1655,7 +1720,7 @@
 
   .loading-card {
 
-    height: 405px;
+    height: 455px;
 
   }
 
@@ -1663,7 +1728,7 @@
 
 
 /* =========================================================
-   VERY SMALL MOBILE
+   SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 420px) {
@@ -1686,13 +1751,14 @@
 
   .project-card {
 
-    height: 390px;
+    height: 445px;
 
-    min-height: 390px;
+    min-height: 445px;
 
     padding:
       23px
-      19px;
+      19px
+      21px;
 
   }
 
@@ -1708,16 +1774,21 @@
 
   .project-name {
 
-    font-size: 1.18rem;
+    font-size: 1.17rem;
 
   }
 
 
   .project-description {
 
-    height: 82px;
+    font-size: 0.73rem;
 
-    font-size: 0.74rem;
+  }
+
+
+  .projects-stack-end {
+
+    height: 220px;
 
   }
 
@@ -1725,7 +1796,7 @@
 
 
 /* =========================================================
-   ACCESSIBILITY
+   REDUCED MOTION
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
