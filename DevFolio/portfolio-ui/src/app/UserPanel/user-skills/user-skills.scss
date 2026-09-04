@@ -683,3 +683,455 @@
   }
 
 }
+/* =====================================================
+   SKILLS STACKING CARDS
+===================================================== */
+
+
+/*
+ * IMPORTANT:
+ *
+ * Existing skills CSS remains untouched.
+ * This section only changes the layout/scroll behavior.
+ */
+
+
+/* =====================================================
+   SKILLS GRID
+===================================================== */
+
+.skills-grid {
+
+  display: block !important;
+
+  width: 100%;
+
+  position: relative;
+
+  padding:
+
+    30px
+    0
+    160px;
+
+}
+
+
+/* =====================================================
+   STACK CARD
+===================================================== */
+
+.skills-grid .stack-card {
+
+  /*
+   * Every card sticks at almost the same position.
+   * As the user scrolls, the next card comes over it.
+   */
+
+  position: sticky !important;
+
+  top: 105px;
+
+
+  width: min(
+    900px,
+    92%
+  );
+
+  margin-left: auto;
+
+  margin-right: auto;
+
+
+  /*
+   * Space between cards while scrolling
+   */
+
+  margin-bottom: 85px;
+
+
+  /*
+   * Layering
+   */
+
+  z-index:
+
+    calc(
+      20 +
+      var(--card-index)
+    );
+
+
+  /*
+   * Smooth movement
+   */
+
+  transition:
+
+    transform 0.35s ease,
+
+    box-shadow 0.35s ease;
+
+
+  /*
+   * Keep content above background
+   */
+
+  overflow: hidden;
+
+}
+
+
+/* =====================================================
+   CARD OFFSET
+===================================================== */
+
+
+/*
+ * Each card gets a tiny vertical/rotation difference.
+ * This creates the physical "stack/deck" look.
+ */
+
+.skills-grid
+.stack-card:nth-child(1) {
+
+  transform:
+    translateY(0)
+    rotate(-0.4deg);
+
+}
+
+
+.skills-grid
+.stack-card:nth-child(2) {
+
+  transform:
+    translateY(8px)
+    rotate(0.35deg);
+
+}
+
+
+.skills-grid
+.stack-card:nth-child(3) {
+
+  transform:
+    translateY(16px)
+    rotate(-0.3deg);
+
+}
+
+
+.skills-grid
+.stack-card:nth-child(4) {
+
+  transform:
+    translateY(24px)
+    rotate(0.25deg);
+
+}
+
+
+.skills-grid
+.stack-card:nth-child(5) {
+
+  transform:
+    translateY(32px)
+    rotate(-0.2deg);
+
+}
+
+
+.skills-grid
+.stack-card:nth-child(6) {
+
+  transform:
+    translateY(40px)
+    rotate(0.2deg);
+
+}
+
+
+.skills-grid
+.stack-card:nth-child(7) {
+
+  transform:
+    translateY(48px)
+    rotate(-0.15deg);
+
+}
+
+
+.skills-grid
+.stack-card:nth-child(8) {
+
+  transform:
+    translateY(56px)
+    rotate(0.15deg);
+
+}
+
+
+.skills-grid
+.stack-card:nth-child(9) {
+
+  transform:
+    translateY(64px)
+    rotate(-0.1deg);
+
+}
+
+
+.skills-grid
+.stack-card:nth-child(10) {
+
+  transform:
+    translateY(72px)
+    rotate(0.1deg);
+
+}
+
+
+.skills-grid
+.stack-card:nth-child(11) {
+
+  transform:
+    translateY(80px)
+    rotate(-0.08deg);
+
+}
+
+
+.skills-grid
+.stack-card:nth-child(12) {
+
+  transform:
+    translateY(88px)
+    rotate(0.08deg);
+
+}
+
+
+/* =====================================================
+   STACK INDEX
+===================================================== */
+
+.stack-card-index {
+
+  position: absolute;
+
+  right: 24px;
+
+  bottom: 18px;
+
+
+  font-size: 0.7rem;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+
+  opacity: 0.35;
+
+
+  pointer-events: none;
+
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.skills-grid
+.stack-card:hover {
+
+  transform:
+
+    translateY(-8px)
+    scale(1.015)
+    rotate(0deg) !important;
+
+
+  z-index: 999 !important;
+
+
+  box-shadow:
+
+    0 25px 70px
+    rgba(0, 217, 255, 0.18);
+
+}
+
+
+/* =====================================================
+   GLOW EFFECT
+===================================================== */
+
+.skills-grid
+.stack-card::after {
+
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+
+  background:
+
+    radial-gradient(
+
+      circle at
+      85% 15%,
+
+      rgba(
+        0,
+        217,
+        255,
+        0.10
+      ),
+
+      transparent 38%
+
+    );
+
+
+  opacity: 0;
+
+  transition:
+    opacity 0.35s ease;
+
+}
+
+
+.skills-grid
+.stack-card:hover::after {
+
+  opacity: 1;
+
+}
+
+
+/* =====================================================
+   DESKTOP CARD HEIGHT
+===================================================== */
+
+@media (min-width: 769px) {
+
+  .skills-grid
+  .stack-card {
+
+    min-height: 310px;
+
+  }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .skills-grid
+  .stack-card {
+
+    width: 94%;
+
+    top: 90px;
+
+    margin-bottom: 70px;
+
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .skills-grid {
+
+    padding-top: 20px;
+
+    padding-bottom: 100px;
+
+  }
+
+
+  .skills-grid
+  .stack-card {
+
+    width: 94%;
+
+    top: 78px;
+
+    margin-bottom: 55px;
+
+    min-height: auto;
+
+  }
+
+
+  /*
+   * Mobile वर rotation कमी
+   */
+
+  .skills-grid
+  .stack-card:nth-child(n) {
+
+    transform:
+      translateY(0)
+      rotate(0deg);
+
+  }
+
+
+  .skills-grid
+  .stack-card:hover {
+
+    transform:
+      translateY(-5px)
+      scale(1.01)
+      rotate(0deg) !important;
+
+  }
+
+
+  .stack-card-index {
+
+    right: 16px;
+
+    bottom: 14px;
+
+  }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .skills-grid
+  .stack-card {
+
+    position: relative !important;
+
+    top: auto;
+
+    transform: none !important;
+
+  }
+
+}

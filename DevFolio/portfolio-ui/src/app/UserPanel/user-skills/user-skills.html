@@ -1,5 +1,7 @@
 <section class="skills-wrapper">
 
+  <!-- BACKGROUND -->
+
   <div class="skills-bg-orb orb-one"></div>
 
   <div class="skills-bg-orb orb-two"></div>
@@ -10,7 +12,9 @@
   <div class="skills-container">
 
 
-    <!-- HEADER -->
+    <!-- =================================================
+         HEADER
+    ================================================== -->
 
     <div class="skills-top">
 
@@ -61,13 +65,12 @@
 
       <div class="title-line"></div>
 
-
     </div>
 
 
-    <!-- ==========================================
-         SKILLS DATA
-    ========================================== -->
+    <!-- =================================================
+         SKILLS STACK
+    ================================================== -->
 
     <div class="skills-grid">
 
@@ -78,12 +81,20 @@
 
 
         <div
-          class="skill-card animate__animated"
+          class="skill-card
+                 stack-card
+                 animate__animated"
 
           *ngFor="
             let row of skills;
             let i = index;
             trackBy: trackByIndex
+          "
+
+          [style.--card-index]="i"
+
+          [style.animationDelay]="
+            (i * 0.12) + 's'
           "
 
           [ngClass]="{
@@ -95,10 +106,6 @@
               i % 2 !== 0
 
           }"
-
-          [style.animationDelay]="
-            (i * 0.12) + 's'
-          "
         >
 
 
@@ -124,7 +131,6 @@
 
             </div>
 
-
           </div>
 
 
@@ -144,11 +150,10 @@
               class="heading-line"
             ></div>
 
-
           </div>
 
 
-          <!-- VALUES -->
+          <!-- SKILL VALUES -->
 
           <div class="skill-values">
 
@@ -180,6 +185,15 @@
           </div>
 
 
+          <!-- STACK NUMBER -->
+
+          <div class="stack-card-index">
+
+            {{ (i + 1).toString().padStart(2, '0') }}
+
+          </div>
+
+
         </div>
 
 
@@ -190,6 +204,5 @@
 
 
   </div>
-
 
 </section>
