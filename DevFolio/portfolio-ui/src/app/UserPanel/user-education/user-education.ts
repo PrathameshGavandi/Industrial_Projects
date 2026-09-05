@@ -1,8 +1,8 @@
 import {
   Component,
   EventEmitter,
-  Output,
-  OnInit
+  OnInit,
+  Output
 } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
@@ -15,8 +15,8 @@ import {
 import {
   Observable,
   catchError,
-  of,
   finalize,
+  of,
   shareReplay
 } from 'rxjs';
 
@@ -42,33 +42,17 @@ export class UserEducationComponent
   implements OnInit {
 
 
-  /* =====================================================
-     LOADING EVENT
-  ===================================================== */
-
   @Output()
   loaded = new EventEmitter<void>();
 
 
-  /* =====================================================
-     EDUCATION DATA
-  ===================================================== */
-
   educations$!: Observable<Education[]>;
 
-
-  /* =====================================================
-     CONSTRUCTOR
-  ===================================================== */
 
   constructor(
     private educationService: EducationService
   ) {}
 
-
-  /* =====================================================
-     INIT
-  ===================================================== */
 
   ngOnInit(): void {
 
@@ -76,10 +60,6 @@ export class UserEducationComponent
 
   }
 
-
-  /* =====================================================
-     LOAD EDUCATION
-  ===================================================== */
 
   private loadEducations(): void {
 
@@ -94,7 +74,7 @@ export class UserEducationComponent
             error
           );
 
-          return of([]);
+          return of([] as Education[]);
 
         }),
 
@@ -104,16 +84,15 @@ export class UserEducationComponent
 
         }),
 
-        shareReplay(1)
+        shareReplay({
+          bufferSize: 1,
+          refCount: true
+        })
 
       );
 
   }
 
-
-  /* =====================================================
-     TRACK BY
-  ===================================================== */
 
   trackById(
     index: number,
@@ -121,6 +100,15 @@ export class UserEducationComponent
   ): number {
 
     return edu.id ?? index;
+
+  }
+
+
+  getNumber(index: number): string {
+
+    return (index + 1)
+      .toString()
+      .padStart(2, '0');
 
   }
 

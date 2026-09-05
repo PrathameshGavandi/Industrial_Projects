@@ -1,8 +1,9 @@
-/* =====================================================
-   EDUCATION SECTION
-===================================================== */
+/* =========================================================
+   EDUCATION
+   Academic Blueprint / Dossier Theme
+========================================================= */
 
-.education-wrapper {
+.education-section {
 
   position: relative;
 
@@ -10,83 +11,34 @@
 
   min-height: 100vh;
 
-  padding: 110px 60px 130px;
+  padding: 95px 50px 110px;
 
-  overflow: visible;
-
-  background:
-    radial-gradient(
-      circle at 85% 15%,
-      #102d52 0%,
-      #0b1c2d 45%,
-      #081827 100%
-    );
-
-}
-
-
-/* =====================================================
-   BACKGROUND ORBS
-===================================================== */
-
-.education-orb {
-
-  position: absolute;
-
-  border-radius: 50%;
-
-  pointer-events: none;
-
-  opacity: 0.55;
-
-}
-
-
-.education-orb-one {
-
-  width: 420px;
-
-  height: 420px;
-
-  left: -250px;
-
-  top: 12%;
+  overflow: hidden;
 
   background:
+
     radial-gradient(
-      circle,
-      rgba(56, 189, 248, 0.13),
-      transparent 68%
-    );
+      circle at 80% 20%,
+      rgba(37, 99, 235, 0.12),
+      transparent 32%
+    ),
+
+    radial-gradient(
+      circle at 15% 80%,
+      rgba(6, 182, 212, 0.06),
+      transparent 30%
+    ),
+
+    #06121f;
 
 }
 
 
-.education-orb-two {
+/* =========================================================
+   BACKGROUND
+========================================================= */
 
-  width: 480px;
-
-  height: 480px;
-
-  right: -260px;
-
-  bottom: -100px;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(37, 99, 235, 0.14),
-      transparent 68%
-    );
-
-}
-
-
-/* =====================================================
-   GRID BACKGROUND
-===================================================== */
-
-.education-grid-bg {
+.education-bg {
 
   position: absolute;
 
@@ -94,7 +46,62 @@
 
   pointer-events: none;
 
-  opacity: 0.55;
+}
+
+
+.blue-glow {
+
+  position: absolute;
+
+  width: 380px;
+
+  height: 380px;
+
+  top: 5%;
+
+  right: -180px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(56, 189, 248, 0.14),
+      transparent 68%
+    );
+
+  filter: blur(30px);
+
+}
+
+
+.blue-glow.second {
+
+  top: auto;
+
+  right: auto;
+
+  bottom: -180px;
+
+  left: -180px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(37, 99, 235, 0.13),
+      transparent 68%
+    );
+
+}
+
+
+.grid-lines {
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.25;
 
   background-image:
 
@@ -109,21 +116,14 @@
       transparent 1px
     );
 
-  background-size: 55px 55px;
-
-  mask-image:
-    linear-gradient(
-      to bottom,
-      black,
-      transparent 90%
-    );
+  background-size: 60px 60px;
 
 }
 
 
-/* =====================================================
+/* =========================================================
    CONTAINER
-===================================================== */
+========================================================= */
 
 .education-container {
 
@@ -131,31 +131,46 @@
 
   z-index: 2;
 
-  width: 100%;
-
-  max-width: 1150px;
+  max-width: 1180px;
 
   margin: 0 auto;
 
 }
 
 
-/* =====================================================
+/* =========================================================
    HEADER
-===================================================== */
+========================================================= */
 
 .education-header {
 
-  max-width: 760px;
-
-  margin: 0 auto 90px;
-
-  text-align: center;
+  margin-bottom: 55px;
 
 }
 
 
-.education-kicker {
+.section-label {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+
+  color: #67e8f9;
+
+  font-size: 0.58rem;
+
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+
+}
+
+
+.section-label .number {
 
   display: flex;
 
@@ -163,77 +178,76 @@
 
   justify-content: center;
 
-  gap: 12px;
+  width: 30px;
 
-  margin-bottom: 18px;
+  height: 19px;
 
-  color: #38bdf8;
+  border: 1px solid
+    rgba(103, 232, 249, 0.25);
 
-  font-size: 0.68rem;
+  border-radius: 4px;
 
-  font-weight: 800;
-
-  letter-spacing: 3px;
+  font-size: 0.5rem;
 
 }
 
 
-.education-kicker span {
+.section-label .line {
 
-  width: 34px;
+  width: 45px;
 
   height: 1px;
 
-  background: #38bdf8;
-
-  box-shadow:
-    0 0 12px
-    rgba(56, 189, 248, 0.55);
+  background:
+    linear-gradient(
+      90deg,
+      #38bdf8,
+      transparent
+    );
 
 }
 
 
-/* =====================================================
+/* =========================================================
    TITLE
-===================================================== */
+========================================================= */
 
 .education-title {
 
+  max-width: 850px;
+
   margin: 0;
 
-  color: #ffffff !important;
+  color: #f8fafc !important;
 
-  font-size:
-    clamp(
-      3rem,
-      5vw,
-      4.7rem
-    );
+  font-size: clamp(
+    3rem,
+    6vw,
+    5.4rem
+  );
 
-  line-height: 1.05;
+  line-height: 0.95;
 
-  font-weight: 800;
+  font-weight: 850;
 
-  letter-spacing: -2.5px;
+  letter-spacing: -4px;
 
 }
 
 
 .education-title span {
 
-  display: inline-block;
+  display: block;
 
-  margin-left: 10px;
+  margin-top: 7px;
 
   background:
     linear-gradient(
-      90deg,
-      #38bdf8,
-      #60a5fa,
-      #38bdf8
+      110deg,
+      #67e8f9,
+      #38bdf8 45%,
+      #818cf8
     );
-
-  background-size: 200% auto;
 
   -webkit-background-clip: text;
 
@@ -244,415 +258,187 @@
 }
 
 
-/* =====================================================
-   TITLE LINE
-===================================================== */
-
-.education-title-line {
-
-  width: 90px;
-
-  height: 3px;
-
-  margin: 22px auto 0;
-
-  overflow: hidden;
-
-  border-radius: 20px;
-
-  background:
-    rgba(56, 189, 248, 0.15);
-
-}
-
-
-.education-title-line span {
-
-  display: block;
-
-  width: 45px;
-
-  height: 100%;
-
-  margin: auto;
-
-  background: #38bdf8;
-
-  box-shadow:
-    0 0 18px
-    rgba(56, 189, 248, 0.7);
-
-}
-
-
-/* =====================================================
-   SUBTITLE
-===================================================== */
-
 .education-subtitle {
 
-  max-width: 680px;
+  max-width: 620px;
 
-  margin: 26px auto 0;
+  margin: 24px 0 0;
 
-  color: #94a3b8;
+  color: #879caf;
 
-  font-size: 0.95rem;
+  font-size: 0.78rem;
 
-  line-height: 1.8;
+  line-height: 1.75;
 
 }
 
 
-/* =====================================================
-   EDUCATION TIMELINE
-===================================================== */
+/* =========================================================
+   EDUCATION LIST
+========================================================= */
 
-.education-timeline {
+.education-list {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+}
+
+
+/* =========================================================
+   DOSSIER
+========================================================= */
+
+.education-dossier {
 
   position: relative;
-
-  width: 100%;
-
-}
-
-
-/* =====================================================
-   EDUCATION ENTRY
-   ONE CARD PER LINE + STICKY STACK
-===================================================== */
-
-.education-entry {
-
-  position: sticky;
-
-  top: 105px;
 
   display: grid;
 
   grid-template-columns:
-    130px
-    42px
-    minmax(0, 1fr);
+    75px
+    minmax(0, 1fr)
+    105px;
 
-  width: 100%;
+  min-height: 310px;
 
-  min-height: 455px;
+  overflow: hidden;
 
-  margin-bottom: 105px;
+  border: 1px solid
+    rgba(103, 232, 249, 0.12);
 
-}
+  border-radius: 16px;
 
+  background:
 
-/* Last item still needs scroll space */
+    linear-gradient(
+      135deg,
+      rgba(14, 37, 57, 0.92),
+      rgba(7, 20, 34, 0.97)
+    );
 
-.education-entry:last-child {
+  box-shadow:
+    0 20px 50px
+    rgba(0, 0, 0, 0.22);
 
-  margin-bottom: 30px;
-
-}
-
-
-/* =====================================================
-   YEAR
-===================================================== */
-
-.education-year {
-
-  align-self: start;
-
-  padding-top: 35px;
-
-  padding-right: 25px;
-
-  text-align: right;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 
 }
 
 
-.year-label {
+.education-dossier:hover {
 
-  display: block;
+  transform: translateY(-4px);
 
-  margin-bottom: 7px;
+  border-color:
+    rgba(103, 232, 249, 0.30);
 
-  color:
-    rgba(148, 163, 184, 0.45);
-
-  font-size: 0.52rem;
-
-  font-weight: 800;
-
-  letter-spacing: 1.8px;
+  box-shadow:
+    0 28px 60px
+    rgba(0, 0, 0, 0.30),
+    0 0 35px
+    rgba(56, 189, 248, 0.04);
 
 }
 
 
-.education-year strong {
+/* =========================================================
+   LEFT INDEX
+========================================================= */
 
-  display: block;
-
-  color: #7dd3fc;
-
-  font-size: 1.4rem;
-
-  font-weight: 850;
-
-  letter-spacing: -0.5px;
-
-  text-shadow:
-    0 0 18px
-    rgba(56, 189, 248, 0.25);
-
-}
-
-
-/* =====================================================
-   TIMELINE MARKER
-===================================================== */
-
-.education-marker {
+.dossier-index {
 
   position: relative;
 
   display: flex;
 
-  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+
+  padding-top: 30px;
+
+  border-right: 1px solid
+    rgba(148, 163, 184, 0.07);
+
+  background:
+    rgba(255, 255, 255, 0.012);
 
 }
 
 
-.education-marker::before {
+.dossier-index span {
 
-  content: "";
+  color:
+    rgba(103, 232, 249, 0.8);
 
-  position: absolute;
+  font-size: 0.75rem;
 
-  top: 0;
+  font-weight: 850;
 
-  bottom: -105px;
+  letter-spacing: 2px;
 
-  left: 50%;
+}
+
+
+.index-line {
 
   width: 1px;
+
+  height: 100px;
+
+  margin: 15px 0;
 
   background:
     linear-gradient(
       to bottom,
-      rgba(56, 189, 248, 0.65),
-      rgba(56, 189, 248, 0.08)
-    );
-
-}
-
-
-.education-entry:last-child
-.education-marker::before {
-
-  bottom: 100%;
-
-}
-
-
-/* =====================================================
-   MARKER DOT
-===================================================== */
-
-.education-dot {
-
-  position: relative;
-
-  z-index: 5;
-
-  width: 15px;
-
-  height: 15px;
-
-  margin-top: 38px;
-
-  border-radius: 50%;
-
-  background: #081827;
-
-  border:
-    2px solid #38bdf8;
-
-  box-shadow:
-
-    0 0 0 6px
-    rgba(56, 189, 248, 0.06),
-
-    0 0 24px
-    rgba(56, 189, 248, 0.65);
-
-}
-
-
-.marker-glow {
-
-  position: absolute;
-
-  top: 34px;
-
-  width: 28px;
-
-  height: 28px;
-
-  border-radius: 50%;
-
-  background:
-    rgba(56, 189, 248, 0.12);
-
-}
-
-
-/* =====================================================
-   MAIN CARD
-===================================================== */
-
-.education-card {
-
-  position: relative;
-
-  isolation: isolate;
-
-  min-height: 455px;
-
-  height: 455px;
-
-  padding: 30px 34px;
-
-  overflow: hidden;
-
-  border-radius: 24px;
-
-  background:
-
-    linear-gradient(
-      145deg,
-      rgba(15, 40, 63, 0.98),
-      rgba(7, 22, 36, 0.98)
-    );
-
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.16);
-
-  box-shadow:
-
-    0 30px 70px
-    rgba(0, 0, 0, 0.30),
-
-    inset 0 1px 0
-    rgba(255, 255, 255, 0.035);
-
-  transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
-
-}
-
-
-/* =====================================================
-   CARD ACCENT
-===================================================== */
-
-.card-accent {
-
-  position: absolute;
-
-  top: 0;
-
-  left: 7%;
-
-  width: 86%;
-
-  height: 2px;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      #38bdf8,
-      #60a5fa,
-      #38bdf8,
+      rgba(56, 189, 248, 0.45),
       transparent
     );
 
-  box-shadow:
-    0 0 20px
-    rgba(56, 189, 248, 0.45);
-
 }
 
 
-/* =====================================================
-   CARD GLOW
-===================================================== */
+.dossier-index small {
 
-.education-card-glow {
-
-  position: absolute;
-
-  top: -170px;
-
-  right: -140px;
-
-  width: 330px;
-
-  height: 330px;
-
-  border-radius: 50%;
-
-  pointer-events: none;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(56, 189, 248, 0.12),
-      transparent 68%
-    );
-
-}
-
-
-/* =====================================================
-   CARD NUMBER
-===================================================== */
-
-.card-number {
-
-  position: absolute;
-
-  top: 20px;
-
-  right: 28px;
+  writing-mode: vertical-rl;
 
   color:
-    rgba(125, 211, 252, 0.055);
+    rgba(148, 163, 184, 0.30);
 
-  font-size: 5.5rem;
+  font-size: 0.42rem;
 
-  font-weight: 900;
+  font-weight: 800;
 
-  line-height: 1;
-
-  letter-spacing: -5px;
-
-  pointer-events: none;
+  letter-spacing: 2px;
 
 }
 
 
-/* =====================================================
-   CARD TOP
-===================================================== */
+/* =========================================================
+   MAIN
+========================================================= */
 
-.education-card-top {
+.dossier-main {
 
   position: relative;
 
-  z-index: 2;
+  padding: 27px 30px 20px;
+
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.dossier-top {
 
   display: flex;
 
@@ -660,96 +446,34 @@
 
   justify-content: space-between;
 
-  margin-bottom: 20px;
-
 }
 
 
-/* =====================================================
-   DEGREE ICON
-===================================================== */
-
-.degree-icon {
+.dossier-label {
 
   display: flex;
 
   align-items: center;
 
-  justify-content: center;
-
-  width: 52px;
-
-  height: 52px;
-
-  border-radius: 15px;
-
-  color: #38bdf8;
-
-  background:
-
-    linear-gradient(
-      145deg,
-      rgba(56, 189, 248, 0.15),
-      rgba(37, 99, 235, 0.07)
-    );
-
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.22);
-
-  box-shadow:
-
-    0 12px 28px
-    rgba(0, 0, 0, 0.22),
-
-    inset 0 1px 0
-    rgba(255, 255, 255, 0.05);
-
-  font-size: 19px;
-
-}
-
-
-/* =====================================================
-   STATUS
-===================================================== */
-
-.card-status {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  padding: 7px 11px;
-
-  border-radius: 20px;
+  gap: 7px;
 
   color:
-    rgba(125, 211, 252, 0.7);
+    rgba(103, 232, 249, 0.48);
 
-  background:
-    rgba(56, 189, 248, 0.045);
-
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.11);
-
-  font-size: 0.5rem;
+  font-size: 0.45rem;
 
   font-weight: 800;
 
-  letter-spacing: 1.5px;
+  letter-spacing: 1.7px;
 
 }
 
 
-.status-dot {
+.pulse {
 
-  width: 6px;
+  width: 5px;
 
-  height: 6px;
+  height: 5px;
 
   border-radius: 50%;
 
@@ -762,119 +486,67 @@
 }
 
 
-/* =====================================================
-   DEGREE SECTION
-===================================================== */
-
-.degree-section {
-
-  position: relative;
-
-  z-index: 2;
-
-}
-
-
-.section-mini-label {
-
-  display: block;
-
-  margin-bottom: 7px;
-
-  color:
-    rgba(148, 163, 184, 0.5);
-
-  font-size: 0.5rem;
-
-  font-weight: 800;
-
-  letter-spacing: 1.8px;
-
-}
-
-
-.degree-title {
-
-  margin: 0;
-
-  color: #ffffff;
-
-  font-size: 1.75rem;
-
-  line-height: 1.25;
-
-  font-weight: 800;
-
-  letter-spacing: -0.6px;
-
-}
-
-
-.degree-badge {
-
-  display: inline-flex;
-
-  align-items: center;
-
-  margin-top: 12px;
-
-  padding: 7px 12px;
-
-  border-radius: 8px;
-
-  color: #7dd3fc;
-
-  background:
-    rgba(56, 189, 248, 0.055);
-
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.14);
-
-  font-size: 0.54rem;
-
-  font-weight: 800;
-
-  letter-spacing: 1.3px;
-
-  text-transform: uppercase;
-
-}
-
-
-/* =====================================================
-   COLLEGE
-===================================================== */
-
-.college-info {
-
-  position: relative;
-
-  z-index: 2;
+.completion {
 
   display: flex;
 
   align-items: center;
 
-  gap: 13px;
+  gap: 6px;
+
+  padding: 5px 8px;
+
+  border: 1px solid
+    rgba(34, 197, 94, 0.11);
+
+  border-radius: 5px;
+
+  color:
+    rgba(134, 239, 172, 0.55);
+
+  background:
+    rgba(34, 197, 94, 0.025);
+
+  font-size: 0.42rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+}
+
+
+.completion span {
+
+  width: 5px;
+
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+}
+
+
+/* =========================================================
+   DEGREE
+========================================================= */
+
+.degree-area {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
 
   margin-top: 22px;
 
-  padding: 14px 15px;
-
-  border-radius: 13px;
-
-  background:
-    rgba(56, 189, 248, 0.035);
-
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.09);
-
 }
 
 
-.college-icon {
+.degree-icon {
 
   display: flex;
 
@@ -884,462 +556,37 @@
 
   flex-shrink: 0;
 
-  width: 35px;
+  width: 48px;
 
-  height: 35px;
+  height: 48px;
 
-  border-radius: 10px;
+  border: 1px solid
+    rgba(56, 189, 248, 0.18);
+
+  border-radius: 12px;
 
   color: #38bdf8;
-
-  background:
-    rgba(56, 189, 248, 0.08);
-
-}
-
-
-.college-content {
-
-  min-width: 0;
-
-}
-
-
-.info-label {
-
-  display: block;
-
-  margin-bottom: 4px;
-
-  color:
-    rgba(148, 163, 184, 0.5);
-
-  font-size: 0.5rem;
-
-  font-weight: 800;
-
-  letter-spacing: 1.6px;
-
-}
-
-
-.college-info p {
-
-  margin: 0;
-
-  color: #cbd5e1;
-
-  font-size: 0.83rem;
-
-  line-height: 1.45;
-
-}
-
-
-/* =====================================================
-   META
-===================================================== */
-
-.education-meta {
-
-  position: relative;
-
-  z-index: 2;
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  gap: 13px;
-
-  margin-top: 13px;
-
-}
-
-
-.meta-item {
-
-  display: flex;
-
-  align-items: flex-start;
-
-  gap: 10px;
-
-  padding: 12px;
-
-  border-radius: 11px;
-
-  background:
-    rgba(148, 163, 184, 0.025);
-
-  border:
-    1px solid
-    rgba(148, 163, 184, 0.07);
-
-}
-
-
-.meta-icon {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  flex-shrink: 0;
-
-  width: 28px;
-
-  height: 28px;
-
-  border-radius: 8px;
-
-  color: #60a5fa;
-
-  background:
-    rgba(96, 165, 250, 0.06);
-
-  font-size: 11px;
-
-}
-
-
-.meta-item p {
-
-  margin: 0;
-
-  color: #94a3b8;
-
-  font-size: 0.7rem;
-
-  line-height: 1.45;
-
-}
-
-
-/* =====================================================
-   RESULT
-===================================================== */
-
-.education-result {
-
-  position: relative;
-
-  z-index: 2;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  margin-top: 15px;
-
-  padding: 14px 16px;
-
-  border-radius: 13px;
 
   background:
     linear-gradient(
-      90deg,
-      rgba(56, 189, 248, 0.065),
-      rgba(37, 99, 235, 0.025)
+      145deg,
+      rgba(56, 189, 248, 0.10),
+      rgba(37, 99, 235, 0.04)
     );
 
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.09);
+  font-size: 17px;
+
+  transition: 0.3s ease;
 
 }
 
 
-.result-label {
-
-  display: block;
-
-  margin-bottom: 4px;
-
-  color:
-    rgba(148, 163, 184, 0.5);
-
-  font-size: 0.49rem;
-
-  font-weight: 800;
-
-  letter-spacing: 1.7px;
-
-}
-
-
-.result-content strong {
-
-  color: #7dd3fc;
-
-  font-size: 1.1rem;
-
-  font-weight: 850;
-
-}
-
-
-/* =====================================================
-   RESULT RING
-===================================================== */
-
-.result-ring {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  width: 42px;
-
-  height: 42px;
-
-  border-radius: 50%;
-
-  background:
-    conic-gradient(
-      #38bdf8,
-      #2563eb,
-      rgba(56, 189, 248, 0.08),
-      #38bdf8
-    );
-
-}
-
-
-.ring-inner {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  width: 34px;
-
-  height: 34px;
-
-  border-radius: 50%;
-
-  background: #0b1c2d;
-
-  color: #38bdf8;
-
-  font-size: 12px;
-
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-.education-footer {
-
-  position: absolute;
-
-  z-index: 2;
-
-  right: 34px;
-
-  bottom: 25px;
-
-  left: 34px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  padding-top: 14px;
-
-  border-top:
-    1px solid
-    rgba(148, 163, 184, 0.07);
-
-}
-
-
-.footer-category {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 7px;
-
-  color:
-    rgba(125, 211, 252, 0.45);
-
-  font-size: 0.5rem;
-
-  font-weight: 800;
-
-  letter-spacing: 1.6px;
-
-}
-
-
-.footer-dot {
-
-  width: 6px;
-
-  height: 6px;
-
-  border-radius: 50%;
-
-  background: #38bdf8;
-
-  box-shadow:
-    0 0 9px
-    rgba(56, 189, 248, 0.8);
-
-}
-
-
-.footer-arrow {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  width: 30px;
-
-  height: 30px;
-
-  border-radius: 50%;
-
-  color: #38bdf8;
-
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.15);
-
-  background:
-    rgba(56, 189, 248, 0.025);
-
-}
-
-
-/* =====================================================
-   DECORATIVE CORNERS
-===================================================== */
-
-.card-corner {
-
-  position: absolute;
-
-  width: 18px;
-
-  height: 18px;
-
-  pointer-events: none;
-
-}
-
-
-.corner-tl {
-
-  top: 13px;
-
-  left: 13px;
-
-  border-top:
-    1px solid
-    rgba(56, 189, 248, 0.3);
-
-  border-left:
-    1px solid
-    rgba(56, 189, 248, 0.3);
-
-}
-
-
-.corner-tr {
-
-  top: 13px;
-
-  right: 13px;
-
-  border-top:
-    1px solid
-    rgba(56, 189, 248, 0.3);
-
-  border-right:
-    1px solid
-    rgba(56, 189, 248, 0.3);
-
-}
-
-
-.corner-bl {
-
-  bottom: 13px;
-
-  left: 13px;
-
-  border-bottom:
-    1px solid
-    rgba(56, 189, 248, 0.18);
-
-  border-left:
-    1px solid
-    rgba(56, 189, 248, 0.18);
-
-}
-
-
-.corner-br {
-
-  right: 13px;
-
-  bottom: 13px;
-
-  border-right:
-    1px solid
-    rgba(56, 189, 248, 0.18);
-
-  border-bottom:
-    1px solid
-    rgba(56, 189, 248, 0.18);
-
-}
-
-
-/* =====================================================
-   HOVER
-===================================================== */
-
-.education-card:hover {
-
-  border-color:
-    rgba(56, 189, 248, 0.32);
-
-  box-shadow:
-
-    0 35px 75px
-    rgba(0, 0, 0, 0.38),
-
-    0 0 35px
-    rgba(56, 189, 248, 0.055),
-
-    inset 0 1px 0
-    rgba(255, 255, 255, 0.05);
-
-}
-
-
-.education-card:hover
+.education-dossier:hover
 .degree-icon {
+
+  transform:
+    translateY(-2px)
+    rotate(-4deg);
 
   border-color:
     rgba(56, 189, 248, 0.35);
@@ -1347,105 +594,921 @@
 }
 
 
-/* =====================================================
+.micro-label {
+
+  display: block;
+
+  margin-bottom: 4px;
+
+  color:
+    rgba(148, 163, 184, 0.43);
+
+  font-size: 0.43rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+
+}
+
+
+.degree-content h3 {
+
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size: 1.65rem;
+
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  letter-spacing: -0.7px;
+
+}
+
+
+.specialization {
+
+  display: inline-block;
+
+  margin-top: 5px;
+
+  color: #67e8f9;
+
+  font-size: 0.48rem;
+
+  font-weight: 750;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   INSTITUTION
+========================================================= */
+
+.institution-row {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  margin-top: 19px;
+
+  padding: 11px 12px;
+
+  border: 1px solid
+    rgba(148, 163, 184, 0.07);
+
+  border-radius: 9px;
+
+  background:
+    rgba(255, 255, 255, 0.018);
+
+}
+
+
+.institution-icon {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 30px;
+
+  height: 30px;
+
+  border-radius: 7px;
+
+  color: #60a5fa;
+
+  background:
+    rgba(96, 165, 250, 0.07);
+
+  font-size: 11px;
+
+}
+
+
+.institution-content {
+
+  min-width: 0;
+
+}
+
+
+.institution-content strong {
+
+  display: block;
+
+  overflow: hidden;
+
+  color: #cbd5e1;
+
+  font-size: 0.70rem;
+
+  font-weight: 650;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+}
+
+
+.graduation-year {
+
+  display: flex;
+
+  align-items: flex-end;
+
+  flex-direction: column;
+
+  margin-left: auto;
+
+}
+
+
+.graduation-year span {
+
+  color:
+    rgba(148, 163, 184, 0.38);
+
+  font-size: 0.39rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+
+}
+
+
+.graduation-year strong {
+
+  margin-top: 2px;
+
+  color: #7dd3fc;
+
+  font-size: 0.85rem;
+
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.dossier-details {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr
+    110px;
+
+  gap: 9px;
+
+  margin-top: 9px;
+
+}
+
+
+.detail-block {
+
+  padding: 9px 11px;
+
+  border: 1px solid
+    rgba(148, 163, 184, 0.055);
+
+  border-radius: 8px;
+
+  background:
+    rgba(148, 163, 184, 0.018);
+
+}
+
+
+.detail-block p {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  color: #94a3b8;
+
+  font-size: 0.57rem;
+
+  line-height: 1.4;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+}
+
+
+.detail-block p i {
+
+  flex-shrink: 0;
+
+  color: #38bdf8;
+
+  font-size: 9px;
+
+}
+
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+.result-block {
+
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 8px 11px;
+
+  overflow: hidden;
+
+  border: 1px solid
+    rgba(56, 189, 248, 0.10);
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(56, 189, 248, 0.06),
+      rgba(37, 99, 235, 0.025)
+    );
+
+}
+
+
+.result-block > strong {
+
+  color: #7dd3fc;
+
+  font-size: 1rem;
+
+  font-weight: 850;
+
+}
+
+
+.result-ring {
+
+  position: absolute;
+
+  right: -8px;
+
+  bottom: -12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 48px;
+
+  height: 48px;
+
+  border: 1px solid
+    rgba(56, 189, 248, 0.10);
+
+  border-radius: 50%;
+
+  color:
+    rgba(56, 189, 248, 0.28);
+
+  font-size: 11px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.dossier-footer {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 13px;
+
+  padding-top: 9px;
+
+  border-top: 1px solid
+    rgba(148, 163, 184, 0.06);
+
+}
+
+
+.dossier-footer > span {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  flex-shrink: 0;
+
+  color:
+    rgba(125, 211, 252, 0.38);
+
+  font-size: 0.40rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+
+}
+
+
+.dossier-footer i {
+
+  color: #38bdf8;
+
+  font-size: 5px;
+
+}
+
+
+.footer-line {
+
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.10),
+      transparent
+    );
+
+}
+
+
+.dossier-footer b {
+
+  color:
+    rgba(148, 163, 184, 0.25);
+
+  font-size: 0.40rem;
+
+  font-weight: 700;
+
+}
+
+
+/* =========================================================
+   RIGHT YEAR
+========================================================= */
+
+.year-display {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: column;
+
+  border-left: 1px solid
+    rgba(148, 163, 184, 0.07);
+
+  background:
+    rgba(255, 255, 255, 0.012);
+
+}
+
+
+.year-display span {
+
+  color:
+    rgba(125, 211, 252, 0.78);
+
+  font-size: 2.1rem;
+
+  font-weight: 900;
+
+  letter-spacing: -2px;
+
+  writing-mode: vertical-rl;
+
+  transform: rotate(180deg);
+
+}
+
+
+.year-display small {
+
+  margin-top: 12px;
+
+  color:
+    rgba(148, 163, 184, 0.28);
+
+  font-size: 0.38rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  writing-mode: vertical-rl;
+
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.education-empty {
+
+  padding: 55px;
+
+  text-align: center;
+
+  border: 1px dashed
+    rgba(148, 163, 184, 0.12);
+
+  border-radius: 14px;
+
+}
+
+
+.education-empty i {
+
+  color: #38bdf8;
+
+  font-size: 1.4rem;
+
+}
+
+
+.education-empty h3 {
+
+  margin: 12px 0 0;
+
+  color: #cbd5e1;
+
+  font-size: 0.95rem;
+
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.loading-dossier {
+
+  min-height: 310px;
+
+}
+
+
+.loading-index {
+
+  width: 100%;
+
+  background:
+    rgba(148, 163, 184, 0.035);
+
+}
+
+
+.loading-main {
+
+  padding: 27px 30px;
+
+}
+
+
+.loading-top,
+.loading-degree,
+.loading-institution,
+.loading-details,
+.loading-footer,
+.loading-year {
+
+  border-radius: 5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.025),
+      rgba(148, 163, 184, 0.09),
+      rgba(148, 163, 184, 0.025)
+    );
+
+  background-size: 200% 100%;
+
+  animation:
+    skeletonMove 1.6s linear infinite;
+
+}
+
+
+.loading-top {
+
+  width: 100%;
+
+  height: 18px;
+
+}
+
+
+.loading-degree {
+
+  width: 55%;
+
+  height: 48px;
+
+  margin-top: 22px;
+
+}
+
+
+.loading-institution {
+
+  width: 90%;
+
+  height: 42px;
+
+  margin-top: 18px;
+
+}
+
+
+.loading-details {
+
+  width: 100%;
+
+  height: 40px;
+
+  margin-top: 10px;
+
+}
+
+
+.loading-footer {
+
+  width: 100%;
+
+  height: 20px;
+
+  margin-top: 14px;
+
+}
+
+
+.loading-year {
+
+  width: 100%;
+
+  height: 100%;
+
+}
+
+
+@keyframes skeletonMove {
+
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+
+}
+
+
+/* =========================================================
    TABLET
-===================================================== */
+========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
 
-  .education-wrapper {
+  .education-section {
 
     padding:
-      90px 35px 110px;
+      80px 30px 90px;
 
   }
 
 
-  .education-header {
-
-    margin-bottom: 70px;
-
-  }
-
-
-  .education-entry {
+  .education-dossier {
 
     grid-template-columns:
-      90px
-      35px
-      minmax(0, 1fr);
-
-    min-height: 450px;
-
-    margin-bottom: 90px;
+      55px
+      minmax(0, 1fr)
+      80px;
 
   }
 
 
-  .education-card {
+  .dossier-main {
 
-    min-height: 450px;
-
-    height: 450px;
-
-    padding: 28px;
+    padding:
+      24px;
 
   }
 
 
-  .education-year {
+  .degree-content h3 {
 
-    padding-right: 18px;
+    font-size: 1.4rem;
 
   }
 
 
-  .education-meta {
+  .dossier-details {
 
-    gap: 10px;
+    grid-template-columns:
+      1fr
+      1fr
+      90px;
 
   }
 
 }
 
 
-/* =====================================================
+/* =========================================================
    MOBILE
-===================================================== */
+========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
-  .education-wrapper {
-
-    min-height: auto;
+  .education-section {
 
     padding:
-      80px 15px 100px;
+      70px 18px 80px;
 
   }
 
 
   .education-header {
 
-    margin-bottom: 60px;
+    margin-bottom: 42px;
 
   }
 
 
-  .education-kicker {
+  .education-title {
 
-    gap: 8px;
+    font-size: 3rem;
 
-    font-size: 0.55rem;
-
-    letter-spacing: 2px;
+    letter-spacing: -3px;
 
   }
 
 
-  .education-kicker span {
+  .education-subtitle {
 
-    width: 20px;
+    font-size: 0.72rem;
+
+  }
+
+
+  .education-dossier {
+
+    display: block;
+
+    min-height: 0;
+
+  }
+
+
+  /* INDEX */
+
+  .dossier-index {
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 9px;
+
+    height: 42px;
+
+    padding: 0 18px;
+
+    border-right: 0;
+
+    border-bottom: 1px solid
+      rgba(148, 163, 184, 0.06);
+
+  }
+
+
+  .index-line {
+
+    width: 30px;
+
+    height: 1px;
+
+    margin: 0;
+
+    background:
+      linear-gradient(
+        90deg,
+        #38bdf8,
+        transparent
+      );
+
+  }
+
+
+  .dossier-index small {
+
+    writing-mode: initial;
+
+  }
+
+
+  /* MAIN */
+
+  .dossier-main {
+
+    padding:
+      21px 18px 18px;
+
+  }
+
+
+  .degree-area {
+
+    margin-top: 19px;
+
+  }
+
+
+  .degree-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    font-size: 15px;
+
+  }
+
+
+  .degree-content h3 {
+
+    font-size: 1.3rem;
+
+  }
+
+
+  .institution-row {
+
+    flex-wrap: wrap;
+
+  }
+
+
+  .graduation-year {
+
+    margin-left: auto;
+
+  }
+
+
+  .dossier-details {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .result-block {
+
+    min-height: 50px;
+
+  }
+
+
+  .dossier-footer {
+
+    margin-top: 12px;
+
+  }
+
+
+  /* YEAR */
+
+  .year-display {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 15px;
+
+    display: flex;
+
+    width: auto;
+
+    height: auto;
+
+    padding: 5px 8px;
+
+    border: 1px solid
+      rgba(56, 189, 248, 0.12);
+
+    border-radius: 5px;
+
+    background:
+      rgba(6, 18, 31, 0.85);
+
+  }
+
+
+  .year-display span {
+
+    font-size: 0.68rem;
+
+    writing-mode: initial;
+
+    transform: none;
+
+    letter-spacing: 0;
+
+  }
+
+
+  .year-display small {
+
+    display: none;
+
+  }
+
+
+  .loading-year {
+
+    display: none;
+
+  }
+
+
+  .loading-dossier {
+
+    min-height: 330px;
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .education-section {
+
+    padding-left: 14px;
+
+    padding-right: 14px;
 
   }
 
@@ -1454,317 +1517,54 @@
 
     font-size: 2.65rem;
 
-    letter-spacing: -1.8px;
+  }
+
+
+  .degree-content h3 {
+
+    font-size: 1.15rem;
 
   }
 
 
-  .education-title span {
+  .institution-content strong {
 
-    display: block;
-
-    margin: 6px 0 0;
+    font-size: 0.65rem;
 
   }
 
 
-  .education-subtitle {
+  .graduation-year {
 
-    font-size: 0.82rem;
-
-    line-height: 1.7;
-
-  }
-
-
-  /* MOBILE TIMELINE */
-
-  .education-entry {
-
-    top: 80px;
-
-    grid-template-columns:
-      28px
-      minmax(0, 1fr);
-
-    gap: 12px;
-
-    min-height: 520px;
-
-    margin-bottom: 55px;
-
-  }
-
-
-  /* YEAR BECOMES BADGE */
-
-  .education-year {
-
-    position: absolute;
-
-    top: -13px;
-
-    left: 42px;
-
-    z-index: 8;
-
-    padding: 6px 10px;
-
-    border-radius: 7px;
-
-    background:
-      rgba(8, 24, 39, 0.97);
-
-    border:
-      1px solid
-      rgba(56, 189, 248, 0.14);
-
-    text-align: left;
-
-  }
-
-
-  .year-label {
-
-    display: inline;
-
-    margin-right: 5px;
-
-    font-size: 0.43rem;
-
-  }
-
-
-  .education-year strong {
-
-    display: inline;
-
-    font-size: 0.67rem;
-
-  }
-
-
-  /* MARKER */
-
-  .education-marker {
-
-    grid-column: 1;
-
-  }
-
-
-  .education-marker::before {
-
-    bottom: -55px;
-
-  }
-
-
-  .education-dot {
-
-    width: 11px;
-
-    height: 11px;
-
-    margin-top: 32px;
-
-  }
-
-
-  .marker-glow {
-
-    top: 28px;
-
-    width: 22px;
-
-    height: 22px;
-
-  }
-
-
-  /* CARD */
-
-  .education-card {
-
-    grid-column: 2;
-
-    min-height: 520px;
-
-    height: 520px;
-
-    padding: 27px 19px;
-
-    border-radius: 18px;
-
-  }
-
-
-  .card-number {
-
-    top: 20px;
-
-    right: 20px;
-
-    font-size: 4.3rem;
-
-  }
-
-
-  .education-card-top {
-
-    margin-bottom: 18px;
-
-  }
-
-
-  .degree-icon {
-
-    width: 44px;
-
-    height: 44px;
-
-    font-size: 16px;
-
-  }
-
-
-  .card-status {
-
-    padding: 6px 9px;
-
-    font-size: 0.44rem;
-
-  }
-
-
-  .degree-title {
-
-    font-size: 1.32rem;
-
-  }
-
-
-  .degree-badge {
-
-    max-width: 100%;
-
-    white-space: normal;
-
-    font-size: 0.47rem;
-
-    line-height: 1.4;
-
-  }
-
-
-  .college-info {
-
-    margin-top: 19px;
-
-    padding: 12px;
-
-  }
-
-
-  .college-info p {
-
-    font-size: 0.73rem;
-
-  }
-
-
-  .education-meta {
-
-    grid-template-columns: 1fr;
-
-    gap: 8px;
-
-    margin-top: 10px;
-
-  }
-
-
-  .meta-item {
-
-    padding: 10px;
-
-  }
-
-
-  .meta-item p {
-
-    font-size: 0.67rem;
-
-  }
-
-
-  .education-result {
-
-    margin-top: 11px;
-
-    padding: 12px;
-
-  }
-
-
-  .result-ring {
-
-    width: 37px;
-
-    height: 37px;
-
-  }
-
-
-  .ring-inner {
-
-    width: 29px;
-
-    height: 29px;
-
-    font-size: 10px;
-
-  }
-
-
-  .education-footer {
-
-    right: 19px;
-
-    bottom: 20px;
-
-    left: 19px;
-
-  }
-
-
-  .footer-category {
-
-    font-size: 0.43rem;
-
-  }
-
-
-  .footer-arrow {
-
-    width: 27px;
-
-    height: 27px;
+    display: none;
 
   }
 
 }
 
 
-/* =====================================================
-   ACCESSIBILITY / REDUCED MOTION
-===================================================== */
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-  .education-card {
+  .education-dossier,
+  .degree-icon {
 
     transition: none;
+
+  }
+
+
+  .loading-top,
+  .loading-degree,
+  .loading-institution,
+  .loading-details,
+  .loading-footer,
+  .loading-year {
+
+    animation: none;
 
   }
 

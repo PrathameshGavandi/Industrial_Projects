@@ -1,242 +1,354 @@
-<section class="education-wrapper">
+<section class="education-section">
 
   <!-- BACKGROUND -->
-  <div class="education-orb education-orb-one"></div>
-  <div class="education-orb education-orb-two"></div>
-  <div class="education-grid-bg"></div>
+  <div class="education-bg" aria-hidden="true">
+
+    <div class="blue-glow"></div>
+
+    <div class="blue-glow second"></div>
+
+    <div class="grid-lines"></div>
+
+  </div>
+
 
   <div class="education-container">
 
-    <!-- HEADER -->
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
     <header class="education-header">
 
-      <div class="education-kicker">
-        <span></span>
+      <div class="section-label">
+
+        <span class="number">
+          03
+        </span>
+
+        <span class="line"></span>
+
         ACADEMIC JOURNEY
-        <span></span>
+
       </div>
+
 
       <h2 class="education-title">
-        My <span>Education</span>
+
+        The foundation
+        <span>behind the code.</span>
+
       </h2>
 
-      <p class="education-subtitle">
-        The academic foundation behind my technical skills,
-        problem-solving mindset, and journey as a developer.
-      </p>
 
-      <div class="education-title-line">
-        <span></span>
-      </div>
+      <p class="education-subtitle">
+
+        Academic milestones that shaped my technical
+        foundation and problem-solving mindset.
+
+      </p>
 
     </header>
 
 
-    <!-- EDUCATION TIMELINE -->
-    <div class="education-timeline">
 
-      <div
-        class="education-entry"
+    <!-- =====================================================
+         EDUCATION LIST
+    ====================================================== -->
+
+    <div
+      class="education-list"
+
+      *ngIf="
+        educations$ | async as educations;
+        else loading
+      "
+    >
+
+
+      <!-- ===================================================
+           EDUCATION DOSSIER
+      ==================================================== -->
+
+      <article
+        class="education-dossier"
+
         *ngFor="
-          let edu of educations$ | async;
+          let edu of educations;
           let i = index;
           trackBy: trackById
         "
-        [style.z-index]="i + 10"
       >
 
-        <!-- YEAR -->
-        <div class="education-year">
 
-          <span class="year-label">
-            COMPLETED
+        <!-- LEFT INDEX -->
+        <div class="dossier-index">
+
+          <span>
+            {{ getNumber(i) }}
           </span>
 
-          <strong>
-            {{ edu.passingYear }}
-          </strong>
+          <div class="index-line"></div>
+
+          <small>
+            EDUCATION
+          </small>
 
         </div>
 
 
-        <!-- TIMELINE LINE -->
-        <div class="education-marker">
 
-          <div class="marker-glow"></div>
-          <div class="education-dot"></div>
-
-        </div>
+        <!-- MAIN CONTENT -->
+        <div class="dossier-main">
 
 
-        <!-- MAIN CARD -->
-        <article class="education-card">
+          <!-- TOP -->
+          <div class="dossier-top">
 
-          <!-- TOP ACCENT -->
-          <div class="card-accent"></div>
+            <div class="dossier-label">
 
-          <!-- CARD BACKGROUND GLOW -->
-          <div class="education-card-glow"></div>
+              <span class="pulse"></span>
 
-          <!-- CARD NUMBER -->
-          <div class="card-number">
-            {{ (i + 1).toString().padStart(2, '0') }}
-          </div>
+              ACADEMIC RECORD
 
-
-          <!-- CARD TOP -->
-          <div class="education-card-top">
-
-            <div class="degree-icon">
-              <i class="fas fa-graduation-cap"></i>
             </div>
 
-            <div class="card-status">
-              <span class="status-dot"></span>
+
+            <div class="completion">
+
+              <span></span>
+
               COMPLETED
+
             </div>
 
           </div>
+
 
 
           <!-- DEGREE -->
-          <div class="degree-section">
+          <div class="degree-area">
 
-            <span class="section-mini-label">
-              DEGREE
-            </span>
+            <div class="degree-icon">
 
-            <h3 class="degree-title">
-              {{ edu.degree }}
-            </h3>
+              <i class="fas fa-graduation-cap"></i>
 
-            <span class="degree-badge">
-              {{ edu.specialization }}
-            </span>
+            </div>
+
+
+            <div class="degree-content">
+
+              <span class="micro-label">
+                DEGREE
+              </span>
+
+              <h3>
+                {{ edu.degree }}
+              </h3>
+
+              <span class="specialization">
+                {{ edu.specialization }}
+              </span>
+
+            </div>
 
           </div>
 
 
-          <!-- INSTITUTION -->
-          <div class="college-info">
 
-            <div class="college-icon">
+          <!-- INSTITUTION -->
+          <div class="institution-row">
+
+            <div class="institution-icon">
+
               <i class="fas fa-building-columns"></i>
+
             </div>
 
-            <div class="college-content">
 
-              <span class="info-label">
+            <div class="institution-content">
+
+              <span class="micro-label">
                 INSTITUTION
               </span>
 
-              <p>
+              <strong>
                 {{ edu.college }}
+              </strong>
+
+            </div>
+
+
+            <div class="graduation-year">
+
+              <span>
+                GRADUATED
+              </span>
+
+              <strong>
+                {{ edu.passingYear }}
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- BOTTOM DATA -->
+          <div class="dossier-details">
+
+
+            <div class="detail-block">
+
+              <span class="micro-label">
+                UNIVERSITY
+              </span>
+
+              <p>
+                <i class="fas fa-university"></i>
+                {{ edu.university }}
               </p>
 
             </div>
 
-          </div>
 
+            <div class="detail-block">
 
-          <!-- UNIVERSITY + LOCATION -->
-          <div class="education-meta">
-
-            <div class="meta-item">
-
-              <span class="meta-icon">
-                <i class="fas fa-university"></i>
+              <span class="micro-label">
+                LOCATION
               </span>
 
-              <div>
-
-                <span class="info-label">
-                  UNIVERSITY
-                </span>
-
-                <p>
-                  {{ edu.university }}
-                </p>
-
-              </div>
-
-            </div>
-
-
-            <div class="meta-item">
-
-              <span class="meta-icon">
+              <p>
                 <i class="fas fa-location-dot"></i>
-              </span>
-
-              <div>
-
-                <span class="info-label">
-                  LOCATION
-                </span>
-
-                <p>
-                  {{ edu.location }}
-                </p>
-
-              </div>
+                {{ edu.location }}
+              </p>
 
             </div>
 
-          </div>
 
+            <div class="result-block">
 
-          <!-- RESULT -->
-          <div class="education-result">
-
-            <div class="result-content">
-
-              <span class="result-label">
-                ACADEMIC RESULT
+              <span class="micro-label">
+                CGPA
               </span>
 
               <strong>
                 {{ edu.cgpa }}
               </strong>
 
-            </div>
-
-            <div class="result-ring">
-
-              <div class="ring-inner">
+              <div class="result-ring">
                 <i class="fas fa-award"></i>
               </div>
 
             </div>
 
+
           </div>
+
 
 
           <!-- FOOTER -->
-          <div class="education-footer">
+          <div class="dossier-footer">
 
-            <span class="footer-category">
-              <span class="footer-dot"></span>
+            <span>
+
+              <i class="fas fa-circle"></i>
+
               COMPUTER SCIENCE
+
             </span>
 
-            <span class="footer-arrow">
-              ↗
-            </span>
+
+            <div class="footer-line"></div>
+
+
+            <b>
+              {{ getNumber(i) }} / {{ educations.length.toString().padStart(2, '0') }}
+            </b>
 
           </div>
 
 
-          <!-- DECORATIVE CORNERS -->
-          <span class="card-corner corner-tl"></span>
-          <span class="card-corner corner-tr"></span>
-          <span class="card-corner corner-bl"></span>
-          <span class="card-corner corner-br"></span>
+        </div>
+
+
+
+        <!-- RIGHT YEAR -->
+        <div class="year-display">
+
+          <span>
+            {{ edu.passingYear }}
+          </span>
+
+          <small>
+            COMPLETED
+          </small>
+
+        </div>
+
+
+      </article>
+
+
+
+      <!-- EMPTY -->
+      <div
+        class="education-empty"
+        *ngIf="educations.length === 0"
+      >
+
+        <i class="fas fa-graduation-cap"></i>
+
+        <h3>
+          No education details available
+        </h3>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         LOADING
+    ====================================================== -->
+
+    <ng-template #loading>
+
+      <div class="education-list">
+
+        <article
+          class="education-dossier loading-dossier"
+          *ngFor="let item of [1, 2]"
+        >
+
+          <div class="loading-index"></div>
+
+          <div class="loading-main">
+
+            <div class="loading-top"></div>
+
+            <div class="loading-degree"></div>
+
+            <div class="loading-institution"></div>
+
+            <div class="loading-details"></div>
+
+            <div class="loading-footer"></div>
+
+          </div>
+
+          <div class="loading-year"></div>
 
         </article>
 
       </div>
 
-    </div>
+    </ng-template>
+
 
   </div>
 
