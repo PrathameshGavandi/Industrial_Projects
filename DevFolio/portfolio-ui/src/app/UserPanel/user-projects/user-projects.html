@@ -1,91 +1,40 @@
 <section class="projects-section">
 
-
-  <!-- =====================================================
-       BACKGROUND
-  ====================================================== -->
-
-  <div
-    class="projects-background"
-    aria-hidden="true"
-  >
-
+  <div class="projects-background" aria-hidden="true">
     <span class="background-orb orb-one"></span>
-
     <span class="background-orb orb-two"></span>
-
   </div>
-
-
 
   <div class="projects-container">
 
-
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
-
+    <!-- HEADER -->
     <header class="projects-header">
 
-
       <div class="section-label">
-
-        <span class="label-number">
-          04
-        </span>
-
+        <span class="label-number">04</span>
         <span class="label-line"></span>
-
-        <span>
-          SELECTED PROJECTS
-        </span>
-
+        <span>SELECTED PROJECTS</span>
       </div>
-
-
 
       <div class="heading-wrap">
-
         <h2 class="projects-title">
-
-          Work that
-
-          <span>
-            speaks.
-          </span>
-
+          Work that <span>speaks.</span>
         </h2>
 
-
-        <div
-          class="heading-decoration"
-          aria-hidden="true"
-        >
-
+        <div class="heading-decoration" aria-hidden="true">
           <span></span>
-
           <span></span>
-
           <span></span>
-
         </div>
-
       </div>
-
-
 
       <div class="header-bottom">
 
-
         <p class="projects-subtitle">
-
           A collection of professional, academic and personal
           projects built with modern technologies and real-world
           problem solving.
-
         </p>
-
-
 
         <a
           class="github-link"
@@ -93,54 +42,28 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-
           <span class="github-icon">
-
             <i class="fab fa-github"></i>
-
           </span>
 
+          <span>Explore GitHub</span>
 
-          <span>
-            Explore GitHub
-          </span>
-
-
-          <span class="github-arrow">
-            ↗
-          </span>
-
+          <span class="github-arrow">↗</span>
         </a>
 
-
       </div>
-
 
     </header>
 
 
-
-    <!-- =====================================================
-         PROJECT LIST
-    ====================================================== -->
-
+    <!-- PROJECTS -->
     <div
-      class="projects-list"
-
-      *ngIf="
-        projectList$ | async as projects;
-        else loading
-      "
+      class="projects-grid"
+      *ngIf="projectList$ | async as projects; else loading"
     >
-
-
-      <!-- ===================================================
-           PROJECT
-      ==================================================== -->
 
       <article
         class="project-card"
-
         *ngFor="
           let project of projects;
           let index = index;
@@ -148,242 +71,131 @@
         "
       >
 
+        <!-- TOP -->
+        <div class="project-top">
 
-        <!-- ===============================================
-             PROJECT HEADER
-        ================================================ -->
-
-        <div class="project-header-row">
-
-
-          <div class="project-number">
-
+          <span class="project-number">
             {{ getProjectNumber(index) }}
+          </span>
 
-          </div>
-
-
-          <div class="project-type">
-
+          <span class="project-type">
             {{ project.type }}
-
-          </div>
-
+          </span>
 
         </div>
 
 
-
-        <!-- =================================================
-             PROJECT CONTENT
-        ================================================== -->
-
+        <!-- CONTENT -->
         <div class="project-content">
 
+          <div class="project-meta">
+            <span class="meta-line"></span>
+            PROJECT {{ getProjectNumber(index) }}
+          </div>
 
-          <div class="project-information">
+          <h3 class="project-name">
+            {{ project.name }}
+          </h3>
+
+          <div
+            class="project-description"
+            [innerHTML]="project.description"
+          ></div>
 
 
-            <!-- Meta -->
+          <!-- TECH STACK -->
+          <div class="technology-section">
 
-            <div class="project-meta">
+            <div class="technology-title">
+              <span></span>
+              TECH STACK
+            </div>
 
-              <span class="meta-line"></span>
+            <div class="technology-list">
 
-              <span>
-                PROJECT {{ getProjectNumber(index) }}
+              <span
+                class="technology"
+                *ngFor="
+                  let tech of project.technologyList;
+                  trackBy: trackByTechnology
+                "
+              >
+                {{ tech }}
               </span>
 
             </div>
 
-
-
-            <!-- Project Name -->
-
-            <h3 class="project-name">
-
-              {{ project.name }}
-
-            </h3>
-
-
-
-            <!-- Description -->
-
-            <div
-              class="project-description"
-              [innerHTML]="project.description"
-            ></div>
-
-
-
-            <!-- Technology -->
-
-            <div class="technology-section">
-
-
-              <div class="technology-title">
-
-                <span></span>
-
-                TECH STACK
-
-              </div>
-
-
-
-              <div class="technology-list">
-
-
-                <span
-                  class="technology"
-
-                  *ngFor="
-                    let tech of project.technologyList;
-                    trackBy: trackByTechnology
-                  "
-                >
-
-                  {{ tech }}
-
-                </span>
-
-
-              </div>
-
-
-            </div>
-
-
           </div>
-
 
         </div>
 
 
-
-        <!-- =================================================
-             PROJECT FOOTER
-        ================================================== -->
-
+        <!-- FOOTER -->
         <div class="project-bottom">
 
-
           <div class="project-status">
-
             <span class="status-indicator"></span>
-
-            <span>
-              COMPLETED PROJECT
-            </span>
-
+            COMPLETED
           </div>
-
 
           <div class="project-end-line"></div>
 
-
         </div>
-
 
       </article>
 
 
-
-      <!-- =====================================================
-           EMPTY STATE
-      ====================================================== -->
-
+      <!-- EMPTY -->
       <div
         class="projects-empty"
-
-        *ngIf="
-          projects.length === 0
-        "
+        *ngIf="projects.length === 0"
       >
 
-
         <div class="empty-icon">
-
           <i class="fas fa-layer-group"></i>
-
         </div>
 
-
-        <h3>
-          No projects available
-        </h3>
-
+        <h3>No projects available</h3>
 
         <p>
           Projects will appear here once they are added.
         </p>
 
-
       </div>
-
 
     </div>
 
 
-
-    <!-- =====================================================
-         LOADING
-    ====================================================== -->
-
+    <!-- LOADING -->
     <ng-template #loading>
 
-
-      <div class="projects-loading">
-
+      <div class="projects-grid">
 
         <article
           class="loading-project"
-
-          *ngFor="
-            let item of [1, 2, 3]
-          "
+          *ngFor="let item of [1, 2, 3, 4]"
         >
 
-
           <div class="loading-header">
-
             <div class="loading-small"></div>
-
             <div class="loading-type"></div>
-
           </div>
 
+          <div class="loading-meta"></div>
 
-          <div class="loading-content">
+          <div class="loading-title"></div>
 
+          <div class="loading-text"></div>
+          <div class="loading-text"></div>
 
-            <div class="loading-meta"></div>
-
-            <div class="loading-title"></div>
-
-            <div class="loading-text"></div>
-
-            <div class="loading-text"></div>
-
-            <div class="loading-text short"></div>
-
-            <div class="loading-tags"></div>
-
-
-          </div>
-
+          <div class="loading-tags"></div>
 
         </article>
 
-
       </div>
-
 
     </ng-template>
 
-
   </div>
-
 
 </section>

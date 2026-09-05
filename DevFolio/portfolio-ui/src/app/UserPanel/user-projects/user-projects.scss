@@ -1,29 +1,26 @@
 /* =========================================================
    PROJECTS
-   Clean Editorial Showcase
 ========================================================= */
 
 .projects-section {
 
   position: relative;
-
   width: 100%;
-
   min-height: 100vh;
 
-  padding: 120px 60px 130px;
+  padding: 90px 50px 100px;
 
   overflow: hidden;
 
   background:
     radial-gradient(
       circle at 15% 15%,
-      rgba(37, 99, 235, 0.12),
+      rgba(37, 99, 235, 0.10),
       transparent 35%
     ),
     radial-gradient(
       circle at 85% 75%,
-      rgba(14, 165, 233, 0.08),
+      rgba(14, 165, 233, 0.07),
       transparent 32%
     ),
     #06121f;
@@ -38,12 +35,9 @@
 .projects-background {
 
   position: absolute;
-
   inset: 0;
 
   pointer-events: none;
-
-  overflow: hidden;
 
 }
 
@@ -56,20 +50,18 @@
 
   filter: blur(80px);
 
-  opacity: 0.22;
+  opacity: 0.18;
 
 }
 
 
 .orb-one {
 
-  top: 12%;
-
+  top: 10%;
   left: -120px;
 
-  width: 280px;
-
-  height: 280px;
+  width: 250px;
+  height: 250px;
 
   background: #2563eb;
 
@@ -79,12 +71,10 @@
 .orb-two {
 
   right: -100px;
-
   bottom: 10%;
 
-  width: 260px;
-
-  height: 260px;
+  width: 230px;
+  height: 230px;
 
   background: #06b6d4;
 
@@ -98,14 +88,11 @@
 .projects-container {
 
   position: relative;
-
   z-index: 2;
 
-  width: 100%;
+  max-width: 1200px;
 
-  max-width: 1240px;
-
-  margin: 0 auto;
+  margin: auto;
 
 }
 
@@ -116,7 +103,7 @@
 
 .projects-header {
 
-  margin-bottom: 90px;
+  margin-bottom: 55px;
 
 }
 
@@ -127,56 +114,51 @@
 
   align-items: center;
 
-  gap: 12px;
+  gap: 10px;
 
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 
   color: #67e8f9;
 
-  font-size: 0.62rem;
+  font-size: 0.58rem;
 
   font-weight: 800;
 
-  letter-spacing: 2.8px;
+  letter-spacing: 2.5px;
 
 }
 
 
 .label-number {
 
-  display: inline-flex;
+  display: flex;
 
   align-items: center;
-
   justify-content: center;
 
-  width: 31px;
+  width: 29px;
+  height: 19px;
 
-  height: 20px;
-
-  border: 1px solid rgba(103, 232, 249, 0.28);
+  border: 1px solid
+    rgba(103, 232, 249, 0.25);
 
   border-radius: 4px;
 
-  color: #67e8f9;
-
-  background: rgba(103, 232, 249, 0.05);
-
-  font-size: 0.55rem;
+  font-size: 0.52rem;
 
 }
 
 
 .label-line {
 
-  width: 55px;
+  width: 45px;
 
   height: 1px;
 
   background:
     linear-gradient(
       90deg,
-      rgba(103, 232, 249, 0.7),
+      #67e8f9,
       transparent
     );
 
@@ -203,31 +185,29 @@
   color: #f8fafc !important;
 
   font-size: clamp(
-    3.5rem,
-    7vw,
-    6.7rem
+    3rem,
+    6vw,
+    5.5rem
   );
 
   line-height: 0.9;
 
   font-weight: 850;
 
-  letter-spacing: -5px;
+  letter-spacing: -4px;
 
 }
 
 
 .projects-title span {
 
-  display: inline-block;
-
-  margin-left: 14px;
+  margin-left: 10px;
 
   background:
     linear-gradient(
       110deg,
       #67e8f9,
-      #38bdf8 45%,
+      #38bdf8,
       #818cf8
     );
 
@@ -241,31 +221,28 @@
 
 
 /* =========================================================
-   HEADING DECORATION
+   DECORATION
 ========================================================= */
 
 .heading-decoration {
 
   position: absolute;
 
-  right: -52px;
-
-  bottom: -14px;
+  right: -35px;
+  bottom: -12px;
 
   display: flex;
 
-  gap: 5px;
-
   align-items: flex-end;
+
+  gap: 4px;
 
 }
 
 
 .heading-decoration span {
 
-  display: block;
-
-  width: 4px;
+  width: 3px;
 
   border-radius: 3px;
 
@@ -275,17 +252,17 @@
 
 
 .heading-decoration span:nth-child(1) {
-  height: 9px;
+  height: 7px;
 }
 
 
 .heading-decoration span:nth-child(2) {
-  height: 17px;
+  height: 13px;
 }
 
 
 .heading-decoration span:nth-child(3) {
-  height: 28px;
+  height: 22px;
 }
 
 
@@ -297,35 +274,31 @@
 
   display: flex;
 
-  align-items: flex-end;
+  align-items: center;
 
   justify-content: space-between;
 
-  gap: 40px;
+  gap: 30px;
 
-  margin-top: 35px;
+  margin-top: 25px;
 
 }
 
 
 .projects-subtitle {
 
-  max-width: 620px;
+  max-width: 600px;
 
   margin: 0;
 
-  color: #94a3b8;
+  color: #8fa3b7;
 
-  font-size: 0.9rem;
+  font-size: 0.78rem;
 
-  line-height: 1.85;
+  line-height: 1.7;
 
 }
 
-
-/* =========================================================
-   GITHUB
-========================================================= */
 
 .github-link {
 
@@ -333,94 +306,70 @@
 
   align-items: center;
 
-  gap: 11px;
+  gap: 9px;
 
   flex-shrink: 0;
 
-  padding: 12px 15px;
+  padding: 10px 13px;
 
-  border: 1px solid rgba(148, 163, 184, 0.16);
+  border: 1px solid
+    rgba(148, 163, 184, 0.14);
 
-  border-radius: 8px;
+  border-radius: 7px;
 
   color: #e2e8f0 !important;
 
   text-decoration: none;
 
-  background: rgba(15, 23, 42, 0.65);
+  background:
+    rgba(15, 23, 42, 0.55);
 
-  transition:
-    border-color 0.3s ease,
-    background 0.3s ease,
-    transform 0.3s ease;
+  transition: 0.3s ease;
 
 }
 
 
 .github-link:hover {
 
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 
-  border-color: rgba(103, 232, 249, 0.4);
-
-  background: rgba(14, 116, 144, 0.12);
+  border-color:
+    rgba(103, 232, 249, 0.4);
 
 }
 
 
-.github-icon {
+.github-icon,
+.github-arrow {
 
   color: #67e8f9;
-
-  font-size: 1rem;
 
 }
 
 
 .github-link span:nth-child(2) {
 
-  font-size: 0.68rem;
+  font-size: 0.62rem;
 
   font-weight: 750;
 
-  letter-spacing: 0.8px;
-
-}
-
-
-.github-arrow {
-
-  color: #67e8f9;
-
-  font-size: 1rem;
-
-  transition: transform 0.3s ease;
-
-}
-
-
-.github-link:hover .github-arrow {
-
-  transform:
-    translate(
-      3px,
-      -3px
-    );
+  letter-spacing: 0.7px;
 
 }
 
 
 /* =========================================================
-   PROJECT LIST
+   PROJECT GRID
 ========================================================= */
 
-.projects-list {
+.projects-grid {
 
-  display: flex;
+  display: grid;
 
-  flex-direction: column;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
 
-  gap: 0;
+  gap: 18px;
 
 }
 
@@ -433,40 +382,49 @@
 
   position: relative;
 
-  padding: 55px 0 60px;
+  min-height: 310px;
 
-  border-top: 1px solid
+  padding: 24px 25px 20px;
+
+  border: 1px solid
     rgba(148, 163, 184, 0.10);
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15, 32, 52, 0.78),
+      rgba(7, 20, 34, 0.88)
+    );
 
   transition:
-    padding-left 0.35s ease,
-    padding-right 0.35s ease;
-
-}
-
-
-.project-card:last-child {
-
-  border-bottom: 1px solid
-    rgba(148, 163, 184, 0.10);
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 
 }
 
 
 .project-card:hover {
 
-  padding-left: 12px;
+  transform: translateY(-5px);
 
-  padding-right: 12px;
+  border-color:
+    rgba(103, 232, 249, 0.28);
+
+  box-shadow:
+    0 15px 40px
+    rgba(0, 0, 0, 0.22);
 
 }
 
 
 /* =========================================================
-   PROJECT HEADER ROW
+   TOP
 ========================================================= */
 
-.project-header-row {
+.project-top {
 
   display: flex;
 
@@ -474,7 +432,7 @@
 
   justify-content: space-between;
 
-  margin-bottom: 32px;
+  margin-bottom: 22px;
 
 }
 
@@ -483,56 +441,41 @@
 
   color: #67e8f9;
 
-  font-size: 0.68rem;
+  font-size: 0.62rem;
 
   font-weight: 850;
 
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
 
 }
 
 
 .project-type {
 
-  padding: 7px 11px;
+  max-width: 130px;
+
+  padding: 5px 8px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
 
   border: 1px solid
     rgba(148, 163, 184, 0.12);
 
-  border-radius: 5px;
+  border-radius: 4px;
 
   color: #94a3b8;
 
-  background:
-    rgba(255, 255, 255, 0.025);
-
-  font-size: 0.52rem;
+  font-size: 0.47rem;
 
   font-weight: 750;
 
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 
   text-transform: uppercase;
-
-}
-
-
-/* =========================================================
-   PROJECT CONTENT
-========================================================= */
-
-.project-content {
-
-  display: block;
-
-}
-
-
-.project-information {
-
-  width: 100%;
-
-  max-width: 850px;
 
 }
 
@@ -547,25 +490,25 @@
 
   align-items: center;
 
-  gap: 10px;
+  gap: 7px;
 
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 
   color:
-    rgba(103, 232, 249, 0.62);
+    rgba(103, 232, 249, 0.55);
 
-  font-size: 0.55rem;
+  font-size: 0.48rem;
 
   font-weight: 800;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.6px;
 
 }
 
 
 .meta-line {
 
-  width: 30px;
+  width: 20px;
 
   height: 1px;
 
@@ -580,23 +523,23 @@
 
 .project-name {
 
-  margin: 0 0 22px;
+  margin: 0 0 12px;
 
   color: #f8fafc;
 
   font-size: clamp(
-    2.2rem,
-    4vw,
-    4rem
+    1.45rem,
+    2.5vw,
+    2.15rem
   );
 
-  line-height: 1.05;
+  line-height: 1.1;
 
   font-weight: 800;
 
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 
-  transition: color 0.3s ease;
+  transition: 0.3s ease;
 
 }
 
@@ -614,22 +557,18 @@
 
 .project-description {
 
-  max-width: 820px;
+  color: #8498ad;
 
-  margin: 0;
+  font-size: 0.69rem;
 
-  color: #8fa3b7;
-
-  font-size: 0.88rem;
-
-  line-height: 1.9;
+  line-height: 1.65;
 
 }
 
 
 .project-description p {
 
-  margin: 0 0 9px;
+  margin: 0 0 5px;
 
 }
 
@@ -641,20 +580,13 @@
 }
 
 
-.project-description br {
-
-  line-height: 1.8;
-
-}
-
-
 /* =========================================================
-   TECHNOLOGIES
+   TECHNOLOGY
 ========================================================= */
 
 .technology-section {
 
-  margin-top: 32px;
+  margin-top: 18px;
 
 }
 
@@ -665,35 +597,30 @@
 
   align-items: center;
 
-  gap: 8px;
+  gap: 6px;
 
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 
   color:
-    rgba(148, 163, 184, 0.5);
+    rgba(148, 163, 184, 0.48);
 
-  font-size: 0.51rem;
+  font-size: 0.44rem;
 
   font-weight: 800;
 
-  letter-spacing: 1.8px;
+  letter-spacing: 1.4px;
 
 }
 
 
 .technology-title span {
 
-  width: 5px;
-
-  height: 5px;
+  width: 4px;
+  height: 4px;
 
   border-radius: 50%;
 
   background: #38bdf8;
-
-  box-shadow:
-    0 0 10px
-    rgba(56, 189, 248, 0.8);
 
 }
 
@@ -704,55 +631,34 @@
 
   flex-wrap: wrap;
 
-  gap: 7px;
+  gap: 5px;
 
 }
 
 
 .technology {
 
-  display: inline-flex;
-
-  align-items: center;
-
-  min-height: 27px;
-
-  padding: 5px 9px;
+  padding: 4px 7px;
 
   border: 1px solid
-    rgba(148, 163, 184, 0.11);
+    rgba(148, 163, 184, 0.10);
 
-  border-radius: 5px;
+  border-radius: 4px;
 
-  color: #b8c5d3;
+  color: #aebdca;
 
   background:
     rgba(148, 163, 184, 0.035);
 
-  font-size: 0.59rem;
+  font-size: 0.48rem;
 
   font-weight: 650;
-
-  transition:
-    border-color 0.25s ease,
-    color 0.25s ease,
-    background 0.25s ease;
-
-}
-
-
-.project-card:hover .technology {
-
-  border-color:
-    rgba(103, 232, 249, 0.20);
-
-  color: #d7f9ff;
 
 }
 
 
 /* =========================================================
-   PROJECT BOTTOM
+   BOTTOM
 ========================================================= */
 
 .project-bottom {
@@ -761,9 +667,9 @@
 
   align-items: center;
 
-  gap: 15px;
+  gap: 10px;
 
-  margin-top: 42px;
+  margin-top: 20px;
 
 }
 
@@ -774,49 +680,48 @@
 
   align-items: center;
 
-  gap: 7px;
+  gap: 5px;
 
   flex-shrink: 0;
 
   color:
-    rgba(148, 163, 184, 0.48);
+    rgba(148, 163, 184, 0.42);
 
-  font-size: 0.48rem;
+  font-size: 0.41rem;
 
   font-weight: 800;
 
-  letter-spacing: 1.4px;
+  letter-spacing: 1px;
 
 }
 
 
 .status-indicator {
 
-  width: 6px;
-
-  height: 6px;
+  width: 5px;
+  height: 5px;
 
   border-radius: 50%;
 
   background: #22c55e;
 
   box-shadow:
-    0 0 10px
-    rgba(34, 197, 94, 0.55);
+    0 0 7px
+    rgba(34, 197, 94, 0.5);
 
 }
 
 
 .project-end-line {
 
-  width: 100%;
+  flex: 1;
 
   height: 1px;
 
   background:
     linear-gradient(
       90deg,
-      rgba(148, 163, 184, 0.12),
+      rgba(148, 163, 184, 0.10),
       transparent
     );
 
@@ -824,41 +729,41 @@
 
 
 /* =========================================================
-   EMPTY STATE
+   EMPTY
 ========================================================= */
 
 .projects-empty {
 
-  padding: 80px 20px;
+  grid-column: 1 / -1;
+
+  padding: 60px 20px;
 
   text-align: center;
 
   border: 1px dashed
     rgba(148, 163, 184, 0.12);
 
-  border-radius: 18px;
+  border-radius: 12px;
 
 }
 
 
 .empty-icon {
 
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 
   color: #38bdf8;
-
-  font-size: 1.5rem;
 
 }
 
 
 .projects-empty h3 {
 
-  margin: 0 0 7px;
+  margin: 0 0 5px;
 
   color: #e2e8f0;
 
-  font-size: 1.1rem;
+  font-size: 1rem;
 
 }
 
@@ -869,7 +774,7 @@
 
   color: #64748b;
 
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 
 }
 
@@ -878,29 +783,16 @@
    LOADING
 ========================================================= */
 
-.projects-loading {
-
-  display: flex;
-
-  flex-direction: column;
-
-}
-
-
 .loading-project {
 
-  padding: 55px 0 60px;
+  min-height: 310px;
 
-  border-top: 1px solid
-    rgba(148, 163, 184, 0.10);
+  padding: 24px 25px;
 
-}
+  border: 1px solid
+    rgba(148, 163, 184, 0.08);
 
-
-.loading-project:last-child {
-
-  border-bottom: 1px solid
-    rgba(148, 163, 184, 0.10);
+  border-radius: 12px;
 
 }
 
@@ -909,11 +801,9 @@
 
   display: flex;
 
-  align-items: center;
-
   justify-content: space-between;
 
-  margin-bottom: 32px;
+  margin-bottom: 25px;
 
 }
 
@@ -928,96 +818,81 @@
   background:
     linear-gradient(
       90deg,
-      rgba(148, 163, 184, 0.035),
+      rgba(148, 163, 184, 0.03),
       rgba(148, 163, 184, 0.10),
-      rgba(148, 163, 184, 0.035)
+      rgba(148, 163, 184, 0.03)
     );
 
   background-size: 200% 100%;
 
   animation:
-    skeletonMove 1.7s linear infinite;
+    skeletonMove 1.6s linear infinite;
 
 }
 
 
 .loading-small {
 
-  width: 45px;
+  width: 35px;
+  height: 9px;
 
-  height: 10px;
-
-  border-radius: 4px;
+  border-radius: 3px;
 
 }
 
 
 .loading-type {
 
-  width: 100px;
+  width: 80px;
+  height: 20px;
 
-  height: 25px;
-
-  border-radius: 5px;
+  border-radius: 4px;
 
 }
 
 
 .loading-meta {
 
-  width: 110px;
+  width: 80px;
+  height: 7px;
 
-  height: 9px;
-
-  margin-bottom: 20px;
-
-  border-radius: 4px;
+  margin-bottom: 13px;
 
 }
 
 
 .loading-title {
 
-  width: 55%;
+  width: 65%;
+  height: 30px;
 
-  height: 50px;
+  margin-bottom: 20px;
 
-  margin-bottom: 28px;
-
-  border-radius: 7px;
+  border-radius: 5px;
 
 }
 
 
 .loading-text {
 
-  width: 80%;
+  width: 90%;
+  height: 8px;
 
-  height: 10px;
+  margin-bottom: 10px;
 
-  margin-bottom: 13px;
-
-  border-radius: 4px;
-
-}
-
-
-.loading-text.short {
-
-  width: 55%;
+  border-radius: 3px;
 
 }
 
 
 .loading-tags {
 
-  width: 45%;
+  width: 50%;
+  height: 25px;
 
-  height: 30px;
+  margin-top: 20px;
 
-  margin-top: 32px;
-
-  border-radius: 5px;
+  border-radius: 4px;
 
 }
 
@@ -1025,15 +900,11 @@
 @keyframes skeletonMove {
 
   from {
-
     background-position: 200% 0;
-
   }
 
   to {
-
     background-position: -200% 0;
-
   }
 
 }
@@ -1043,95 +914,38 @@
    TABLET
 ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
 
   .projects-section {
 
     padding:
-      95px
-      35px
-      110px;
+      80px
+      30px
+      90px;
 
   }
 
 
-  .projects-header {
+  .projects-grid {
 
-    margin-bottom: 75px;
-
-  }
-
-
-  .projects-title {
-
-    font-size: clamp(
-      3.2rem,
-      9vw,
-      5rem
-    );
-
-  }
-
-
-  .header-bottom {
-
-    align-items: flex-start;
-
-    flex-direction: column;
+    gap: 15px;
 
   }
 
 
   .project-card {
 
+    min-height: 300px;
+
     padding:
-      45px
-      0
-      50px;
-
-  }
-
-
-  .project-card:hover {
-
-    padding-left: 0;
-
-    padding-right: 0;
-
-  }
-
-
-  .project-information {
-
-    max-width: 100%;
+      22px;
 
   }
 
 
   .project-name {
 
-    font-size: clamp(
-      2rem,
-      6vw,
-      3.2rem
-    );
-
-  }
-
-
-  .project-description {
-
-    max-width: 100%;
-
-  }
-
-
-  .loading-project {
-
-    padding:
-      45px
-      0
-      50px;
+    font-size: 1.65rem;
 
   }
 
@@ -1142,44 +956,28 @@
    MOBILE
 ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
   .projects-section {
 
     padding:
-      80px
+      70px
       18px
-      90px;
+      80px;
 
   }
 
 
   .projects-header {
 
-    margin-bottom: 60px;
-
-  }
-
-
-  .section-label {
-
-    font-size: 0.53rem;
-
-    letter-spacing: 2px;
-
-  }
-
-
-  .label-line {
-
-    width: 30px;
+    margin-bottom: 45px;
 
   }
 
 
   .projects-title {
 
-    font-size: 3.25rem;
+    font-size: 3.1rem;
 
     letter-spacing: -3px;
 
@@ -1190,154 +988,46 @@
 
     display: block;
 
-    margin: 9px 0 0;
-
-  }
-
-
-  .heading-decoration {
-
-    right: -27px;
+    margin: 7px 0 0;
 
   }
 
 
   .header-bottom {
 
-    margin-top: 28px;
+    align-items: flex-start;
 
-    gap: 25px;
+    flex-direction: column;
+
+    gap: 20px;
 
   }
 
 
   .projects-subtitle {
 
-    font-size: 0.78rem;
-
-    line-height: 1.8;
+    font-size: 0.72rem;
 
   }
 
 
-  .github-link {
+  .projects-grid {
 
-    width: fit-content;
+    grid-template-columns: 1fr;
 
   }
 
 
   .project-card {
 
-    padding:
-      38px
-      0
-      42px;
-
-  }
-
-
-  .project-header-row {
-
-    margin-bottom: 28px;
-
-  }
-
-
-  .project-number {
-
-    font-size: 0.59rem;
-
-  }
-
-
-  .project-type {
-
-    max-width: 145px;
-
-    overflow: hidden;
-
-    text-overflow: ellipsis;
-
-    white-space: nowrap;
-
-    font-size: 0.48rem;
-
-  }
-
-
-  .project-meta {
-
-    font-size: 0.50rem;
-
-    letter-spacing: 1.7px;
-
-  }
-
-
-  .project-name {
-
-    margin-bottom: 18px;
-
-    font-size: 2rem;
-
-    letter-spacing: -1px;
-
-  }
-
-
-  .project-description {
-
-    font-size: 0.77rem;
-
-    line-height: 1.8;
-
-  }
-
-
-  .technology-section {
-
-    margin-top: 25px;
-
-  }
-
-
-  .project-bottom {
-
-    margin-top: 30px;
+    min-height: auto;
 
   }
 
 
   .loading-project {
 
-    padding:
-      38px
-      0
-      42px;
-
-  }
-
-
-  .loading-title {
-
-    width: 80%;
-
-    height: 38px;
-
-  }
-
-
-  .loading-text {
-
-    width: 95%;
-
-  }
-
-
-  .loading-tags {
-
-    width: 70%;
+    min-height: 280px;
 
   }
 
@@ -1353,7 +1043,6 @@
   .projects-section {
 
     padding-left: 14px;
-
     padding-right: 14px;
 
   }
@@ -1361,28 +1050,14 @@
 
   .projects-title {
 
-    font-size: 2.9rem;
+    font-size: 2.75rem;
 
   }
 
 
   .project-name {
 
-    font-size: 1.8rem;
-
-  }
-
-
-  .project-status {
-
-    font-size: 0.42rem;
-
-  }
-
-
-  .project-type {
-
-    max-width: 120px;
+    font-size: 1.5rem;
 
   }
 
@@ -1395,10 +1070,9 @@
 
 @media (prefers-reduced-motion: reduce) {
 
-  .github-link,
   .project-card,
   .project-name,
-  .technology {
+  .github-link {
 
     transition: none;
 
