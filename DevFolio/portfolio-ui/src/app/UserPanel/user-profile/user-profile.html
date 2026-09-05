@@ -7,7 +7,10 @@
       *ngIf="profile$ | async as profile"
     >
 
-      <!-- LEFT : CREATIVE PROFILE IMAGE -->
+      <!-- =================================================
+           LEFT : PROFILE IMAGE
+      ================================================== -->
+
       <div class="hero-image animate__animated animate__fadeInLeft">
 
         <!-- BACKGROUND SHAPES -->
@@ -21,10 +24,8 @@
         <!-- MAIN PHOTO -->
         <div class="hero-photo">
 
-          <!-- ANIMATED ROTATING BORDER -->
           <div class="hero-photo-border"></div>
 
-          <!-- IMAGE -->
           <img
             src="assets/images/prathamesh.jpg"
             [alt]="profile.name"
@@ -32,7 +33,7 @@
 
         </div>
 
-        <!-- FLOATING ELEMENT -->
+        <!-- FLOATING CARD -->
         <div class="hero-floating-card">
 
           <span class="floating-dot"></span>
@@ -41,7 +42,7 @@
 
         </div>
 
-        <!-- SMALL DECORATION -->
+        <!-- DECORATION -->
         <div class="hero-plus">
           +
         </div>
@@ -49,10 +50,13 @@
       </div>
 
 
-      <!-- RIGHT : CONTENT -->
+      <!-- =================================================
+           RIGHT : CONTENT
+      ================================================== -->
+
       <div class="hero-content">
 
-        <!-- SMALL LABEL -->
+        <!-- LABEL -->
         <div
           class="hero-label animate__animated animate__fadeInUp"
         >
@@ -71,7 +75,9 @@
 
           Hi, I'm
 
-          <span>{{ profile.name }}</span>
+          <span>
+            {{ profile.name }}
+          </span>
 
         </h1>
 
@@ -95,7 +101,10 @@
         </p>
 
 
-        <!-- CONTACT -->
+        <!-- =================================================
+             CONTACT
+        ================================================== -->
+
         <div
           class="hero-contact animate__animated animate__fadeInUp animate__delay-2s"
         >
@@ -103,15 +112,15 @@
           <!-- EMAIL -->
           <p>
 
-            <span class="icon">📧</span>
+            <span class="icon">
+              📧
+            </span>
 
             <a
               href="javascript:void(0)"
               (click)="openMail(profile.email)"
             >
-
               {{ profile.email }}
-
             </a>
 
           </p>
@@ -120,14 +129,14 @@
           <!-- PHONE -->
           <p>
 
-            <span class="icon">📞</span>
+            <span class="icon">
+              📞
+            </span>
 
             <a
               [href]="'tel:' + profile.phone"
             >
-
               {{ profile.phone }}
-
             </a>
 
           </p>
@@ -135,7 +144,95 @@
         </div>
 
 
-        <!-- BIO WITH BULLET POINTS -->
+        <!-- =================================================
+             SOCIAL LINKS
+        ================================================== -->
+
+        <div
+          class="hero-socials animate__animated animate__fadeInUp animate__delay-2s"
+        >
+
+          <span class="social-label">
+            CONNECT WITH ME
+          </span>
+
+
+          <div class="social-links">
+
+            <!-- GITHUB -->
+            <a
+              href="https://github.com/PrathameshGavandi"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              title="GitHub"
+            >
+
+              <i class="fab fa-github"></i>
+
+              <span>
+                GitHub
+              </span>
+
+              <b>
+                ↗
+              </b>
+
+            </a>
+
+
+            <!-- LINKEDIN -->
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+
+              <i class="fab fa-linkedin-in"></i>
+
+              <span>
+                LinkedIn
+              </span>
+
+              <b>
+                ↗
+              </b>
+
+            </a>
+
+
+            <!-- INSTAGRAM -->
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              title="Instagram"
+            >
+
+              <i class="fab fa-instagram"></i>
+
+              <span>
+                Instagram
+              </span>
+
+              <b>
+                ↗
+              </b>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             BIO
+        ================================================== -->
+
         <div
           class="hero-bio animate__animated animate__fadeInUp animate__delay-3s"
           *ngIf="getBioPoints(profile.bio).length > 0"
@@ -150,15 +247,15 @@
 
             <div
               class="bio-item"
-              *ngFor="let point of getBioPoints(profile.bio)"
+              *ngFor="
+                let point of getBioPoints(profile.bio)
+              "
             >
 
               <span class="bio-bullet"></span>
 
               <span class="bio-text">
-
                 {{ point }}
-
               </span>
 
             </div>
@@ -168,7 +265,10 @@
         </div>
 
 
-        <!-- ACTION BUTTONS -->
+        <!-- =================================================
+             ACTION BUTTONS
+        ================================================== -->
+
         <div
           class="hero-actions animate__animated animate__fadeInUp animate__delay-4s"
         >
@@ -182,7 +282,9 @@
 
             View Resume
 
-            <span>↗</span>
+            <span>
+              ↗
+            </span>
 
           </a>
 
@@ -196,7 +298,9 @@
 
             Contact
 
-            <span>→</span>
+            <span>
+              →
+            </span>
 
           </a>
 

@@ -1106,6 +1106,189 @@
 
 
 /* =====================================================
+   SOCIAL LINKS
+===================================================== */
+
+.hero-socials {
+
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 14px;
+
+}
+
+
+.hero-socials a {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 7px 12px;
+
+  border:
+    1px solid rgba(148, 163, 184, 0.12);
+
+  border-radius: 8px;
+
+  background:
+    rgba(56, 189, 248, 0.035);
+
+  color:
+    #cbd5e1 !important;
+
+  text-decoration: none;
+
+  font-size:
+    0.72rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.3px;
+
+  transition:
+
+    transform 0.3s ease,
+
+    color 0.3s ease,
+
+    border-color 0.3s ease,
+
+    background 0.3s ease,
+
+    box-shadow 0.3s ease;
+
+}
+
+
+.hero-socials a i {
+
+  font-size:
+    14px;
+
+  color:
+    #7dd3fc;
+
+  transition:
+
+    transform 0.3s ease,
+
+    color 0.3s ease;
+
+}
+
+
+/* =====================================================
+   SOCIAL HOVER
+===================================================== */
+
+.hero-socials a:hover {
+
+  transform:
+    translateY(-3px);
+
+  color:
+    #ffffff !important;
+
+  border-color:
+    rgba(56, 189, 248, 0.35);
+
+  background:
+    rgba(56, 189, 248, 0.08);
+
+  box-shadow:
+
+    0 8px 22px
+    rgba(0, 0, 0, 0.18),
+
+    0 0 15px
+    rgba(56, 189, 248, 0.08);
+
+}
+
+
+.hero-socials a:hover i {
+
+  color:
+    #38bdf8;
+
+  transform:
+    scale(1.12);
+
+}
+
+
+/* =====================================================
+   GITHUB HOVER
+===================================================== */
+
+.hero-socials a.github:hover {
+
+  border-color:
+    rgba(255, 255, 255, 0.25);
+
+  box-shadow:
+
+    0 8px 22px
+    rgba(0, 0, 0, 0.2),
+
+    0 0 15px
+    rgba(255, 255, 255, 0.06);
+
+}
+
+
+/* =====================================================
+   LINKEDIN HOVER
+===================================================== */
+
+.hero-socials a.linkedin:hover {
+
+  border-color:
+    rgba(10, 102, 194, 0.45);
+
+  box-shadow:
+
+    0 8px 22px
+    rgba(0, 0, 0, 0.18),
+
+    0 0 15px
+    rgba(10, 102, 194, 0.12);
+
+}
+
+
+/* =====================================================
+   INSTAGRAM HOVER
+===================================================== */
+
+.hero-socials a.instagram:hover {
+
+  border-color:
+    rgba(225, 48, 108, 0.4);
+
+  box-shadow:
+
+    0 8px 22px
+    rgba(0, 0, 0, 0.18),
+
+    0 0 15px
+    rgba(225, 48, 108, 0.1);
+
+}
+
+
+/* =====================================================
    BIO BULLET SECTION
 ===================================================== */
 
@@ -1511,6 +1694,7 @@
 
 
   .hero-contact,
+  .hero-socials,
   .hero-actions {
 
     justify-content:
@@ -1725,6 +1909,43 @@
   }
 
 
+  /* ===================================================
+     MOBILE SOCIAL LINKS
+  =================================================== */
+
+  .hero-socials {
+
+    justify-content:
+      center;
+
+    gap:
+      8px;
+
+    margin-top:
+      12px;
+
+  }
+
+
+  .hero-socials a {
+
+    padding:
+      7px 10px;
+
+    font-size:
+      0.68rem;
+
+  }
+
+
+  .hero-socials a i {
+
+    font-size:
+      13px;
+
+  }
+
+
   .bio-list {
 
     gap:
@@ -1819,6 +2040,8 @@
 
 
   .hero-contact p,
+
+  .hero-socials a,
 
   .hero-actions .btn,
 
