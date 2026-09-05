@@ -5,10 +5,14 @@
   <div class="experience-glow experience-glow-two"></div>
   <div class="experience-grid"></div>
 
+
   <div class="experience-container">
 
-    <!-- SECTION HEADER -->
-    <div class="experience-header animate__animated animate__fadeInUp">
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="experience-header">
 
       <div class="experience-eyebrow">
         <span></span>
@@ -22,26 +26,41 @@
       </h2>
 
       <p>
-        A journey of building real-world applications, solving problems,
-        and continuously growing as a software developer.
+        Real-world development experience focused on building
+        applications, solving problems and growing as a software developer.
       </p>
 
-    </div>
+    </header>
 
 
-    <!-- EXPERIENCE LIST -->
+    <!-- =====================================================
+         EXPERIENCE LIST
+    ====================================================== -->
+
     <div class="experience-list">
 
       <article
-        class="experience-card animate__animated animate__fadeInUp"
-        *ngFor="let exp of experiences$ | async; let i = index"
-        [style.animationDelay]="(i * 0.15) + 's'"
+        class="experience-card"
+        *ngFor="
+          let exp of experiences$ | async;
+          let i = index;
+          trackBy: trackById
+        "
+        [style.animationDelay]="(i * 0.12) + 's'"
       >
 
-        <!-- LEFT VISUAL -->
+        <!-- =================================================
+             IMAGE PANEL
+        ================================================== -->
+
         <div class="experience-visual">
 
-          <div class="visual-back"></div>
+          <div class="visual-orbit orbit-one"></div>
+          <div class="visual-orbit orbit-two"></div>
+
+          <div class="visual-number">
+            {{ getNumber(i) }}
+          </div>
 
           <div class="visual-frame">
 
@@ -50,30 +69,32 @@
               alt="Professional Experience"
             />
 
+            <div class="image-overlay"></div>
+
           </div>
 
-          <div class="visual-tag">
+          <div class="visual-label">
             <span></span>
             EXPERIENCE
-          </div>
-
-          <div class="visual-number">
-            {{ (i + 1).toString().padStart(2, '0') }}
           </div>
 
         </div>
 
 
-        <!-- RIGHT CONTENT -->
+        <!-- =================================================
+             EXPERIENCE CONTENT
+        ================================================== -->
+
         <div class="experience-info">
 
-          <!-- TOP -->
+          <!-- TOP META -->
+
           <div class="experience-top">
 
             <div class="experience-meta">
 
               <span class="experience-index">
-                0{{ i + 1 }} / CAREER
+                {{ getNumber(i) }} / CAREER
               </span>
 
               <span class="experience-status">
@@ -83,7 +104,7 @@
 
             </div>
 
-            <!-- DURATION -->
+
             <div class="experience-duration">
               {{ exp.duration }}
             </div>
@@ -92,15 +113,19 @@
 
 
           <!-- ROLE -->
+
           <h3 class="experience-role">
             {{ exp.role }}
           </h3>
 
 
           <!-- COMPANY -->
+
           <div class="experience-company">
 
-            <span class="company-mark">◆</span>
+            <span class="company-mark">
+              ◆
+            </span>
 
             <span>
               {{ exp.company }}
@@ -110,21 +135,26 @@
 
 
           <!-- SEPARATOR -->
+
           <div class="experience-line"></div>
 
 
           <!-- DESCRIPTION -->
+
           <div class="experience-description">
 
             <span class="description-label">
-              WHAT I WORKED ON
+              CONTRIBUTION
             </span>
+
 
             <div class="description-list">
 
               <div
                 class="description-item"
-                *ngFor="let point of getDescriptionPoints(exp.description)"
+                *ngFor="
+                  let point of getDescriptionPoints(exp.description)
+                "
               >
 
                 <span class="description-bullet"></span>
@@ -141,12 +171,17 @@
 
 
           <!-- FOOTER -->
+
           <div class="experience-footer">
 
             <div class="tech-label">
+
               <span></span>
+
               FULL-STACK DEVELOPMENT
+
             </div>
+
 
             <div class="experience-arrow">
               ↗
@@ -157,6 +192,24 @@
         </div>
 
       </article>
+
+
+      <!-- EMPTY STATE -->
+
+      <div
+        class="experience-empty"
+        *ngIf="
+          (experiences$ | async)?.length === 0
+        "
+      >
+
+        <i class="fas fa-briefcase"></i>
+
+        <h3>
+          No experience details available
+        </h3>
+
+      </div>
 
     </div>
 

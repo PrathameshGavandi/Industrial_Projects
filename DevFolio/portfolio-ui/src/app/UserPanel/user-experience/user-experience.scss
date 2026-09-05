@@ -1,203 +1,317 @@
-/* =====================================================
-   EXPERIENCE SECTION
-===================================================== */
+/* =========================================================
+   EXPERIENCE
+   Compact Career Snapshot Theme
+========================================================= */
 
 .experience-wrapper {
+
   position: relative;
+
   width: 100%;
+
   min-height: 100vh;
-  padding: 110px 60px;
+
+  padding: 85px 50px 95px;
+
   overflow: hidden;
 
   background:
+
     radial-gradient(
-      circle at 12% 20%,
-      #102d52 0%,
-      #0b1c2d 45%,
-      #081827 100%
-    );
+      circle at 8% 18%,
+      rgba(14, 116, 144, 0.16),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 92% 82%,
+      rgba(37, 99, 235, 0.13),
+      transparent 32%
+    ),
+
+    #06121f;
+
 }
 
 
-/* =====================================================
-   BACKGROUND GLOWS
-===================================================== */
+/* =========================================================
+   BACKGROUND
+========================================================= */
 
 .experience-glow {
+
   position: absolute;
+
   border-radius: 50%;
+
   pointer-events: none;
-  filter: blur(110px);
+
+  filter: blur(90px);
+
 }
+
 
 .experience-glow-one {
-  width: 450px;
-  height: 450px;
-  left: -240px;
-  top: 10%;
 
-  background: rgba(56, 189, 248, 0.08);
+  width: 360px;
 
-  animation: experienceGlowOne 9s ease-in-out infinite alternate;
+  height: 360px;
+
+  left: -180px;
+
+  top: 8%;
+
+  background:
+    rgba(56, 189, 248, 0.08);
+
+  animation:
+    glowOne 10s ease-in-out infinite alternate;
+
 }
+
 
 .experience-glow-two {
-  width: 400px;
-  height: 400px;
-  right: -200px;
-  bottom: -100px;
 
-  background: rgba(37, 99, 235, 0.10);
+  width: 330px;
 
-  animation: experienceGlowTwo 10s ease-in-out infinite alternate;
+  height: 330px;
+
+  right: -150px;
+
+  bottom: 0;
+
+  background:
+    rgba(37, 99, 235, 0.09);
+
+  animation:
+    glowTwo 11s ease-in-out infinite alternate;
+
 }
 
-@keyframes experienceGlowOne {
+
+@keyframes glowOne {
+
   from {
-    transform: translate(0, 0) scale(1);
+
+    transform:
+      translate(0)
+      scale(1);
+
   }
 
   to {
-    transform: translate(70px, -40px) scale(1.15);
+
+    transform:
+      translate(55px, -30px)
+      scale(1.12);
+
   }
+
 }
 
-@keyframes experienceGlowTwo {
+
+@keyframes glowTwo {
+
   from {
-    transform: translate(0, 0) scale(1);
+
+    transform:
+      translate(0)
+      scale(1);
+
   }
 
   to {
-    transform: translate(-50px, -50px) scale(1.12);
+
+    transform:
+      translate(-45px, -35px)
+      scale(1.1);
+
   }
+
 }
 
 
-/* =====================================================
+/* =========================================================
    GRID
-===================================================== */
+========================================================= */
 
 .experience-grid {
+
   position: absolute;
+
   inset: 0;
+
   pointer-events: none;
 
+  opacity: 0.65;
+
   background-image:
+
     linear-gradient(
       rgba(148, 163, 184, 0.025) 1px,
       transparent 1px
     ),
+
     linear-gradient(
       90deg,
       rgba(148, 163, 184, 0.025) 1px,
       transparent 1px
     );
 
-  background-size: 55px 55px;
+  background-size: 58px 58px;
 
   mask-image:
     linear-gradient(
       to bottom,
-      black,
-      transparent 90%
+      black 0%,
+      transparent 92%
     );
+
 }
 
 
-/* =====================================================
+/* =========================================================
    CONTAINER
-===================================================== */
+========================================================= */
 
 .experience-container {
+
   position: relative;
-  z-index: 5;
+
+  z-index: 2;
 
   width: 100%;
-  max-width: 1180px;
+
+  max-width: 1160px;
 
   margin: 0 auto;
+
 }
 
 
-/* =====================================================
+/* =========================================================
    HEADER
-===================================================== */
+========================================================= */
 
 .experience-header {
-  max-width: 760px;
-  margin: 0 auto 75px;
+
+  max-width: 700px;
+
+  margin:
+    0 auto 50px;
+
   text-align: center;
+
 }
+
 
 .experience-eyebrow {
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 10px;
 
-  color: #38bdf8;
+  margin-bottom: 16px;
 
-  font-size: 0.65rem;
-  font-weight: 800;
-  letter-spacing: 3px;
+  color: #67e8f9;
+
+  font-size: 0.56rem;
+
+  font-weight: 850;
+
+  letter-spacing: 2.7px;
+
 }
+
 
 .experience-eyebrow span {
-  width: 32px;
+
+  width: 30px;
+
   height: 1px;
 
-  background: #38bdf8;
+  background:
 
-  box-shadow:
-    0 0 12px rgba(56, 189, 248, 0.6);
-}
-
-.experience-header h2 {
-  margin: 0;
-
-  color: #ffffff;
-
-  font-size:
-    clamp(
-      2.8rem,
-      5vw,
-      4.7rem
+    linear-gradient(
+      90deg,
+      transparent,
+      #38bdf8
     );
 
-  line-height: 1.05;
-
-  font-weight: 800;
-
-  letter-spacing: -2.8px;
 }
 
-.experience-header h2 span {
-  display: inline-block;
 
-  margin-left: 8px;
+.experience-eyebrow span:last-child {
 
   background:
+
     linear-gradient(
       90deg,
       #38bdf8,
-      #60a5fa,
-      #38bdf8
+      transparent
+    );
+
+}
+
+
+.experience-header h2 {
+
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size:
+
+    clamp(
+      2.7rem,
+      5vw,
+      4.5rem
+    );
+
+  line-height: 0.98;
+
+  font-weight: 850;
+
+  letter-spacing: -3.5px;
+
+}
+
+
+.experience-header h2 span {
+
+  display: inline-block;
+
+  margin-left: 7px;
+
+  background:
+
+    linear-gradient(
+      110deg,
+      #67e8f9,
+      #38bdf8 45%,
+      #818cf8
     );
 
   background-size: 200% auto;
 
   -webkit-background-clip: text;
+
   background-clip: text;
 
   -webkit-text-fill-color: transparent;
 
   animation:
-    experienceGradient 4s linear infinite;
+    headerGradient 5s linear infinite;
+
 }
 
-@keyframes experienceGradient {
+
+@keyframes headerGradient {
+
   from {
     background-position: 0 center;
   }
@@ -205,282 +319,421 @@
   to {
     background-position: 200% center;
   }
+
 }
 
+
 .experience-header h2::after {
+
   content: "";
 
   display: block;
 
-  width: 65px;
-  height: 3px;
+  width: 48px;
 
-  margin: 23px auto 0;
+  height: 2px;
+
+  margin:
+    19px auto 0;
 
   border-radius: 50px;
 
   background: #38bdf8;
 
   box-shadow:
-    0 0 20px rgba(56, 189, 248, 0.5);
+    0 0 16px
+    rgba(56, 189, 248, 0.55);
+
 }
+
 
 .experience-header p {
-  max-width: 650px;
 
-  margin: 27px auto 0;
+  max-width: 590px;
 
-  color: #94a3b8;
+  margin:
+    19px auto 0;
 
-  font-size: 0.92rem;
+  color: #7f93a7;
 
-  line-height: 1.8;
+  font-size: 0.74rem;
+
+  line-height: 1.7;
+
 }
 
 
-/* =====================================================
-   EXPERIENCE LIST
-===================================================== */
+/* =========================================================
+   LIST
+========================================================= */
 
 .experience-list {
+
   display: flex;
+
   flex-direction: column;
 
-  gap: 35px;
+  gap: 18px;
+
 }
 
 
-/* =====================================================
+/* =========================================================
    EXPERIENCE CARD
-===================================================== */
+========================================================= */
 
 .experience-card {
+
   position: relative;
 
   display: grid;
 
-  grid-template-columns: 330px minmax(0, 1fr);
+  grid-template-columns:
+    235px
+    minmax(0, 1fr);
 
-  min-height: 390px;
+  min-height: 285px;
 
   overflow: hidden;
 
-  border-radius: 24px;
+  border:
+    1px solid
+    rgba(103, 232, 249, 0.11);
+
+  border-radius: 17px;
 
   background:
+
     linear-gradient(
       135deg,
-      rgba(15, 40, 63, 0.92),
-      rgba(8, 24, 39, 0.96)
+      rgba(13, 35, 54, 0.95),
+      rgba(6, 20, 33, 0.98)
     );
 
-  border:
-    1px solid rgba(56, 189, 248, 0.13);
-
   box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.28);
+    0 18px 50px
+    rgba(0, 0, 0, 0.25);
 
-  backdrop-filter: blur(18px);
+  backdrop-filter: blur(15px);
+
+  opacity: 0;
+
+  animation:
+    cardReveal 0.7s ease forwards;
 
   transition:
-    transform 0.45s ease,
-    border-color 0.45s ease,
-    box-shadow 0.45s ease;
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+
 }
 
+
+@keyframes cardReveal {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(18px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
 .experience-card::before {
+
   content: "";
 
   position: absolute;
 
   top: 0;
+
   left: 0;
 
   width: 100%;
-  height: 2px;
+
+  height: 1px;
 
   background:
+
     linear-gradient(
       90deg,
       transparent,
       #38bdf8,
-      #2563eb,
+      #818cf8,
       transparent
     );
 
-  opacity: 0.75;
+  opacity: 0.65;
 
-  z-index: 5;
 }
+
 
 .experience-card:hover {
-  transform: translateY(-8px);
+
+  transform:
+    translateY(-4px);
 
   border-color:
-    rgba(56, 189, 248, 0.32);
+    rgba(103, 232, 249, 0.26);
 
   box-shadow:
-    0 40px 90px rgba(0, 0, 0, 0.38),
-    0 0 45px rgba(56, 189, 248, 0.06);
+
+    0 25px 60px
+    rgba(0, 0, 0, 0.34),
+
+    0 0 30px
+    rgba(56, 189, 248, 0.045);
+
 }
 
 
-/* =====================================================
-   VISUAL
-===================================================== */
+/* =========================================================
+   VISUAL PANEL
+========================================================= */
 
 .experience-visual {
-  position: relative;
 
-  min-height: 390px;
+  position: relative;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
+
+  min-height: 285px;
 
   overflow: hidden;
 
+  border-right:
+    1px solid
+    rgba(148, 163, 184, 0.07);
+
   background:
+
     radial-gradient(
       circle at center,
       rgba(56, 189, 248, 0.10),
-      transparent 65%
-    );
-}
-
-.experience-visual::before {
-  content: "";
-
-  position: absolute;
-
-  width: 230px;
-  height: 300px;
-
-  border:
-    1px solid rgba(56, 189, 248, 0.12);
-
-  transform: rotate(-9deg);
-
-  border-radius: 20px;
-}
-
-.visual-back {
-  position: absolute;
-
-  width: 230px;
-  height: 300px;
-
-  border-radius:
-    25px 65px 25px 65px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(14, 165, 233, 0.22),
-      rgba(37, 99, 235, 0.06)
+      transparent 67%
     );
 
-  transform:
-    rotate(9deg)
-    translate(20px, 12px);
-
-  transition:
-    transform 0.5s ease;
 }
 
-.experience-card:hover .visual-back {
-  transform:
-    rotate(13deg)
-    translate(25px, 5px);
-}
+
+/* =========================================================
+   IMAGE
+========================================================= */
 
 .visual-frame {
-  position: relative;
 
-  width: 225px;
-  height: 290px;
+  position: relative;
 
   z-index: 3;
 
-  padding: 7px;
+  width: 150px;
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(56, 189, 248, 0.75),
-      rgba(37, 99, 235, 0.20)
-    );
+  height: 205px;
 
-  border-radius: 18px;
+  padding: 5px;
 
-  transform: rotate(-6deg);
-
-  box-shadow:
-    0 25px 50px rgba(0, 0, 0, 0.45);
-
-  transition:
-    transform 0.5s ease;
-}
-
-.visual-frame::before {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  border-radius: 18px;
-
-  border:
-    1px solid rgba(255, 255, 255, 0.18);
-
-  pointer-events: none;
-}
-
-.visual-frame img {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: cover;
+  overflow: hidden;
 
   border-radius: 13px;
 
-  filter:
-    brightness(0.92)
-    saturate(0.9);
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(103, 232, 249, 0.65),
+      rgba(37, 99, 235, 0.15)
+    );
+
+  transform:
+    rotate(-5deg);
+
+  box-shadow:
+    0 18px 35px
+    rgba(0, 0, 0, 0.40);
 
   transition:
-    transform 0.6s ease,
-    filter 0.5s ease;
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+
 }
 
-.experience-card:hover .visual-frame {
-  transform:
-    rotate(0deg)
-    translateY(-8px)
-    scale(1.025);
-}
 
-.experience-card:hover .visual-frame img {
+.visual-frame img {
+
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 9px;
+
   filter:
-    brightness(1.04)
-    saturate(1.08);
+    brightness(0.86)
+    saturate(0.85);
 
-  transform: scale(1.035);
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+
 }
 
 
-/* =====================================================
-   VISUAL TAG
-===================================================== */
+.image-overlay {
 
-.visual-tag {
   position: absolute;
 
-  left: 24px;
-  bottom: 25px;
+  inset: 0;
+
+  border-radius: 9px;
+
+  pointer-events: none;
+
+  background:
+
+    linear-gradient(
+      180deg,
+      transparent 55%,
+      rgba(3, 12, 22, 0.35)
+    );
+
+}
+
+
+.experience-card:hover
+.visual-frame {
+
+  transform:
+    rotate(0deg)
+    translateY(-5px)
+    scale(1.035);
+
+  box-shadow:
+    0 22px 42px
+    rgba(0, 0, 0, 0.48);
+
+}
+
+
+.experience-card:hover
+.visual-frame img {
+
+  transform:
+    scale(1.04);
+
+  filter:
+    brightness(1)
+    saturate(1.05);
+
+}
+
+
+/* =========================================================
+   ORBITS
+========================================================= */
+
+.visual-orbit {
+
+  position: absolute;
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.10);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+}
+
+
+.orbit-one {
+
+  width: 215px;
+
+  height: 215px;
+
+  transform:
+    rotate(25deg)
+    scaleX(0.55);
+
+}
+
+
+.orbit-two {
+
+  width: 250px;
+
+  height: 250px;
+
+  transform:
+    rotate(-30deg)
+    scaleX(0.40);
+
+  border-color:
+    rgba(129, 140, 248, 0.07);
+
+}
+
+
+/* =========================================================
+   VISUAL NUMBER
+========================================================= */
+
+.visual-number {
+
+  position: absolute;
+
+  top: 15px;
+
+  right: 17px;
+
+  z-index: 5;
+
+  color:
+    rgba(125, 211, 252, 0.16);
+
+  font-size: 2.7rem;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing: -3px;
+
+}
+
+
+/* =========================================================
+   VISUAL LABEL
+========================================================= */
+
+.visual-label {
+
+  position: absolute;
+
+  left: 15px;
+
+  bottom: 15px;
 
   z-index: 6;
 
@@ -488,119 +741,399 @@
 
   align-items: center;
 
-  gap: 8px;
+  gap: 6px;
 
-  padding: 8px 12px;
-
-  border-radius: 8px;
-
-  background:
-    rgba(8, 24, 39, 0.85);
+  padding:
+    6px 9px;
 
   border:
-    1px solid rgba(56, 189, 248, 0.20);
+    1px solid
+    rgba(56, 189, 248, 0.15);
 
-  backdrop-filter: blur(12px);
+  border-radius: 6px;
 
-  color: #bae6fd;
+  background:
+    rgba(5, 18, 30, 0.82);
 
-  font-size: 0.55rem;
+  backdrop-filter: blur(10px);
 
-  font-weight: 800;
+  color:
+    rgba(186, 230, 253, 0.65);
 
-  letter-spacing: 1.5px;
+  font-size: 0.40rem;
+
+  font-weight: 850;
+
+  letter-spacing: 1.3px;
+
 }
 
-.visual-tag span {
-  width: 6px;
-  height: 6px;
+
+.visual-label span {
+
+  width: 4px;
+
+  height: 4px;
 
   border-radius: 50%;
 
   background: #38bdf8;
 
   box-shadow:
-    0 0 10px rgba(56, 189, 248, 0.8);
+    0 0 8px
+    rgba(56, 189, 248, 0.8);
+
 }
 
 
-/* =====================================================
-   NUMBER
-===================================================== */
-
-.visual-number {
-  position: absolute;
-
-  right: 25px;
-  top: 22px;
-
-  color:
-    rgba(125, 211, 252, 0.18);
-
-  font-size: 3.5rem;
-
-  line-height: 1;
-
-  font-weight: 900;
-
-  letter-spacing: -3px;
-}
-
-
-/* =====================================================
+/* =========================================================
    INFORMATION
-===================================================== */
+========================================================= */
 
 .experience-info {
-  position: relative;
-
-  padding: 45px 45px 35px;
 
   display: flex;
 
   flex-direction: column;
 
   justify-content: center;
+
+  min-width: 0;
+
+  padding:
+    28px 32px 23px;
+
 }
 
 
-/* =====================================================
+/* =========================================================
    TOP
-===================================================== */
+========================================================= */
 
 .experience-top {
+
   display: flex;
 
   align-items: center;
 
   justify-content: space-between;
 
-  gap: 20px;
+  gap: 15px;
 
-  margin-bottom: 20px;
+  margin-bottom: 13px;
+
 }
 
+
 .experience-meta {
+
   display: flex;
 
   align-items: center;
 
-  gap: 15px;
+  gap: 13px;
 
   flex-wrap: wrap;
+
 }
 
+
 .experience-index {
+
   color: #38bdf8;
+
+  font-size: 0.48rem;
+
+  font-weight: 850;
+
+  letter-spacing: 1.7px;
+
+}
+
+
+.experience-status {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color:
+    rgba(148, 163, 184, 0.48);
+
+  font-size: 0.43rem;
+
+  font-weight: 750;
+
+  letter-spacing: 1.2px;
+
+}
+
+
+.experience-status i {
+
+  width: 4px;
+
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 7px
+    rgba(34, 197, 94, 0.75);
+
+}
+
+
+/* =========================================================
+   DURATION
+========================================================= */
+
+.experience-duration {
+
+  flex-shrink: 0;
+
+  padding:
+    7px 11px;
+
+  border:
+    1px solid
+    rgba(56, 189, 248, 0.18);
+
+  border-radius: 7px;
+
+  color: #a5e8ff;
+
+  background:
+    rgba(56, 189, 248, 0.06);
 
   font-size: 0.58rem;
 
   font-weight: 800;
 
-  letter-spacing: 2px;
+  white-space: nowrap;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+
 }
 
-.experience-status {
+
+.experience-card:hover
+.experience-duration {
+
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(56, 189, 248, 0.35);
+
+  background:
+    rgba(56, 189, 248, 0.10);
+
+}
+
+
+/* =========================================================
+   ROLE
+========================================================= */
+
+.experience-role {
+
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size:
+    clamp(
+      1.45rem,
+      2.5vw,
+      2rem
+    );
+
+  line-height: 1.12;
+
+  font-weight: 820;
+
+  letter-spacing: -1px;
+
+}
+
+
+/* =========================================================
+   COMPANY
+========================================================= */
+
+.experience-company {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 7px;
+
+  color: #67e8f9;
+
+  font-size: 0.70rem;
+
+  font-weight: 650;
+
+}
+
+
+.company-mark {
+
+  color: #38bdf8;
+
+  font-size: 0.42rem;
+
+}
+
+
+/* =========================================================
+   LINE
+========================================================= */
+
+.experience-line {
+
+  width: 100%;
+
+  height: 1px;
+
+  margin:
+    15px 0;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(56, 189, 248, 0.18),
+      rgba(148, 163, 184, 0.05),
+      transparent
+    );
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.experience-description {
+
+  width: 100%;
+
+}
+
+
+.description-label {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  color:
+    rgba(148, 163, 184, 0.42);
+
+  font-size: 0.43rem;
+
+  font-weight: 850;
+
+  letter-spacing: 1.7px;
+
+}
+
+
+.description-list {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+}
+
+
+.description-item {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+}
+
+
+.description-bullet {
+
+  flex-shrink: 0;
+
+  width: 4px;
+
+  height: 4px;
+
+  margin-top: 7px;
+
+  border-radius: 50%;
+
+  background: #38bdf8;
+
+  box-shadow:
+    0 0 7px
+    rgba(56, 189, 248, 0.7);
+
+}
+
+
+.description-text {
+
+  flex: 1;
+
+  color: #879bad;
+
+  font-size: 0.68rem;
+
+  line-height: 1.55;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.experience-footer {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 15px;
+
+  padding-top: 10px;
+
+  border-top:
+    1px solid
+    rgba(148, 163, 184, 0.055);
+
+}
+
+
+.tech-label {
+
   display: flex;
 
   align-items: center;
@@ -608,578 +1141,601 @@
   gap: 6px;
 
   color:
-    rgba(148, 163, 184, 0.65);
+    rgba(125, 211, 252, 0.40);
 
-  font-size: 0.52rem;
+  font-size: 0.40rem;
 
-  font-weight: 700;
+  font-weight: 850;
 
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
+
 }
 
-.experience-status i {
-  width: 5px;
-  height: 5px;
 
-  border-radius: 50%;
+.tech-label span {
+
+  width: 13px;
+
+  height: 1px;
 
   background: #38bdf8;
 
-  box-shadow:
-    0 0 8px rgba(56, 189, 248, 0.8);
 }
 
 
-/* =====================================================
-   DURATION
-===================================================== */
+.experience-arrow {
 
-.experience-duration {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 27px;
+
+  height: 27px;
+
   flex-shrink: 0;
 
-  padding: 11px 17px;
-
-  border-radius: 10px;
-
-  color: #dff6ff;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(56, 189, 248, 0.13),
-      rgba(37, 99, 235, 0.10)
-    );
-
   border:
-    1px solid rgba(56, 189, 248, 0.30);
+    1px solid
+    rgba(56, 189, 248, 0.13);
 
-  font-size: 0.86rem;
+  border-radius: 50%;
 
-  font-weight: 800;
+  color: #38bdf8;
 
-  letter-spacing: 0.3px;
-
-  box-shadow:
-    0 0 20px rgba(56, 189, 248, 0.07);
-
-  white-space: nowrap;
+  font-size: 12px;
 
   transition:
     transform 0.3s ease,
-    border-color 0.3s ease,
     background 0.3s ease;
-}
 
-.experience-card:hover .experience-duration {
-  transform: translateY(-2px);
-
-  border-color:
-    rgba(56, 189, 248, 0.50);
-
-  background:
-    rgba(56, 189, 248, 0.15);
 }
 
 
-/* =====================================================
-   ROLE
-===================================================== */
-
-.experience-role {
-  margin: 0;
-
-  color: #ffffff;
-
-  font-size:
-    clamp(
-      1.7rem,
-      3vw,
-      2.35rem
-    );
-
-  line-height: 1.15;
-
-  font-weight: 800;
-
-  letter-spacing: -1px;
-}
-
-
-/* =====================================================
-   COMPANY
-===================================================== */
-
-.experience-company {
-  display: flex;
-
-  align-items: center;
-
-  gap: 10px;
-
-  margin-top: 13px;
-
-  color: #7dd3fc;
-
-  font-size: 0.88rem;
-
-  font-weight: 600;
-}
-
-.company-mark {
-  color: #38bdf8;
-
-  font-size: 0.55rem;
-}
-
-
-/* =====================================================
-   LINE
-===================================================== */
-
-.experience-line {
-  width: 100%;
-
-  height: 1px;
-
-  margin: 27px 0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(56, 189, 248, 0.22),
-      rgba(148, 163, 184, 0.06),
-      transparent
-    );
-}
-
-
-/* =====================================================
-   DESCRIPTION
-===================================================== */
-
-.experience-description {
-  width: 100%;
-}
-
-.description-label {
-  display: block;
-
-  margin-bottom: 14px;
-
-  color:
-    rgba(148, 163, 184, 0.55);
-
-  font-size: 0.56rem;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
-}
-
-
-/* =====================================================
-   DESCRIPTION LIST
-===================================================== */
-
-.description-list {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 11px;
-
-  width: 100%;
-
-  margin: 0;
-  padding: 0;
-}
-
-
-/* EACH BULLET */
-.description-item {
-  display: flex;
-
-  align-items: flex-start;
-
-  width: 100%;
-
-  gap: 12px;
-
-  margin: 0;
-  padding: 0;
-}
-
-
-/* BULLET */
-.description-bullet {
-  flex-shrink: 0;
-
-  width: 6px;
-  height: 6px;
-
-  margin-top: 8px;
-
-  border-radius: 50%;
-
-  background: #38bdf8;
-
-  box-shadow:
-    0 0 9px rgba(56, 189, 248, 0.8);
-}
-
-
-/* TEXT */
-.description-text {
-  display: block;
-
-  flex: 1;
-
-  color: #94a3b8;
-
-  font-size: 0.84rem;
-
-  line-height: 1.65;
-
-  word-break: normal;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-.experience-footer {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  margin-top: 30px;
-
-  padding-top: 16px;
-
-  border-top:
-    1px solid rgba(148, 163, 184, 0.06);
-}
-
-.tech-label {
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  color:
-    rgba(125, 211, 252, 0.55);
-
-  font-size: 0.53rem;
-
-  font-weight: 800;
-
-  letter-spacing: 1.7px;
-}
-
-.tech-label span {
-  width: 18px;
-  height: 1px;
-
-  background: #38bdf8;
-}
-
+.experience-card:hover
 .experience-arrow {
-  width: 34px;
-  height: 34px;
 
-  display: flex;
+  transform:
+    translate(3px, -3px);
 
-  align-items: center;
-  justify-content: center;
+  background:
+    rgba(56, 189, 248, 0.08);
 
-  border-radius: 50%;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.experience-empty {
+
+  padding: 45px;
+
+  text-align: center;
 
   border:
-    1px solid rgba(56, 189, 248, 0.18);
+    1px dashed
+    rgba(148, 163, 184, 0.12);
+
+  border-radius: 14px;
+
+}
+
+
+.experience-empty i {
 
   color: #38bdf8;
 
-  font-size: 15px;
+  font-size: 1.2rem;
 
-  transition:
-    transform 0.35s ease,
-    background 0.35s ease,
-    border-color 0.35s ease;
-}
-
-.experience-card:hover .experience-arrow {
-  transform:
-    translate(4px, -4px);
-
-  background:
-    rgba(56, 189, 248, 0.09);
-
-  border-color:
-    rgba(56, 189, 248, 0.4);
 }
 
 
-/* =====================================================
+.experience-empty h3 {
+
+  margin: 10px 0 0;
+
+  color: #cbd5e1;
+
+  font-size: 0.85rem;
+
+}
+
+
+/* =========================================================
    TABLET
-===================================================== */
+========================================================= */
 
-@media (max-width: 950px) {
+@media (max-width: 900px) {
 
   .experience-wrapper {
-    padding: 90px 35px;
+
+    padding:
+      75px 30px 85px;
+
   }
+
 
   .experience-card {
-    grid-template-columns: 280px minmax(0, 1fr);
+
+    grid-template-columns:
+      190px
+      minmax(0, 1fr);
+
   }
+
 
   .experience-visual {
-    min-height: 360px;
+
+    min-height: 280px;
+
   }
+
 
   .visual-frame {
-    width: 190px;
-    height: 250px;
+
+    width: 125px;
+
+    height: 175px;
+
   }
 
-  .visual-back {
-    width: 200px;
-    height: 260px;
-  }
 
   .experience-info {
-    padding: 35px 30px;
+
+    padding:
+      24px 25px 20px;
+
   }
 
-  .experience-duration {
-    font-size: 0.78rem;
-    padding: 10px 14px;
+
+  .experience-role {
+
+    font-size: 1.45rem;
+
   }
+
 
   .description-text {
-    font-size: 0.80rem;
+
+    font-size: 0.64rem;
+
   }
+
 }
 
 
-/* =====================================================
+/* =========================================================
    MOBILE
-===================================================== */
+========================================================= */
 
 @media (max-width: 700px) {
 
   .experience-wrapper {
+
     min-height: auto;
 
     padding:
-      80px 18px 90px;
+      70px 18px 80px;
+
   }
+
 
   .experience-header {
-    margin-bottom: 50px;
+
+    margin-bottom: 38px;
+
   }
 
-  .experience-eyebrow {
-    font-size: 0.56rem;
-    letter-spacing: 2px;
-  }
-
-  .experience-eyebrow span {
-    width: 22px;
-  }
 
   .experience-header h2 {
-    font-size: 2.5rem;
-    letter-spacing: -1.6px;
+
+    font-size: 2.65rem;
+
+    letter-spacing: -2.5px;
+
   }
 
+
   .experience-header h2 span {
+
     display: block;
 
     margin:
-      6px 0 0;
+      5px 0 0;
+
   }
 
+
   .experience-header p {
-    font-size: 0.84rem;
-    line-height: 1.7;
+
+    font-size: 0.70rem;
+
+  }
+
+
+  .experience-list {
+
+    gap: 15px;
+
   }
 
 
   /* CARD */
 
   .experience-card {
-    grid-template-columns: 1fr;
 
-    min-height: auto;
+    display: grid;
 
-    border-radius: 18px;
+    grid-template-columns:
+      105px
+      minmax(0, 1fr);
+
+    min-height: 0;
+
+    border-radius: 14px;
+
   }
 
 
   /* IMAGE */
 
   .experience-visual {
-    min-height: 330px;
+
+    min-height: 100%;
+
+    border-right:
+      1px solid
+      rgba(148, 163, 184, 0.06);
+
   }
+
 
   .visual-frame {
-    width: 195px;
-    height: 250px;
+
+    width: 78px;
+
+    height: 120px;
+
+    padding: 4px;
+
+    border-radius: 9px;
+
   }
 
-  .visual-back {
-    width: 205px;
-    height: 260px;
+
+  .visual-frame img {
+
+    border-radius: 6px;
+
   }
 
-  .visual-tag {
-    left: 18px;
-    bottom: 18px;
+
+  .visual-orbit {
+
+    opacity: 0.6;
+
   }
+
+
+  .orbit-one {
+
+    width: 125px;
+
+    height: 125px;
+
+  }
+
+
+  .orbit-two {
+
+    width: 145px;
+
+    height: 145px;
+
+  }
+
 
   .visual-number {
-    right: 18px;
-    top: 18px;
 
-    font-size: 2.8rem;
+    top: 10px;
+
+    right: 9px;
+
+    font-size: 1.55rem;
+
+    letter-spacing: -1px;
+
+  }
+
+
+  .visual-label {
+
+    left: 7px;
+
+    bottom: 8px;
+
+    padding:
+      4px 6px;
+
+    font-size: 0.30rem;
+
+  }
+
+
+  .visual-label span {
+
+    width: 3px;
+
+    height: 3px;
+
   }
 
 
   /* CONTENT */
 
   .experience-info {
+
     padding:
-      27px 22px 24px;
+      17px 15px 14px;
+
   }
+
 
   .experience-top {
+
     align-items: flex-start;
 
-    flex-direction: column;
+    gap: 7px;
 
-    gap: 12px;
+    margin-bottom: 9px;
+
   }
+
+
+  .experience-meta {
+
+    gap: 7px;
+
+  }
+
+
+  .experience-index {
+
+    font-size: 0.38rem;
+
+  }
+
+
+  .experience-status {
+
+    font-size: 0.34rem;
+
+  }
+
 
   .experience-duration {
-    font-size: 0.76rem;
 
-    padding: 9px 14px;
+    padding:
+      5px 7px;
+
+    font-size: 0.40rem;
+
   }
+
 
   .experience-role {
-    font-size: 1.55rem;
 
-    letter-spacing: -0.6px;
+    font-size: 1.05rem;
+
+    letter-spacing: -0.45px;
+
   }
+
 
   .experience-company {
-    font-size: 0.8rem;
+
+    margin-top: 5px;
+
+    font-size: 0.55rem;
+
   }
+
 
   .experience-line {
-    margin: 22px 0;
+
+    margin:
+      10px 0;
+
   }
 
 
-  /* BULLETS */
+  .description-label {
+
+    margin-bottom: 6px;
+
+    font-size: 0.34rem;
+
+  }
+
 
   .description-list {
-    gap: 9px;
+
+    gap: 5px;
+
   }
+
 
   .description-item {
-    gap: 9px;
+
+    gap: 6px;
+
   }
+
 
   .description-bullet {
-    width: 5px;
-    height: 5px;
 
-    margin-top: 7px;
+    width: 3px;
+
+    height: 3px;
+
+    margin-top: 6px;
+
   }
+
 
   .description-text {
-    font-size: 0.78rem;
-    line-height: 1.7;
+
+    font-size: 0.53rem;
+
+    line-height: 1.5;
+
   }
+
 
   .experience-footer {
-    margin-top: 25px;
+
+    margin-top: 9px;
+
+    padding-top: 7px;
+
   }
 
+
   .tech-label {
-    font-size: 0.47rem;
+
+    font-size: 0.30rem;
+
+    letter-spacing: 0.8px;
+
   }
+
+
+  .experience-arrow {
+
+    width: 21px;
+
+    height: 21px;
+
+    font-size: 9px;
+
+  }
+
 }
 
 
-/* =====================================================
+/* =========================================================
    SMALL MOBILE
-===================================================== */
+========================================================= */
 
 @media (max-width: 400px) {
 
   .experience-wrapper {
-    padding-left: 14px;
-    padding-right: 14px;
+
+    padding-left: 13px;
+
+    padding-right: 13px;
+
   }
 
-  .experience-header h2 {
-    font-size: 2.2rem;
+
+  .experience-card {
+
+    grid-template-columns:
+      88px
+      minmax(0, 1fr);
+
   }
+
 
   .experience-visual {
-    min-height: 300px;
+
+    min-height: 100%;
+
   }
+
 
   .visual-frame {
-    width: 175px;
-    height: 225px;
+
+    width: 65px;
+
+    height: 105px;
+
   }
 
-  .visual-back {
-    width: 185px;
-    height: 235px;
+
+  .visual-number {
+
+    font-size: 1.3rem;
+
   }
+
 
   .experience-info {
+
     padding:
-      24px 18px;
+      15px 12px 12px;
+
   }
+
 
   .experience-role {
-    font-size: 1.4rem;
+
+    font-size: 0.95rem;
+
   }
 
-  .experience-duration {
-    font-size: 0.70rem;
-    padding: 8px 12px;
+
+  .experience-company {
+
+    font-size: 0.50rem;
+
   }
+
+
+  .description-text {
+
+    font-size: 0.49rem;
+
+  }
+
+
+  .tech-label {
+
+    font-size: 0.27rem;
+
+  }
+
 }
 
 
-/* =====================================================
+/* =========================================================
    REDUCED MOTION
-===================================================== */
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
   .experience-glow-one,
   .experience-glow-two,
-  .experience-header h2 span {
+  .experience-header h2 span,
+  .experience-card {
+
     animation: none;
+
   }
+
 
   .experience-card,
   .visual-frame,
-  .visual-back,
-  .experience-arrow,
-  .experience-duration {
+  .visual-frame img,
+  .experience-duration,
+  .experience-arrow {
+
     transition: none;
+
   }
+
 }
