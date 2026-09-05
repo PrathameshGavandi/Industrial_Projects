@@ -1,4 +1,3 @@
- scss
 /* =========================================================
    PROJECTS
    Editorial Showcase
@@ -121,10 +120,6 @@
 
 }
 
-
-/* =========================================================
-   SECTION LABEL
-========================================================= */
 
 .section-label {
 
@@ -280,23 +275,17 @@
 
 
 .heading-decoration span:nth-child(1) {
-
   height: 9px;
-
 }
 
 
 .heading-decoration span:nth-child(2) {
-
   height: 17px;
-
 }
 
 
 .heading-decoration span:nth-child(3) {
-
   height: 28px;
-
 }
 
 
@@ -405,19 +394,14 @@
 
   font-size: 1rem;
 
-  transition:
-    transform 0.3s ease;
+  transition: transform 0.3s ease;
 
 }
 
 
 .github-link:hover .github-arrow {
 
-  transform:
-    translate(
-      3px,
-      -3px
-    );
+  transform: translate(3px, -3px);
 
 }
 
@@ -464,7 +448,9 @@
 }
 
 
-/* Alternate layout */
+/* =========================================================
+   REVERSE PROJECT
+========================================================= */
 
 .project-showcase.project-reverse {
 
@@ -493,6 +479,7 @@
 
 /* =========================================================
    VISUAL BLOCK
+   No Project Images Required
 ========================================================= */
 
 .project-visual {
@@ -521,7 +508,8 @@
 
   transition:
     border-color 0.45s ease,
-    box-shadow 0.45s ease;
+    box-shadow 0.45s ease,
+    transform 0.45s ease;
 
 }
 
@@ -573,6 +561,8 @@
 
 
 .project-showcase:hover .project-visual {
+
+  transform: translateY(-4px);
 
   border-color:
     rgba(103, 232, 249, 0.32);
@@ -736,7 +726,7 @@
 
 
 /* =========================================================
-   ICON
+   CODE ICON
 ========================================================= */
 
 .visual-icon {
@@ -1694,4 +1684,3 @@
   }
 
 }
- 

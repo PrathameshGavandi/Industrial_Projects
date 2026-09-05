@@ -7,7 +7,14 @@ import {
 
 import { CommonModule } from '@angular/common';
 
-import { Observable, catchError, finalize, map, of, shareReplay } from 'rxjs';
+import {
+  Observable,
+  catchError,
+  finalize,
+  map,
+  of,
+  shareReplay
+} from 'rxjs';
 
 import { ProjectsService } from '../../Services/ProjectsService';
 
@@ -177,4 +184,3 @@ export class UserProjectsComponent implements OnInit {
   }
 
 }
- 

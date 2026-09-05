@@ -1,9 +1,18 @@
- html
 <section class="projects-section">
 
-  <div class="projects-background" aria-hidden="true">
+  <!-- =====================================================
+       BACKGROUND
+  ====================================================== -->
+
+  <div
+    class="projects-background"
+    aria-hidden="true"
+  >
+
     <span class="background-orb orb-one"></span>
+
     <span class="background-orb orb-two"></span>
+
   </div>
 
 
@@ -17,23 +26,44 @@
     <header class="projects-header">
 
       <div class="section-label">
-        <span class="label-number">04</span>
+
+        <span class="label-number">
+          04
+        </span>
+
         <span class="label-line"></span>
-        <span>SELECTED PROJECTS</span>
+
+        <span>
+          SELECTED PROJECTS
+        </span>
+
       </div>
 
 
       <div class="heading-wrap">
 
         <h2 class="projects-title">
+
           Work that
-          <span>speaks.</span>
+
+          <span>
+            speaks.
+          </span>
+
         </h2>
 
-        <div class="heading-decoration">
+
+        <div
+          class="heading-decoration"
+          aria-hidden="true"
+        >
+
           <span></span>
+
           <span></span>
+
           <span></span>
+
         </div>
 
       </div>
@@ -42,9 +72,11 @@
       <div class="header-bottom">
 
         <p class="projects-subtitle">
+
           A collection of professional, academic and personal
           projects built with modern technologies and real-world
           problem solving.
+
         </p>
 
 
@@ -56,12 +88,20 @@
         >
 
           <span class="github-icon">
+
             <i class="fab fa-github"></i>
+
           </span>
 
-          <span>Explore GitHub</span>
 
-          <span class="github-arrow">↗</span>
+          <span>
+            Explore GitHub
+          </span>
+
+
+          <span class="github-arrow">
+            ↗
+          </span>
 
         </a>
 
@@ -80,13 +120,16 @@
       *ngIf="projectList$ | async as projects; else loading"
     >
 
+
       <article
         class="project-showcase"
+
         *ngFor="
           let project of projects;
           let index = index;
           trackBy: trackById
         "
+
         [class.project-reverse]="index % 2 !== 0"
       >
 
@@ -97,29 +140,56 @@
 
         <div class="project-visual">
 
-          <div class="visual-number" aria-hidden="true">
+
+          <!-- Decorative number -->
+
+          <div
+            class="visual-number"
+            aria-hidden="true"
+          >
+
             {{ getProjectNumber(index) }}
+
           </div>
 
 
-          <div class="visual-circle circle-one"></div>
-          <div class="visual-circle circle-two"></div>
+          <!-- Decorative circles -->
+
+          <div
+            class="visual-circle circle-one"
+            aria-hidden="true"
+          ></div>
+
+          <div
+            class="visual-circle circle-two"
+            aria-hidden="true"
+          ></div>
 
 
           <div class="visual-content">
 
+
+            <!-- Top -->
+
             <div class="visual-top">
 
               <span class="visual-index">
+
                 {{ getProjectNumber(index) }}
+
               </span>
 
+
               <span class="visual-type">
+
                 {{ project.type }}
+
               </span>
 
             </div>
 
+
+            <!-- Main Code Icon -->
 
             <div class="visual-icon">
 
@@ -128,11 +198,24 @@
             </div>
 
 
+            <!-- Bottom Caption -->
+
             <div class="visual-caption">
-              <span>BUILD</span>
-              <span>DEPLOY</span>
-              <span>ITERATE</span>
+
+              <span>
+                BUILD
+              </span>
+
+              <span>
+                DEPLOY
+              </span>
+
+              <span>
+                ITERATE
+              </span>
+
             </div>
+
 
           </div>
 
@@ -147,6 +230,8 @@
         <div class="project-information">
 
 
+          <!-- Meta -->
+
           <div class="project-meta">
 
             <span class="meta-line"></span>
@@ -158,10 +243,16 @@
           </div>
 
 
+          <!-- Project Name -->
+
           <h3 class="project-name">
+
             {{ project.name }}
+
           </h3>
 
+
+          <!-- Description -->
 
           <div
             class="project-description"
@@ -169,32 +260,48 @@
           ></div>
 
 
+
+          <!-- Technology -->
+
           <div class="technology-section">
 
+
             <div class="technology-title">
+
               <span></span>
+
               TECH STACK
+
             </div>
 
 
             <div class="technology-list">
 
+
               <span
                 class="technology"
+
                 *ngFor="
                   let tech of project.technologyList;
                   trackBy: trackByTechnology
                 "
               >
+
                 {{ tech }}
+
               </span>
+
 
             </div>
 
           </div>
 
 
+
+          <!-- Bottom -->
+
           <div class="project-bottom">
+
 
             <div class="project-status">
 
@@ -209,31 +316,45 @@
 
             <div class="project-end-line"></div>
 
+
           </div>
 
+
         </div>
+
 
       </article>
 
 
-      <!-- Empty state -->
+
+      <!-- =====================================================
+           EMPTY STATE
+      ====================================================== -->
 
       <div
         class="projects-empty"
+
         *ngIf="projects.length === 0"
       >
 
         <div class="empty-icon">
+
           <i class="fas fa-layer-group"></i>
+
         </div>
 
-        <h3>No projects available</h3>
+
+        <h3>
+          No projects available
+        </h3>
+
 
         <p>
           Projects will appear here once they are added.
         </p>
 
       </div>
+
 
     </div>
 
@@ -245,14 +366,20 @@
 
     <ng-template #loading>
 
+
       <div class="projects-loading">
+
 
         <article
           class="loading-project"
-          *ngFor="let item of [1, 2, 3]"
+
+          *ngFor="
+            let item of [1, 2, 3]
+          "
         >
 
           <div class="loading-visual"></div>
+
 
           <div class="loading-content">
 
@@ -261,7 +388,9 @@
             <div class="loading-title"></div>
 
             <div class="loading-text"></div>
+
             <div class="loading-text"></div>
+
             <div class="loading-text short"></div>
 
             <div class="loading-tags"></div>
@@ -270,7 +399,9 @@
 
         </article>
 
+
       </div>
+
 
     </ng-template>
 
@@ -278,4 +409,3 @@
   </div>
 
 </section>
- 
