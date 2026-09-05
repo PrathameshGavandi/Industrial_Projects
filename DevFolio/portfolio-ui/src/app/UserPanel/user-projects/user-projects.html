@@ -1,5 +1,6 @@
 <section class="projects-section">
 
+
   <!-- =====================================================
        BACKGROUND
   ====================================================== -->
@@ -16,6 +17,7 @@
   </div>
 
 
+
   <div class="projects-container">
 
 
@@ -24,6 +26,7 @@
     ====================================================== -->
 
     <header class="projects-header">
+
 
       <div class="section-label">
 
@@ -38,6 +41,7 @@
         </span>
 
       </div>
+
 
 
       <div class="heading-wrap">
@@ -69,7 +73,9 @@
       </div>
 
 
+
       <div class="header-bottom">
+
 
         <p class="projects-subtitle">
 
@@ -78,6 +84,7 @@
           problem solving.
 
         </p>
+
 
 
         <a
@@ -105,7 +112,9 @@
 
         </a>
 
+
       </div>
+
 
     </header>
 
@@ -117,207 +126,161 @@
 
     <div
       class="projects-list"
-      *ngIf="projectList$ | async as projects; else loading"
+
+      *ngIf="
+        projectList$ | async as projects;
+        else loading
+      "
     >
 
 
+      <!-- ===================================================
+           PROJECT
+      ==================================================== -->
+
       <article
-        class="project-showcase"
+        class="project-card"
 
         *ngFor="
           let project of projects;
           let index = index;
           trackBy: trackById
         "
-
-        [class.project-reverse]="index % 2 !== 0"
       >
 
 
-        <!-- =================================================
-             PROJECT VISUAL
-        ================================================== -->
+        <!-- ===============================================
+             PROJECT HEADER
+        ================================================ -->
 
-        <div class="project-visual">
+        <div class="project-header-row">
 
 
-          <!-- Decorative number -->
-
-          <div
-            class="visual-number"
-            aria-hidden="true"
-          >
+          <div class="project-number">
 
             {{ getProjectNumber(index) }}
 
           </div>
 
 
-          <!-- Decorative circles -->
+          <div class="project-type">
 
-          <div
-            class="visual-circle circle-one"
-            aria-hidden="true"
-          ></div>
-
-          <div
-            class="visual-circle circle-two"
-            aria-hidden="true"
-          ></div>
-
-
-          <div class="visual-content">
-
-
-            <!-- Top -->
-
-            <div class="visual-top">
-
-              <span class="visual-index">
-
-                {{ getProjectNumber(index) }}
-
-              </span>
-
-
-              <span class="visual-type">
-
-                {{ project.type }}
-
-              </span>
-
-            </div>
-
-
-            <!-- Main Code Icon -->
-
-            <div class="visual-icon">
-
-              <i class="fas fa-code"></i>
-
-            </div>
-
-
-            <!-- Bottom Caption -->
-
-            <div class="visual-caption">
-
-              <span>
-                BUILD
-              </span>
-
-              <span>
-                DEPLOY
-              </span>
-
-              <span>
-                ITERATE
-              </span>
-
-            </div>
-
+            {{ project.type }}
 
           </div>
+
 
         </div>
 
 
 
         <!-- =================================================
-             PROJECT INFORMATION
+             PROJECT CONTENT
         ================================================== -->
 
-        <div class="project-information">
+        <div class="project-content">
 
 
-          <!-- Meta -->
+          <div class="project-information">
 
-          <div class="project-meta">
 
-            <span class="meta-line"></span>
+            <!-- Meta -->
+
+            <div class="project-meta">
+
+              <span class="meta-line"></span>
+
+              <span>
+                PROJECT {{ getProjectNumber(index) }}
+              </span>
+
+            </div>
+
+
+
+            <!-- Project Name -->
+
+            <h3 class="project-name">
+
+              {{ project.name }}
+
+            </h3>
+
+
+
+            <!-- Description -->
+
+            <div
+              class="project-description"
+              [innerHTML]="project.description"
+            ></div>
+
+
+
+            <!-- Technology -->
+
+            <div class="technology-section">
+
+
+              <div class="technology-title">
+
+                <span></span>
+
+                TECH STACK
+
+              </div>
+
+
+
+              <div class="technology-list">
+
+
+                <span
+                  class="technology"
+
+                  *ngFor="
+                    let tech of project.technologyList;
+                    trackBy: trackByTechnology
+                  "
+                >
+
+                  {{ tech }}
+
+                </span>
+
+
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROJECT FOOTER
+        ================================================== -->
+
+        <div class="project-bottom">
+
+
+          <div class="project-status">
+
+            <span class="status-indicator"></span>
 
             <span>
-              PROJECT {{ getProjectNumber(index) }}
+              COMPLETED PROJECT
             </span>
 
           </div>
 
 
-          <!-- Project Name -->
-
-          <h3 class="project-name">
-
-            {{ project.name }}
-
-          </h3>
-
-
-          <!-- Description -->
-
-          <div
-            class="project-description"
-            [innerHTML]="project.description"
-          ></div>
-
-
-
-          <!-- Technology -->
-
-          <div class="technology-section">
-
-
-            <div class="technology-title">
-
-              <span></span>
-
-              TECH STACK
-
-            </div>
-
-
-            <div class="technology-list">
-
-
-              <span
-                class="technology"
-
-                *ngFor="
-                  let tech of project.technologyList;
-                  trackBy: trackByTechnology
-                "
-              >
-
-                {{ tech }}
-
-              </span>
-
-
-            </div>
-
-          </div>
-
-
-
-          <!-- Bottom -->
-
-          <div class="project-bottom">
-
-
-            <div class="project-status">
-
-              <span class="status-indicator"></span>
-
-              <span>
-                COMPLETED PROJECT
-              </span>
-
-            </div>
-
-
-            <div class="project-end-line"></div>
-
-
-          </div>
+          <div class="project-end-line"></div>
 
 
         </div>
@@ -334,8 +297,11 @@
       <div
         class="projects-empty"
 
-        *ngIf="projects.length === 0"
+        *ngIf="
+          projects.length === 0
+        "
       >
+
 
         <div class="empty-icon">
 
@@ -352,6 +318,7 @@
         <p>
           Projects will appear here once they are added.
         </p>
+
 
       </div>
 
@@ -378,12 +345,20 @@
           "
         >
 
-          <div class="loading-visual"></div>
+
+          <div class="loading-header">
+
+            <div class="loading-small"></div>
+
+            <div class="loading-type"></div>
+
+          </div>
 
 
           <div class="loading-content">
 
-            <div class="loading-small"></div>
+
+            <div class="loading-meta"></div>
 
             <div class="loading-title"></div>
 
@@ -395,7 +370,9 @@
 
             <div class="loading-tags"></div>
 
+
           </div>
+
 
         </article>
 
@@ -407,5 +384,6 @@
 
 
   </div>
+
 
 </section>

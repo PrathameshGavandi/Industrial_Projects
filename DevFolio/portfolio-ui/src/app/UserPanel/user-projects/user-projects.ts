@@ -121,8 +121,11 @@ export class UserProjectsComponent implements OnInit {
 
 
         shareReplay({
+
           bufferSize: 1,
+
           refCount: true
+
         })
 
       );
@@ -137,7 +140,9 @@ export class UserProjectsComponent implements OnInit {
     const technologyList =
       (project.technologies ?? '')
         .split(',')
-        .map(technology => technology.trim())
+        .map(
+          technology => technology.trim()
+        )
         .filter(Boolean);
 
 

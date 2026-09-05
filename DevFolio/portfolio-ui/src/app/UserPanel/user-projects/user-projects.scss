@@ -1,6 +1,6 @@
 /* =========================================================
    PROJECTS
-   Editorial Showcase
+   Clean Editorial Showcase
 ========================================================= */
 
 .projects-section {
@@ -116,7 +116,7 @@
 
 .projects-header {
 
-  margin-bottom: 95px;
+  margin-bottom: 90px;
 
 }
 
@@ -401,7 +401,11 @@
 
 .github-link:hover .github-arrow {
 
-  transform: translate(3px, -3px);
+  transform:
+    translate(
+      3px,
+      -3px
+    );
 
 }
 
@@ -416,261 +420,53 @@
 
   flex-direction: column;
 
-  gap: 105px;
+  gap: 0;
 
 }
 
 
 /* =========================================================
-   PROJECT SHOWCASE
+   PROJECT CARD
 ========================================================= */
 
-.project-showcase {
+.project-card {
 
   position: relative;
 
-  display: grid;
+  padding: 55px 0 60px;
 
-  grid-template-columns:
-    minmax(320px, 0.9fr)
-    minmax(0, 1.1fr);
-
-  align-items: center;
-
-  gap: clamp(
-    55px,
-    8vw,
-    120px
-  );
-
-  min-height: 430px;
-
-}
-
-
-/* =========================================================
-   REVERSE PROJECT
-========================================================= */
-
-.project-showcase.project-reverse {
-
-  grid-template-columns:
-    minmax(0, 1.1fr)
-    minmax(320px, 0.9fr);
-
-}
-
-
-.project-showcase.project-reverse
-.project-visual {
-
-  order: 2;
-
-}
-
-
-.project-showcase.project-reverse
-.project-information {
-
-  order: 1;
-
-}
-
-
-/* =========================================================
-   VISUAL BLOCK
-   No Project Images Required
-========================================================= */
-
-.project-visual {
-
-  position: relative;
-
-  height: 390px;
-
-  overflow: hidden;
-
-  border: 1px solid rgba(103, 232, 249, 0.13);
-
-  border-radius: 28px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(15, 46, 70, 0.9),
-      rgba(7, 23, 38, 0.98)
-    );
-
-  box-shadow:
-    0 25px 70px rgba(0, 0, 0, 0.28);
-
-  isolation: isolate;
+  border-top: 1px solid
+    rgba(148, 163, 184, 0.10);
 
   transition:
-    border-color 0.45s ease,
-    box-shadow 0.45s ease,
-    transform 0.45s ease;
+    padding-left 0.35s ease,
+    padding-right 0.35s ease;
 
 }
 
 
-.project-visual::before {
+.project-card:last-child {
 
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      135deg,
-      transparent 40%,
-      rgba(56, 189, 248, 0.07),
-      transparent 70%
-    );
-
-  pointer-events: none;
+  border-bottom: 1px solid
+    rgba(148, 163, 184, 0.10);
 
 }
 
 
-.project-visual::after {
+.project-card:hover {
 
-  content: "";
+  padding-left: 12px;
 
-  position: absolute;
-
-  left: 10%;
-
-  right: 10%;
-
-  bottom: 0;
-
-  height: 1px;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(103, 232, 249, 0.6),
-      transparent
-    );
-
-}
-
-
-.project-showcase:hover .project-visual {
-
-  transform: translateY(-4px);
-
-  border-color:
-    rgba(103, 232, 249, 0.32);
-
-  box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.38),
-    0 0 40px rgba(34, 211, 238, 0.05);
+  padding-right: 12px;
 
 }
 
 
 /* =========================================================
-   VISUAL NUMBER
+   PROJECT HEADER ROW
 ========================================================= */
 
-.visual-number {
-
-  position: absolute;
-
-  right: -8px;
-
-  bottom: -38px;
-
-  color: rgba(103, 232, 249, 0.045);
-
-  font-size: 13rem;
-
-  line-height: 1;
-
-  font-weight: 900;
-
-  letter-spacing: -12px;
-
-  pointer-events: none;
-
-}
-
-
-/* =========================================================
-   CIRCLES
-========================================================= */
-
-.visual-circle {
-
-  position: absolute;
-
-  border: 1px solid rgba(103, 232, 249, 0.09);
-
-  border-radius: 50%;
-
-  pointer-events: none;
-
-}
-
-
-.circle-one {
-
-  width: 300px;
-
-  height: 300px;
-
-  right: -110px;
-
-  top: -80px;
-
-}
-
-
-.circle-two {
-
-  width: 190px;
-
-  height: 190px;
-
-  right: -55px;
-
-  top: -25px;
-
-  border-color:
-    rgba(129, 140, 248, 0.11);
-
-}
-
-
-/* =========================================================
-   VISUAL CONTENT
-========================================================= */
-
-.visual-content {
-
-  position: relative;
-
-  z-index: 2;
-
-  height: 100%;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: space-between;
-
-  padding: 28px;
-
-}
-
-
-.visual-top {
+.project-header-row {
 
   display: flex;
 
@@ -678,43 +474,39 @@
 
   justify-content: space-between;
 
+  margin-bottom: 32px;
+
 }
 
 
-.visual-index {
+.project-number {
 
   color: #67e8f9;
 
-  font-size: 0.62rem;
+  font-size: 0.68rem;
 
   font-weight: 850;
 
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
 
 }
 
 
-.visual-type {
+.project-type {
 
-  max-width: 150px;
+  padding: 7px 11px;
 
-  padding: 7px 10px;
-
-  overflow: hidden;
-
-  text-overflow: ellipsis;
-
-  white-space: nowrap;
-
-  border: 1px solid rgba(148, 163, 184, 0.13);
+  border: 1px solid
+    rgba(148, 163, 184, 0.12);
 
   border-radius: 5px;
 
   color: #94a3b8;
 
-  background: rgba(255, 255, 255, 0.025);
+  background:
+    rgba(255, 255, 255, 0.025);
 
-  font-size: 0.53rem;
+  font-size: 0.52rem;
 
   font-weight: 750;
 
@@ -726,112 +518,28 @@
 
 
 /* =========================================================
-   CODE ICON
+   PROJECT CONTENT
 ========================================================= */
 
-.visual-icon {
+.project-content {
 
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  width: 82px;
-
-  height: 82px;
-
-  border: 1px solid rgba(103, 232, 249, 0.22);
-
-  border-radius: 22px;
-
-  color: #67e8f9;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(103, 232, 249, 0.13),
-      rgba(99, 102, 241, 0.08)
-    );
-
-  box-shadow:
-    0 18px 45px rgba(0, 0, 0, 0.2);
-
-  font-size: 1.8rem;
-
-  transition:
-    transform 0.45s cubic-bezier(
-      0.22,
-      1,
-      0.36,
-      1
-    );
+  display: block;
 
 }
 
-
-.project-showcase:hover .visual-icon {
-
-  transform:
-    rotate(-5deg)
-    scale(1.06);
-
-}
-
-
-/* =========================================================
-   VISUAL CAPTION
-========================================================= */
-
-.visual-caption {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 16px;
-
-  color: rgba(148, 163, 184, 0.42);
-
-  font-size: 0.48rem;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
-
-}
-
-
-.visual-caption span {
-
-  position: relative;
-
-}
-
-
-.visual-caption span:not(:last-child)::after {
-
-  content: "•";
-
-  position: absolute;
-
-  right: -11px;
-
-  color: rgba(103, 232, 249, 0.5);
-
-}
-
-
-/* =========================================================
-   INFORMATION
-========================================================= */
 
 .project-information {
 
-  max-width: 610px;
+  width: 100%;
+
+  max-width: 850px;
 
 }
 
+
+/* =========================================================
+   META
+========================================================= */
 
 .project-meta {
 
@@ -841,11 +549,12 @@
 
   gap: 10px;
 
-  margin-bottom: 19px;
+  margin-bottom: 18px;
 
-  color: rgba(103, 232, 249, 0.65);
+  color:
+    rgba(103, 232, 249, 0.62);
 
-  font-size: 0.56rem;
+  font-size: 0.55rem;
 
   font-weight: 800;
 
@@ -876,16 +585,25 @@
   color: #f8fafc;
 
   font-size: clamp(
-    2rem,
-    3.4vw,
-    3.3rem
+    2.2rem,
+    4vw,
+    4rem
   );
 
-  line-height: 1.08;
+  line-height: 1.05;
 
   font-weight: 800;
 
-  letter-spacing: -1.8px;
+  letter-spacing: -2px;
+
+  transition: color 0.3s ease;
+
+}
+
+
+.project-card:hover .project-name {
+
+  color: #67e8f9;
 
 }
 
@@ -896,15 +614,15 @@
 
 .project-description {
 
-  max-width: 570px;
+  max-width: 820px;
 
   margin: 0;
 
   color: #8fa3b7;
 
-  font-size: 0.84rem;
+  font-size: 0.88rem;
 
-  line-height: 1.85;
+  line-height: 1.9;
 
 }
 
@@ -936,7 +654,7 @@
 
 .technology-section {
 
-  margin-top: 30px;
+  margin-top: 32px;
 
 }
 
@@ -951,7 +669,8 @@
 
   margin-bottom: 12px;
 
-  color: rgba(148, 163, 184, 0.5);
+  color:
+    rgba(148, 163, 184, 0.5);
 
   font-size: 0.51rem;
 
@@ -973,7 +692,8 @@
   background: #38bdf8;
 
   box-shadow:
-    0 0 10px rgba(56, 189, 248, 0.8);
+    0 0 10px
+    rgba(56, 189, 248, 0.8);
 
 }
 
@@ -999,13 +719,15 @@
 
   padding: 5px 9px;
 
-  border: 1px solid rgba(148, 163, 184, 0.11);
+  border: 1px solid
+    rgba(148, 163, 184, 0.11);
 
   border-radius: 5px;
 
   color: #b8c5d3;
 
-  background: rgba(148, 163, 184, 0.035);
+  background:
+    rgba(148, 163, 184, 0.035);
 
   font-size: 0.59rem;
 
@@ -1019,10 +741,12 @@
 }
 
 
-.project-showcase:hover .technology {
+.project-card:hover .technology {
 
   border-color:
-    rgba(103, 232, 249, 0.15);
+    rgba(103, 232, 249, 0.20);
+
+  color: #d7f9ff;
 
 }
 
@@ -1039,7 +763,7 @@
 
   gap: 15px;
 
-  margin-top: 31px;
+  margin-top: 42px;
 
 }
 
@@ -1054,7 +778,8 @@
 
   flex-shrink: 0;
 
-  color: rgba(148, 163, 184, 0.48);
+  color:
+    rgba(148, 163, 184, 0.48);
 
   font-size: 0.48rem;
 
@@ -1076,7 +801,8 @@
   background: #22c55e;
 
   box-shadow:
-    0 0 10px rgba(34, 197, 94, 0.55);
+    0 0 10px
+    rgba(34, 197, 94, 0.55);
 
 }
 
@@ -1107,7 +833,8 @@
 
   text-align: center;
 
-  border: 1px dashed rgba(148, 163, 184, 0.12);
+  border: 1px dashed
+    rgba(148, 163, 184, 0.12);
 
   border-radius: 18px;
 
@@ -1157,32 +884,43 @@
 
   flex-direction: column;
 
-  gap: 70px;
-
 }
 
 
 .loading-project {
 
-  display: grid;
+  padding: 55px 0 60px;
 
-  grid-template-columns:
-    minmax(320px, 0.9fr)
-    minmax(0, 1.1fr);
-
-  gap: clamp(
-    55px,
-    8vw,
-    120px
-  );
-
-  min-height: 390px;
+  border-top: 1px solid
+    rgba(148, 163, 184, 0.10);
 
 }
 
 
-.loading-visual,
+.loading-project:last-child {
+
+  border-bottom: 1px solid
+    rgba(148, 163, 184, 0.10);
+
+}
+
+
+.loading-header {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 32px;
+
+}
+
+
 .loading-small,
+.loading-type,
+.loading-meta,
 .loading-title,
 .loading-text,
 .loading-tags {
@@ -1203,29 +941,35 @@
 }
 
 
-.loading-visual {
-
-  height: 390px;
-
-  border-radius: 28px;
-
-}
-
-
-.loading-content {
-
-  padding-top: 45px;
-
-}
-
-
 .loading-small {
 
-  width: 80px;
+  width: 45px;
 
   height: 10px;
 
-  margin-bottom: 22px;
+  border-radius: 4px;
+
+}
+
+
+.loading-type {
+
+  width: 100px;
+
+  height: 25px;
+
+  border-radius: 5px;
+
+}
+
+
+.loading-meta {
+
+  width: 110px;
+
+  height: 9px;
+
+  margin-bottom: 20px;
 
   border-radius: 4px;
 
@@ -1234,9 +978,9 @@
 
 .loading-title {
 
-  width: 70%;
+  width: 55%;
 
-  height: 45px;
+  height: 50px;
 
   margin-bottom: 28px;
 
@@ -1247,7 +991,7 @@
 
 .loading-text {
 
-  width: 92%;
+  width: 80%;
 
   height: 10px;
 
@@ -1260,18 +1004,18 @@
 
 .loading-text.short {
 
-  width: 65%;
+  width: 55%;
 
 }
 
 
 .loading-tags {
 
-  width: 55%;
+  width: 45%;
 
-  height: 35px;
+  height: 30px;
 
-  margin-top: 35px;
+  margin-top: 32px;
 
   border-radius: 5px;
 
@@ -1338,58 +1082,56 @@
   }
 
 
-  .project-showcase,
-  .project-showcase.project-reverse {
+  .project-card {
 
-    grid-template-columns: 1fr;
-
-    gap: 38px;
-
-  }
-
-
-  .project-showcase.project-reverse
-  .project-visual {
-
-    order: 1;
+    padding:
+      45px
+      0
+      50px;
 
   }
 
 
-  .project-showcase.project-reverse
+  .project-card:hover {
+
+    padding-left: 0;
+
+    padding-right: 0;
+
+  }
+
+
   .project-information {
 
-    order: 2;
+    max-width: 100%;
 
   }
 
 
-  .project-visual {
+  .project-name {
 
-    height: 350px;
+    font-size: clamp(
+      2rem,
+      6vw,
+      3.2rem
+    );
+
+  }
+
+
+  .project-description {
+
+    max-width: 100%;
 
   }
 
 
   .loading-project {
 
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-
-  }
-
-
-  .loading-visual {
-
-    height: 350px;
-
-  }
-
-
-  .loading-content {
-
-    padding-top: 0;
+    padding:
+      45px
+      0
+      50px;
 
   }
 
@@ -1485,84 +1227,57 @@
   }
 
 
-  .projects-list {
+  .project-card {
 
-    gap: 70px;
-
-  }
-
-
-  .project-showcase,
-  .project-showcase.project-reverse {
-
-    gap: 30px;
-
-    min-height: auto;
+    padding:
+      38px
+      0
+      42px;
 
   }
 
 
-  .project-visual {
+  .project-header-row {
 
-    height: 300px;
-
-    border-radius: 22px;
+    margin-bottom: 28px;
 
   }
 
 
-  .visual-content {
+  .project-number {
 
-    padding: 21px;
-
-  }
-
-
-  .visual-icon {
-
-    width: 66px;
-
-    height: 66px;
-
-    border-radius: 18px;
-
-    font-size: 1.45rem;
+    font-size: 0.59rem;
 
   }
 
 
-  .visual-number {
+  .project-type {
 
-    right: -4px;
+    max-width: 145px;
 
-    bottom: -25px;
+    overflow: hidden;
 
-    font-size: 9rem;
+    text-overflow: ellipsis;
 
-    letter-spacing: -8px;
+    white-space: nowrap;
 
-  }
-
-
-  .circle-one {
-
-    width: 230px;
-
-    height: 230px;
+    font-size: 0.48rem;
 
   }
 
 
-  .circle-two {
+  .project-meta {
 
-    width: 150px;
+    font-size: 0.50rem;
 
-    height: 150px;
+    letter-spacing: 1.7px;
 
   }
 
 
   .project-name {
+
+    margin-bottom: 18px;
 
     font-size: 2rem;
 
@@ -1575,7 +1290,7 @@
 
     font-size: 0.77rem;
 
-    line-height: 1.78;
+    line-height: 1.8;
 
   }
 
@@ -1589,14 +1304,40 @@
 
   .project-bottom {
 
-    margin-top: 25px;
+    margin-top: 30px;
 
   }
 
 
-  .loading-visual {
+  .loading-project {
 
-    height: 300px;
+    padding:
+      38px
+      0
+      42px;
+
+  }
+
+
+  .loading-title {
+
+    width: 80%;
+
+    height: 38px;
+
+  }
+
+
+  .loading-text {
+
+    width: 95%;
+
+  }
+
+
+  .loading-tags {
+
+    width: 70%;
 
   }
 
@@ -1625,13 +1366,6 @@
   }
 
 
-  .project-visual {
-
-    height: 270px;
-
-  }
-
-
   .project-name {
 
     font-size: 1.8rem;
@@ -1639,18 +1373,16 @@
   }
 
 
-  .visual-caption {
-
-    gap: 11px;
+  .project-status {
 
     font-size: 0.42rem;
 
   }
 
 
-  .project-status {
+  .project-type {
 
-    font-size: 0.42rem;
+    max-width: 120px;
 
   }
 
@@ -1664,8 +1396,8 @@
 @media (prefers-reduced-motion: reduce) {
 
   .github-link,
-  .project-visual,
-  .visual-icon,
+  .project-card,
+  .project-name,
   .technology {
 
     transition: none;
@@ -1673,8 +1405,9 @@
   }
 
 
-  .loading-visual,
   .loading-small,
+  .loading-type,
+  .loading-meta,
   .loading-title,
   .loading-text,
   .loading-tags {
