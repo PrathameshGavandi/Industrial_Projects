@@ -1,9 +1,10 @@
+ scss
 /* =========================================================
    PROJECTS
-   Premium Stacked Portfolio
+   Editorial Showcase
 ========================================================= */
 
-.projects-wrapper {
+.projects-section {
 
   position: relative;
 
@@ -11,29 +12,31 @@
 
   min-height: 100vh;
 
-  padding:
-    110px
-    60px
-    0;
+  padding: 120px 60px 130px;
 
-  overflow: visible;
+  overflow: hidden;
 
   background:
     radial-gradient(
-      circle at 15% 10%,
-      #102c49 0%,
-      #0a1c2d 42%,
-      #071522 100%
-    );
+      circle at 15% 15%,
+      rgba(37, 99, 235, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(14, 165, 233, 0.08),
+      transparent 32%
+    ),
+    #06121f;
 
 }
 
 
 /* =========================================================
-   BACKGROUND GRID
+   BACKGROUND
 ========================================================= */
 
-.projects-grid-bg {
+.projects-background {
 
   position: absolute;
 
@@ -41,31 +44,50 @@
 
   pointer-events: none;
 
-  opacity: 0.4;
+  overflow: hidden;
 
-  background-image:
+}
 
-    linear-gradient(
-      rgba(56, 189, 248, 0.035) 1px,
-      transparent 1px
-    ),
 
-    linear-gradient(
-      90deg,
-      rgba(56, 189, 248, 0.035) 1px,
-      transparent 1px
-    );
+.background-orb {
 
-  background-size:
-    55px
-    55px;
+  position: absolute;
 
-  mask-image:
-    linear-gradient(
-      to bottom,
-      black,
-      transparent
-    );
+  border-radius: 50%;
+
+  filter: blur(80px);
+
+  opacity: 0.22;
+
+}
+
+
+.orb-one {
+
+  top: 12%;
+
+  left: -120px;
+
+  width: 280px;
+
+  height: 280px;
+
+  background: #2563eb;
+
+}
+
+
+.orb-two {
+
+  right: -100px;
+
+  bottom: 10%;
+
+  width: 260px;
+
+  height: 260px;
+
+  background: #06b6d4;
 
 }
 
@@ -82,7 +104,7 @@
 
   width: 100%;
 
-  max-width: 1200px;
+  max-width: 1240px;
 
   margin: 0 auto;
 
@@ -95,70 +117,71 @@
 
 .projects-header {
 
-  max-width: 780px;
-
-  margin:
-    0 auto
-    80px;
-
-  text-align: center;
+  margin-bottom: 95px;
 
 }
 
 
 /* =========================================================
-   KICKER
+   SECTION LABEL
 ========================================================= */
 
-.projects-kicker {
+.section-label {
 
   display: flex;
 
   align-items: center;
 
-  justify-content: center;
-
   gap: 12px;
 
-  margin-bottom: 18px;
+  margin-bottom: 28px;
 
-  color: #38bdf8;
+  color: #67e8f9;
 
-  font-size: 0.65rem;
+  font-size: 0.62rem;
 
   font-weight: 800;
 
-  letter-spacing: 3px;
+  letter-spacing: 2.8px;
 
 }
 
 
-.kicker-line {
+.label-number {
 
-  width: 34px;
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 31px;
+
+  height: 20px;
+
+  border: 1px solid rgba(103, 232, 249, 0.28);
+
+  border-radius: 4px;
+
+  color: #67e8f9;
+
+  background: rgba(103, 232, 249, 0.05);
+
+  font-size: 0.55rem;
+
+}
+
+
+.label-line {
+
+  width: 55px;
 
   height: 1px;
 
   background:
     linear-gradient(
       90deg,
-      transparent,
-      #38bdf8
-    );
-
-  box-shadow:
-    0 0 10px
-    rgba(56, 189, 248, 0.55);
-
-}
-
-
-.kicker-line:last-child {
-
-  background:
-    linear-gradient(
-      90deg,
-      #38bdf8,
+      rgba(103, 232, 249, 0.7),
       transparent
     );
 
@@ -169,42 +192,48 @@
    TITLE
 ========================================================= */
 
+.heading-wrap {
+
+  position: relative;
+
+  display: inline-block;
+
+}
+
+
 .projects-title {
 
   margin: 0;
 
-  color: #ffffff !important;
+  color: #f8fafc !important;
 
-  font-size:
-    clamp(
-      3rem,
-      5vw,
-      4.7rem
-    );
+  font-size: clamp(
+    3.5rem,
+    7vw,
+    6.7rem
+  );
 
-  line-height: 1;
+  line-height: 0.9;
 
   font-weight: 850;
 
-  letter-spacing: -3px;
+  letter-spacing: -5px;
 
 }
 
 
 .projects-title span {
 
-  position: relative;
-
   display: inline-block;
 
-  margin-left: 8px;
+  margin-left: 14px;
 
   background:
     linear-gradient(
-      100deg,
-      #38bdf8,
-      #60a5fa,
-      #22d3ee
+      110deg,
+      #67e8f9,
+      #38bdf8 45%,
+      #818cf8
     );
 
   -webkit-background-clip: text;
@@ -216,45 +245,85 @@
 }
 
 
-.projects-title span::after {
+/* =========================================================
+   HEADING DECORATION
+========================================================= */
 
-  content: "";
+.heading-decoration {
 
   position: absolute;
 
-  left: 5px;
+  right: -52px;
 
-  right: 0;
+  bottom: -14px;
 
-  bottom: -12px;
+  display: flex;
 
-  height: 2px;
+  gap: 5px;
 
-  background:
-    linear-gradient(
-      90deg,
-      #38bdf8,
-      transparent
-    );
+  align-items: flex-end;
 
-  box-shadow:
-    0 0 14px
-    rgba(56, 189, 248, 0.65);
+}
+
+
+.heading-decoration span {
+
+  display: block;
+
+  width: 4px;
+
+  border-radius: 3px;
+
+  background: #38bdf8;
+
+}
+
+
+.heading-decoration span:nth-child(1) {
+
+  height: 9px;
+
+}
+
+
+.heading-decoration span:nth-child(2) {
+
+  height: 17px;
+
+}
+
+
+.heading-decoration span:nth-child(3) {
+
+  height: 28px;
 
 }
 
 
 /* =========================================================
-   SUBTITLE
+   HEADER BOTTOM
 ========================================================= */
+
+.header-bottom {
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-top: 35px;
+
+}
+
 
 .projects-subtitle {
 
-  max-width: 670px;
+  max-width: 620px;
 
-  margin:
-    30px auto
-    0;
+  margin: 0;
 
   color: #94a3b8;
 
@@ -269,7 +338,7 @@
    GITHUB
 ========================================================= */
 
-.github-cta {
+.github-link {
 
   display: inline-flex;
 
@@ -277,94 +346,72 @@
 
   gap: 11px;
 
-  margin-top: 28px;
+  flex-shrink: 0;
 
-  padding:
-    11px
-    16px;
+  padding: 12px 15px;
 
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.22);
+  border: 1px solid rgba(148, 163, 184, 0.16);
 
-  border-radius: 10px;
+  border-radius: 8px;
 
-  color: #bae6fd !important;
+  color: #e2e8f0 !important;
 
   text-decoration: none;
 
-  background:
-    rgba(8, 30, 48, 0.9);
+  background: rgba(15, 23, 42, 0.65);
 
   transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
 
 }
 
 
-.github-cta:hover {
+.github-link:hover {
 
-  transform:
-    translateY(-3px);
+  transform: translateY(-3px);
 
-  border-color:
-    rgba(56, 189, 248, 0.55);
+  border-color: rgba(103, 232, 249, 0.4);
 
-  box-shadow:
-    0 12px 30px
-    rgba(0, 0, 0, 0.25),
-
-    0 0 20px
-    rgba(56, 189, 248, 0.07);
+  background: rgba(14, 116, 144, 0.12);
 
 }
 
 
 .github-icon {
 
-  display: flex;
+  color: #67e8f9;
 
-  align-items: center;
-
-  justify-content: center;
-
-  width: 25px;
-
-  height: 25px;
-
-  border-radius: 7px;
-
-  color: #38bdf8;
-
-  background:
-    rgba(56, 189, 248, 0.09);
+  font-size: 1rem;
 
 }
 
 
-.github-text {
+.github-link span:nth-child(2) {
 
-  font-size: 0.74rem;
+  font-size: 0.68rem;
 
-  font-weight: 700;
+  font-weight: 750;
+
+  letter-spacing: 0.8px;
 
 }
 
 
 .github-arrow {
 
-  font-size: 15px;
+  color: #67e8f9;
+
+  font-size: 1rem;
 
   transition:
-    transform 0.25s ease;
+    transform 0.3s ease;
 
 }
 
 
-.github-cta:hover
-.github-arrow {
+.github-link:hover .github-arrow {
 
   transform:
     translate(
@@ -376,341 +423,249 @@
 
 
 /* =========================================================
-   PROJECT STACK
+   PROJECT LIST
 ========================================================= */
 
-.projects-stack {
-
-  position: relative;
-
-  width: 100%;
-
-  overflow: visible;
-
-}
-
-
-/* =========================================================
-   STICKY ROW
-========================================================= */
-
-.project-stack-row {
-
-  position: sticky;
-
-  top: 105px;
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(
-      2,
-      minmax(
-        0,
-        1fr
-      )
-    );
-
-  align-items: stretch;
-
-  gap: 24px;
-
-  width: 100%;
-
-  margin-bottom: 125px;
-
-  isolation: isolate;
-
-}
-
-
-/*
- * IMPORTANT
- *
- * Row is sticky.
- * Card is NOT sticky.
- *
- * Therefore:
- *
- * [01] [02]
- *
- * then
- *
- * [03] [04]
- *
- * comes over the first row.
- */
-
-
-/* =========================================================
-   PROJECT CARD
-========================================================= */
-
-.project-card {
-
-  position: relative;
-
-  box-sizing: border-box;
-
-  width: 100%;
-
-  /*
-   * Same size for every card.
-   */
-  height: 470px;
-
-  min-height: 470px;
-
-  padding:
-    30px
-    30px
-    25px;
-
-  overflow: hidden;
-
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.20);
-
-  border-radius: 22px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #102b44 0%,
-      #0c2237 48%,
-      #081a2b 100%
-    );
-
-  box-shadow:
-
-    0 25px 55px
-    rgba(0, 0, 0, 0.30),
-
-    inset 0 1px 0
-    rgba(255, 255, 255, 0.045);
-
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
-
-}
-
-
-/* =========================================================
-   TOP BORDER
-========================================================= */
-
-.project-card::before {
-
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-
-  left: 8%;
-
-  width: 84%;
-
-  height: 2px;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      #38bdf8,
-      #60a5fa,
-      transparent
-    );
-
-  box-shadow:
-    0 0 14px
-    rgba(56, 189, 248, 0.45);
-
-}
-
-
-/* =========================================================
-   HOVER
-========================================================= */
-
-.project-card:hover {
-
-  transform:
-    translateY(-6px);
-
-  border-color:
-    rgba(56, 189, 248, 0.45);
-
-  box-shadow:
-
-    0 32px 70px
-    rgba(0, 0, 0, 0.38),
-
-    0 0 28px
-    rgba(56, 189, 248, 0.07),
-
-    inset 0 1px 0
-    rgba(255, 255, 255, 0.06);
-
-}
-
-
-/* =========================================================
-   CARD GRID
-========================================================= */
-
-.card-grid {
-
-  position: absolute;
-
-  inset: 0;
-
-  pointer-events: none;
-
-  opacity: 0.32;
-
-  background-image:
-
-    linear-gradient(
-      rgba(56, 189, 248, 0.025) 1px,
-      transparent 1px
-    ),
-
-    linear-gradient(
-      90deg,
-      rgba(56, 189, 248, 0.025) 1px,
-      transparent 1px
-    );
-
-  background-size:
-    32px
-    32px;
-
-  mask-image:
-    linear-gradient(
-      135deg,
-      black,
-      transparent 75%
-    );
-
-}
-
-
-/* =========================================================
-   TOP GLOW
-========================================================= */
-
-.card-top-glow {
-
-  position: absolute;
-
-  top: -100px;
-
-  right: -90px;
-
-  width: 260px;
-
-  height: 190px;
-
-  pointer-events: none;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(56, 189, 248, 0.14),
-      transparent 70%
-    );
-
-}
-
-
-/* =========================================================
-   NUMBER
-========================================================= */
-
-.project-number {
-
-  position: absolute;
-
-  top: 16px;
-
-  right: 22px;
-
-  color:
-    rgba(125, 211, 252, 0.055);
-
-  font-size: 6rem;
-
-  font-weight: 900;
-
-  line-height: 1;
-
-  letter-spacing: -7px;
-
-  pointer-events: none;
-
-}
-
-
-/* =========================================================
-   SIDE LABEL
-========================================================= */
-
-.project-index {
-
-  position: absolute;
-
-  left: 0;
-
-  top: 125px;
+.projects-list {
 
   display: flex;
 
   flex-direction: column;
 
-  align-items: center;
-
-  gap: 8px;
-
-  width: 24px;
-
-  color:
-    rgba(125, 211, 252, 0.35);
-
-  font-size: 0.45rem;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
-
-  writing-mode:
-    vertical-rl;
-
-}
-
-
-.project-index strong {
-
-  color:
-    rgba(56, 189, 248, 0.75);
-
-  font-size: 0.55rem;
+  gap: 105px;
 
 }
 
 
 /* =========================================================
-   CONTENT
+   PROJECT SHOWCASE
 ========================================================= */
 
-.project-content {
+.project-showcase {
 
   position: relative;
 
-  z-index: 3;
+  display: grid;
+
+  grid-template-columns:
+    minmax(320px, 0.9fr)
+    minmax(0, 1.1fr);
+
+  align-items: center;
+
+  gap: clamp(
+    55px,
+    8vw,
+    120px
+  );
+
+  min-height: 430px;
+
+}
+
+
+/* Alternate layout */
+
+.project-showcase.project-reverse {
+
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(320px, 0.9fr);
+
+}
+
+
+.project-showcase.project-reverse
+.project-visual {
+
+  order: 2;
+
+}
+
+
+.project-showcase.project-reverse
+.project-information {
+
+  order: 1;
+
+}
+
+
+/* =========================================================
+   VISUAL BLOCK
+========================================================= */
+
+.project-visual {
+
+  position: relative;
+
+  height: 390px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(103, 232, 249, 0.13);
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15, 46, 70, 0.9),
+      rgba(7, 23, 38, 0.98)
+    );
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.28);
+
+  isolation: isolate;
+
+  transition:
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+
+}
+
+
+.project-visual::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 40%,
+      rgba(56, 189, 248, 0.07),
+      transparent 70%
+    );
+
+  pointer-events: none;
+
+}
+
+
+.project-visual::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 10%;
+
+  right: 10%;
+
+  bottom: 0;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(103, 232, 249, 0.6),
+      transparent
+    );
+
+}
+
+
+.project-showcase:hover .project-visual {
+
+  border-color:
+    rgba(103, 232, 249, 0.32);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.38),
+    0 0 40px rgba(34, 211, 238, 0.05);
+
+}
+
+
+/* =========================================================
+   VISUAL NUMBER
+========================================================= */
+
+.visual-number {
+
+  position: absolute;
+
+  right: -8px;
+
+  bottom: -38px;
+
+  color: rgba(103, 232, 249, 0.045);
+
+  font-size: 13rem;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing: -12px;
+
+  pointer-events: none;
+
+}
+
+
+/* =========================================================
+   CIRCLES
+========================================================= */
+
+.visual-circle {
+
+  position: absolute;
+
+  border: 1px solid rgba(103, 232, 249, 0.09);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+}
+
+
+.circle-one {
+
+  width: 300px;
+
+  height: 300px;
+
+  right: -110px;
+
+  top: -80px;
+
+}
+
+
+.circle-two {
+
+  width: 190px;
+
+  height: 190px;
+
+  right: -55px;
+
+  top: -25px;
+
+  border-color:
+    rgba(129, 140, 248, 0.11);
+
+}
+
+
+/* =========================================================
+   VISUAL CONTENT
+========================================================= */
+
+.visual-content {
+
+  position: relative;
+
+  z-index: 2;
 
   height: 100%;
 
@@ -718,14 +673,14 @@
 
   flex-direction: column;
 
+  justify-content: space-between;
+
+  padding: 28px;
+
 }
 
 
-/* =========================================================
-   TOP
-========================================================= */
-
-.project-top {
+.visual-top {
 
   display: flex;
 
@@ -733,7 +688,49 @@
 
   justify-content: space-between;
 
-  margin-bottom: 21px;
+}
+
+
+.visual-index {
+
+  color: #67e8f9;
+
+  font-size: 0.62rem;
+
+  font-weight: 850;
+
+  letter-spacing: 2px;
+
+}
+
+
+.visual-type {
+
+  max-width: 150px;
+
+  padding: 7px 10px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  border: 1px solid rgba(148, 163, 184, 0.13);
+
+  border-radius: 5px;
+
+  color: #94a3b8;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  font-size: 0.53rem;
+
+  font-weight: 750;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
 
 }
 
@@ -742,7 +739,7 @@
    ICON
 ========================================================= */
 
-.project-icon {
+.visual-icon {
 
   display: flex;
 
@@ -750,83 +747,130 @@
 
   justify-content: center;
 
-  width: 48px;
+  width: 82px;
 
-  height: 48px;
+  height: 82px;
 
-  flex-shrink: 0;
+  border: 1px solid rgba(103, 232, 249, 0.22);
 
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.22);
+  border-radius: 22px;
 
-  border-radius: 14px;
-
-  color: #38bdf8;
+  color: #67e8f9;
 
   background:
     linear-gradient(
       145deg,
-      rgba(56, 189, 248, 0.14),
-      rgba(37, 99, 235, 0.08)
+      rgba(103, 232, 249, 0.13),
+      rgba(99, 102, 241, 0.08)
     );
 
   box-shadow:
-    0 10px 25px
-    rgba(0, 0, 0, 0.18);
+    0 18px 45px rgba(0, 0, 0, 0.2);
+
+  font-size: 1.8rem;
 
   transition:
-    transform 0.25s ease;
+    transform 0.45s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
 
 }
 
 
-.project-card:hover
-.project-icon {
+.project-showcase:hover .visual-icon {
 
   transform:
-    rotate(-4deg)
-    scale(1.05);
+    rotate(-5deg)
+    scale(1.06);
 
 }
 
 
 /* =========================================================
-   TYPE
+   VISUAL CAPTION
 ========================================================= */
 
-.project-type {
+.visual-caption {
 
-  max-width: 145px;
+  display: flex;
 
-  padding:
-    7px
-    11px;
+  align-items: center;
 
-  overflow: hidden;
+  gap: 16px;
 
-  text-overflow: ellipsis;
+  color: rgba(148, 163, 184, 0.42);
 
-  white-space: nowrap;
+  font-size: 0.48rem;
 
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.16);
+  font-weight: 800;
 
-  border-radius: 8px;
+  letter-spacing: 2px;
 
-  color: #7dd3fc;
+}
 
-  background:
-    rgba(56, 189, 248, 0.055);
+
+.visual-caption span {
+
+  position: relative;
+
+}
+
+
+.visual-caption span:not(:last-child)::after {
+
+  content: "•";
+
+  position: absolute;
+
+  right: -11px;
+
+  color: rgba(103, 232, 249, 0.5);
+
+}
+
+
+/* =========================================================
+   INFORMATION
+========================================================= */
+
+.project-information {
+
+  max-width: 610px;
+
+}
+
+
+.project-meta {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 19px;
+
+  color: rgba(103, 232, 249, 0.65);
 
   font-size: 0.56rem;
 
   font-weight: 800;
 
-  letter-spacing: 1.3px;
+  letter-spacing: 2px;
 
-  text-transform: uppercase;
+}
+
+
+.meta-line {
+
+  width: 30px;
+
+  height: 1px;
+
+  background: #38bdf8;
 
 }
 
@@ -837,59 +881,21 @@
 
 .project-name {
 
-  margin: 0;
+  margin: 0 0 22px;
 
-  max-width: 90%;
+  color: #f8fafc;
 
-  min-height: 42px;
+  font-size: clamp(
+    2rem,
+    3.4vw,
+    3.3rem
+  );
 
-  color: #ffffff;
-
-  font-size: 1.42rem;
-
-  line-height: 1.3;
+  line-height: 1.08;
 
   font-weight: 800;
 
-  letter-spacing: -0.5px;
-
-}
-
-
-/* =========================================================
-   LINE
-========================================================= */
-
-.project-line {
-
-  width: 100%;
-
-  height: 1px;
-
-  margin:
-    14px
-    0
-    17px;
-
-  background:
-    rgba(148, 163, 184, 0.08);
-
-}
-
-
-.project-line span {
-
-  display: block;
-
-  width: 68px;
-
-  height: 1px;
-
-  background: #38bdf8;
-
-  box-shadow:
-    0 0 10px
-    rgba(56, 189, 248, 0.55);
+  letter-spacing: -1.8px;
 
 }
 
@@ -898,44 +904,24 @@
    DESCRIPTION
 ========================================================= */
 
-/*
- * NO line-clamp here.
- *
- * This was the main reason your previous
- * project descriptions were getting cut.
- */
-
 .project-description {
 
-  flex: 0 0 auto;
-
-  width: 100%;
+  max-width: 570px;
 
   margin: 0;
 
-  padding-right: 3px;
+  color: #8fa3b7;
 
-  color: #9aaabd;
+  font-size: 0.84rem;
 
-  font-size: 0.82rem;
-
-  line-height: 1.72;
-
-  overflow: visible;
+  line-height: 1.85;
 
 }
 
 
-/*
- * Normalize HTML coming from API.
- */
-
 .project-description p {
 
-  margin:
-    0
-    0
-    8px;
+  margin: 0 0 9px;
 
 }
 
@@ -949,7 +935,7 @@
 
 .project-description br {
 
-  line-height: 1.72;
+  line-height: 1.8;
 
 }
 
@@ -960,20 +946,12 @@
 
 .technology-section {
 
-  margin-top: auto;
-
-  min-height: 82px;
-
-  padding-top: 18px;
+  margin-top: 30px;
 
 }
 
 
-/* =========================================================
-   TECH HEADING
-========================================================= */
-
-.tech-heading {
+.technology-title {
 
   display: flex;
 
@@ -981,12 +959,11 @@
 
   gap: 8px;
 
-  margin-bottom: 11px;
+  margin-bottom: 12px;
 
-  color:
-    rgba(148, 163, 184, 0.60);
+  color: rgba(148, 163, 184, 0.5);
 
-  font-size: 0.55rem;
+  font-size: 0.51rem;
 
   font-weight: 800;
 
@@ -995,114 +972,87 @@
 }
 
 
-.tech-dot {
+.technology-title span {
 
   width: 5px;
 
   height: 5px;
-
-  flex-shrink: 0;
 
   border-radius: 50%;
 
   background: #38bdf8;
 
   box-shadow:
-    0 0 9px
-    rgba(56, 189, 248, 0.8);
+    0 0 10px rgba(56, 189, 248, 0.8);
 
 }
 
 
-/* =========================================================
-   TECH LIST
-========================================================= */
-
-.tech-list {
+.technology-list {
 
   display: flex;
 
   flex-wrap: wrap;
 
-  align-content: flex-start;
-
   gap: 7px;
-
-  max-height: 64px;
-
-  overflow: hidden;
 
 }
 
 
-/* =========================================================
-   TECH PILL
-========================================================= */
-
-.tech-pill {
+.technology {
 
   display: inline-flex;
 
   align-items: center;
 
-  max-width: 135px;
+  min-height: 27px;
 
-  padding:
-    6px
-    9px;
+  padding: 5px 9px;
 
-  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.11);
 
-  text-overflow: ellipsis;
+  border-radius: 5px;
 
-  white-space: nowrap;
+  color: #b8c5d3;
 
-  border:
-    1px solid
-    rgba(148, 163, 184, 0.10);
+  background: rgba(148, 163, 184, 0.035);
 
-  border-radius: 7px;
+  font-size: 0.59rem;
 
-  color: #cbd5e1;
+  font-weight: 650;
 
-  background:
-    rgba(148, 163, 184, 0.045);
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease;
 
-  font-size: 0.61rem;
+}
 
-  font-weight: 600;
+
+.project-showcase:hover .technology {
+
+  border-color:
+    rgba(103, 232, 249, 0.15);
 
 }
 
 
 /* =========================================================
-   FOOTER
+   PROJECT BOTTOM
 ========================================================= */
 
-.project-footer {
+.project-bottom {
 
   display: flex;
 
   align-items: center;
 
-  justify-content: space-between;
+  gap: 15px;
 
-  flex-shrink: 0;
-
-  margin-top: 19px;
-
-  padding-top: 15px;
-
-  border-top:
-    1px solid
-    rgba(148, 163, 184, 0.08);
+  margin-top: 31px;
 
 }
 
-
-/* =========================================================
-   STATUS
-========================================================= */
 
 .project-status {
 
@@ -1112,197 +1062,97 @@
 
   gap: 7px;
 
-  color:
-    rgba(125, 211, 252, 0.58);
+  flex-shrink: 0;
 
-  font-size: 0.5rem;
+  color: rgba(148, 163, 184, 0.48);
+
+  font-size: 0.48rem;
 
   font-weight: 800;
 
-  letter-spacing: 1.35px;
+  letter-spacing: 1.4px;
 
 }
 
 
-.status-dot {
+.status-indicator {
 
   width: 6px;
 
   height: 6px;
 
-  flex-shrink: 0;
-
   border-radius: 50%;
 
-  background: #38bdf8;
+  background: #22c55e;
 
   box-shadow:
-    0 0 9px
-    rgba(56, 189, 248, 0.8);
+    0 0 10px rgba(34, 197, 94, 0.55);
 
 }
 
 
-/* =========================================================
-   ARROW
-========================================================= */
-
-.project-arrow {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  width: 31px;
-
-  height: 31px;
-
-  flex-shrink: 0;
-
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.18);
-
-  border-radius: 50%;
-
-  color: #38bdf8;
-
-  background:
-    rgba(56, 189, 248, 0.035);
-
-  font-size: 14px;
-
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    background 0.25s ease;
-
-}
-
-
-.project-card:hover
-.project-arrow {
-
-  transform:
-    translate(
-      3px,
-      -3px
-    );
-
-  border-color:
-    rgba(56, 189, 248, 0.40);
-
-  background:
-    rgba(56, 189, 248, 0.10);
-
-}
-
-
-/* =========================================================
-   CORNERS
-========================================================= */
-
-.corner {
-
-  position: absolute;
-
-  z-index: 5;
-
-  width: 16px;
-
-  height: 16px;
-
-  pointer-events: none;
-
-}
-
-
-.corner-tl {
-
-  top: 12px;
-
-  left: 12px;
-
-  border-top:
-    1px solid
-    rgba(56, 189, 248, 0.58);
-
-  border-left:
-    1px solid
-    rgba(56, 189, 248, 0.58);
-
-}
-
-
-.corner-tr {
-
-  top: 12px;
-
-  right: 12px;
-
-  border-top:
-    1px solid
-    rgba(56, 189, 248, 0.58);
-
-  border-right:
-    1px solid
-    rgba(56, 189, 248, 0.58);
-
-}
-
-
-.corner-bl {
-
-  bottom: 12px;
-
-  left: 12px;
-
-  border-bottom:
-    1px solid
-    rgba(56, 189, 248, 0.58);
-
-  border-left:
-    1px solid
-    rgba(56, 189, 248, 0.58);
-
-}
-
-
-.corner-br {
-
-  bottom: 12px;
-
-  right: 12px;
-
-  border-bottom:
-    1px solid
-    rgba(56, 189, 248, 0.58);
-
-  border-right:
-    1px solid
-    rgba(56, 189, 248, 0.58);
-
-}
-
-
-/* =========================================================
-   LAST ROW RELEASE SPACE
-========================================================= */
-
-/*
- * This prevents the final sticky row from visually
- * colliding with the portfolio footer.
- */
-
-.projects-stack-end {
-
-  height: 360px;
+.project-end-line {
 
   width: 100%;
 
-  pointer-events: none;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.12),
+      transparent
+    );
+
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.projects-empty {
+
+  padding: 80px 20px;
+
+  text-align: center;
+
+  border: 1px dashed rgba(148, 163, 184, 0.12);
+
+  border-radius: 18px;
+
+}
+
+
+.empty-icon {
+
+  margin-bottom: 18px;
+
+  color: #38bdf8;
+
+  font-size: 1.5rem;
+
+}
+
+
+.projects-empty h3 {
+
+  margin: 0 0 7px;
+
+  color: #e2e8f0;
+
+  font-size: 1.1rem;
+
+}
+
+
+.projects-empty p {
+
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 0.75rem;
 
 }
 
@@ -1317,134 +1167,123 @@
 
   flex-direction: column;
 
-  gap: 125px;
+  gap: 70px;
 
 }
 
 
-.loading-row {
+.loading-project {
 
   display: grid;
 
   grid-template-columns:
-    repeat(
-      2,
-      minmax(
-        0,
-        1fr
-      )
-    );
+    minmax(320px, 0.9fr)
+    minmax(0, 1.1fr);
 
-  gap: 24px;
+  gap: clamp(
+    55px,
+    8vw,
+    120px
+  );
 
-}
-
-
-.loading-card {
-
-  box-sizing: border-box;
-
-  height: 470px;
-
-  padding: 30px;
-
-  border:
-    1px solid
-    rgba(56, 189, 248, 0.10);
-
-  border-radius: 22px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #102b44,
-      #081a2b
-    );
+  min-height: 390px;
 
 }
 
 
-.loading-icon,
+.loading-visual,
+.loading-small,
 .loading-title,
-.loading-line,
+.loading-text,
 .loading-tags {
 
   background:
     linear-gradient(
       90deg,
-      rgba(148, 163, 184, 0.045),
-      rgba(148, 163, 184, 0.11),
-      rgba(148, 163, 184, 0.045)
+      rgba(148, 163, 184, 0.035),
+      rgba(148, 163, 184, 0.10),
+      rgba(148, 163, 184, 0.035)
     );
 
-  background-size:
-    200%
-    100%;
+  background-size: 200% 100%;
 
   animation:
-    skeletonMove
-    1.5s
-    linear
-    infinite;
+    skeletonMove 1.7s linear infinite;
 
 }
 
 
-.loading-icon {
+.loading-visual {
 
-  width: 48px;
+  height: 390px;
 
-  height: 48px;
+  border-radius: 28px;
 
-  margin-bottom: 30px;
+}
 
-  border-radius: 14px;
+
+.loading-content {
+
+  padding-top: 45px;
+
+}
+
+
+.loading-small {
+
+  width: 80px;
+
+  height: 10px;
+
+  margin-bottom: 22px;
+
+  border-radius: 4px;
 
 }
 
 
 .loading-title {
 
-  width: 62%;
+  width: 70%;
 
-  height: 24px;
+  height: 45px;
 
-  margin-bottom: 22px;
+  margin-bottom: 28px;
 
-  border-radius: 5px;
+  border-radius: 7px;
 
 }
 
 
-.loading-line {
+.loading-text {
 
   width: 92%;
 
   height: 10px;
 
-  margin-bottom: 12px;
+  margin-bottom: 13px;
 
-  border-radius: 5px;
+  border-radius: 4px;
 
 }
 
 
-.loading-line.short {
+.loading-text.short {
 
-  width: 70%;
+  width: 65%;
 
 }
 
 
 .loading-tags {
 
-  width: 85%;
+  width: 55%;
 
-  height: 45px;
+  height: 35px;
 
-  margin-top: 65px;
+  margin-top: 35px;
 
-  border-radius: 8px;
+  border-radius: 5px;
 
 }
 
@@ -1453,15 +1292,13 @@
 
   from {
 
-    background-position:
-      200% 0;
+    background-position: 200% 0;
 
   }
 
   to {
 
-    background-position:
-      -200% 0;
+    background-position: -200% 0;
 
   }
 
@@ -1474,65 +1311,95 @@
 
 @media (max-width: 900px) {
 
-  .projects-wrapper {
+  .projects-section {
 
     padding:
-      90px
+      95px
       35px
-      0;
+      110px;
 
   }
 
 
   .projects-header {
 
-    margin-bottom: 65px;
+    margin-bottom: 75px;
 
   }
 
 
-  .project-stack-row {
+  .projects-title {
 
-    top: 90px;
-
-    gap: 18px;
-
-    margin-bottom: 105px;
-
-  }
-
-
-  .project-card {
-
-    height: 480px;
-
-    min-height: 480px;
-
-    padding:
-      27px
-      25px
-      23px;
+    font-size: clamp(
+      3.2rem,
+      9vw,
+      5rem
+    );
 
   }
 
 
-  .loading-row {
+  .header-bottom {
 
-    gap: 18px;
+    align-items: flex-start;
 
-  }
-
-
-  .loading-card {
-
-    height: 480px;
+    flex-direction: column;
 
   }
 
 
-  .projects-stack-end {
+  .project-showcase,
+  .project-showcase.project-reverse {
 
-    height: 300px;
+    grid-template-columns: 1fr;
+
+    gap: 38px;
+
+  }
+
+
+  .project-showcase.project-reverse
+  .project-visual {
+
+    order: 1;
+
+  }
+
+
+  .project-showcase.project-reverse
+  .project-information {
+
+    order: 2;
+
+  }
+
+
+  .project-visual {
+
+    height: 350px;
+
+  }
+
+
+  .loading-project {
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+  }
+
+
+  .loading-visual {
+
+    height: 350px;
+
+  }
+
+
+  .loading-content {
+
+    padding-top: 0;
 
   }
 
@@ -1543,48 +1410,46 @@
    MOBILE
 ========================================================= */
 
-@media (max-width: 760px) {
+@media (max-width: 600px) {
 
-  .projects-wrapper {
+  .projects-section {
 
     padding:
       80px
       18px
-      0;
+      90px;
 
   }
 
 
   .projects-header {
 
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 
   }
 
 
-  .projects-kicker {
+  .section-label {
 
-    gap: 8px;
-
-    font-size: 0.56rem;
+    font-size: 0.53rem;
 
     letter-spacing: 2px;
 
   }
 
 
-  .kicker-line {
+  .label-line {
 
-    width: 20px;
+    width: 30px;
 
   }
 
 
   .projects-title {
 
-    font-size: 2.65rem;
+    font-size: 3.25rem;
 
-    letter-spacing: -2px;
+    letter-spacing: -3px;
 
   }
 
@@ -1593,72 +1458,125 @@
 
     display: block;
 
-    margin:
-      8px
-      0
-      0;
+    margin: 9px 0 0;
+
+  }
+
+
+  .heading-decoration {
+
+    right: -27px;
+
+  }
+
+
+  .header-bottom {
+
+    margin-top: 28px;
+
+    gap: 25px;
 
   }
 
 
   .projects-subtitle {
 
-    font-size: 0.82rem;
+    font-size: 0.78rem;
 
-    line-height: 1.75;
-
-  }
-
-
-  /*
-   * One card per row on mobile.
-   */
-
-  .project-stack-row {
-
-    grid-template-columns: 1fr;
-
-    top: 75px;
-
-    gap: 18px;
-
-    margin-bottom: 85px;
+    line-height: 1.8;
 
   }
 
 
-  .project-card {
+  .github-link {
 
-    height: 455px;
+    width: fit-content;
 
-    min-height: 455px;
+  }
 
-    padding:
-      25px
-      22px
-      22px;
+
+  .projects-list {
+
+    gap: 70px;
+
+  }
+
+
+  .project-showcase,
+  .project-showcase.project-reverse {
+
+    gap: 30px;
+
+    min-height: auto;
+
+  }
+
+
+  .project-visual {
+
+    height: 300px;
+
+    border-radius: 22px;
+
+  }
+
+
+  .visual-content {
+
+    padding: 21px;
+
+  }
+
+
+  .visual-icon {
+
+    width: 66px;
+
+    height: 66px;
 
     border-radius: 18px;
 
+    font-size: 1.45rem;
+
   }
 
 
-  .project-number {
+  .visual-number {
 
-    top: 18px;
+    right: -4px;
 
-    right: 18px;
+    bottom: -25px;
 
-    font-size: 4.8rem;
+    font-size: 9rem;
+
+    letter-spacing: -8px;
+
+  }
+
+
+  .circle-one {
+
+    width: 230px;
+
+    height: 230px;
+
+  }
+
+
+  .circle-two {
+
+    width: 150px;
+
+    height: 150px;
 
   }
 
 
   .project-name {
 
-    max-width: 88%;
+    font-size: 2rem;
 
-    font-size: 1.25rem;
+    letter-spacing: -1px;
 
   }
 
@@ -1667,60 +1585,28 @@
 
     font-size: 0.77rem;
 
-    line-height: 1.7;
+    line-height: 1.78;
 
   }
 
 
-  .project-type {
+  .technology-section {
 
-    max-width: 120px;
-
-    font-size: 0.5rem;
+    margin-top: 25px;
 
   }
 
 
-  .tech-pill {
+  .project-bottom {
 
-    font-size: 0.57rem;
-
-  }
-
-
-  .project-status {
-
-    font-size: 0.45rem;
+    margin-top: 25px;
 
   }
 
 
-  .projects-stack-end {
+  .loading-visual {
 
-    height: 250px;
-
-  }
-
-
-  .projects-loading {
-
-    gap: 85px;
-
-  }
-
-
-  .loading-row {
-
-    grid-template-columns: 1fr;
-
-    gap: 18px;
-
-  }
-
-
-  .loading-card {
-
-    height: 455px;
+    height: 300px;
 
   }
 
@@ -1731,9 +1617,9 @@
    SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 420px) {
+@media (max-width: 400px) {
 
-  .projects-wrapper {
+  .projects-section {
 
     padding-left: 14px;
 
@@ -1742,53 +1628,39 @@
   }
 
 
-  .project-stack-row {
+  .projects-title {
 
-    top: 65px;
-
-  }
-
-
-  .project-card {
-
-    height: 445px;
-
-    min-height: 445px;
-
-    padding:
-      23px
-      19px
-      21px;
+    font-size: 2.9rem;
 
   }
 
 
-  .project-icon {
+  .project-visual {
 
-    width: 43px;
-
-    height: 43px;
+    height: 270px;
 
   }
 
 
   .project-name {
 
-    font-size: 1.17rem;
+    font-size: 1.8rem;
 
   }
 
 
-  .project-description {
+  .visual-caption {
 
-    font-size: 0.73rem;
+    gap: 11px;
+
+    font-size: 0.42rem;
 
   }
 
 
-  .projects-stack-end {
+  .project-status {
 
-    height: 220px;
+    font-size: 0.42rem;
 
   }
 
@@ -1796,24 +1668,25 @@
 
 
 /* =========================================================
-   REDUCED MOTION
+   ACCESSIBILITY
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-  .github-cta,
-  .project-card,
-  .project-icon,
-  .project-arrow {
+  .github-link,
+  .project-visual,
+  .visual-icon,
+  .technology {
 
     transition: none;
 
   }
 
 
-  .loading-icon,
+  .loading-visual,
+  .loading-small,
   .loading-title,
-  .loading-line,
+  .loading-text,
   .loading-tags {
 
     animation: none;
@@ -1821,3 +1694,4 @@
   }
 
 }
+ 

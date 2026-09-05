@@ -1,22 +1,15 @@
 import {
   Component,
   EventEmitter,
-  Output,
-  OnInit
+  OnInit,
+  Output
 } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 
-import { ProjectsService } from '../../Services/ProjectsService';
+import { Observable, catchError, finalize, map, of, shareReplay } from 'rxjs';
 
-import {
-  Observable,
-  catchError,
-  finalize,
-  map,
-  of,
-  shareReplay
-} from 'rxjs';
+import { ProjectsService } from '../../Services/ProjectsService';
 
 
 export interface Project {
@@ -58,24 +51,14 @@ interface ProjectView extends Project {
 })
 
 
-export class UserProjectsComponent
-implements OnInit {
+export class UserProjectsComponent implements OnInit {
 
 
   @Output()
   loaded = new EventEmitter<void>();
 
 
-  /*
-   * Projects are grouped as:
-   *
-   * [01] [02]
-   * [03] [04]
-   * [05] [06]
-   *
-   * Each complete row becomes sticky.
-   */
-  projectRows$!: Observable<ProjectView[][]>;
+  projectList$!: Observable<ProjectView[]>;
 
 
   constructor(
@@ -92,130 +75,72 @@ implements OnInit {
 
   private loadProjects(): void {
 
-    this.projectRows$ =
+    this.projectList$ = this.projectsService
 
-      this.projectsService
-        .getAllProjects()
+      .getAllProjects()
 
-        .pipe(
+      .pipe(
 
-          map(
-            (
-              projects:
-              Project[] |
-              null |
-              undefined
-            ) => {
+        map(
+          (
+            projects: Project[] | null | undefined
+          ) => {
 
-              const preparedProjects =
-                (projects ?? []).map(
-                  project => this.prepareProject(
-                    project
-                  )
-                );
-
-
-              return this.groupProjects(
-                preparedProjects
-              );
-
-            }
-          ),
-
-
-          catchError((error) => {
-
-            console.error(
-              'Projects API Error:',
-              error
+            return (projects ?? []).map(
+              project => this.prepareProject(project)
             );
 
-            return of(
-              [] as ProjectView[][]
-            );
-
-          }),
+          }
+        ),
 
 
-          finalize(() => {
+        catchError(error => {
 
-            this.loaded.emit();
+          console.error(
+            'Projects API Error:',
+            error
+          );
 
-          }),
+          return of([] as ProjectView[]);
+
+        }),
 
 
-          shareReplay({
-            bufferSize: 1,
-            refCount: true
-          })
+        finalize(() => {
 
-        );
+          this.loaded.emit();
+
+        }),
+
+
+        shareReplay({
+          bufferSize: 1,
+          refCount: true
+        })
+
+      );
 
   }
 
 
-  /*
-   * Prepare project data once.
-   *
-   * This prevents split/map work
-   * from happening repeatedly in HTML.
-   */
   private prepareProject(
     project: Project
   ): ProjectView {
+
+    const technologyList =
+      (project.technologies ?? '')
+        .split(',')
+        .map(technology => technology.trim())
+        .filter(Boolean);
+
 
     return {
 
       ...project,
 
-      technologyList:
-        (project.technologies ?? '')
-          .split(',')
-          .map(
-            tech => tech.trim()
-          )
-          .filter(
-            tech => tech.length > 0
-          )
+      technologyList
 
     };
-
-  }
-
-
-  /*
-   * Group projects into 2-card rows.
-   */
-  private groupProjects(
-    projects: ProjectView[]
-  ): ProjectView[][] {
-
-    const rows: ProjectView[][] = [];
-
-
-    for (
-      let i = 0;
-      i < projects.length;
-      i += 2
-    ) {
-
-      rows.push(
-        projects.slice(i, i + 2)
-      );
-
-    }
-
-
-    return rows;
-
-  }
-
-
-  trackByRow(
-    index: number
-  ): number {
-
-    return index;
 
   }
 
@@ -242,20 +167,14 @@ implements OnInit {
 
 
   getProjectNumber(
-    rowIndex: number,
-    cardIndex: number
+    index: number
   ): string {
 
-    const number =
-      (rowIndex * 2) +
-      cardIndex +
-      1;
-
-
-    return number
+    return (index + 1)
       .toString()
       .padStart(2, '0');
 
   }
 
 }
+ 

@@ -1,13 +1,10 @@
-<section class="projects-wrapper">
+ html
+<section class="projects-section">
 
-  <!-- =====================================================
-       BACKGROUND
-  ====================================================== -->
-
-  <div
-    class="projects-grid-bg"
-    aria-hidden="true"
-  ></div>
+  <div class="projects-background" aria-hidden="true">
+    <span class="background-orb orb-one"></span>
+    <span class="background-orb orb-two"></span>
+  </div>
 
 
   <div class="projects-container">
@@ -19,324 +16,224 @@
 
     <header class="projects-header">
 
+      <div class="section-label">
+        <span class="label-number">04</span>
+        <span class="label-line"></span>
+        <span>SELECTED PROJECTS</span>
+      </div>
 
-      <div class="projects-kicker">
 
-        <span class="kicker-line"></span>
+      <div class="heading-wrap">
 
-        <span>SELECTED WORK</span>
+        <h2 class="projects-title">
+          Work that
+          <span>speaks.</span>
+        </h2>
 
-        <span class="kicker-line"></span>
+        <div class="heading-decoration">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
       </div>
 
 
-      <h2 class="projects-title">
+      <div class="header-bottom">
 
-        Things I've
-
-        <span>Built.</span>
-
-      </h2>
-
-
-      <p class="projects-subtitle">
-
-        A collection of professional, academic and
-        personal projects crafted with modern
-        technologies and real-world problem solving.
-
-      </p>
+        <p class="projects-subtitle">
+          A collection of professional, academic and personal
+          projects built with modern technologies and real-world
+          problem solving.
+        </p>
 
 
-      <a
-        class="github-cta"
-        href="https://github.com/PrathameshGavandi/Industrial_Projects"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+        <a
+          class="github-link"
+          href="https://github.com/PrathameshGavandi/Industrial_Projects"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
 
-        <span class="github-icon">
+          <span class="github-icon">
+            <i class="fab fa-github"></i>
+          </span>
 
-          <i class="fab fa-github"></i>
+          <span>Explore GitHub</span>
 
-        </span>
+          <span class="github-arrow">↗</span>
 
+        </a>
 
-        <span class="github-text">
-          Explore GitHub
-        </span>
-
-
-        <span class="github-arrow">
-          ↗
-        </span>
-
-      </a>
-
+      </div>
 
     </header>
 
 
 
     <!-- =====================================================
-         PROJECTS
+         PROJECT LIST
     ====================================================== -->
 
     <div
-      class="projects-stack"
-      *ngIf="
-        projectRows$ | async as projectRows;
-        else loading
-      "
+      class="projects-list"
+      *ngIf="projectList$ | async as projects; else loading"
     >
 
-
-      <!-- =================================================
-           STICKY ROW
-      ================================================== -->
-
-      <div
-        class="project-stack-row"
+      <article
+        class="project-showcase"
         *ngFor="
-          let row of projectRows;
-          let rowIndex = index;
-          trackBy: trackByRow
+          let project of projects;
+          let index = index;
+          trackBy: trackById
         "
-        [style.z-index]="rowIndex + 10"
+        [class.project-reverse]="index % 2 !== 0"
       >
 
 
-        <!-- ===============================================
-             PROJECT CARD
-        ================================================ -->
+        <!-- =================================================
+             PROJECT VISUAL
+        ================================================== -->
 
-        <article
-          class="project-card"
-          *ngFor="
-            let project of row;
-            let cardIndex = index;
-            trackBy: trackById
-          "
-        >
+        <div class="project-visual">
 
-
-          <!-- CARD BACKGROUND -->
-          <div
-            class="card-grid"
-            aria-hidden="true"
-          ></div>
-
-
-          <div
-            class="card-top-glow"
-            aria-hidden="true"
-          ></div>
-
-
-          <!-- LARGE NUMBER -->
-
-          <div
-            class="project-number"
-            aria-hidden="true"
-          >
-
-            {{
-              getProjectNumber(
-                rowIndex,
-                cardIndex
-              )
-            }}
-
+          <div class="visual-number" aria-hidden="true">
+            {{ getProjectNumber(index) }}
           </div>
 
 
-
-          <!-- SIDE LABEL -->
-
-          <div
-            class="project-index"
-            aria-hidden="true"
-          >
-
-            <span>PROJECT</span>
-
-            <strong>
-              {{
-                getProjectNumber(
-                  rowIndex,
-                  cardIndex
-                )
-              }}
-            </strong>
-
-          </div>
+          <div class="visual-circle circle-one"></div>
+          <div class="visual-circle circle-two"></div>
 
 
+          <div class="visual-content">
 
-          <!-- =================================================
-               CARD CONTENT
-          ================================================== -->
+            <div class="visual-top">
 
-          <div class="project-content">
-
-
-            <!-- TOP -->
-
-            <div class="project-top">
-
-
-              <div class="project-icon">
-
-                <i class="fas fa-code"></i>
-
-              </div>
-
-
-              <span class="project-type">
-
-                {{ project.type }}
-
+              <span class="visual-index">
+                {{ getProjectNumber(index) }}
               </span>
 
+              <span class="visual-type">
+                {{ project.type }}
+              </span>
 
             </div>
 
 
+            <div class="visual-icon">
 
-            <!-- PROJECT NAME -->
-
-            <h3 class="project-name">
-
-              {{ project.name }}
-
-            </h3>
-
-
-
-            <!-- TITLE LINE -->
-
-            <div class="project-line">
-
-              <span></span>
+              <i class="fas fa-code"></i>
 
             </div>
 
 
-
-            <!-- =================================================
-                 FULL DESCRIPTION
-            ================================================== -->
-
-            <div
-              class="project-description"
-              [innerHTML]="project.description"
-            ></div>
-
-
-
-            <!-- =================================================
-                 TECHNOLOGIES
-            ================================================== -->
-
-            <div class="technology-section">
-
-
-              <div class="tech-heading">
-
-                <span class="tech-dot"></span>
-
-                <span>
-                  TECHNOLOGIES
-                </span>
-
-              </div>
-
-
-              <div class="tech-list">
-
-                <span
-                  class="tech-pill"
-                  *ngFor="
-                    let tech of project.technologyList;
-                    trackBy: trackByTechnology
-                  "
-                >
-
-                  {{ tech }}
-
-                </span>
-
-              </div>
-
-
+            <div class="visual-caption">
+              <span>BUILD</span>
+              <span>DEPLOY</span>
+              <span>ITERATE</span>
             </div>
 
+          </div>
+
+        </div>
 
 
-            <!-- =================================================
-                 FOOTER
-            ================================================== -->
 
-            <div class="project-footer">
+        <!-- =================================================
+             PROJECT INFORMATION
+        ================================================== -->
 
-
-              <div class="project-status">
-
-                <span class="status-dot"></span>
-
-                <span>
-                  PROJECT COMPLETED
-                </span>
-
-              </div>
+        <div class="project-information">
 
 
-              <div class="project-arrow">
+          <div class="project-meta">
 
-                ↗
+            <span class="meta-line"></span>
 
-              </div>
-
-
-            </div>
-
+            <span>
+              PROJECT {{ getProjectNumber(index) }}
+            </span>
 
           </div>
 
 
-
-          <!-- =================================================
-               CORNERS
-          ================================================== -->
-
-          <span class="corner corner-tl"></span>
-
-          <span class="corner corner-tr"></span>
-
-          <span class="corner corner-bl"></span>
-
-          <span class="corner corner-br"></span>
+          <h3 class="project-name">
+            {{ project.name }}
+          </h3>
 
 
-        </article>
+          <div
+            class="project-description"
+            [innerHTML]="project.description"
+          ></div>
 
 
-      </div>
+          <div class="technology-section">
+
+            <div class="technology-title">
+              <span></span>
+              TECH STACK
+            </div>
 
 
-      <!--
-        Extra space is intentional.
+            <div class="technology-list">
 
-        It gives the final sticky row enough room
-        to release naturally before the footer.
-      -->
+              <span
+                class="technology"
+                *ngFor="
+                  let tech of project.technologyList;
+                  trackBy: trackByTechnology
+                "
+              >
+                {{ tech }}
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="project-bottom">
+
+            <div class="project-status">
+
+              <span class="status-indicator"></span>
+
+              <span>
+                COMPLETED PROJECT
+              </span>
+
+            </div>
+
+
+            <div class="project-end-line"></div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- Empty state -->
 
       <div
-        class="projects-stack-end"
-        aria-hidden="true"
-      ></div>
+        class="projects-empty"
+        *ngIf="projects.length === 0"
+      >
 
+        <div class="empty-icon">
+          <i class="fas fa-layer-group"></i>
+        </div>
+
+        <h3>No projects available</h3>
+
+        <p>
+          Projects will appear here once they are added.
+        </p>
+
+      </div>
 
     </div>
 
@@ -348,41 +245,32 @@
 
     <ng-template #loading>
 
-
       <div class="projects-loading">
 
-
-        <div
-          class="loading-row"
-          *ngFor="let row of [1, 2]"
+        <article
+          class="loading-project"
+          *ngFor="let item of [1, 2, 3]"
         >
 
+          <div class="loading-visual"></div>
 
-          <div
-            class="loading-card"
-            *ngFor="let card of [1, 2]"
-          >
+          <div class="loading-content">
 
-            <div class="loading-icon"></div>
+            <div class="loading-small"></div>
 
             <div class="loading-title"></div>
 
-            <div class="loading-line"></div>
-
-            <div class="loading-line"></div>
-
-            <div class="loading-line short"></div>
+            <div class="loading-text"></div>
+            <div class="loading-text"></div>
+            <div class="loading-text short"></div>
 
             <div class="loading-tags"></div>
 
           </div>
 
-
-        </div>
-
+        </article>
 
       </div>
-
 
     </ng-template>
 
@@ -390,3 +278,4 @@
   </div>
 
 </section>
+ 
