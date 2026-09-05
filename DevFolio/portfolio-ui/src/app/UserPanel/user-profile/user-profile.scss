@@ -94,6 +94,10 @@
 }
 
 
+/* =====================================================
+   BACKGROUND ANIMATION
+===================================================== */
+
 @keyframes backgroundGlow {
 
   from {
@@ -274,7 +278,7 @@
 
 
 /* =====================================================
-   ANIMATED PHOTO SHAPE BORDER
+   PHOTO BORDER
 ===================================================== */
 
 .hero-photo-border {
@@ -343,10 +347,6 @@
 
 }
 
-
-/* =====================================================
-   ROTATING BORDER ANIMATION
-===================================================== */
 
 @keyframes rotatingPhotoBorder {
 
@@ -429,7 +429,7 @@
 
 
 /* =====================================================
-   PHOTO HOVER EFFECT
+   PHOTO HOVER
 ===================================================== */
 
 .hero-image:hover .hero-photo {
@@ -487,7 +487,6 @@
   top: 65px;
 
   border-radius:
-
     25px 70px 25px 70px;
 
   background:
@@ -1107,37 +1106,53 @@
 
 /* =====================================================
    SOCIAL LINKS
+   DIRECTLY BELOW EMAIL / PHONE
 ===================================================== */
 
 .hero-socials {
+
+  width: 100%;
+
+  margin-top: 13px;
+
+}
+
+
+.social-links {
 
   display: flex;
 
   align-items: center;
 
+  justify-content: flex-start;
+
   flex-wrap: wrap;
 
-  gap: 10px;
-
-  margin-top: 14px;
+  gap: 12px;
 
 }
 
 
-.hero-socials a {
+.social-links a {
 
   display: inline-flex;
 
   align-items: center;
 
+  justify-content: center;
+
   gap: 8px;
 
-  padding: 7px 12px;
+  min-height: 36px;
+
+  padding:
+    7px 12px;
 
   border:
     1px solid rgba(148, 163, 184, 0.12);
 
-  border-radius: 8px;
+  border-radius:
+    8px;
 
   background:
     rgba(56, 189, 248, 0.035);
@@ -1145,7 +1160,8 @@
   color:
     #cbd5e1 !important;
 
-  text-decoration: none;
+  text-decoration:
+    none;
 
   font-size:
     0.72rem;
@@ -1154,7 +1170,7 @@
     700;
 
   letter-spacing:
-    0.3px;
+    0.25px;
 
   transition:
 
@@ -1171,7 +1187,7 @@
 }
 
 
-.hero-socials a i {
+.social-links a i {
 
   font-size:
     14px;
@@ -1188,11 +1204,31 @@
 }
 
 
+.social-links a b {
+
+  font-size:
+    12px;
+
+  font-weight:
+    700;
+
+  color:
+    #64748b;
+
+  transition:
+
+    transform 0.3s ease,
+
+    color 0.3s ease;
+
+}
+
+
 /* =====================================================
    SOCIAL HOVER
 ===================================================== */
 
-.hero-socials a:hover {
+.social-links a:hover {
 
   transform:
     translateY(-3px);
@@ -1217,7 +1253,7 @@
 }
 
 
-.hero-socials a:hover i {
+.social-links a:hover i {
 
   color:
     #38bdf8;
@@ -1228,11 +1264,22 @@
 }
 
 
+.social-links a:hover b {
+
+  color:
+    #38bdf8;
+
+  transform:
+    translate(2px, -2px);
+
+}
+
+
 /* =====================================================
-   GITHUB HOVER
+   GITHUB
 ===================================================== */
 
-.hero-socials a.github:hover {
+.social-links a.github:hover {
 
   border-color:
     rgba(255, 255, 255, 0.25);
@@ -1249,10 +1296,10 @@
 
 
 /* =====================================================
-   LINKEDIN HOVER
+   LINKEDIN
 ===================================================== */
 
-.hero-socials a.linkedin:hover {
+.social-links a.linkedin:hover {
 
   border-color:
     rgba(10, 102, 194, 0.45);
@@ -1269,10 +1316,10 @@
 
 
 /* =====================================================
-   INSTAGRAM HOVER
+   INSTAGRAM
 ===================================================== */
 
-.hero-socials a.instagram:hover {
+.social-links a.instagram:hover {
 
   border-color:
     rgba(225, 48, 108, 0.4);
@@ -1301,7 +1348,7 @@
     650px;
 
   margin:
-    25px 0 0;
+    22px 0 0;
 
 }
 
@@ -1694,8 +1741,26 @@
 
 
   .hero-contact,
-  .hero-socials,
   .hero-actions {
+
+    justify-content:
+      center;
+
+  }
+
+
+  .hero-socials {
+
+    display:
+      flex;
+
+    justify-content:
+      center;
+
+  }
+
+
+  .social-links {
 
     justify-content:
       center;
@@ -1918,16 +1983,30 @@
     justify-content:
       center;
 
-    gap:
-      8px;
-
     margin-top:
-      12px;
+      13px;
 
   }
 
 
-  .hero-socials a {
+  .social-links {
+
+    width:
+      100%;
+
+    justify-content:
+      center;
+
+    gap:
+      8px;
+
+  }
+
+
+  .social-links a {
+
+    min-height:
+      35px;
 
     padding:
       7px 10px;
@@ -1938,10 +2017,18 @@
   }
 
 
-  .hero-socials a i {
+  .social-links a i {
 
     font-size:
       13px;
+
+  }
+
+
+  .social-links a b {
+
+    font-size:
+      11px;
 
   }
 
@@ -2041,7 +2128,7 @@
 
   .hero-contact p,
 
-  .hero-socials a,
+  .social-links a,
 
   .hero-actions .btn,
 

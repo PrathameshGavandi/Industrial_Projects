@@ -1,249 +1,240 @@
 import {
-Component,
-EventEmitter,
-HostListener,
-Output,
-OnInit
+  Component,
+  EventEmitter,
+  HostListener,
+  Output,
+  OnInit
 } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 
 import {
-ProfileService,
-Profile
+  ProfileService,
+  Profile
 } from '../../Services/ProfileService';
 
 import {
-Observable,
-map,
-catchError,
-of,
-finalize,
-shareReplay
+  Observable,
+  map,
+  catchError,
+  of,
+  finalize,
+  shareReplay
 } from 'rxjs';
 
 import { Router } from '@angular/router';
 
 import Swal from 'sweetalert2';
 
+
 @Component({
 
-selector: 'app-user-profile',
+  selector: 'app-user-profile',
 
-standalone: true,
+  standalone: true,
 
-imports: [
-CommonModule
-],
+  imports: [
+    CommonModule
+  ],
 
-templateUrl: './user-profile.html',
+  templateUrl: './user-profile.html',
 
-styleUrls: ['./user-profile.scss']
+  styleUrls: ['./user-profile.scss']
 
 })
 
+
 export class UserProfileComponent
-implements OnInit {
-
-@Output()
-loaded = new EventEmitter<void>();
-
-profile$!: Observable<Profile>;
-
-constructor(
-
- 
-private profileService: ProfileService,
-
-private router: Router
- 
-
-) {}
-
-ngOnInit(): void {
-
- 
-this.loadProfile();
- 
-
-}
-
-private loadProfile(): void {
-
- 
-this.profile$ =
-
-  this.profileService
-    .getallProfiles()
-    .pipe(
+  implements OnInit {
 
 
-      map((res: any[]) => {
+  @Output()
+  loaded = new EventEmitter<void>();
 
 
-        const p = res?.[0];
+  profile$!: Observable<Profile>;
 
 
-        return {
+  constructor(
 
-          ...p,
+    private profileService: ProfileService,
 
-          name:
-            p?.Name ??
-            p?.name ??
-            'Your Name',
+    private router: Router
 
-          email:
-            p?.Email ??
-            p?.email ??
-            '',
-
-          phone:
-            p?.Phone ??
-            p?.phone ??
-            '',
-
-          bio:
-            p?.Bio ??
-            p?.bio ??
-            ''
-
-        } as Profile;
+  ) {}
 
 
-      }),
+  ngOnInit(): void {
+
+    this.loadProfile();
+
+  }
 
 
-      catchError((error) => {
+  private loadProfile(): void {
+
+    this.profile$ =
+
+      this.profileService
+        .getallProfiles()
+        .pipe(
+
+          map((res: any[]) => {
+
+            const p = res?.[0];
+
+            return {
+
+              ...p,
+
+              name:
+                p?.Name ??
+                p?.name ??
+                'Your Name',
+
+              email:
+                p?.Email ??
+                p?.email ??
+                '',
+
+              phone:
+                p?.Phone ??
+                p?.phone ??
+                '',
+
+              bio:
+                p?.Bio ??
+                p?.bio ??
+                ''
+
+            } as Profile;
+
+          }),
 
 
-        console.error(
-          'Profile API Error:',
-          error
+          catchError((error) => {
+
+            console.error(
+              'Profile API Error:',
+              error
+            );
+
+            return of({
+
+              name: 'Your Name',
+
+              email: '',
+
+              phone: '',
+
+              bio: ''
+
+            } as Profile);
+
+          }),
+
+
+          finalize(() => {
+
+            this.loaded.emit();
+
+          }),
+
+
+          shareReplay(1)
+
         );
 
-
-        return of({
-
-          name: 'Your Name',
-
-          email: '',
-
-          phone: '',
-
-          bio: ''
-
-        } as Profile);
+  }
 
 
-      }),
+  getBioPoints(
+    bio: string | undefined
+  ): string[] {
+
+    if (!bio) {
+
+      return [];
+
+    }
 
 
-      finalize(() => {
+    return bio
+      .split('||')
+      .map(point => point.trim())
+      .filter(point => point.length > 0);
 
-        this.loaded.emit();
-
-      }),
-
-
-      shareReplay(1)
-
-    );
- 
-
-}
-
-getBioPoints(
-bio: string | undefined
-): string[] {
-
- 
-if (!bio) {
-
-  return [];
-
-}
+  }
 
 
-return bio
-  .split('||')
-  .map(point => point.trim())
-  .filter(point => point.length > 0);
- 
+  openMail(
+    email: string | undefined
+  ): void {
 
-}
+    if (!email) {
 
-openMail(
-email: string | undefined
-): void {
+      return;
 
- 
-if (!email) {
-
-  return;
-
-}
+    }
 
 
-window.location.href =
-  'mailto:' + email;
- 
+    window.location.href =
+      'mailto:' + email;
 
-}
-
-@HostListener(
-'document:keydown',
-['$event']
-)
-
-handleAdminShortcut(
-event: KeyboardEvent
-): void {
-
- 
-if (
-
-  event.ctrlKey &&
-
-  event.shiftKey &&
-
-  event.key.toLowerCase() === 'a'
-
-) {
+  }
 
 
-  event.preventDefault();
+  @HostListener(
+    'document:keydown',
+    ['$event']
+  )
+
+  handleAdminShortcut(
+    event: KeyboardEvent
+  ): void {
+
+    if (
+
+      event.ctrlKey &&
+
+      event.shiftKey &&
+
+      event.key.toLowerCase() === 'a'
+
+    ) {
+
+      event.preventDefault();
 
 
-  Swal.fire({
+      Swal.fire({
 
-    icon: 'info',
+        icon: 'info',
 
-    title: 'Admin Access',
+        title: 'Admin Access',
 
-    text:
-      'Redirecting to Admin Login...',
+        text:
+          'Redirecting to Admin Login...',
 
-    timer: 1200,
+        timer: 1200,
 
-    showConfirmButton: false,
+        showConfirmButton: false,
 
-    background: '#0b1c2d',
+        background: '#0b1c2d',
 
-    color: '#ffffff'
+        color: '#ffffff'
 
-  })
-  .then(() => {
+      })
 
-    this.router.navigate([
-      '/login'
-    ]);
+      .then(() => {
 
-  });
+        this.router.navigate([
+          '/login'
+        ]);
 
-}
- 
+      });
 
-}
+    }
+
+  }
 
 }
