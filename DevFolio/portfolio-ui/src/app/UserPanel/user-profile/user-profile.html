@@ -1,4 +1,10 @@
+```html
 <section class="hero-wrapper">
+
+  <!-- Decorative technical background -->
+  <div class="hero-grid"></div>
+  <div class="hero-orbit hero-orbit-one"></div>
+  <div class="hero-orbit hero-orbit-two"></div>
 
   <div class="hero-wrapper-inner">
 
@@ -7,127 +13,140 @@
       *ngIf="profile$ | async as profile"
     >
 
-      <!-- LEFT : CREATIVE PROFILE IMAGE -->
+      <!-- =====================================================
+           LEFT : PROFILE VISUAL
+      ====================================================== -->
       <div class="hero-image animate__animated animate__fadeInLeft">
 
-        <!-- BACKGROUND SHAPES -->
-        <div class="hero-shape hero-shape-one"></div>
-        <div class="hero-shape hero-shape-two"></div>
+        <!-- Small top label -->
+        <div class="visual-label">
+          <span class="visual-status"></span>
+          AVAILABLE FOR OPPORTUNITIES
+        </div>
 
-        <!-- DOT PATTERN -->
-        <div class="hero-dots hero-dots-top"></div>
-        <div class="hero-dots hero-dots-bottom"></div>
-
-        <!-- MAIN PHOTO -->
+        <!-- Photo frame -->
         <div class="hero-photo">
 
-          <!-- ANIMATED ROTATING BORDER -->
           <div class="hero-photo-border"></div>
 
-          <!-- IMAGE -->
           <img
             src="assets/images/prathamesh.jpg"
             [alt]="profile.name"
           />
 
+          <!-- Image number -->
+          <div class="photo-index">
+            <span>01</span>
+            <span>/</span>
+            <span>01</span>
+          </div>
+
         </div>
 
-        <!-- FLOATING ELEMENT -->
+        <!-- Floating role card -->
         <div class="hero-floating-card">
 
           <span class="floating-dot"></span>
 
-          <span>FULL-STACK</span>
+          <div>
+            <small>ROLE</small>
+            <strong>FULL-STACK</strong>
+          </div>
 
         </div>
 
-        <!-- SMALL DECORATION -->
-        <div class="hero-plus">
-          +
+        <!-- Experience / tech marker -->
+        <div class="hero-tech-marker">
+          <span>JAVA</span>
+          <span>•</span>
+          <span>ANGULAR</span>
+          <span>•</span>
+          <span>SQL</span>
         </div>
+
+        <!-- Corner plus -->
+        <div class="hero-plus">+</div>
 
       </div>
 
 
-      <!-- RIGHT : CONTENT -->
+      <!-- =====================================================
+           RIGHT : CONTENT
+      ====================================================== -->
       <div class="hero-content">
 
-        <!-- SMALL LABEL -->
+        <!-- Label -->
         <div
           class="hero-label animate__animated animate__fadeInUp"
         >
+          <span class="label-line"></span>
 
-          <span></span>
+          <span>DEVELOPER</span>
 
-          DEVELOPER • CREATOR
+          <span class="label-dot">/</span>
 
+          <span>CREATOR</span>
         </div>
 
 
-        <!-- TITLE -->
+        <!-- Main heading -->
         <h1
           class="hero-title animate__animated animate__fadeInUp"
         >
-
           Hi, I'm
 
           <span>{{ profile.name }}</span>
-
         </h1>
 
 
-        <!-- SUBTITLE -->
+        <!-- Intro -->
         <p
           class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s"
         >
-
           Full-Stack Developer
 
           <strong>
-            | Java, Spring Boot, C#, ASP.NET, Angular & SQL
+            Java · Spring Boot · C# · ASP.NET · Angular · SQL
           </strong>
 
           <br>
 
           Building modern, scalable, and user-friendly web applications
           with hands-on experience in industry-oriented projects.
-
         </p>
 
 
-        <!-- CONTACT -->
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
         <div
           class="hero-contact animate__animated animate__fadeInUp animate__delay-2s"
         >
 
-          <!-- EMAIL -->
+          <!-- Email -->
           <p>
 
-            <span class="icon">📧</span>
+            <span class="icon">✉</span>
 
             <a
               href="javascript:void(0)"
               (click)="openMail(profile.email)"
             >
-
               {{ profile.email }}
-
             </a>
 
           </p>
 
 
-          <!-- PHONE -->
+          <!-- Phone -->
           <p>
 
-            <span class="icon">📞</span>
+            <span class="icon">⌕</span>
 
             <a
               [href]="'tel:' + profile.phone"
             >
-
               {{ profile.phone }}
-
             </a>
 
           </p>
@@ -135,15 +154,25 @@
         </div>
 
 
-        <!-- BIO WITH BULLET POINTS -->
+        <!-- =====================================================
+             ABOUT
+        ====================================================== -->
         <div
           class="hero-bio animate__animated animate__fadeInUp animate__delay-3s"
           *ngIf="getBioPoints(profile.bio).length > 0"
         >
 
-          <span class="bio-label">
-            ABOUT ME
-          </span>
+          <div class="bio-heading">
+
+            <span class="bio-number">01</span>
+
+            <span class="bio-label">
+              ABOUT ME
+            </span>
+
+            <span class="bio-line"></span>
+
+          </div>
 
 
           <div class="bio-list">
@@ -156,9 +185,7 @@
               <span class="bio-bullet"></span>
 
               <span class="bio-text">
-
                 {{ point }}
-
               </span>
 
             </div>
@@ -168,35 +195,37 @@
         </div>
 
 
-        <!-- ACTION BUTTONS -->
+        <!-- =====================================================
+             ACTIONS
+        ====================================================== -->
         <div
           class="hero-actions animate__animated animate__fadeInUp animate__delay-4s"
         >
 
-          <!-- RESUME -->
+          <!-- Resume -->
           <a
             class="btn primary"
             href="assets/files/Prathamesh_Gavandi_Software_Developer.pdf"
             target="_blank"
           >
 
-            View Resume
+            <span>View Resume</span>
 
-            <span>↗</span>
+            <span class="btn-arrow">↗</span>
 
           </a>
 
 
-          <!-- CONTACT -->
+          <!-- Contact -->
           <a
             class="btn outline"
             href="javascript:void(0)"
             (click)="openMail(profile.email)"
           >
 
-            Contact
+            <span>Let's Talk</span>
 
-            <span>→</span>
+            <span class="btn-arrow">→</span>
 
           </a>
 
@@ -209,3 +238,4 @@
   </div>
 
 </section>
+```
