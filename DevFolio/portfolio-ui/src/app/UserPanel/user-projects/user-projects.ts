@@ -1,21 +1,12 @@
 import {
   Component,
-  OnInit
+  OnInit,
+  ChangeDetectorRef
 } from '@angular/core';
 
-import { CommonModule }
-  from '@angular/common';
+import { CommonModule } from '@angular/common';
 
-import {
-  Observable,
-  catchError,
-  map,
-  of,
-  shareReplay
-} from 'rxjs';
-
-import { ProjectsService }
-  from '../../Services/ProjectsService';
+import { ProjectsService } from '../../Services/ProjectsService';
 
 
 export interface Project {
@@ -33,8 +24,7 @@ export interface Project {
 }
 
 
-interface ProjectView
-  extends Project {
+interface ProjectView extends Project {
 
   technologyList: string[];
 
@@ -42,21 +32,15 @@ interface ProjectView
 
 
 @Component({
-
   selector: 'app-user-projects',
-
   standalone: true,
 
   imports: [
     CommonModule
   ],
 
-  templateUrl:
-    './user-projects.html',
-
-  styleUrls:
-    ['./user-projects.scss']
-
+  templateUrl: './user-projects.html',
+  styleUrls: ['./user-projects.scss']
 })
 
 
@@ -64,203 +48,99 @@ export class UserProjectsComponent
   implements OnInit {
 
 
-  projectList$!:
-    Observable<ProjectView[]>;
+  projectList: ProjectView[] = [];
+
+  isLoading = true;
 
 
   constructor(
-    private projectsService:
-      ProjectsService
+    private projectsService: ProjectsService,
+    private cdr: ChangeDetectorRef
   ) {}
 
 
-  /* =====================================================
-     INIT
-  ===================================================== */
-
   ngOnInit(): void {
-
-    /*
-     * Projects API starts immediately.
-     *
-     * It does NOT wait for portfolio loader.
-     */
 
     this.loadProjects();
 
   }
 
 
-  /* =====================================================
+  /* ==========================================
      LOAD PROJECTS
-  ===================================================== */
 
-  private loadProjects(): void {
+     Direct API subscription.
+  ========================================== */
 
-    this.projectList$ =
+  loadProjects(): void {
 
-      this.projectsService
-
-        .getAllProjects()
-
-        .pipe(
+    this.isLoading = true;
 
 
-          /* ==============================================
-             API RESPONSE
-          ============================================== */
+    this.projectsService
+      .getAllProjects()
+      .subscribe({
 
-          map(
-            (
-              projects:
-                Project[] |
-                null |
-                undefined
-            ) => {
+        next: (projects: Project[]) => {
 
-              return (
-                projects ?? []
-              ).map(
-                project =>
-                  this.prepareProject(
-                    project
-                  )
-              );
-
-            }
-          ),
-
-
-          /* ==============================================
-             API ERROR
-          ============================================== */
-
-          catchError(error => {
-
-            console.error(
-              'Projects API Error:',
-              error
+          this.projectList =
+            (projects || []).map(
+              project =>
+                this.prepareProject(project)
             );
 
-            /*
-             * Only Projects component
-             * handles its API error.
-             */
 
-            return of(
-              [] as ProjectView[]
-            );
+          this.isLoading = false;
 
-          }),
+          this.cdr.detectChanges();
+
+        },
 
 
-          /*
-           * No finalize().
-           *
-           * There is no communication with
-           * the parent loader anymore.
-           */
+        error: (error) => {
 
+          console.error(
+            'Projects API Error:',
+            error
+          );
 
-          /* ==============================================
-             CACHE
-          ============================================== */
+          this.projectList = [];
 
-          shareReplay({
+          this.isLoading = false;
 
-            bufferSize: 1,
+          this.cdr.detectChanges();
 
-            refCount: true
+        }
 
-          })
-
-        );
+      });
 
   }
 
 
-  /* =====================================================
+  /* ==========================================
      PREPARE PROJECT
-  ===================================================== */
+  ========================================== */
 
   private prepareProject(
     project: Project
   ): ProjectView {
 
-    const technologyList =
-
-      (project.technologies ?? '')
-
-        .split(',')
-
-        .map(
-          technology =>
-            technology.trim()
-        )
-
-        .filter(Boolean);
-
-
     return {
 
       ...project,
 
-      technologyList
+      technologyList:
+        project.technologies
+          ? project.technologies
+              .split(',')
+              .map(
+                technology =>
+                  technology.trim()
+              )
+              .filter(Boolean)
+          : []
 
     };
-
-  }
-
-
-  /* =====================================================
-     TRACK PROJECT
-  ===================================================== */
-
-  trackById(
-    index: number,
-    project: ProjectView
-  ): number | string {
-
-    return (
-
-      project.id ??
-
-      `${index}-${project.name}`
-
-    );
-
-  }
-
-
-  /* =====================================================
-     TRACK TECHNOLOGY
-  ===================================================== */
-
-  trackByTechnology(
-    index: number,
-    technology: string
-  ): string {
-
-    return `${index}-${technology}`;
-
-  }
-
-
-  /* =====================================================
-     PROJECT NUMBER
-  ===================================================== */
-
-  getProjectNumber(
-    index: number
-  ): string {
-
-    return (
-
-      index + 1
-
-    )
-      .toString()
-      .padStart(2, '0');
 
   }
 

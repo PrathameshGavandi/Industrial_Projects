@@ -28,33 +28,21 @@ import { UserEducationComponent }
 
 
 @Component({
-
   selector: 'app-user-portfolio',
-
   standalone: true,
 
   imports: [
-
     CommonModule,
-
     UserNav,
-
     UserProfileComponent,
-
     UserSkillsComponent,
-
     UserExperienceComponent,
-
     UserProjectsComponent,
-
     UserEducationComponent
-
   ],
 
   templateUrl: './user-portfolio.html',
-
   styleUrls: ['./user-portfolio.scss']
-
 })
 
 
@@ -62,51 +50,54 @@ export class UserPortfolioComponent
   implements OnInit, OnDestroy {
 
 
-  /* =====================================================
-     PORTFOLIO LOADER
-     ===================================================== */
+  /* ==========================================
+     VISUAL LOADER ONLY
+
+     IMPORTANT:
+     This loader has NO dependency on APIs.
+
+     All child components are already present
+     in the DOM, so their ngOnInit() methods
+     start their own API calls independently.
+  ========================================== */
 
   isLoading = true;
 
   showContinueButton = false;
 
+  /*
+   * This is ONLY visual progress.
+   * It does NOT represent API progress.
+   */
   progressValue = 0;
 
-
   /*
-   * IMPORTANT
+   * Loader will stay visible for 3 seconds.
    *
-   * Loader is completely independent
-   * from all child components and APIs.
-   *
-   * Change this value if you want the
-   * loader to be faster/slower.
+   * Change this value if you want:
+   * 3000 = 3 seconds
+   * 4000 = 4 seconds
+   * 5000 = 5 seconds
    */
+  private readonly LOADER_DURATION = 3000;
 
-  private readonly LOADER_DURATION = 5000;
-
-  private loaderTimer?: ReturnType<typeof setInterval>;
-
-  private readyTimer?: ReturnType<typeof setTimeout>;
+  private loaderTimer?: ReturnType<typeof setTimeout>;
+  private progressTimer?: ReturnType<typeof setInterval>;
 
 
-  /* =====================================================
+  /* ==========================================
      CUSTOM CURSOR
-     ===================================================== */
+  ========================================== */
 
   cursorX = -100;
-
   cursorY = -100;
 
   cursorClicking = false;
 
-
   rippleX = -100;
-
   rippleY = -100;
 
   showCursorRipple = false;
-
 
   private rippleTimer?: ReturnType<typeof setTimeout>;
 
@@ -116,78 +107,67 @@ export class UserPortfolioComponent
   ) {}
 
 
-  /* =====================================================
+  /* ==========================================
      INIT
-     ===================================================== */
+  ========================================== */
 
   ngOnInit(): void {
 
     /*
-     * Start ONLY the visual loader.
+     * Start ONLY visual loader.
      *
-     * No API is checked here.
-     * No child component is checked here.
+     * No API is called here.
+     * No child component is awaited.
      */
-
     this.startLoader();
-
   }
 
 
-  /* =====================================================
+  /* ==========================================
      CUSTOM CURSOR MOVEMENT
-     ===================================================== */
+  ========================================== */
 
   @HostListener(
     'document:mousemove',
     ['$event']
   )
-
   onMouseMove(
     event: MouseEvent
   ): void {
 
     this.cursorX = event.clientX;
-
     this.cursorY = event.clientY;
-
   }
 
 
-  /* =====================================================
+  /* ==========================================
      MOUSE DOWN
-     ===================================================== */
+  ========================================== */
 
   @HostListener(
     'document:mousedown',
     ['$event']
   )
-
   onMouseDown(
     event: MouseEvent
   ): void {
 
     this.cursorClicking = true;
 
-
     this.rippleX = event.clientX;
-
     this.rippleY = event.clientY;
-
 
     this.showCursorRipple = false;
 
-
     if (this.rippleTimer) {
-
-      clearTimeout(
-        this.rippleTimer
-      );
-
+      clearTimeout(this.rippleTimer);
     }
 
-
-    setTimeout(() => {
+    /*
+     * Small timeout allows Angular
+     * to recreate ripple element.
+     */
+    this.rippleTimer = setTimeout(() => {
 
       this.showCursorRipple = true;
 
@@ -203,245 +183,177 @@ export class UserPortfolioComponent
       this.cdr.detectChanges();
 
     }, 550);
-
   }
 
 
-  /* =====================================================
+  /* ==========================================
      MOUSE UP
-     ===================================================== */
+  ========================================== */
 
   @HostListener(
     'document:mouseup'
   )
-
   onMouseUp(): void {
 
     this.cursorClicking = false;
-
   }
 
 
-  /* =====================================================
-     START LOADER
-     ===================================================== */
+  /* ==========================================
+     START VISUAL LOADER
+  ========================================== */
 
   private startLoader(): void {
 
-    /*
-     * Reset loader state.
-     */
-
     this.isLoading = true;
-
     this.showContinueButton = false;
-
     this.progressValue = 0;
 
 
     /*
      * Clear previous timers if any.
      */
+    if (this.loaderTimer) {
+      clearTimeout(this.loaderTimer);
+    }
 
-    this.clearLoaderTimers();
+    if (this.progressTimer) {
+      clearInterval(this.progressTimer);
+    }
 
 
     /*
-     * Loader progress is purely visual.
+     * VISUAL PROGRESS ONLY
      *
-     * It has absolutely NO connection
-     * with Profile / Skills / Experience /
-     * Projects / Education APIs.
+     * This progress has absolutely
+     * nothing to do with API loading.
      */
-
-    const intervalTime = 50;
-
-    const totalSteps =
-      this.LOADER_DURATION / intervalTime;
-
-    const progressStep =
-      100 / totalSteps;
+    const startTime = Date.now();
 
 
-    this.loaderTimer = setInterval(() => {
+    this.progressTimer = setInterval(() => {
 
-      if (this.progressValue < 100) {
+      const elapsed = Date.now() - startTime;
 
-        this.progressValue = Math.min(
-          100,
-          Math.round(
-            this.progressValue + progressStep
-          )
-        );
+      this.progressValue = Math.min(
+        100,
+        Math.round(
+          (elapsed / this.LOADER_DURATION) * 100
+        )
+      );
 
-        this.cdr.detectChanges();
 
-      }
+      this.cdr.detectChanges();
 
 
       /*
-       * Loader reached 100%.
+       * Stop progress at 100%.
        */
-
       if (this.progressValue >= 100) {
 
-        this.stopProgressTimer();
+        if (this.progressTimer) {
 
+          clearInterval(
+            this.progressTimer
+          );
 
-        /*
-         * Small delay only for visual
-         * READY transition.
-         */
-
-        this.readyTimer = setTimeout(() => {
-
-          this.finishLoading();
-
-        }, 300);
-
+          this.progressTimer = undefined;
+        }
       }
 
-    }, intervalTime);
+    }, 50);
 
+
+    /*
+     * After fixed visual duration,
+     * simply enable Continue button.
+     *
+     * API status is NOT checked.
+     */
+    this.loaderTimer = setTimeout(() => {
+
+      this.progressValue = 100;
+
+      this.showContinueButton = true;
+
+      if (this.progressTimer) {
+
+        clearInterval(
+          this.progressTimer
+        );
+
+        this.progressTimer = undefined;
+      }
+
+      this.cdr.detectChanges();
+
+    }, this.LOADER_DURATION);
   }
 
 
-  /* =====================================================
-     FINISH LOADING
-     ===================================================== */
-
-  private finishLoading(): void {
-
-    if (this.showContinueButton) {
-
-      return;
-
-    }
-
-
-    this.progressValue = 100;
-
-    this.showContinueButton = true;
-
-
-    console.log(
-      '🚀 Portfolio visual loader completed.'
-    );
-
-
-    this.cdr.detectChanges();
-
-  }
-
-
-  /* =====================================================
+  /* ==========================================
      GO TO PORTFOLIO
-     ===================================================== */
+  ========================================== */
 
   goToContent(): void {
 
+    /*
+     * Button works only after visual loader
+     * is completed.
+     */
     if (!this.showContinueButton) {
-
       return;
-
     }
 
 
+    /*
+     * ONLY hide loader.
+     *
+     * This does NOT start/stop/wait for APIs.
+     */
     this.isLoading = false;
-
 
     this.cdr.detectChanges();
 
 
     /*
-     * Scroll to profile after loader disappears.
+     * Scroll to profile section.
      */
-
     setTimeout(() => {
 
       const profileSection =
-        document.getElementById(
-          'profile'
-        );
-
+        document.getElementById('profile');
 
       if (profileSection) {
 
         profileSection.scrollIntoView({
-
           behavior: 'smooth',
-
           block: 'start'
-
         });
 
       }
 
     }, 100);
-
   }
 
 
-  /* =====================================================
-     STOP PROGRESS TIMER
-     ===================================================== */
-
-  private stopProgressTimer(): void {
-
-    if (this.loaderTimer) {
-
-      clearInterval(
-        this.loaderTimer
-      );
-
-      this.loaderTimer = undefined;
-
-    }
-
-  }
-
-
-  /* =====================================================
-     CLEAR LOADER TIMERS
-     ===================================================== */
-
-  private clearLoaderTimers(): void {
-
-    this.stopProgressTimer();
-
-
-    if (this.readyTimer) {
-
-      clearTimeout(
-        this.readyTimer
-      );
-
-      this.readyTimer = undefined;
-
-    }
-
-  }
-
-
-  /* =====================================================
+  /* ==========================================
      CLEANUP
-     ===================================================== */
+  ========================================== */
 
   ngOnDestroy(): void {
 
-    this.clearLoaderTimers();
-
-
-    if (this.rippleTimer) {
-
-      clearTimeout(
-        this.rippleTimer
-      );
-
-      this.rippleTimer = undefined;
-
+    if (this.loaderTimer) {
+      clearTimeout(this.loaderTimer);
     }
 
+    if (this.progressTimer) {
+      clearInterval(this.progressTimer);
+    }
+
+    if (this.rippleTimer) {
+      clearTimeout(this.rippleTimer);
+    }
   }
 
 }

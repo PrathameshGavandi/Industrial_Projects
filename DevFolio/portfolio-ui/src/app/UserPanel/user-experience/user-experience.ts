@@ -1,54 +1,24 @@
 import {
   Component,
-  OnInit
+  OnInit,
+  ChangeDetectorRef
 } from '@angular/core';
 
-import { CommonModule }
-  from '@angular/common';
+import { CommonModule } from '@angular/common';
 
-import { ExperienceService }
-  from '../../Services/ExperienceService';
-
-import {
-  Observable,
-  catchError,
-  of,
-  shareReplay
-} from 'rxjs';
-
-
-export interface Experience {
-
-  id?: number;
-
-  company: string;
-
-  role: string;
-
-  duration: string;
-
-  description: string;
-
-}
+import { ExperienceService } from '../../Services/ExperienceService';
 
 
 @Component({
-
   selector: 'app-user-experience',
-
   standalone: true,
 
   imports: [
     CommonModule
   ],
 
-  templateUrl:
-    './user-experience.html',
-
-  styleUrls: [
-    './user-experience.scss'
-  ]
-
+  templateUrl: './user-experience.html',
+  styleUrls: ['./user-experience.scss']
 })
 
 
@@ -56,168 +26,66 @@ export class UserExperienceComponent
   implements OnInit {
 
 
-  experiences$!:
-    Observable<Experience[]>;
+  experiences: any[] = [];
+
+  isLoading = true;
 
 
   constructor(
-    private experienceService:
-      ExperienceService
+    private experienceService: ExperienceService,
+    private cdr: ChangeDetectorRef
   ) {}
 
 
-  /* =====================================================
-     INIT
-  ===================================================== */
-
   ngOnInit(): void {
-
-    /*
-     * Experience API starts immediately.
-     *
-     * It does not wait for portfolio loader.
-     */
 
     this.loadExperiences();
 
   }
 
 
-  /* =====================================================
+  /* ==========================================
      LOAD EXPERIENCE
-  ===================================================== */
 
-  private loadExperiences(): void {
+     Direct subscription.
+  ========================================== */
 
-    this.experiences$ =
+  loadExperiences(): void {
 
-      this.experienceService
-
-        .getallExperiences()
-
-        .pipe(
+    this.isLoading = true;
 
 
-          /* ==============================================
-             API ERROR
-          ============================================== */
+    this.experienceService
+      .getallExperiences()
+      .subscribe({
 
-          catchError((error) => {
+        next: (res: any[]) => {
 
-            console.error(
-              'Experience API Error:',
-              error
-            );
+          this.experiences = res || [];
 
-            /*
-             * Experience component handles
-             * its own API failure.
-             */
+          this.isLoading = false;
 
-            return of(
-              [] as Experience[]
-            );
+          this.cdr.detectChanges();
 
-          }),
+        },
 
 
-          /*
-           * No finalize().
-           *
-           * Parent loader is completely
-           * independent.
-           */
+        error: (error) => {
 
+          console.error(
+            'Experience API Error:',
+            error
+          );
 
-          /* ==============================================
-             CACHE
-          ============================================== */
+          this.experiences = [];
 
-          shareReplay({
+          this.isLoading = false;
 
-            bufferSize: 1,
+          this.cdr.detectChanges();
 
-            refCount: true
+        }
 
-          })
-
-        );
-
-  }
-
-
-  /* =====================================================
-     TRACK BY ID
-  ===================================================== */
-
-  trackById(
-    index: number,
-    exp: Experience
-  ): number {
-
-    return exp.id ?? index;
-
-  }
-
-
-  /* =====================================================
-     EXPERIENCE NUMBER
-  ===================================================== */
-
-  getNumber(
-    index: number
-  ): string {
-
-    return (
-
-      index + 1
-
-    )
-      .toString()
-      .padStart(2, '0');
-
-  }
-
-
-  /* =====================================================
-     DESCRIPTION POINTS
-  ===================================================== */
-
-  getDescriptionPoints(
-    description:
-      string | string[]
-  ): string[] {
-
-
-    if (
-      Array.isArray(description)
-    ) {
-
-      return description;
-
-    }
-
-
-    if (!description) {
-
-      return [];
-
-    }
-
-
-    return description
-
-      .split('||')
-
-      .map(
-        point =>
-          point.trim()
-      )
-
-      .filter(
-        point =>
-          point.length > 0
-      );
+      });
 
   }
 

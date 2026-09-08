@@ -1,49 +1,24 @@
 import {
   Component,
-  OnInit
+  OnInit,
+  ChangeDetectorRef
 } from '@angular/core';
 
-import { CommonModule }
-  from '@angular/common';
+import { CommonModule } from '@angular/common';
 
-import { SkillsService }
-  from '../../Services/SkillsService';
-
-import {
-  Observable,
-  map,
-  catchError,
-  of,
-  shareReplay
-} from 'rxjs';
-
-
-interface SkillRow {
-
-  label: string;
-
-  values: string[];
-
-}
+import { SkillsService } from '../../Services/SkillsService';
 
 
 @Component({
-
   selector: 'app-skills',
-
   standalone: true,
 
   imports: [
     CommonModule
   ],
 
-  templateUrl:
-    './user-skills.html',
-
-  styleUrls: [
-    './user-skills.scss'
-  ]
-
+  templateUrl: './user-skills.html',
+  styleUrls: ['./user-skills.scss']
 })
 
 
@@ -51,361 +26,101 @@ export class UserSkillsComponent
   implements OnInit {
 
 
-  /*
-   * Each array = ONE ROW
-   *
-   * [
-   *   [01, 02],
-   *   [03, 04],
-   *   [05, 06]
-   * ]
-   */
+  skills: any[] = [];
 
-  skills$!:
-    Observable<SkillRow[][]>;
+  skillRows: any[][] = [];
+
+  isLoading = true;
 
 
   constructor(
-    private skillsService:
-      SkillsService
+    private skillsService: SkillsService,
+    private cdr: ChangeDetectorRef
   ) {}
 
 
-  /* =====================================================
-     INIT
-  ===================================================== */
-
   ngOnInit(): void {
-
-    /*
-     * Skills API starts immediately
-     * when this component initializes.
-     */
 
     this.loadSkills();
 
   }
 
 
-  /* =====================================================
+  /* ==========================================
      LOAD SKILLS
-  ===================================================== */
 
-  private loadSkills(): void {
+     Direct API subscription.
+  ========================================== */
 
-    this.skills$ =
+  loadSkills(): void {
 
-      this.skillsService
-        .getAllSkills()
-        .pipe(
+    this.isLoading = true;
 
 
-          /* ==============================================
-             API RESPONSE
-          ============================================== */
+    this.skillsService
+      .getAllSkills()
+      .subscribe({
 
-          map((res: any[]) => {
+        next: (res: any[]) => {
 
-            if (
-              !res ||
-              res.length === 0
-            ) {
+          this.skills = res || [];
 
-              return [];
+          this.createSkillRows();
 
-            }
+          this.isLoading = false;
 
+          this.cdr.detectChanges();
 
-            const s = res[0];
+        },
 
 
-            const skills:
-              SkillRow[] = [
+        error: (error) => {
 
+          console.error(
+            'Skills API Error:',
+            error
+          );
 
-              {
-                label:
-                  'Procedural Oriented Programming',
+          this.skills = [];
 
-                values:
-                  s.pop?.split(',')
-                  ?? []
+          this.skillRows = [];
 
-              },
+          this.isLoading = false;
 
+          this.cdr.detectChanges();
 
-              {
-                label:
-                  'Object Oriented Programming',
+        }
 
-                values:
-                  s.oop?.split(',')
-                  ?? []
-
-              },
-
-
-              {
-                label:
-                  'Virtual Machines Based',
-
-                values:
-                  s.vm?.split(',')
-                  ?? []
-
-              },
-
-
-              {
-                label:
-                  'Frameworks',
-
-                values:
-                  s.fw?.split(',')
-                  ?? []
-
-              },
-
-
-              {
-                label:
-                  'Scripting Languages',
-
-                values:
-                  s.script?.split(',')
-                  ?? []
-
-              },
-
-
-              {
-                label:
-                  'Web Technologies',
-
-                values:
-                  s.web?.split(',')
-                  ?? []
-
-              },
-
-
-              {
-                label:
-                  'IDEs & Tools',
-
-                values:
-                  s.ide?.split(',')
-                  ?? []
-
-              },
-
-
-              {
-                label:
-                  'Servers',
-
-                values:
-                  s.server?.split(',')
-                  ?? []
-
-              },
-
-
-              {
-                label:
-                  'Version Control System',
-
-                values:
-                  s.vcs?.split(',')
-                  ?? []
-
-              },
-
-
-              {
-                label:
-                  'Database',
-
-                values:
-                  s.db?.split(',')
-                  ?? []
-
-              },
-
-
-              {
-                label:
-                  'Operating Systems',
-
-                values:
-                  s.os?.split(',')
-                  ?? []
-
-              },
-
-
-              {
-                label:
-                  'Methodologies',
-
-                values:
-                  s.method?.split(',')
-                  ?? []
-
-              }
-
-            ];
-
-
-            return this.groupSkills(
-              skills
-            );
-
-          }),
-
-
-          /* ==============================================
-             API ERROR
-          ============================================== */
-
-          catchError((error) => {
-
-            console.error(
-              'Skills API Error:',
-              error
-            );
-
-            /*
-             * Only Skills component
-             * handles this error.
-             */
-
-            return of(
-              [] as SkillRow[][]
-            );
-
-          }),
-
-
-          /*
-           * No finalize().
-           *
-           * There is no parent loader
-           * notification anymore.
-           */
-
-          /* ==============================================
-             CACHE
-          ============================================== */
-
-          shareReplay({
-
-            bufferSize: 1,
-
-            refCount: true
-
-          })
-
-        );
+      });
 
   }
 
 
-  /* =====================================================
-     GROUP INTO TWO CARD ROWS
-  ===================================================== */
+  /* ==========================================
+     CREATE ROWS
+  ========================================== */
 
-  private groupSkills(
-    skills: SkillRow[]
-  ): SkillRow[][] {
+  private createSkillRows(): void {
 
-    const rows:
-      SkillRow[][] = [];
+    this.skillRows = [];
+
+    const rowSize = 3;
 
 
     for (
       let i = 0;
-      i < skills.length;
-      i += 2
+      i < this.skills.length;
+      i += rowSize
     ) {
 
-      rows.push(
-        skills.slice(
+      this.skillRows.push(
+        this.skills.slice(
           i,
-          i + 2
+          i + rowSize
         )
       );
 
     }
-
-
-    return rows;
-
-  }
-
-
-  /* =====================================================
-     TRACK ROW
-  ===================================================== */
-
-  trackByRow(
-    index: number
-  ): number {
-
-    return index;
-
-  }
-
-
-  /* =====================================================
-     TRACK SKILL
-  ===================================================== */
-
-  trackBySkill(
-    index: number,
-    skill: SkillRow
-  ): string {
-
-    return skill.label;
-
-  }
-
-
-  /* =====================================================
-     TRACK VALUE
-  ===================================================== */
-
-  trackByValue(
-    index: number,
-    value: string
-  ): string {
-
-    return value;
-
-  }
-
-
-  /* =====================================================
-     CARD NUMBER
-  ===================================================== */
-
-  getSkillNumber(
-    rowIndex: number,
-    cardIndex: number
-  ): string {
-
-    const number =
-
-      (rowIndex * 2)
-      +
-      cardIndex
-      +
-      1;
-
-
-    return number
-      .toString()
-      .padStart(2, '0');
 
   }
 

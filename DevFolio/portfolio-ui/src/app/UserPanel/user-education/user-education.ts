@@ -1,40 +1,27 @@
 import {
   Component,
-  OnInit
+  OnInit,
+  ChangeDetectorRef
 } from '@angular/core';
 
-import { CommonModule }
-  from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 import {
   EducationService,
   Education
 } from '../../Services/EducationService';
 
-import {
-  Observable,
-  catchError,
-  of,
-  shareReplay
-} from 'rxjs';
-
 
 @Component({
-
   selector: 'app-user-education',
-
   standalone: true,
 
   imports: [
     CommonModule
   ],
 
-  templateUrl:
-    './user-education.html',
-
-  styleUrls:
-    ['./user-education.scss']
-
+  templateUrl: './user-education.html',
+  styleUrls: ['./user-education.scss']
 })
 
 
@@ -42,125 +29,69 @@ export class UserEducationComponent
   implements OnInit {
 
 
-  educations$!:
-    Observable<Education[]>;
+  educations: Education[] = [];
+
+  isLoading = true;
 
 
   constructor(
-    private educationService:
-      EducationService
+    private educationService: EducationService,
+    private cdr: ChangeDetectorRef
   ) {}
 
 
-  /* =====================================================
-     INIT
-  ===================================================== */
-
   ngOnInit(): void {
-
-    /*
-     * Education API starts immediately.
-     *
-     * It does NOT wait for portfolio loader.
-     */
 
     this.loadEducations();
 
   }
 
 
-  /* =====================================================
+  /* ==========================================
      LOAD EDUCATION
-  ===================================================== */
 
-  private loadEducations(): void {
+     Direct API subscription like Admin panel.
+  ========================================== */
 
-    this.educations$ =
+  loadEducations(): void {
 
-      this.educationService
-
-        .getAllEducations()
-
-        .pipe(
+    this.isLoading = true;
 
 
-          /* ==============================================
-             API ERROR
-          ============================================== */
+    this.educationService
+      .getAllEducations()
+      .subscribe({
 
-          catchError((error) => {
+        next: (res: Education[]) => {
 
-            console.error(
-              'Education API Error:',
-              error
-            );
+          this.educations = res || [];
 
-            /*
-             * Education component handles
-             * its own API failure.
-             */
-
-            return of(
-              [] as Education[]
-            );
-
-          }),
-
+          this.isLoading = false;
 
           /*
-           * No finalize().
-           *
-           * Parent loader is completely
-           * independent.
+           * Immediate UI update.
            */
+          this.cdr.detectChanges();
+
+        },
 
 
-          /* ==============================================
-             CACHE
-          ============================================== */
+        error: (error) => {
 
-          shareReplay({
+          console.error(
+            'Education API Error:',
+            error
+          );
 
-            bufferSize: 1,
+          this.educations = [];
 
-            refCount: true
+          this.isLoading = false;
 
-          })
+          this.cdr.detectChanges();
 
-        );
+        }
 
-  }
-
-
-  /* =====================================================
-     TRACK BY ID
-  ===================================================== */
-
-  trackById(
-    index: number,
-    edu: Education
-  ): number {
-
-    return edu.id ?? index;
-
-  }
-
-
-  /* =====================================================
-     EDUCATION NUMBER
-  ===================================================== */
-
-  getNumber(
-    index: number
-  ): string {
-
-    return (
-
-      index + 1
-
-    )
-      .toString()
-      .padStart(2, '0');
+      });
 
   }
 

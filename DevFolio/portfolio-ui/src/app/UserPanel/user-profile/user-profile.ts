@@ -1,27 +1,16 @@
 import {
   Component,
-  HostListener,
-  OnInit
+  OnInit,
+  ChangeDetectorRef
 } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 
-import {
-  ProfileService,
-  Profile
-} from '../../Services/ProfileService';
-
-import { Router }
-  from '@angular/router';
-
-import Swal
-  from 'sweetalert2';
+import { ProfileService } from '../../Services/ProfileService';
 
 
 @Component({
-
   selector: 'app-user-profile',
-
   standalone: true,
 
   imports: [
@@ -29,9 +18,7 @@ import Swal
   ],
 
   templateUrl: './user-profile.html',
-
   styleUrls: ['./user-profile.scss']
-
 })
 
 
@@ -39,45 +26,43 @@ export class UserProfileComponent
   implements OnInit {
 
 
-  /* =====================================================
+  /* ==========================================
      PROFILE DATA
-  ===================================================== */
+  ========================================== */
 
-  profile: Profile = {
-
+  profile: any = {
     name: 'Your Name',
-
+    title: 'Full Stack Developer',
     email: '',
-
     phone: '',
-
-    bio: ''
-
+    location: '',
+    about: '',
+    profileImage: '',
+    github: '',
+    linkedin: ''
   };
 
 
+  isLoading = true;
+
+
   constructor(
-
-    private profileService:
-      ProfileService,
-
-    private router:
-      Router
-
+    private profileService: ProfileService,
+    private cdr: ChangeDetectorRef
   ) {}
 
 
-  /* =====================================================
+  /* ==========================================
      INIT
-  ===================================================== */
+  ========================================== */
 
   ngOnInit(): void {
 
     /*
-     * API call starts immediately
-     * when Profile component initializes.
+     * API starts immediately when
+     * UserProfileComponent is created.
      *
-     * It does NOT wait for portfolio loader.
+     * It does NOT depend on parent loader.
      */
 
     this.loadProfile();
@@ -85,24 +70,18 @@ export class UserProfileComponent
   }
 
 
-  /* =====================================================
+  /* ==========================================
      LOAD PROFILE
-  ===================================================== */
+  ========================================== */
 
-  private loadProfile(): void {
+  loadProfile(): void {
 
-    console.log(
-      'USER PROFILE → API CALL STARTED'
-    );
+    this.isLoading = true;
 
 
     this.profileService
       .getallProfiles()
       .subscribe({
-
-        /* ================================================
-           API SUCCESS
-        ================================================ */
 
         next: (res: any[]) => {
 
@@ -112,41 +91,30 @@ export class UserProfileComponent
           );
 
 
-          const p = res?.[0];
+          /*
+           * If API returns an array,
+           * use the first profile.
+           */
+          if (res && res.length > 0) {
+
+            this.profile = {
+              ...this.profile,
+              ...res[0]
+            };
+
+          }
 
 
-          this.profile = {
+          this.isLoading = false;
 
-            ...p,
 
-            name:
-              p?.Name ??
-              p?.name ??
-              'Your Name',
-
-            email:
-              p?.Email ??
-              p?.email ??
-              '',
-
-            phone:
-              p?.Phone ??
-              p?.phone ??
-              '',
-
-            bio:
-              p?.Bio ??
-              p?.bio ??
-              ''
-
-          } as Profile;
+          /*
+           * Immediately update UI.
+           */
+          this.cdr.detectChanges();
 
         },
 
-
-        /* ================================================
-           API ERROR
-        ================================================ */
 
         error: (error) => {
 
@@ -155,140 +123,19 @@ export class UserProfileComponent
             error
           );
 
+
           /*
-           * No parent notification.
-           *
-           * Profile handles its own error.
+           * Keep default profile data
+           * if API fails.
            */
+          this.isLoading = false;
 
-        },
 
-
-        /* ================================================
-           API COMPLETED
-        ================================================ */
-
-        complete: () => {
-
-          console.log(
-            'USER PROFILE → LOADING COMPLETED'
-          );
+          this.cdr.detectChanges();
 
         }
 
       });
-
-  }
-
-
-  /* =====================================================
-     BIO POINTS
-  ===================================================== */
-
-  getBioPoints(
-    bio: string | undefined
-  ): string[] {
-
-    if (!bio) {
-
-      return [];
-
-    }
-
-
-    return bio
-
-      .split('||')
-
-      .map(
-        point =>
-          point.trim()
-      )
-
-      .filter(
-        point =>
-          point.length > 0
-      );
-
-  }
-
-
-  /* =====================================================
-     EMAIL
-  ===================================================== */
-
-  openMail(
-    email: string | undefined
-  ): void {
-
-    if (!email) {
-
-      return;
-
-    }
-
-
-    window.location.href =
-      'mailto:' + email;
-
-  }
-
-
-  /* =====================================================
-     ADMIN SHORTCUT
-     CTRL + SHIFT + A
-  ===================================================== */
-
-  @HostListener(
-    'document:keydown',
-    ['$event']
-  )
-
-  handleAdminShortcut(
-    event: KeyboardEvent
-  ): void {
-
-    if (
-
-      event.ctrlKey &&
-
-      event.shiftKey &&
-
-      event.key.toLowerCase() === 'a'
-
-    ) {
-
-      event.preventDefault();
-
-
-      Swal.fire({
-
-        icon: 'info',
-
-        title: 'Admin Access',
-
-        text:
-          'Redirecting to Admin Login...',
-
-        timer: 1200,
-
-        showConfirmButton: false,
-
-        background: '#0b1c2d',
-
-        color: '#ffffff'
-
-      })
-
-      .then(() => {
-
-        this.router.navigate([
-          '/login'
-        ]);
-
-      });
-
-    }
 
   }
 
