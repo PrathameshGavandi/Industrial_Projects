@@ -1,11 +1,10 @@
 import {
   Component,
-  EventEmitter,
-  Output,
   OnInit
 } from '@angular/core';
 
-import { CommonModule } from '@angular/common';
+import { CommonModule }
+  from '@angular/common';
 
 import { ExperienceService }
   from '../../Services/ExperienceService';
@@ -14,7 +13,6 @@ import {
   Observable,
   catchError,
   of,
-  finalize,
   shareReplay
 } from 'rxjs';
 
@@ -44,19 +42,18 @@ export interface Experience {
     CommonModule
   ],
 
-  templateUrl: './user-experience.html',
+  templateUrl:
+    './user-experience.html',
 
-  styleUrls: ['./user-experience.scss']
+  styleUrls: [
+    './user-experience.scss'
+  ]
 
 })
 
 
 export class UserExperienceComponent
   implements OnInit {
-
-
-  @Output()
-  loaded = new EventEmitter<void>();
 
 
   experiences$!:
@@ -69,20 +66,41 @@ export class UserExperienceComponent
   ) {}
 
 
+  /* =====================================================
+     INIT
+  ===================================================== */
+
   ngOnInit(): void {
+
+    /*
+     * Experience API starts immediately.
+     *
+     * It does not wait for portfolio loader.
+     */
 
     this.loadExperiences();
 
   }
 
 
+  /* =====================================================
+     LOAD EXPERIENCE
+  ===================================================== */
+
   private loadExperiences(): void {
 
     this.experiences$ =
 
       this.experienceService
+
         .getallExperiences()
+
         .pipe(
+
+
+          /* ==============================================
+             API ERROR
+          ============================================== */
 
           catchError((error) => {
 
@@ -91,25 +109,46 @@ export class UserExperienceComponent
               error
             );
 
-            return of([] as Experience[]);
+            /*
+             * Experience component handles
+             * its own API failure.
+             */
+
+            return of(
+              [] as Experience[]
+            );
 
           }),
 
-          finalize(() => {
 
-            this.loaded.emit();
+          /*
+           * No finalize().
+           *
+           * Parent loader is completely
+           * independent.
+           */
 
-          }),
+
+          /* ==============================================
+             CACHE
+          ============================================== */
 
           shareReplay({
+
             bufferSize: 1,
+
             refCount: true
+
           })
 
         );
 
   }
 
+
+  /* =====================================================
+     TRACK BY ID
+  ===================================================== */
 
   trackById(
     index: number,
@@ -121,20 +160,38 @@ export class UserExperienceComponent
   }
 
 
-  getNumber(index: number): string {
+  /* =====================================================
+     EXPERIENCE NUMBER
+  ===================================================== */
 
-    return (index + 1)
+  getNumber(
+    index: number
+  ): string {
+
+    return (
+
+      index + 1
+
+    )
       .toString()
       .padStart(2, '0');
 
   }
 
 
+  /* =====================================================
+     DESCRIPTION POINTS
+  ===================================================== */
+
   getDescriptionPoints(
-    description: string | string[]
+    description:
+      string | string[]
   ): string[] {
 
-    if (Array.isArray(description)) {
+
+    if (
+      Array.isArray(description)
+    ) {
 
       return description;
 
@@ -149,10 +206,17 @@ export class UserExperienceComponent
 
 
     return description
+
       .split('||')
-      .map(point => point.trim())
+
+      .map(
+        point =>
+          point.trim()
+      )
+
       .filter(
-        point => point.length > 0
+        point =>
+          point.length > 0
       );
 
   }

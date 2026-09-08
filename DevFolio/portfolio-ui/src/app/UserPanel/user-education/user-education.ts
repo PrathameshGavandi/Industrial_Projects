@@ -1,11 +1,10 @@
 import {
   Component,
-  EventEmitter,
-  OnInit,
-  Output
+  OnInit
 } from '@angular/core';
 
-import { CommonModule } from '@angular/common';
+import { CommonModule }
+  from '@angular/common';
 
 import {
   EducationService,
@@ -15,7 +14,6 @@ import {
 import {
   Observable,
   catchError,
-  finalize,
   of,
   shareReplay
 } from 'rxjs';
@@ -31,9 +29,11 @@ import {
     CommonModule
   ],
 
-  templateUrl: './user-education.html',
+  templateUrl:
+    './user-education.html',
 
-  styleUrls: ['./user-education.scss']
+  styleUrls:
+    ['./user-education.scss']
 
 })
 
@@ -42,57 +42,99 @@ export class UserEducationComponent
   implements OnInit {
 
 
-  @Output()
-  loaded = new EventEmitter<void>();
-
-
-  educations$!: Observable<Education[]>;
+  educations$!:
+    Observable<Education[]>;
 
 
   constructor(
-    private educationService: EducationService
+    private educationService:
+      EducationService
   ) {}
 
 
+  /* =====================================================
+     INIT
+  ===================================================== */
+
   ngOnInit(): void {
+
+    /*
+     * Education API starts immediately.
+     *
+     * It does NOT wait for portfolio loader.
+     */
 
     this.loadEducations();
 
   }
 
 
+  /* =====================================================
+     LOAD EDUCATION
+  ===================================================== */
+
   private loadEducations(): void {
 
-    this.educations$ = this.educationService
-      .getAllEducations()
-      .pipe(
+    this.educations$ =
 
-        catchError((error) => {
+      this.educationService
 
-          console.error(
-            'Education API Error:',
-            error
-          );
+        .getAllEducations()
 
-          return of([] as Education[]);
+        .pipe(
 
-        }),
 
-        finalize(() => {
+          /* ==============================================
+             API ERROR
+          ============================================== */
 
-          this.loaded.emit();
+          catchError((error) => {
 
-        }),
+            console.error(
+              'Education API Error:',
+              error
+            );
 
-        shareReplay({
-          bufferSize: 1,
-          refCount: true
-        })
+            /*
+             * Education component handles
+             * its own API failure.
+             */
 
-      );
+            return of(
+              [] as Education[]
+            );
+
+          }),
+
+
+          /*
+           * No finalize().
+           *
+           * Parent loader is completely
+           * independent.
+           */
+
+
+          /* ==============================================
+             CACHE
+          ============================================== */
+
+          shareReplay({
+
+            bufferSize: 1,
+
+            refCount: true
+
+          })
+
+        );
 
   }
 
+
+  /* =====================================================
+     TRACK BY ID
+  ===================================================== */
 
   trackById(
     index: number,
@@ -104,9 +146,19 @@ export class UserEducationComponent
   }
 
 
-  getNumber(index: number): string {
+  /* =====================================================
+     EDUCATION NUMBER
+  ===================================================== */
 
-    return (index + 1)
+  getNumber(
+    index: number
+  ): string {
+
+    return (
+
+      index + 1
+
+    )
       .toString()
       .padStart(2, '0');
 

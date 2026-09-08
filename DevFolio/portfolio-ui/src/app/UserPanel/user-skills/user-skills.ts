@@ -1,11 +1,10 @@
 import {
   Component,
-  EventEmitter,
-  Output,
   OnInit
 } from '@angular/core';
 
-import { CommonModule } from '@angular/common';
+import { CommonModule }
+  from '@angular/common';
 
 import { SkillsService }
   from '../../Services/SkillsService';
@@ -15,10 +14,8 @@ import {
   map,
   catchError,
   of,
-  finalize,
   shareReplay
 } from 'rxjs';
-
 
 
 interface SkillRow {
@@ -28,7 +25,6 @@ interface SkillRow {
   values: string[];
 
 }
-
 
 
 @Component({
@@ -51,14 +47,8 @@ interface SkillRow {
 })
 
 
-
 export class UserSkillsComponent
   implements OnInit {
-
-
-  @Output()
-  loaded =
-    new EventEmitter<void>();
 
 
   /*
@@ -75,20 +65,26 @@ export class UserSkillsComponent
     Observable<SkillRow[][]>;
 
 
-
   constructor(
     private skillsService:
       SkillsService
   ) {}
 
 
+  /* =====================================================
+     INIT
+  ===================================================== */
 
   ngOnInit(): void {
+
+    /*
+     * Skills API starts immediately
+     * when this component initializes.
+     */
 
     this.loadSkills();
 
   }
-
 
 
   /* =====================================================
@@ -104,9 +100,9 @@ export class UserSkillsComponent
         .pipe(
 
 
-          /* ===============================================
+          /* ==============================================
              API RESPONSE
-          =============================================== */
+          ============================================== */
 
           map((res: any[]) => {
 
@@ -134,6 +130,7 @@ export class UserSkillsComponent
                 values:
                   s.pop?.split(',')
                   ?? []
+
               },
 
 
@@ -144,6 +141,7 @@ export class UserSkillsComponent
                 values:
                   s.oop?.split(',')
                   ?? []
+
               },
 
 
@@ -154,6 +152,7 @@ export class UserSkillsComponent
                 values:
                   s.vm?.split(',')
                   ?? []
+
               },
 
 
@@ -164,6 +163,7 @@ export class UserSkillsComponent
                 values:
                   s.fw?.split(',')
                   ?? []
+
               },
 
 
@@ -174,6 +174,7 @@ export class UserSkillsComponent
                 values:
                   s.script?.split(',')
                   ?? []
+
               },
 
 
@@ -184,6 +185,7 @@ export class UserSkillsComponent
                 values:
                   s.web?.split(',')
                   ?? []
+
               },
 
 
@@ -194,6 +196,7 @@ export class UserSkillsComponent
                 values:
                   s.ide?.split(',')
                   ?? []
+
               },
 
 
@@ -204,6 +207,7 @@ export class UserSkillsComponent
                 values:
                   s.server?.split(',')
                   ?? []
+
               },
 
 
@@ -214,6 +218,7 @@ export class UserSkillsComponent
                 values:
                   s.vcs?.split(',')
                   ?? []
+
               },
 
 
@@ -224,6 +229,7 @@ export class UserSkillsComponent
                 values:
                   s.db?.split(',')
                   ?? []
+
               },
 
 
@@ -234,6 +240,7 @@ export class UserSkillsComponent
                 values:
                   s.os?.split(',')
                   ?? []
+
               },
 
 
@@ -244,6 +251,7 @@ export class UserSkillsComponent
                 values:
                   s.method?.split(',')
                   ?? []
+
               }
 
             ];
@@ -256,10 +264,9 @@ export class UserSkillsComponent
           }),
 
 
-
-          /* ===============================================
-             ERROR
-          =============================================== */
+          /* ==============================================
+             API ERROR
+          ============================================== */
 
           catchError((error) => {
 
@@ -268,29 +275,40 @@ export class UserSkillsComponent
               error
             );
 
-            return of([]);
+            /*
+             * Only Skills component
+             * handles this error.
+             */
+
+            return of(
+              [] as SkillRow[][]
+            );
 
           }),
 
 
+          /*
+           * No finalize().
+           *
+           * There is no parent loader
+           * notification anymore.
+           */
 
-          /* ===============================================
-             LOADING COMPLETE
-          =============================================== */
+          /* ==============================================
+             CACHE
+          ============================================== */
 
-          finalize(() => {
+          shareReplay({
 
-            this.loaded.emit();
+            bufferSize: 1,
 
-          }),
+            refCount: true
 
-
-          shareReplay(1)
+          })
 
         );
 
   }
-
 
 
   /* =====================================================
@@ -326,7 +344,6 @@ export class UserSkillsComponent
   }
 
 
-
   /* =====================================================
      TRACK ROW
   ===================================================== */
@@ -338,7 +355,6 @@ export class UserSkillsComponent
     return index;
 
   }
-
 
 
   /* =====================================================
@@ -355,7 +371,6 @@ export class UserSkillsComponent
   }
 
 
-
   /* =====================================================
      TRACK VALUE
   ===================================================== */
@@ -370,7 +385,6 @@ export class UserSkillsComponent
   }
 
 
-
   /* =====================================================
      CARD NUMBER
   ===================================================== */
@@ -381,6 +395,7 @@ export class UserSkillsComponent
   ): string {
 
     const number =
+
       (rowIndex * 2)
       +
       cardIndex

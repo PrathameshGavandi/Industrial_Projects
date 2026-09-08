@@ -62,9 +62,9 @@ export class UserPortfolioComponent
   implements OnInit, OnDestroy {
 
 
-  /* ==========================================
-     LOADER
-  ========================================== */
+  /* =====================================================
+     PORTFOLIO LOADER
+     ===================================================== */
 
   isLoading = true;
 
@@ -73,37 +73,26 @@ export class UserPortfolioComponent
   progressValue = 0;
 
 
-  /* ==========================================
-     CHILD COMPONENT STATUS
-  ========================================== */
+  /*
+   * IMPORTANT
+   *
+   * Loader is completely independent
+   * from all child components and APIs.
+   *
+   * Change this value if you want the
+   * loader to be faster/slower.
+   */
 
-  private componentStatus: Record<string, boolean> = {
+  private readonly LOADER_DURATION = 5000;
 
-    profile: false,
+  private loaderTimer?: ReturnType<typeof setInterval>;
 
-    skills: false,
-
-    experience: false,
-
-    projects: false,
-
-    education: false
-
-  };
+  private readyTimer?: ReturnType<typeof setTimeout>;
 
 
-  /* ==========================================
-     MAX LOADING TIME
-  ========================================== */
-
-  private readonly MAX_LOADING_TIME = 10000;
-
-  private fallbackTimer?: ReturnType<typeof setTimeout>;
-
-
-  /* ==========================================
+  /* =====================================================
      CUSTOM CURSOR
-  ========================================== */
+     ===================================================== */
 
   cursorX = -100;
 
@@ -127,20 +116,27 @@ export class UserPortfolioComponent
   ) {}
 
 
-  /* ==========================================
+  /* =====================================================
      INIT
-  ========================================== */
+     ===================================================== */
 
   ngOnInit(): void {
+
+    /*
+     * Start ONLY the visual loader.
+     *
+     * No API is checked here.
+     * No child component is checked here.
+     */
 
     this.startLoader();
 
   }
 
 
-  /* ==========================================
+  /* =====================================================
      CUSTOM CURSOR MOVEMENT
-  ========================================== */
+     ===================================================== */
 
   @HostListener(
     'document:mousemove',
@@ -158,9 +154,9 @@ export class UserPortfolioComponent
   }
 
 
-  /* ==========================================
+  /* =====================================================
      MOUSE DOWN
-  ========================================== */
+     ===================================================== */
 
   @HostListener(
     'document:mousedown',
@@ -191,11 +187,6 @@ export class UserPortfolioComponent
     }
 
 
-    /*
-     * Small timeout allows Angular
-     * to recreate the ripple element
-     */
-
     setTimeout(() => {
 
       this.showCursorRipple = true;
@@ -216,9 +207,9 @@ export class UserPortfolioComponent
   }
 
 
-  /* ==========================================
+  /* =====================================================
      MOUSE UP
-  ========================================== */
+     ===================================================== */
 
   @HostListener(
     'document:mouseup'
@@ -231,12 +222,15 @@ export class UserPortfolioComponent
   }
 
 
-  /* ==========================================
+  /* =====================================================
      START LOADER
-  ========================================== */
+     ===================================================== */
 
   private startLoader(): void {
 
+    /*
+     * Reset loader state.
+     */
 
     this.isLoading = true;
 
@@ -245,120 +239,80 @@ export class UserPortfolioComponent
     this.progressValue = 0;
 
 
-    this.componentStatus = {
+    /*
+     * Clear previous timers if any.
+     */
 
-      profile: false,
-
-      skills: false,
-
-      experience: false,
-
-      projects: false,
-
-      education: false
-
-    };
+    this.clearLoaderTimers();
 
 
     /*
-     * Maximum 10 seconds fallback
+     * Loader progress is purely visual.
+     *
+     * It has absolutely NO connection
+     * with Profile / Skills / Experience /
+     * Projects / Education APIs.
      */
 
-    this.fallbackTimer = setTimeout(() => {
+    const intervalTime = 50;
+
+    const totalSteps =
+      this.LOADER_DURATION / intervalTime;
+
+    const progressStep =
+      100 / totalSteps;
 
 
-      if (!this.showContinueButton) {
+    this.loaderTimer = setInterval(() => {
 
-        console.warn(
-          'Maximum loading time reached.'
+      if (this.progressValue < 100) {
+
+        this.progressValue = Math.min(
+          100,
+          Math.round(
+            this.progressValue + progressStep
+          )
         );
 
-        this.finishLoading();
+        this.cdr.detectChanges();
 
       }
 
-    }, this.MAX_LOADING_TIME);
+
+      /*
+       * Loader reached 100%.
+       */
+
+      if (this.progressValue >= 100) {
+
+        this.stopProgressTimer();
+
+
+        /*
+         * Small delay only for visual
+         * READY transition.
+         */
+
+        this.readyTimer = setTimeout(() => {
+
+          this.finishLoading();
+
+        }, 300);
+
+      }
+
+    }, intervalTime);
 
   }
 
 
-  /* ==========================================
-     CHILD LOADED
-  ========================================== */
-
-  onComponentLoaded(
-    componentName: string
-  ): void {
-
-
-    if (
-      this.componentStatus[componentName]
-    ) {
-
-      return;
-
-    }
-
-
-    this.componentStatus[componentName] = true;
-
-
-    const totalComponents =
-      Object.keys(
-        this.componentStatus
-      ).length;
-
-
-    const loadedComponents =
-      Object.values(
-        this.componentStatus
-      ).filter(Boolean)
-      .length;
-
-
-    this.progressValue = Math.round(
-
-      (
-        loadedComponents /
-        totalComponents
-      ) * 100
-
-    );
-
-
-    console.log(
-
-      `Loaded: ${componentName}`,
-
-      `${loadedComponents}/${totalComponents}`
-
-    );
-
-
-    if (
-      loadedComponents === totalComponents
-    ) {
-
-      this.finishLoading();
-
-    }
-
-
-    this.cdr.detectChanges();
-
-  }
-
-
-  /* ==========================================
+  /* =====================================================
      FINISH LOADING
-  ========================================== */
+     ===================================================== */
 
   private finishLoading(): void {
 
-
-    if (
-      this.showContinueButton
-    ) {
+    if (this.showContinueButton) {
 
       return;
 
@@ -370,21 +324,8 @@ export class UserPortfolioComponent
     this.showContinueButton = true;
 
 
-    if (
-      this.fallbackTimer
-    ) {
-
-      clearTimeout(
-        this.fallbackTimer
-      );
-
-      this.fallbackTimer = undefined;
-
-    }
-
-
     console.log(
-      '🚀 Portfolio loading completed!'
+      '🚀 Portfolio visual loader completed.'
     );
 
 
@@ -393,16 +334,13 @@ export class UserPortfolioComponent
   }
 
 
-  /* ==========================================
+  /* =====================================================
      GO TO PORTFOLIO
-  ========================================== */
+     ===================================================== */
 
   goToContent(): void {
 
-
-    if (
-      !this.showContinueButton
-    ) {
+    if (!this.showContinueButton) {
 
       return;
 
@@ -415,8 +353,11 @@ export class UserPortfolioComponent
     this.cdr.detectChanges();
 
 
-    setTimeout(() => {
+    /*
+     * Scroll to profile after loader disappears.
+     */
 
+    setTimeout(() => {
 
       const profileSection =
         document.getElementById(
@@ -424,9 +365,7 @@ export class UserPortfolioComponent
         );
 
 
-      if (
-        profileSection
-      ) {
+      if (profileSection) {
 
         profileSection.scrollIntoView({
 
@@ -438,37 +377,68 @@ export class UserPortfolioComponent
 
       }
 
-
     }, 100);
 
   }
 
 
-  /* ==========================================
-     CLEANUP
-  ========================================== */
+  /* =====================================================
+     STOP PROGRESS TIMER
+     ===================================================== */
 
-  ngOnDestroy(): void {
+  private stopProgressTimer(): void {
 
+    if (this.loaderTimer) {
 
-    if (
-      this.fallbackTimer
-    ) {
-
-      clearTimeout(
-        this.fallbackTimer
+      clearInterval(
+        this.loaderTimer
       );
+
+      this.loaderTimer = undefined;
 
     }
 
+  }
 
-    if (
-      this.rippleTimer
-    ) {
+
+  /* =====================================================
+     CLEAR LOADER TIMERS
+     ===================================================== */
+
+  private clearLoaderTimers(): void {
+
+    this.stopProgressTimer();
+
+
+    if (this.readyTimer) {
+
+      clearTimeout(
+        this.readyTimer
+      );
+
+      this.readyTimer = undefined;
+
+    }
+
+  }
+
+
+  /* =====================================================
+     CLEANUP
+     ===================================================== */
+
+  ngOnDestroy(): void {
+
+    this.clearLoaderTimers();
+
+
+    if (this.rippleTimer) {
 
       clearTimeout(
         this.rippleTimer
       );
+
+      this.rippleTimer = undefined;
 
     }
 

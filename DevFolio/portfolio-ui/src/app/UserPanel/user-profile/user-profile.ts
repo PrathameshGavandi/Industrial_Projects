@@ -1,8 +1,6 @@
 import {
   Component,
-  EventEmitter,
   HostListener,
-  Output,
   OnInit
 } from '@angular/core';
 
@@ -13,9 +11,11 @@ import {
   Profile
 } from '../../Services/ProfileService';
 
-import { Router } from '@angular/router';
+import { Router }
+  from '@angular/router';
 
-import Swal from 'sweetalert2';
+import Swal
+  from 'sweetalert2';
 
 
 @Component({
@@ -39,13 +39,9 @@ export class UserProfileComponent
   implements OnInit {
 
 
-  @Output()
-  loaded = new EventEmitter<void>();
-
-
-  /* ==========================================
+  /* =====================================================
      PROFILE DATA
-  ========================================== */
+  ===================================================== */
 
   profile: Profile = {
 
@@ -62,27 +58,36 @@ export class UserProfileComponent
 
   constructor(
 
-    private profileService: ProfileService,
+    private profileService:
+      ProfileService,
 
-    private router: Router
+    private router:
+      Router
 
   ) {}
 
 
-  /* ==========================================
+  /* =====================================================
      INIT
-  ========================================== */
+  ===================================================== */
 
   ngOnInit(): void {
+
+    /*
+     * API call starts immediately
+     * when Profile component initializes.
+     *
+     * It does NOT wait for portfolio loader.
+     */
 
     this.loadProfile();
 
   }
 
 
-  /* ==========================================
+  /* =====================================================
      LOAD PROFILE
-  ========================================== */
+  ===================================================== */
 
   private loadProfile(): void {
 
@@ -95,9 +100,9 @@ export class UserProfileComponent
       .getallProfiles()
       .subscribe({
 
-        /* ====================================
+        /* ================================================
            API SUCCESS
-        ==================================== */
+        ================================================ */
 
         next: (res: any[]) => {
 
@@ -136,13 +141,12 @@ export class UserProfileComponent
 
           } as Profile;
 
-
         },
 
 
-        /* ====================================
+        /* ================================================
            API ERROR
-        ==================================== */
+        ================================================ */
 
         error: (error) => {
 
@@ -151,35 +155,24 @@ export class UserProfileComponent
             error
           );
 
-
           /*
-           * Even if API fails, tell parent
-           * that this component has finished
-           * loading.
+           * No parent notification.
+           *
+           * Profile handles its own error.
            */
-
-          this.loaded.emit();
 
         },
 
 
-        /* ====================================
+        /* ================================================
            API COMPLETED
-        ==================================== */
+        ================================================ */
 
         complete: () => {
 
           console.log(
             'USER PROFILE → LOADING COMPLETED'
           );
-
-
-          /*
-           * Tell UserPortfolioComponent
-           * that Profile component is ready.
-           */
-
-          this.loaded.emit();
 
         }
 
@@ -188,9 +181,9 @@ export class UserProfileComponent
   }
 
 
-  /* ==========================================
+  /* =====================================================
      BIO POINTS
-  ========================================== */
+  ===================================================== */
 
   getBioPoints(
     bio: string | undefined
@@ -204,20 +197,25 @@ export class UserProfileComponent
 
 
     return bio
+
       .split('||')
+
       .map(
-        point => point.trim()
+        point =>
+          point.trim()
       )
+
       .filter(
-        point => point.length > 0
+        point =>
+          point.length > 0
       );
 
   }
 
 
-  /* ==========================================
+  /* =====================================================
      EMAIL
-  ========================================== */
+  ===================================================== */
 
   openMail(
     email: string | undefined
@@ -236,10 +234,10 @@ export class UserProfileComponent
   }
 
 
-  /* ==========================================
+  /* =====================================================
      ADMIN SHORTCUT
      CTRL + SHIFT + A
-  ========================================== */
+  ===================================================== */
 
   @HostListener(
     'document:keydown',

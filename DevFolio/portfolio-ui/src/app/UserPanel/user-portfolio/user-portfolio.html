@@ -58,14 +58,16 @@
 
   <!-- =================================================
        LOADER CONTENT
-  ================================================== -->
+  ================================================= -->
 
   <div class="loader-card">
 
     <div class="card-top-line"></div>
 
 
-    <!-- LOADER ANIMATION -->
+    <!-- =================================================
+         LOADER ANIMATION
+    ================================================= -->
 
     <div class="loader-animation">
 
@@ -89,7 +91,9 @@
     </div>
 
 
-    <!-- CONTENT -->
+    <!-- =================================================
+         CONTENT
+    ================================================= -->
 
     <div class="loader-content">
 
@@ -106,14 +110,18 @@
 
         <span>
 
-          <ng-container *ngIf="!showContinueButton">
+          <ng-container
+            *ngIf="!showContinueButton"
+          >
 
             SYSTEM INITIALIZING
 
           </ng-container>
 
 
-          <ng-container *ngIf="showContinueButton">
+          <ng-container
+            *ngIf="showContinueButton"
+          >
 
             SYSTEM READY
 
@@ -163,7 +171,9 @@
       </p>
 
 
-      <!-- TECHNOLOGY STACK -->
+      <!-- =================================================
+           TECHNOLOGY STACK
+      ================================================== -->
 
       <div class="loader-tech-stack">
 
@@ -265,7 +275,9 @@
       </div>
 
 
-      <!-- BACKEND MESSAGE -->
+      <!-- =================================================
+           BACKEND MESSAGE
+      ================================================== -->
 
       <div
         class="loader-message"
@@ -274,12 +286,21 @@
 
         <span class="message-icon">
 
-          <ng-container *ngIf="!showContinueButton">
+          <ng-container
+            *ngIf="!showContinueButton"
+          >
+
             ⚡
+
           </ng-container>
 
-          <ng-container *ngIf="showContinueButton">
+
+          <ng-container
+            *ngIf="showContinueButton"
+          >
+
             ✓
+
           </ng-container>
 
         </span>
@@ -287,14 +308,18 @@
 
         <span>
 
-          <ng-container *ngIf="!showContinueButton">
+          <ng-container
+            *ngIf="!showContinueButton"
+          >
 
             Connecting to backend services
 
           </ng-container>
 
 
-          <ng-container *ngIf="showContinueButton">
+          <ng-container
+            *ngIf="showContinueButton"
+          >
 
             All systems ready
 
@@ -305,7 +330,9 @@
       </div>
 
 
-      <!-- PROGRESS -->
+      <!-- =================================================
+           PROGRESS
+      ================================================== -->
 
       <div class="loading-progress">
 
@@ -323,12 +350,21 @@
 
           <span>
 
-            <ng-container *ngIf="!showContinueButton">
+            <ng-container
+              *ngIf="!showContinueButton"
+            >
+
               INITIALIZING
+
             </ng-container>
 
-            <ng-container *ngIf="showContinueButton">
+
+            <ng-container
+              *ngIf="showContinueButton"
+            >
+
               READY
+
             </ng-container>
 
           </span>
@@ -345,7 +381,9 @@
       </div>
 
 
-      <!-- CONTINUE -->
+      <!-- =================================================
+           CONTINUE
+      ================================================== -->
 
       <div class="continue-container">
 
@@ -448,9 +486,7 @@
     class="portfolio-section show"
   >
 
-    <app-user-profile
-      (loaded)="onComponentLoaded('profile')"
-    ></app-user-profile>
+    <app-user-profile></app-user-profile>
 
   </section>
 
@@ -462,9 +498,7 @@
     class="portfolio-section show"
   >
 
-    <app-skills
-      (loaded)="onComponentLoaded('skills')"
-    ></app-skills>
+    <app-skills></app-skills>
 
   </section>
 
@@ -476,9 +510,7 @@
     class="portfolio-section show"
   >
 
-    <app-user-experience
-      (loaded)="onComponentLoaded('experience')"
-    ></app-user-experience>
+    <app-user-experience></app-user-experience>
 
   </section>
 
@@ -490,9 +522,7 @@
     class="portfolio-section show"
   >
 
-    <app-user-projects
-      (loaded)="onComponentLoaded('projects')"
-    ></app-user-projects>
+    <app-user-projects></app-user-projects>
 
   </section>
 
@@ -504,9 +534,7 @@
     class="portfolio-section show"
   >
 
-    <app-user-education
-      (loaded)="onComponentLoaded('education')"
-    ></app-user-education>
+    <app-user-education></app-user-education>
 
   </section>
 
