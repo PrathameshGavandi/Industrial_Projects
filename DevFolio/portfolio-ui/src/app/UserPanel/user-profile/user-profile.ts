@@ -13,15 +13,6 @@ import {
   Profile
 } from '../../Services/ProfileService';
 
-import {
-  Observable,
-  map,
-  catchError,
-  of,
-  finalize,
-  shareReplay
-} from 'rxjs';
-
 import { Router } from '@angular/router';
 
 import Swal from 'sweetalert2';
@@ -52,7 +43,21 @@ export class UserProfileComponent
   loaded = new EventEmitter<void>();
 
 
-  profile$!: Observable<Profile>;
+  /* ==========================================
+     PROFILE DATA
+  ========================================== */
+
+  profile: Profile = {
+
+    name: 'Your Name',
+
+    email: '',
+
+    phone: '',
+
+    bio: ''
+
+  };
 
 
   constructor(
@@ -64,6 +69,10 @@ export class UserProfileComponent
   ) {}
 
 
+  /* ==========================================
+     INIT
+  ========================================== */
+
   ngOnInit(): void {
 
     this.loadProfile();
@@ -71,82 +80,117 @@ export class UserProfileComponent
   }
 
 
+  /* ==========================================
+     LOAD PROFILE
+  ========================================== */
+
   private loadProfile(): void {
 
-    this.profile$ =
-
-      this.profileService
-        .getallProfiles()
-        .pipe(
-
-          map((res: any[]) => {
-
-            const p = res?.[0];
-
-            return {
-
-              ...p,
-
-              name:
-                p?.Name ??
-                p?.name ??
-                'Your Name',
-
-              email:
-                p?.Email ??
-                p?.email ??
-                '',
-
-              phone:
-                p?.Phone ??
-                p?.phone ??
-                '',
-
-              bio:
-                p?.Bio ??
-                p?.bio ??
-                ''
-
-            } as Profile;
-
-          }),
+    console.log(
+      'USER PROFILE → API CALL STARTED'
+    );
 
 
-          catchError((error) => {
+    this.profileService
+      .getallProfiles()
+      .subscribe({
 
-            console.error(
-              'Profile API Error:',
-              error
-            );
+        /* ====================================
+           API SUCCESS
+        ==================================== */
 
-            return of({
+        next: (res: any[]) => {
 
-              name: 'Your Name',
-
-              email: '',
-
-              phone: '',
-
-              bio: ''
-
-            } as Profile);
-
-          }),
+          console.log(
+            'USER PROFILE → API RESPONSE:',
+            res
+          );
 
 
-          finalize(() => {
-
-            this.loaded.emit();
-
-          }),
+          const p = res?.[0];
 
 
-          shareReplay(1)
+          this.profile = {
 
-        );
+            ...p,
+
+            name:
+              p?.Name ??
+              p?.name ??
+              'Your Name',
+
+            email:
+              p?.Email ??
+              p?.email ??
+              '',
+
+            phone:
+              p?.Phone ??
+              p?.phone ??
+              '',
+
+            bio:
+              p?.Bio ??
+              p?.bio ??
+              ''
+
+          } as Profile;
+
+
+        },
+
+
+        /* ====================================
+           API ERROR
+        ==================================== */
+
+        error: (error) => {
+
+          console.error(
+            'USER PROFILE → API ERROR:',
+            error
+          );
+
+
+          /*
+           * Even if API fails, tell parent
+           * that this component has finished
+           * loading.
+           */
+
+          this.loaded.emit();
+
+        },
+
+
+        /* ====================================
+           API COMPLETED
+        ==================================== */
+
+        complete: () => {
+
+          console.log(
+            'USER PROFILE → LOADING COMPLETED'
+          );
+
+
+          /*
+           * Tell UserPortfolioComponent
+           * that Profile component is ready.
+           */
+
+          this.loaded.emit();
+
+        }
+
+      });
 
   }
 
+
+  /* ==========================================
+     BIO POINTS
+  ========================================== */
 
   getBioPoints(
     bio: string | undefined
@@ -161,11 +205,19 @@ export class UserProfileComponent
 
     return bio
       .split('||')
-      .map(point => point.trim())
-      .filter(point => point.length > 0);
+      .map(
+        point => point.trim()
+      )
+      .filter(
+        point => point.length > 0
+      );
 
   }
 
+
+  /* ==========================================
+     EMAIL
+  ========================================== */
 
   openMail(
     email: string | undefined
@@ -183,6 +235,11 @@ export class UserProfileComponent
 
   }
 
+
+  /* ==========================================
+     ADMIN SHORTCUT
+     CTRL + SHIFT + A
+  ========================================== */
 
   @HostListener(
     'document:keydown',
