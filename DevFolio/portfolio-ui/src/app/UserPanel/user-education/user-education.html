@@ -2,354 +2,185 @@
 
   <!-- BACKGROUND -->
   <div class="education-bg" aria-hidden="true">
-
     <div class="blue-glow"></div>
-
     <div class="blue-glow second"></div>
-
     <div class="grid-lines"></div>
-
   </div>
 
-
   <div class="education-container">
-
 
     <!-- =====================================================
          HEADER
     ====================================================== -->
-
     <header class="education-header">
-
       <div class="section-label">
-
-        <span class="number">
-          03
-        </span>
-
+        <span class="number">03</span>
         <span class="line"></span>
-
         ACADEMIC JOURNEY
-
       </div>
 
-
       <h2 class="education-title">
-
         The foundation
         <span>behind the code.</span>
-
       </h2>
 
-
       <p class="education-subtitle">
-
-        Academic milestones that shaped my technical
-        foundation and problem-solving mindset.
-
+        Academic milestones that shaped my technical foundation and problem-solving mindset.
       </p>
-
     </header>
 
-
-
     <!-- =====================================================
-         EDUCATION LIST
+         EDUCATION LIST (Updated: Removed | async pipe)
     ====================================================== -->
-
     <div
       class="education-list"
-
-      *ngIf="
-        educations$ | async as educations;
-        else loading
-      "
+      *ngIf="educations; else loading"
     >
-
 
       <!-- ===================================================
            EDUCATION DOSSIER
       ==================================================== -->
-
       <article
         class="education-dossier"
-
-        *ngFor="
-          let edu of educations;
-          let i = index;
-          trackBy: trackById
-        "
+        *ngFor="let edu of educations; let i = index; trackBy: trackById"
       >
-
 
         <!-- LEFT INDEX -->
         <div class="dossier-index">
-
-          <span>
-            {{ getNumber(i) }}
-          </span>
-
+          <span>{{ getNumber(i) }}</span>
           <div class="index-line"></div>
-
-          <small>
-            EDUCATION
-          </small>
-
+          <small>EDUCATION</small>
         </div>
-
-
 
         <!-- MAIN CONTENT -->
         <div class="dossier-main">
 
-
           <!-- TOP -->
           <div class="dossier-top">
-
             <div class="dossier-label">
-
               <span class="pulse"></span>
-
               ACADEMIC RECORD
-
             </div>
-
 
             <div class="completion">
-
               <span></span>
-
               COMPLETED
-
             </div>
-
           </div>
-
-
 
           <!-- DEGREE -->
           <div class="degree-area">
-
             <div class="degree-icon">
-
               <i class="fas fa-graduation-cap"></i>
-
             </div>
-
 
             <div class="degree-content">
-
-              <span class="micro-label">
-                DEGREE
-              </span>
-
-              <h3>
-                {{ edu.degree }}
-              </h3>
-
-              <span class="specialization">
-                {{ edu.specialization }}
-              </span>
-
+              <span class="micro-label">DEGREE</span>
+              <h3>{{ edu.degree }}</h3>
+              <span class="specialization">{{ edu.specialization }}</span>
             </div>
-
           </div>
-
-
 
           <!-- INSTITUTION -->
           <div class="institution-row">
-
             <div class="institution-icon">
-
               <i class="fas fa-building-columns"></i>
-
             </div>
-
 
             <div class="institution-content">
-
-              <span class="micro-label">
-                INSTITUTION
-              </span>
-
-              <strong>
-                {{ edu.college }}
-              </strong>
-
+              <span class="micro-label">INSTITUTION</span>
+              <strong>{{ edu.college }}</strong>
             </div>
-
 
             <div class="graduation-year">
-
-              <span>
-                GRADUATED
-              </span>
-
-              <strong>
-                {{ edu.passingYear }}
-              </strong>
-
+              <span>GRADUATED</span>
+              <strong>{{ edu.passingYear }}</strong>
             </div>
-
           </div>
-
-
 
           <!-- BOTTOM DATA -->
           <div class="dossier-details">
-
-
             <div class="detail-block">
-
-              <span class="micro-label">
-                UNIVERSITY
-              </span>
-
+              <span class="micro-label">UNIVERSITY</span>
               <p>
                 <i class="fas fa-university"></i>
                 {{ edu.university }}
               </p>
-
             </div>
 
-
             <div class="detail-block">
-
-              <span class="micro-label">
-                LOCATION
-              </span>
-
+              <span class="micro-label">LOCATION</span>
               <p>
                 <i class="fas fa-location-dot"></i>
                 {{ edu.location }}
               </p>
-
             </div>
 
-
             <div class="result-block">
-
-              <span class="micro-label">
-                CGPA
-              </span>
-
-              <strong>
-                {{ edu.cgpa }}
-              </strong>
-
+              <span class="micro-label">CGPA</span>
+              <strong>{{ edu.cgpa }}</strong>
               <div class="result-ring">
                 <i class="fas fa-award"></i>
               </div>
-
             </div>
-
-
           </div>
-
-
 
           <!-- FOOTER -->
           <div class="dossier-footer">
-
             <span>
-
               <i class="fas fa-circle"></i>
-
               COMPUTER SCIENCE
-
             </span>
 
-
             <div class="footer-line"></div>
-
 
             <b>
               {{ getNumber(i) }} / {{ educations.length.toString().padStart(2, '0') }}
             </b>
-
           </div>
 
-
         </div>
-
-
 
         <!-- RIGHT YEAR -->
         <div class="year-display">
-
-          <span>
-            {{ edu.passingYear }}
-          </span>
-
-          <small>
-            COMPLETED
-          </small>
-
+          <span>{{ edu.passingYear }}</span>
+          <small>COMPLETED</small>
         </div>
 
-
       </article>
-
-
 
       <!-- EMPTY -->
       <div
         class="education-empty"
         *ngIf="educations.length === 0"
       >
-
         <i class="fas fa-graduation-cap"></i>
-
-        <h3>
-          No education details available
-        </h3>
-
+        <h3>No education details available</h3>
       </div>
 
-
     </div>
-
-
 
     <!-- =====================================================
          LOADING
     ====================================================== -->
-
     <ng-template #loading>
-
       <div class="education-list">
-
         <article
           class="education-dossier loading-dossier"
-          *ngFor="let item of [1, 2]"
+          *ngFor="let item of"
         >
-
           <div class="loading-index"></div>
-
           <div class="loading-main">
-
             <div class="loading-top"></div>
-
             <div class="loading-degree"></div>
-
             <div class="loading-institution"></div>
-
             <div class="loading-details"></div>
-
             <div class="loading-footer"></div>
-
           </div>
-
           <div class="loading-year"></div>
-
         </article>
-
       </div>
-
     </ng-template>
 
-
   </div>
-
 </section>

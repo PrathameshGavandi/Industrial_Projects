@@ -9,7 +9,6 @@
 
     <!-- HEADER -->
     <header class="projects-header">
-
       <div class="section-label">
         <span class="label-number">04</span>
         <span class="label-line"></span>
@@ -29,7 +28,6 @@
       </div>
 
       <div class="header-bottom">
-
         <p class="projects-subtitle">
           A collection of professional, academic and personal
           projects built with modern technologies and real-world
@@ -45,49 +43,35 @@
           <span class="github-icon">
             <i class="fab fa-github"></i>
           </span>
-
           <span>Explore GitHub</span>
-
           <span class="github-arrow">↗</span>
         </a>
-
       </div>
-
     </header>
 
-
-    <!-- PROJECTS -->
+    <!-- PROJECTS (Updated: Removed | async pipe) -->
     <div
       class="projects-grid"
-      *ngIf="projectList$ | async as projects; else loading"
+      *ngIf="projectList; else loading"
     >
 
       <article
         class="project-card"
-        *ngFor="
-          let project of projects;
-          let index = index;
-          trackBy: trackById
-        "
+        *ngFor="let project of projectList; let index = index; trackBy: trackById"
       >
 
         <!-- TOP -->
         <div class="project-top">
-
           <span class="project-number">
             {{ getProjectNumber(index) }}
           </span>
-
           <span class="project-type">
             {{ project.type }}
           </span>
-
         </div>
-
 
         <!-- CONTENT -->
         <div class="project-content">
-
           <div class="project-meta">
             <span class="meta-line"></span>
             PROJECT {{ getProjectNumber(index) }}
@@ -102,100 +86,68 @@
             [innerHTML]="project.description"
           ></div>
 
-
           <!-- TECH STACK -->
           <div class="technology-section">
-
             <div class="technology-title">
               <span></span>
               TECH STACK
             </div>
 
             <div class="technology-list">
-
               <span
                 class="technology"
-                *ngFor="
-                  let tech of project.technologyList;
-                  trackBy: trackByTechnology
-                "
+                *ngFor="let tech of project.technologyList; trackBy: trackByTechnology"
               >
                 {{ tech }}
               </span>
-
             </div>
-
           </div>
-
         </div>
-
 
         <!-- FOOTER -->
         <div class="project-bottom">
-
           <div class="project-status">
             <span class="status-indicator"></span>
             COMPLETED
           </div>
-
           <div class="project-end-line"></div>
-
         </div>
 
       </article>
 
-
-      <!-- EMPTY -->
+      <!-- EMPTY (Updated: Checks projectList length directly) -->
       <div
         class="projects-empty"
-        *ngIf="projects.length === 0"
+        *ngIf="projectList.length === 0"
       >
-
         <div class="empty-icon">
           <i class="fas fa-layer-group"></i>
         </div>
-
         <h3>No projects available</h3>
-
-        <p>
-          Projects will appear here once they are added.
-        </p>
-
+        <p>Projects will appear here once they are added.</p>
       </div>
 
     </div>
 
-
     <!-- LOADING -->
     <ng-template #loading>
-
       <div class="projects-grid">
-
         <article
           class="loading-project"
-          *ngFor="let item of [1, 2, 3, 4]"
+          *ngFor="let item of"
         >
-
           <div class="loading-header">
             <div class="loading-small"></div>
             <div class="loading-type"></div>
           </div>
-
           <div class="loading-meta"></div>
-
           <div class="loading-title"></div>
-
           <div class="loading-text"></div>
           <div class="loading-text"></div>
-
           <div class="loading-tags"></div>
-
         </article>
-
       </div>
-
     </ng-template>
 
   </div>
-
 </section>

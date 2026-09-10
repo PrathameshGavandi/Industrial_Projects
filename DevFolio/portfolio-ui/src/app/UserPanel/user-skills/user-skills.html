@@ -3,268 +3,144 @@
   <!-- =====================================================
        BACKGROUND
   ===================================================== -->
-
   <div class="skills-bg-orb orb-one"></div>
   <div class="skills-bg-orb orb-two"></div>
   <div class="skills-grid-lines"></div>
 
-
   <div class="skills-container">
-
 
     <!-- =====================================================
          HEADER
     ===================================================== -->
-
     <div class="skills-top">
-
       <div class="skills-image-wrap">
-
         <div class="skills-image">
-
           <img
             src="assets/images/skills.jpg"
             alt="Technical Skills"
           >
-
         </div>
-
       </div>
-
 
       <div class="section-label">
-
         <span></span>
-
         MY EXPERTISE
-
         <span></span>
-
       </div>
 
-
       <h2 class="skills-title">
-
         Technical
-
-        <strong>
-          Skills
-        </strong>
-
+        <strong>Skills</strong>
       </h2>
 
-
       <p class="skills-subtitle">
-
-        Technologies & tools I use to build modern,
-        scalable and user-friendly applications.
-
+        Technologies & tools I use to build modern, scalable and user-friendly applications.
       </p>
 
-
       <div class="title-line"></div>
-
     </div>
 
-
-
     <!-- =====================================================
-         STICKY SKILL ROWS
+         STICKY SKILL ROWS (Updated: Removed | async pipe)
     ===================================================== -->
-
     <div class="skills-grid">
-
-      <ng-container
-        *ngIf="skills$ | async as skillRows"
-      >
-
+      <ng-container *ngIf="skills && skills.length > 0">
 
         <!-- =================================================
              ONE STICKY ROW = TWO CARDS
         ================================================= -->
-
         <div
           class="skill-stack-row"
-
-          *ngFor="
-            let row of skillRows;
-            let rowIndex = index;
-            trackBy: trackByRow
-          "
-
+          *ngFor="let row of skills; let rowIndex = index; trackBy: trackByRow"
           [style.z-index]="rowIndex + 10"
         >
-
 
           <!-- =================================================
                SKILL CARD
           ================================================= -->
-
           <article
             class="skill-card"
-
-            *ngFor="
-              let skill of row;
-              let cardIndex = index;
-              trackBy: trackBySkill
-            "
+            *ngFor="let skill of row; let cardIndex = index; trackBy: trackBySkill"
           >
 
-
             <!-- CARD BACKGROUND DETAILS -->
-
             <div class="card-grid"></div>
-
             <div class="card-glow"></div>
-
             <div class="card-noise"></div>
-
-
 
             <!-- =================================================
                  TOP BAR
             ================================================= -->
-
             <div class="card-top">
-
               <div class="skill-number">
-
                 {{ getSkillNumber(rowIndex, cardIndex) }}
-
               </div>
-
 
               <div class="skill-status">
-
                 <span class="status-dot"></span>
-
                 ACTIVE
-
               </div>
-
             </div>
-
-
 
             <!-- =================================================
                  HEADING
             ================================================= -->
-
             <div class="card-heading">
-
               <div class="heading-meta">
-
-                <span>
-                  TECHNICAL CATEGORY
-                </span>
-
-                <span>
-                  {{ getSkillNumber(rowIndex, cardIndex) }}
-                </span>
-
+                <span>TECHNICAL CATEGORY</span>
+                <span>{{ getSkillNumber(rowIndex, cardIndex) }}</span>
               </div>
-
 
               <h3 class="skill-title">
-
                 {{ skill.label }}
-
               </h3>
 
-
               <div class="heading-line">
-
                 <span></span>
-
               </div>
-
             </div>
-
-
 
             <!-- =================================================
                  SKILL VALUES
             ================================================= -->
-
             <div class="skill-values">
-
               <div
                 class="skill-chip"
-
-                *ngFor="
-                  let value of skill.values;
-                  trackBy: trackByValue
-                "
+                *ngFor="let value of skill.values; trackBy: trackByValue"
               >
-
                 <span class="chip-dot"></span>
-
                 <span class="chip-text">
-
                   {{ value.trim() }}
-
                 </span>
-
               </div>
-
             </div>
-
-
 
             <!-- =================================================
                  CARD FOOTER
             ================================================= -->
-
             <div class="card-footer">
-
               <div class="footer-left">
-
                 <span class="footer-line"></span>
-
-                <span>
-                  TECHNICAL EXPERTISE
-                </span>
-
+                <span>TECHNICAL EXPERTISE</span>
               </div>
 
-
-              <span class="footer-arrow">
-                ↗
-              </span>
-
+              <span class="footer-arrow">↗</span>
             </div>
-
-
 
             <!-- =================================================
                  DECORATIVE CORNERS
             ================================================= -->
-
-            <span
-              class="card-corner corner-tl"
-            ></span>
-
-            <span
-              class="card-corner corner-tr"
-            ></span>
-
-            <span
-              class="card-corner corner-bl"
-            ></span>
-
-            <span
-              class="card-corner corner-br"
-            ></span>
-
+            <span class="card-corner corner-tl"></span>
+            <span class="card-corner corner-tr"></span>
+            <span class="card-corner corner-bl"></span>
+            <span class="card-corner corner-br"></span>
 
           </article>
 
         </div>
 
       </ng-container>
-
     </div>
 
   </div>
-
 </section>
