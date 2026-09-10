@@ -11,7 +11,7 @@ import { SkillsService } from '../../Services/SkillsService';
 })
 export class UserSkillsComponent implements OnInit {
 
-  skills: any[][] = []; /* HTML मध्ये `skills` लूप फिरवला आहे, म्हणून `skillRows` ऐवजी याला रो-ॲरे बनवले */
+  skills: any[][] = []; /* HTML च्या संरचनेनुसार तयार केलेला २-डायमेंशनल रो ॲरे */
   rawSkills: any[] = [];
   isLoading = true;
 
@@ -48,19 +48,35 @@ export class UserSkillsComponent implements OnInit {
   }
 
   /* ==========================================
-     CREATE ROWS
+     CREATE ROWS (डेटा मॅपिंग सुरक्षित करण्यासाठी अपडेटेड)
   ========================================== */
   private createSkillRows(): void {
     this.skills = [];
-    const rowSize = 2; /* तुमच्या CSS डिझाइननुसार २ कार्ड्सची एक रो बनवली */
+    const rowSize = 2; /* सीएसएस ग्रिड लेआउटसाठी एका ओळीत २ कार्ड्स */
 
-    // बॅकएंड डेटा फॉरमॅट करणे (उदा. कॉमा सेपरेटेड व्हॅल्यूजचा ॲरे बनवणे)
-    const formattedSkills = this.rawSkills.map(skill => ({
-      ...skill,
-      values: skill.technologies 
-        ? skill.technologies.split(',').map((t: string) => t.trim()).filter(Boolean)
-        : (skill.values || [])
-    }));
+    // डेटाबेस मधील व्हेरिएबल्सची नावे काहीही असली तरी त्यांना मॅप करणारे सेफ लॉजिक
+    const formattedSkills = this.rawSkills.map(skill => {
+      // १. स्किल कॅटेगरीचे नाव शोधणे (label किंवा category)
+      const labelName = skill.label || skill.category || skill.name || 'Technical Expertise';
+      
+      // २. कॉमा-सेपरेटेड टेक्नॉलॉजीचे व्यवस्थित ॲरेमध्ये रुपांतर करणे
+      let skillValues: string[] = [];
+      const rawText = skill.technologies || skill.skills || skill.values;
+      
+      if (rawText) {
+        if (Array.isArray(rawText)) {
+          skillValues = rawText;
+        } else if (typeof rawText === 'string') {
+          skillValues = rawText.split(',').map((t: string) => t.trim()).filter(Boolean);
+        }
+      }
+
+      return {
+        ...skill,
+        label: labelName,
+        values: skillValues
+      };
+    });
 
     for (let i = 0; i < formattedSkills.length; i += rowSize) {
       this.skills.push(formattedSkills.slice(i, i + rowSize));
@@ -68,7 +84,7 @@ export class UserSkillsComponent implements OnInit {
   }
 
   /* ==========================================
-     मिसिंग फंक्शन्स (ज्यामुळे एरर येत होता)
+     मिसिंग फंक्शन्स
   ========================================== */
 
   // १. स्किल्सचा अनुक्रमांक काढण्यासाठी (उदा. 01, 02)
