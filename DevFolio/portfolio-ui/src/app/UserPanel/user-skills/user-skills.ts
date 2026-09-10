@@ -12,7 +12,7 @@ import { SkillsService } from '../../Services/SkillsService';
 export class UserSkillsComponent implements OnInit {
 
   skills: any[][] = []; /* HTML च्या संरचनेनुसार तयार केलेला २-डायमेंशनल रो ॲरे */
-  rawSkills: any[] = [];
+  rawSkills: any = null; /* डेटाबेसचा मूळ ऑब्जेक्ट साठवण्यासाठी */
   isLoading = true;
 
   constructor(
@@ -31,8 +31,10 @@ export class UserSkillsComponent implements OnInit {
     this.isLoading = true;
 
     this.skillsService.getAllSkills().subscribe({
-      next: (res: any[]) => {
-        this.rawSkills = res || [];
+      next: (res: any) => {
+        // जर बॅकएंडकडून ॲरे येत असेल तर पहिला ऑब्जेक्ट घ्या, अन्यथा थेट ऑब्जेक्ट वापरा
+        this.rawSkills = Array.isArray(res) ? res[0] : res;
+        
         this.createSkillRows();
         this.isLoading = false;
         this.cdr.detectChanges();
@@ -40,7 +42,7 @@ export class UserSkillsComponent implements OnInit {
       error: (error) => {
         console.error('Skills API Error:', error);
         this.skills = [];
-        this.rawSkills = [];
+        this.rawSkills = null;
         this.isLoading = false;
         this.cdr.detectChanges();
       }
@@ -48,36 +50,47 @@ export class UserSkillsComponent implements OnInit {
   }
 
   /* ==========================================
-     CREATE ROWS (डेटा मॅपिंग सुरक्षित करण्यासाठी अपडेटेड)
+     CREATE ROWS (डेटाबेसच्या रचनेनुसार ६ स्वतंत्र कार्ड्स मॅपिंग)
   ========================================== */
   private createSkillRows(): void {
     this.skills = [];
-    const rowSize = 2; /* सीएसएस ग्रिड लेआउटसाठी एका ओळीत २ कार्ड्स */
+    
+    if (!this.rawSkills) {
+      return;
+    }
 
-    // डेटाबेस मधील व्हेरिएबल्सची नावे काहीही असली तरी त्यांना मॅप करणारे सेफ लॉजिक
-    const formattedSkills = this.rawSkills.map(skill => {
-      // १. स्किल कॅटेगरीचे नाव शोधणे (label किंवा category)
-      const labelName = skill.label || skill.category || skill.name || 'Technical Expertise';
-      
-      // २. कॉमा-सेपरेटेड टेक्नॉलॉजीचे व्यवस्थित ॲरेमध्ये रुपांतर करणे
-      let skillValues: string[] = [];
-      const rawText = skill.technologies || skill.skills || skill.values;
-      
-      if (rawText) {
-        if (Array.isArray(rawText)) {
-          skillValues = rawText;
-        } else if (typeof rawText === 'string') {
-          skillValues = rawText.split(',').map((t: string) => t.trim()).filter(Boolean);
-        }
+    const skillData = this.rawSkills;
+
+    // डेटाबेसमधील अचूक फील्ड्स (pop, vm, fw, web, db, vcs) ६ कार्ड्समध्ये मॅप करणे
+    const formattedSkills = [
+      {
+        label: 'Core Programming',
+        values: skillData.pop ? skillData.pop.split(',').map((t: string) => t.trim()).filter(Boolean) : []
+      },
+      {
+        label: 'Object-Oriented & VM Languages',
+        values: skillData.vm ? skillData.vm.split(',').map((t: string) => t.trim()).filter(Boolean) : []
+      },
+      {
+        label: 'Frameworks & Architectures',
+        values: skillData.fw ? skillData.fw.split(',').map((t: string) => t.trim()).filter(Boolean) : []
+      },
+      {
+        label: 'Web Technologies & APIs',
+        values: skillData.web ? skillData.web.split(',').map((t: string) => t.trim()).filter(Boolean) : []
+      },
+      {
+        label: 'Databases & Storage',
+        values: skillData.db ? skillData.db.split(',').map((t: string) => t.trim()).filter(Boolean) : []
+      },
+      {
+        label: 'Tools & DevOps (Version Control)',
+        values: skillData.vcs ? skillData.vcs.split(',').map((t: string) => t.trim()).filter(Boolean) : []
       }
+    ];
 
-      return {
-        ...skill,
-        label: labelName,
-        values: skillValues
-      };
-    });
-
+    // सीएसएस ग्रिड लेआउटसाठी एका ओळीत २ कार्ड्स गोळा करणे
+    const rowSize = 2;
     for (let i = 0; i < formattedSkills.length; i += rowSize) {
       this.skills.push(formattedSkills.slice(i, i + rowSize));
     }
@@ -100,7 +113,7 @@ export class UserSkillsComponent implements OnInit {
 
   // ३. स्किल कार्ड लूप ट्रॅकिंग
   trackBySkill(index: number, item: any): any {
-    return item.id || index;
+    return item.label || index;
   }
 
   // ४. चीप/व्हॅल्यू लूप ट्रॅकिंग
