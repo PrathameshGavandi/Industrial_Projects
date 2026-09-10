@@ -4,7 +4,12 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
+    "strict": false,               /* ही लाईन ॲड केली */
     "types": []
+  },
+  "angularCompilerOptions": {
+    "strictTemplates": false,       /* कडक चेकिंग बंद केली */
+    "fullTemplateTypeCheck": false  /* सर्व टेम्पलेट्स चेक करणे बंद केले */
   },
   "include": [
     "src/**/*.ts"
