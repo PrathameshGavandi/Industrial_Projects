@@ -1,15 +1,19 @@
-/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
-/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+/* To learn more about Typescript configuration file: https://typescriptlang.org. */
+/* To learn more about Angular compiler options: https://angular.dev. */
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "strict": false,               /* ही लाईन ॲड केली */
+    "strict": false,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
     "types": []
   },
   "angularCompilerOptions": {
-    "strictTemplates": false,       /* कडक चेकिंग बंद केली */
-    "fullTemplateTypeCheck": false  /* सर्व टेम्पलेट्स चेक करणे बंद केले */
+    "strictTemplates": false,
+    "fullTemplateTypeCheck": false,
+    "strictInjectionParameters": false,
+    "strictInputAccessModifiers": false
   },
   "include": [
     "src/**/*.ts"
