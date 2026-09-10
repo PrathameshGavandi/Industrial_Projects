@@ -27,14 +27,16 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
 
-        // इथल्या लिस्टमध्ये आपण तुझी अचूक फ्रंटएंड लिंक टाकली आहे
-        config.setAllowedOrigins(List.of(
-                "https://prathamesh-gavandi-portfolio.onrender.com"
-        ));
+        // वैयक्तिक पोर्टफोलिओसाठी आणि भविष्यात कोणत्याही अडचणीशिवाय चालण्यासाठी
+        // '*' वापरून सर्व फ्रंटएंड लिंक्सना परवानगी देणे हा सर्वात उत्तम मार्ग आहे.
+        config.setAllowedOrigins(List.of("*"));
 
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
-        config.setAllowCredentials(true); // अचूक ऑनलाईन लिंक असल्यामुळे हे true चालेल
+
+        // जेव्हा AllowedOrigins मध्ये '*' वापरतात, तेव्हा Credentials 'false' ठेवावे लागतात,
+        // जेणेकरून ब्राउझर सुरक्षा नियम मोडत नाही.
+        config.setAllowCredentials(false);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
